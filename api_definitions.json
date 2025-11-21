@@ -10490,10 +10490,10 @@
   "account": {
     "name": "account",
     "params": [],
-    "returns": "void",
-    "description": "TServerPlayer.loadaccount() - loads the player, only works for players created by script; this function is called automatically when creating a player | TServerPlayer.saveaccount() - saves the player, only works for players created by script",
-    "example": "account()",
-    "scope": "clientside"
+    "returns": "string",
+    "scope": "global",
+    "description": "TServerPlayer.account - string (read only)",
+    "example": "chat = \"Hello\" SPC player.account @ \"!\"; // Hello Denveous!"
   },
   "accounts": {
     "name": "accounts",
