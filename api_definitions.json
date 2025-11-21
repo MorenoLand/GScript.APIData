@@ -6010,11 +6010,11 @@
   "Adventure_setFrameTick": {
     "name": "Adventure_setFrameTick",
     "params": [
-      "float"
+      "int"
     ],
     "returns": "void",
     "scope": "clientside",
-    "description": "Sets the current frame tick value for the client. The value is measured in milliseconds.",
+    "description": "Sets the frame tick value for the client. The value should be in milliseconds.",
     "example": "Adventure_setFrameTick(50);"
   },
   "Adventure_quit": {
@@ -6038,22 +6038,22 @@
   "Adventure_setAccountName": {
     "name": "Adventure_setAccountName",
     "params": [
-      "index"
+      "str"
     ],
     "returns": "void",
     "scope": "clientside",
-    "description": "Sets the account name to the specified string.",
+    "description": "Sets account name for login using the specified string.",
     "example": "Adventure_setAccountName(\"myaccount\");"
   },
   "Adventure_setPassword": {
     "name": "Adventure_setPassword",
     "params": [
-      "x"
+      "str"
     ],
     "returns": "void",
-    "description": "No matching script function found!",
-    "example": "Adventure_setPassword(\"mypassword\");",
-    "scope": "clientside"
+    "scope": "clientside",
+    "description": "Sets account password for login using the specified string.",
+    "example": "Adventure_setPassword(\"mypassword\");"
   },
   "Adventure_setChat": {
     "name": "Adventure_setChat",
@@ -6070,10 +6070,10 @@
     "params": [
       "nickname"
     ],
-    "returns": "void",
-    "description": "No matching script function found!",
-    "example": "Adventure_setNickName(\"NewNick\");",
-    "scope": "clientside"
+    "returns": "str",
+    "scope": "clientside",
+    "description": "Sets the nickname used during login to the specified string.",
+    "example": "Adventure_setNickName(\"NewNick\");"
   },
   "Adventure_setTextEditText": {
     "name": "Adventure_setTextEditText",
@@ -6088,35 +6088,45 @@
   },
   "Adventure_setRemoveVars": {
     "name": "Adventure_setRemoveVars",
-    "params": [],
+    "params": [
+      "bool"
+    ],
     "returns": "void",
-    "description": "No matching script function found!",
-    "example": "Adventure_setRemoveVars();",
-    "scope": "clientside"
+    "scope": "clientside",
+    "description": "Removes/clears variables.",
+    "example": "Adventure_setRemoveVars(true);"
   },
   "Adventure_setFileContent": {
     "name": "Adventure_setFileContent",
-    "params": [],
-    "returns": "void",
-    "description": "No matching script function found!",
-    "example": "Adventure_setFileContent();",
-    "scope": "clientside"
+    "params": [
+      "str",
+      "str",
+      "int"
+    ],
+    "returns": "bool",
+    "scope": "clientside",
+    "description": "Writes content to file (path, content, mode). The third parameter is the save mode (0 - overwrite, 1 - append)",
+    "example": "Adventure_setFileContent(\"scriptfiles/foo.txt\", \"bar\", 0);"
   },
   "Adventure_setCheatWindows": {
     "name": "Adventure_setCheatWindows",
-    "params": [],
+    "params": [
+      "str"
+    ],
     "returns": "void",
-    "description": "No matching script function found!",
-    "example": "Adventure_setCheatWindows();",
-    "scope": "clientside"
+    "scope": "clientside",
+    "description": "Adds a window/tab name to the banned cheat-window list, used with the cheatwindows server option.",
+    "example": "Adventure_setCheatWindows(\"Cheat_Engine\");"
   },
   "Adventure_setGraalControlRecreate": {
     "name": "Adventure_setGraalControlRecreate",
-    "params": [],
+    "params": [
+      "bool"
+    ],
     "returns": "void",
-    "description": "No matching script function found!",
-    "example": "Adventure_setGraalControlRecreate();",
-    "scope": "clientside"
+    "scope": "clientside",
+    "description": "Forces recreation of Graal Control.",
+    "example": "Adventure_setGraalControlRecreate(true);"
   },
   "Adventure_setFullscreen": {
     "name": "Adventure_setFullscreen",
@@ -6148,11 +6158,13 @@
   },
   "Adventure_setAllowedSocketsConnect": {
     "name": "Adventure_setAllowedSocketsConnect",
-    "params": [],
+    "params": [
+      "str"
+    ],
     "returns": "void",
-    "description": "No matching script function found!",
-    "example": "Adventure_setAllowedSocketsConnect();",
-    "scope": "clientside"
+    "scope": "clientside",
+    "description": "Authorizes a TSocket connection to the specified endpoint. The value must be in the format ip:port.",
+    "example": "Adventure_setAllowedSocketsConnect(\"127.0.0.1:4000\");"
   },
   "Adventure_getFileContent": {
     "name": "Adventure_getFileContent",
