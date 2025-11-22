@@ -644,13 +644,13 @@
   "callnpc": {
     "name": "callnpc",
     "params": [
-      "int",
+      "id",
       "params..."
     ],
     "returns": "void",
-    "description": "callnpc(int, params...)",
-    "example": "callnpc(5, \"doSomething\");",
-    "scope": "clientside"
+    "scope": "global",
+    "description": "callnpc(int, params...) - Calls the script of another NPC by its index, passing optional parameters.",
+    "example": "// Call all NPCs in the npcs array for the current level/gmap\nfor (temp.npc: npcs) {\n  callnpc(npc.id, \"onCallTest\", \"Hello world!\");\n}\n\n// In the target NPC:\nfunction onCallTest(data) {\n  chat = \"Called: \" @ data; // Would make the chat \"Called: Hello world!\"\n}\n\n// Or call a specific NPC by ID\ncallnpc(5, \"onCallTest\", \"Hello world!\");"
   },
   "setcharani": {
     "name": "setcharani",
@@ -12877,10 +12877,10 @@
   "graalversion": {
     "name": "graalversion",
     "params": [],
-    "returns": "void",
-    "description": "graalversion - float (read only)",
-    "example": "graalversion()",
-    "scope": "clientside"
+    "returns": "float",
+    "scope": "clientside",
+    "description": "graalversion - float (read only) - Returns the version number of the Graal client as a float value.",
+    "example": "player.chat = graalversion; // would output your current game version into the chat (e.g. 6.113)\n\n if (graalversion >= 5.226) { ... } // checks for graal version higher than 5.226"
   },
   "gradientcolor": {
     "name": "gradientcolor",
@@ -18413,5 +18413,25 @@
     "scope": "clientside",
     "description": "Scene lighting calculation progress (0.0-1.0, read-only) (read-only)",
     "example": "$scenelighting::lightingprogress = 1.0;"
+  },
+  "GuiControl": {
+    "name": "GuiControl",
+    "params": [
+      "name"
+    ],
+    "returns": "GuiControl",
+    "scope": "clientside",
+    "description": "GuiControl is the base GUI control, therefore general functions listed here are available to all GUI controls. Most of the time it is used as container for positioning groups of other controls. It can either have a border (border=1..5) or just be plain transparent, and just display its child controls.",
+    "example": "new GuiControl(\"Test_Back\") {\n   useownprofile = true;\n   profile.border = 3;\n   x = 10;\n   y = 10;\n   width = 160;\n   height = 80;\n }"
+  },
+  "GuiWindowCtrl": {
+    "name": "GuiWindowCtrl",
+    "params": [
+      "name"
+    ],
+    "returns": "GuiWindowCtrl",
+    "scope": "clientside",
+    "description": "Works as a container for other control and displays a title bar and buttons for minimizing, maximizing and closing. With Ctrl+Tab you can switch between active windows.",
+    "example": "new GuiWindowCtrl(\"Test_Window\") {\n  profile = GuiBlueWindowProfile;\n  x = 10;\n  y = 10;\n  width = 160;\n  height = 80;\n  text = \"Window\";\n}"
   }
 }
