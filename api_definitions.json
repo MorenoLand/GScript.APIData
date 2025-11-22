@@ -472,21 +472,21 @@
   },
   "enableselectweapons": {
     "name": "enableselectweapons",
+    "type": "function",
     "params": [],
     "returns": "void",
-    "description": "enableselectweapons()",
-    "example": "enableselectweapons();",
     "scope": "clientside",
-    "type": ""
+    "description": "enableselectweapons() - Re-enables weapon selection that was previously disabled.",
+    "example": "enableselectweapons();"
   },
   "disableselectweapons": {
     "name": "disableselectweapons",
+    "type": "function",
     "params": [],
     "returns": "void",
-    "description": "disableselectweapons()",
-    "example": "disableselectweapons();",
     "scope": "clientside",
-    "type": ""
+    "description": "disableselectweapons() - Disables the weapon select screen.",
+    "example": "disableselectweapons();"
   },
   "noplayerkilling": {
     "name": "noplayerkilling",
@@ -1091,23 +1091,23 @@
   },
   "starts": {
     "name": "starts",
+    "type": "function",
     "params": [
       "text"
     ],
     "returns": "boolean",
-    "description": "string.starts(text)",
-    "example": "if (player.account.starts(\"admin_\")) { }",
-    "scope": "clientside",
-    "type": ""
+    "scope": "global",
+    "description": "string.starts(text) - Checks if the string starts with the specified text/prefix.",
+    "example": "// Check if a command starts with a prefix\nif (player.chat.starts(\"/warp\")) {\n  // Handle warp command\n}\n\n// Check level prefix\nif (player.level.starts(\"overworld_\")) {\n\n}"
   },
   "trim": {
     "name": "trim",
+    "type": "function",
     "params": [],
     "returns": "string",
-    "description": "string.trim()",
-    "example": "temp.clean = temp.input.trim();",
-    "scope": "clientside",
-    "type": ""
+    "scope": "global",
+    "description": "string.trim() - Removes leading and trailing whitespace characters from the string.",
+    "example": "// Clean user input\ntemp.userInput = \"  my name  \";\ntemp.clean = temp.userInput.trim(); // Returns \"my name\""
   },
   "indexOf": {
     "name": "indexOf",
@@ -1366,15 +1366,15 @@
   },
   "spyfire": {
     "name": "spyfire",
+    "type": "function",
     "params": [
-      "int",
-      "int"
+      "length",
+      "power"
     ],
     "returns": "void",
-    "description": "spyfire(int, int)",
-    "example": "spyfire(2, 5);",
     "scope": "clientside",
-    "type": ""
+    "description": "spyfire(int, int) - Shoots a \"horse\" fire with length and power",
+    "example": "spyfire(2, 5);"
   },
   "setshape2": {
     "name": "setshape2",
@@ -1454,14 +1454,14 @@
   },
   "enablefeatures": {
     "name": "enablefeatures",
+    "type": "function",
     "params": [
       "int"
     ],
     "returns": "void",
-    "description": "enablefeatures(int)",
-    "example": "enablefeatures(\"pausemap\");",
     "scope": "clientside",
-    "type": ""
+    "description": "enablefeatures(int) - Enables specific client features based on a feature flag bitmask.\n\nUse `allfeatures` to get all features, then subtract specific feature values to disable them. \n\n`1` = M key (map),\n`2` = P key (pause)\n`4` = Q key (weapon select)\n`8` = R key (show ratings)\n`0x10` = S+A drop items\n`0x20` = S+D switch weapons \n`0x40` = TAB key\n`0x80` = chat text display\n`0x100` = hearts over player heads\n`0x200` = nicknames\n`0x800` = right-click profile\n`0x1000` = emoticons\n`0x8000` = F2 output (savelog/echo)",
+    "example": "// Disable hearts over player heads\nenablefeatures(allfeatures - 0x100);\n\n// Disable multiple features (map and pause)\nenablefeatures(allfeatures - 1 - 2);\n\n// Enable only specific features\nenablefeatures(1 + 2 + 4); // Enable map, pause, and weapon select"
   },
   "length": {
     "name": "length",
@@ -1474,21 +1474,21 @@
   },
   "upper": {
     "name": "upper",
+    "type": "function",
     "params": [],
     "returns": "string",
-    "description": "string.upper()",
-    "example": "temp.upper = \"hello\".upper();",
-    "scope": "clientside",
-    "type": ""
+    "scope": "global",
+    "description": "string.upper() - Converts all characters in the string to uppercase.",
+    "example": "temp.test_name = \"graal online\";\ntemp.display = temp.test_name.upper(); \necho(display); // Returns \"GRAAL ONLINE\"\n\n// Useful for displaying text in uppercase\necho(\"Welcome to \" @ servername.upper());"
   },
   "lower": {
     "name": "lower",
+    "type": "function",
     "params": [],
     "returns": "string",
-    "description": "string.lower()",
-    "example": "temp.lower = \"HELLO\".lower();",
-    "scope": "clientside",
-    "type": ""
+    "scope": "global",
+    "description": "string.lower() - Converts all characters in the string to lowercase.",
+    "example": "temp.input = \"HELLO WORLD\";\ntemp.normalized = temp.input.lower(); // Returns \"hello world\"\n\n// Useful for case-insensitive comparisons\nif (player.chat.lower() == \"hello\") {\n  // Matches \"hello\", \"HELLO\", \"Hello\", etc.\n}"
   },
   "substring": {
     "name": "substring",
@@ -1705,26 +1705,26 @@
   },
   "savelog": {
     "name": "savelog",
+    "type": "function",
     "params": [
       "str"
     ],
     "returns": "void",
-    "description": "savelog(str)",
-    "example": "savelog(param1, param2);",
     "scope": "clientside",
-    "type": ""
+    "description": "savelog(str) - Logs a message to the F2 game messages window.",
+    "example": "savelog(\"Welcome to\" SPC servername);"
   },
   "savelog2": {
     "name": "savelog2",
+    "type": "function",
     "params": [
       "str",
       "str"
     ],
     "returns": "void",
-    "description": "savelog2(str, str)",
-    "example": "savelog2(param1, param2);",
-    "scope": "clientside",
-    "type": ""
+    "scope": "serverside",
+    "description": "savelog2(str, str) - Saves a log message to a file in the logs/ folder.",
+    "example": "savelog2(\"olle_log.txt\", format(\"%s updated links in %s!\", player.account, temp.file));\n\nsavelog2(\"hacking.txt\", \"There was a player hacking detected:\" SPC player.account);"
   },
   "savestring": {
     "name": "savestring",
@@ -2006,15 +2006,15 @@
   },
   "getangle": {
     "name": "getangle",
+    "type": "function",
     "params": [
-      "float",
-      "float"
+      "x",
+      "y"
     ],
-    "returns": "void",
-    "description": "getangle(float,float)",
-    "example": "getangle(param1, param2, param3, param4);",
-    "scope": "clientside",
-    "type": ""
+    "returns": "float",
+    "scope": "global",
+    "description": "getangle(float,float) - Calculates the angle in radians from the origin to the given point, or from a delta X and delta Y.",
+    "example": "// Calculate angle to target\ntemp.dx = target.x - this.x;\ntemp.dy = target.y - this.y;\ntemp.angle = getangle(temp.dx, temp.dy); // Angle in radians\n\n// Use for projectiles or rotation\ntemp.projectileDir = temp.angle;"
   },
   "getanglesfromvector": {
     "name": "getanglesfromvector",
@@ -2229,25 +2229,25 @@
   },
   "vecx": {
     "name": "vecx",
+    "type": "function",
     "params": [
       "dir"
     ],
-    "returns": "void",
-    "description": "vecx(dir)",
-    "example": "vecx(param1, param2);",
-    "scope": "clientside",
-    "type": ""
+    "returns": "float",
+    "scope": "global",
+    "description": "vecx(dir) - Returns the X component of a direction vector.",
+    "example": "// Calculate movement based on direction\ntemp.dir = 1; // Right\ntemp.dx = vecx(temp.dir); // Returns 1.0\ntemp.dy = vecy(temp.dir); // Returns 0.0\n\n// Move NPC in that direction\nthis.x += temp.dx;\nthis.y += temp.dy;"
   },
   "vecy": {
     "name": "vecy",
+    "type": "function",
     "params": [
       "dir"
     ],
-    "returns": "void",
-    "description": "vecy(dir)",
-    "example": "vecy(param1, param2);",
-    "scope": "clientside",
-    "type": ""
+    "returns": "float",
+    "scope": "global",
+    "description": "vecy(dir) - Returns the Y component of a direction vector.",
+    "example": "// Get Y movement component for up direction\ntemp.dir = 0; // Up\ntemp.dy = vecy(temp.dir); // Returns -1.0\n\n// Use in movement calculations\nthis.y += temp.dy * 2; // Move up by 2 tiles"
   },
   "addstring": {
     "name": "addstring",
@@ -2820,14 +2820,14 @@
   },
   "playlooped": {
     "name": "playlooped",
+    "type": "function",
     "params": [
-      "str"
+      "filename"
     ],
     "returns": "void",
-    "description": "playlooped(str)",
-    "example": "playlooped(param1);",
     "scope": "clientside",
-    "type": ""
+    "description": "playlooped(str) - Plays a sound file in a loop, continuously repeating until stopped.",
+    "example": "// Play background music\nplaylooped(\"music/background.ogg\");\n\n// Stop it later\nstopmusic();"
   },
   "playlooped2": {
     "name": "playlooped2",
@@ -2872,12 +2872,12 @@
   },
   "stopmusic": {
     "name": "stopmusic",
+    "type": "function",
     "params": [],
     "returns": "void",
-    "description": "stopmusic()",
-    "example": "stopmusic();",
     "scope": "clientside",
-    "type": ""
+    "description": "stopmusic() - Stops all currently playing music.",
+    "example": "// Stop all playing music\nstopmusic();\n\n// Useful when switching tracks or ending sequences\nif (temp.gameOver) {\n  stopmusic();\n}"
   },
   "stopsound": {
     "name": "stopsound",
@@ -2903,21 +2903,21 @@
   },
   "takeplayercarry": {
     "name": "takeplayercarry",
+    "type": "function",
     "params": [],
     "returns": "void",
-    "description": "takeplayercarry()",
-    "example": "takeplayercarry();",
     "scope": "clientside",
-    "type": ""
+    "description": "takeplayercarry() - Removes the object that the player is currently carrying.",
+    "example": "// Force player to drop carried object\ntakeplayercarry();\n\n// Useful in scripted sequences\nmessage(\"You must drop that to proceed!\");\nif (player.iscarrying) {\n  takeplayercarry();\n}"
   },
   "takeplayerhorse": {
     "name": "takeplayerhorse",
+    "type": "function",
     "params": [],
     "returns": "void",
-    "description": "takeplayerhorse()",
-    "example": "takeplayerhorse();",
     "scope": "clientside",
-    "type": ""
+    "description": "takeplayerhorse() - Removes the horse/mount that the player is currently riding.",
+    "example": "// Dismount player in certain areas\nif (player.level.name.starts(\"inside_\")) {\n  takeplayerhorse();\n  player.chat = \"Horses not allowed here!\";\n}"
   },
   "testplayer": {
     "name": "testplayer",
@@ -3260,14 +3260,14 @@
   },
   "sendtonc": {
     "name": "sendtonc",
+    "type": "function",
     "params": [
       "str"
     ],
     "returns": "void",
-    "description": "sendtonc(str)",
-    "example": "sendtonc(param1);",
-    "scope": "clientside",
-    "type": ""
+    "scope": "serverside",
+    "description": "sendtonc(str) - Sends a message to users connected to NPC Control on Remote Control.",
+    "example": "// Send debug message to NPC Control\nsendtonc(\"NPC \" @ this.name @ \" reached position \" @ this.x @ \",\" @ this.y);"
   },
   "sendtorc": {
     "name": "sendtorc",
@@ -3379,30 +3379,30 @@
   },
   "disabledefmovement": {
     "name": "disabledefmovement",
+    "type": "function",
     "params": [],
     "returns": "void",
-    "description": "disabledefmovement()",
-    "example": "disabledefmovement();",
     "scope": "clientside",
-    "type": ""
+    "description": "disabledefmovement() - Disables the default player movement controls.",
+    "example": "disabledefmovement();"
   },
   "disablemap": {
     "name": "disablemap",
+    "type": "function",
     "params": [],
     "returns": "void",
-    "description": "disablemap()",
-    "example": "disablemap();",
     "scope": "clientside",
-    "type": ""
+    "description": "disablemap() - Disables the map/minimap display for the player.",
+    "example": "disablemap();"
   },
   "disablepause": {
     "name": "disablepause",
+    "type": "function",
     "params": [],
     "returns": "void",
-    "description": "disablepause()",
-    "example": "disablepause();",
     "scope": "clientside",
-    "type": ""
+    "description": "disablepause() - Disables the pause functionality, preventing the player from pausing the game with the built-in pause mechanic.",
+    "example": "disablepause();"
   },
   "disableweapons": {
     "name": "disableweapons",
@@ -3516,30 +3516,30 @@
   },
   "enabledefmovement": {
     "name": "enabledefmovement",
+    "type": "function",
     "params": [],
     "returns": "void",
-    "description": "enabledefmovement()",
-    "example": "enabledefmovement();",
     "scope": "clientside",
-    "type": ""
+    "description": "enabledefmovement() - Re-enables the default player movement controls that were previously disabled.",
+    "example": "enabledefmovement();"
   },
   "enablemap": {
     "name": "enablemap",
+    "type": "function",
     "params": [],
     "returns": "void",
-    "description": "enablemap()",
-    "example": "enablemap();",
     "scope": "clientside",
-    "type": ""
+    "description": "enablemap() - Re-enables the map/minimap display that was previously disabled.",
+    "example": "enablemap();"
   },
   "enablepause": {
     "name": "enablepause",
+    "type": "function",
     "params": [],
     "returns": "void",
-    "description": "enablepause()",
-    "example": "enablepause();",
     "scope": "clientside",
-    "type": ""
+    "description": "enablepause() - Re-enables the pause functionality that was previously disabled.",
+    "example": "enablepause();"
   },
   "enableweapons": {
     "name": "enableweapons",
@@ -3714,14 +3714,14 @@
   },
   "freefileresources": {
     "name": "freefileresources",
+    "type": "function",
     "params": [
       "str"
     ],
     "returns": "void",
-    "description": "freefileresources(str)",
-    "example": "freefileresources(param1);",
     "scope": "clientside",
-    "type": ""
+    "description": "freefileresources(str) - Used for clearing cached resource when files are deleted or updated.",
+    "example": "// Free resources for a specific file\nfreefileresources(\"overworld_map.png\");"
   },
   "generatezipstring": {
     "name": "generatezipstring",
@@ -3898,15 +3898,15 @@
   },
   "getdir": {
     "name": "getdir",
+    "type": "function",
     "params": [
       "float",
       "float"
     ],
-    "returns": "void",
-    "description": "getdir(float,float)",
-    "example": "getdir(param1, param2);",
-    "scope": "clientside",
-    "type": ""
+    "returns": "int",
+    "scope": "global",
+    "description": "getdir(float,float) - Calculates the direction (0-3) from a delta X and delta Y.",
+    "example": "// Calculate direction from movement delta\ntemp.dx = player.x - this.x;\ntemp.dy = player.y - this.y;\ntemp.dir = getdir(temp.dx, temp.dy); // Returns 0-3 based on the player movement\n\n// Face the direction of movement\nthis.dir = temp.dir;"
   },
   "getdownloadedupdatepackagesize": {
     "name": "getdownloadedupdatepackagesize",
@@ -4462,14 +4462,14 @@
   },
   "hidesword": {
     "name": "hidesword",
+    "type": "function",
     "params": [
       "float"
     ],
     "returns": "void",
-    "description": "hidesword(float)",
-    "example": "hidesword();",
     "scope": "clientside",
-    "type": ""
+    "description": "hidesword(float) - Hides or shows the player's sword/weapon.",
+    "example": "// Hide weapon during cutscene\nhidesword(0);\n\n// Show weapon again\nhidesword(1);"
   },
   "if": {
     "name": "if",
@@ -6598,115 +6598,116 @@
   },
   "Adventure_setScriptedDownloadSystem": {
     "name": "Adventure_setScriptedDownloadSystem",
+    "type": "function",
     "params": [
       "bool"
     ],
     "returns": "void",
     "scope": "clientside",
-    "description": "Enables or disables the scripted download system.",
-    "example": "Adventure_setScriptedDownloadSystem(true);",
-    "type": ""
+    "description": "Adventure_setScriptedDownloadSystem(bool) - Enables or disables the scripted download system.",
+    "example": "Adventure_setScriptedDownloadSystem(true);"
   },
   "Adventure_setFrameTick": {
     "name": "Adventure_setFrameTick",
+    "type": "function",
     "params": [
       "int"
     ],
     "returns": "void",
     "scope": "clientside",
-    "description": "Sets the frame tick value for the client. The value should be in milliseconds.",
-    "example": "Adventure_setFrameTick(50);",
-    "type": ""
+    "description": "Adventure_setFrameTick(int) - Sets the frame tick value for the client. The value should be in milliseconds.",
+    "example": "Adventure_setFrameTick(50);"
   },
   "Adventure_quit": {
     "name": "Adventure_quit",
+    "type": "function",
     "params": [],
     "returns": "void",
     "scope": "clientside",
-    "description": "Shuts down the Graal Client immediately",
-    "example": "Adventure_quit();",
-    "type": ""
+    "description": "Adventure_quit() - Shuts down the Graal Client immediately (sets closeapplication flag).",
+    "example": "Adventure_quit();"
   },
   "Adventure_getSystemID": {
     "name": "Adventure_getSystemID",
+    "type": "function",
     "params": [
       "index"
     ],
-    "returns": "string",
+    "returns": "str",
     "scope": "clientside",
-    "description": "System ID type (int) - returns string",
-    "example": "temp.sysid = Adventure_getSystemID(0);",
-    "type": ""
+    "description": "Adventure_getSystemID(int) - Returns System ID type.",
+    "example": "temp.sysid = Adventure_getSystemID(0);"
   },
   "Adventure_setAccountName": {
     "name": "Adventure_setAccountName",
+    "type": "function",
     "params": [
       "str"
     ],
     "returns": "void",
     "scope": "clientside",
-    "description": "Sets account name for login using the specified string.",
-    "example": "Adventure_setAccountName(\"myaccount\");",
-    "type": ""
+    "description": "Adventure_setAccountName(str) - Sets account name for login using the specified string.",
+    "example": "Adventure_setAccountName(\"myaccount\");"
   },
   "Adventure_setPassword": {
     "name": "Adventure_setPassword",
+    "type": "function",
     "params": [
       "str"
     ],
     "returns": "void",
     "scope": "clientside",
-    "description": "Sets account password for login using the specified string.",
-    "example": "Adventure_setPassword(\"mypassword\");",
-    "type": ""
+    "description": "Adventure_setPassword(str) - Sets account password for login using the specified string.",
+    "example": "Adventure_setPassword(\"mypassword\");"
   },
   "Adventure_setChat": {
     "name": "Adventure_setChat",
+    "type": "function",
     "params": [
       "str"
     ],
     "returns": "void",
     "scope": "clientside",
-    "description": "Sets the public overhead chat to the specified string.",
-    "example": "Adventure_setChat(\"Hello world!\");",
-    "type": ""
+    "description": "Adventure_setChat(str) - Sets the public overhead chat to the specified string.",
+    "example": "Adventure_setChat(\"Hello world!\");"
   },
   "Adventure_setNickName": {
     "name": "Adventure_setNickName",
+    "type": "function",
     "params": [
       "nickname"
     ],
     "returns": "str",
     "scope": "clientside",
-    "description": "Sets the nickname used during login to the specified string.",
-    "example": "Adventure_setNickName(\"NewNick\");",
-    "type": ""
+    "description": "Adventure_setNickName(str) - Sets the nickname used during login to the specified string.",
+    "example": "Adventure_setNickName(\"NewNick\");"
   },
   "Adventure_setTextEditText": {
     "name": "Adventure_setTextEditText",
+    "type": "function",
     "params": [
       "obj",
       "str"
     ],
     "returns": "void",
     "scope": "clientside",
-    "description": "Sets the text of a GuiTextEdit control.",
-    "example": "Adventure_setTextEditText(Test_TextEditCtrl, \"Testing\");",
-    "type": ""
+    "description": "Adventure_setTextEditText(obj, str) - Sets the text of a GuiTextEdit control.",
+    "example": "Adventure_setTextEditText(Test_TextEditCtrl, \"Testing\");"
   },
   "Adventure_setRemoveVars": {
     "name": "Adventure_setRemoveVars",
+    "type": "function",
     "params": [
       "bool"
     ],
     "returns": "void",
     "scope": "clientside",
-    "description": "Removes/clears variables.",
-    "example": "Adventure_setRemoveVars(true);",
-    "type": ""
+    "description": "Adventure_setRemoveVars(bool) - Removes/clears variables.",
+    "example": "Adventure_setRemoveVars(true);"
   },
   "Adventure_setFileContent": {
     "name": "Adventure_setFileContent",
+    "type": "function",
     "params": [
       "str",
       "str",
@@ -6714,42 +6715,41 @@
     ],
     "returns": "bool",
     "scope": "clientside",
-    "description": "Writes content to file (path, content, mode). The third parameter is the save mode (0 - overwrite, 1 - append)",
-    "example": "Adventure_setFileContent(\"scriptfiles/foo.txt\", \"bar\", 0);",
-    "type": ""
+    "description": "Adventure_setFileContent(str, str, int) - Writes content to file (path, content, mode). The third parameter is the save mode (0 - overwrite, 1 - append).",
+    "example": "Adventure_setFileContent(\"scriptfiles/foo.txt\", \"bar\", 0);"
   },
   "Adventure_setCheatWindows": {
     "name": "Adventure_setCheatWindows",
+    "type": "function",
     "params": [
       "str"
     ],
     "returns": "void",
     "scope": "clientside",
-    "description": "Adds a window/tab name to the banned cheat-window list, used with the cheatwindows server option.",
-    "example": "Adventure_setCheatWindows(\"Cheat_Engine\");",
-    "type": ""
+    "description": "Adventure_setCheatWindows(str) - Adds a window/tab name to the banned cheat-window list, used with the cheatwindows server option.",
+    "example": "Adventure_setCheatWindows(\"Cheat_Engine\");"
   },
   "Adventure_setGraalControlRecreate": {
     "name": "Adventure_setGraalControlRecreate",
+    "type": "function",
     "params": [
       "bool"
     ],
     "returns": "void",
     "scope": "clientside",
-    "description": "Forces recreation of Graal Control.",
-    "example": "Adventure_setGraalControlRecreate(true);",
-    "type": ""
+    "description": "Adventure_setGraalControlRecreate(bool) - Forces recreation of Graal Control.",
+    "example": "Adventure_setGraalControlRecreate(true);"
   },
   "Adventure_setFullscreen": {
     "name": "Adventure_setFullscreen",
+    "type": "function",
     "params": [
       "bool"
     ],
     "returns": "void",
     "scope": "clientside",
-    "description": "Enables/disables full-screen mode. DEPRECATED.",
-    "example": "Adventure_setFullscreen(1);",
-    "type": ""
+    "description": "Adventure_setFullscreen(bool) - Enables/disables full-screen mode. This is considered a deprecated function.",
+    "example": "Adventure_setFullscreen(false);"
   },
   "Adventure_setControlBinding": {
     "name": "Adventure_setControlBinding",
@@ -6762,39 +6762,40 @@
   },
   "Adventure_setAllowRecordByScript": {
     "name": "Adventure_setAllowRecordByScript",
+    "type": "function",
     "params": [
       "bool"
     ],
     "returns": "void",
     "scope": "clientside",
-    "description": "Enables/disables recording via startrecordvideo(). Would be considered deprecated.",
-    "example": "Adventure_setAllowRecordByScript(1);",
-    "type": ""
+    "description": "Adventure_setAllowRecordByScript(bool) - Enables/disables recording via startrecordvideo() and disablerecordvideo(). This is considered deprecated.",
+    "example": "Adventure_setAllowRecordByScript(true);"
   },
   "Adventure_setAllowedSocketsConnect": {
     "name": "Adventure_setAllowedSocketsConnect",
+    "type": "function",
     "params": [
       "str"
     ],
     "returns": "void",
     "scope": "clientside",
-    "description": "Authorizes a TSocket connection to the specified endpoint. The value must be in the format ip:port.",
-    "example": "Adventure_setAllowedSocketsConnect(\"127.0.0.1:4000\");",
-    "type": ""
+    "description": "Adventure_setAllowedSocketsConnect(str) - Authorizes a TSocket connection to the specified endpoint. The value must be in the format ip:port.",
+    "example": "Adventure_setAllowedSocketsConnect(\"127.0.0.1:4000\");"
   },
   "Adventure_getFileContent": {
     "name": "Adventure_getFileContent",
+    "type": "function",
     "params": [
       "str"
     ],
     "returns": "str",
     "scope": "clientside",
-    "description": "Reads file content from path - returns string",
-    "example": "temp.content = Adventure_getFileContent(\"scriptfiles/foo.txt\");",
-    "type": ""
+    "description": "Adventure_getFileContent(str) - Reads file content from path.",
+    "example": "temp.content = Adventure_getFileContent(\"scriptfiles/foo.txt\");"
   },
   "Adventure_getFolder": {
     "name": "Adventure_getFolder",
+    "type": "function",
     "params": [
       "str",
       "str",
@@ -6803,18 +6804,17 @@
     ],
     "returns": "array",
     "scope": "clientside",
-    "description": "Path, wildcard, include files (bool), include directories/recursive (bool) - returns object list",
-    "example": "temp.files = Adventure_getFolder(\"levels/\", \"*.nw\", true, true);",
-    "type": ""
+    "description": "Adventure_getFolder(str, str, bool, bool) - Retrieves files from a path. Parameters are: path, wildcard, include files (bool), include directories/recursive (bool).",
+    "example": "temp.files = Adventure_getFolder(\"levels/\", \"*.nw\", true, true);"
   },
   "Adventure_getBuildTime": {
     "name": "Adventure_getBuildTime",
+    "type": "function",
     "params": [],
-    "returns": "string",
+    "returns": "str",
     "scope": "clientside",
-    "description": "Build time of current client - returns string",
-    "example": "temp.build = Adventure_getBuildTime();",
-    "type": ""
+    "description": "Adventure_getBuildTime() - Build time of current client.",
+    "example": "temp.build = Adventure_getBuildTime();"
   },
   "Adventure_getIPhoneID": {
     "name": "Adventure_getIPhoneID",
@@ -6845,117 +6845,117 @@
   },
   "Adventure_getFileModTimeGlobal": {
     "name": "Adventure_getFileModTimeGlobal",
+    "type": "function",
     "params": [
-      "path"
+      "str"
     ],
-    "returns": "integer",
-    "description": "No matching script function found!",
-    "example": "temp.modtime = Adventure_getFileModTimeGlobal(\"data.txt\");",
+    "returns": "int",
     "scope": "clientside",
-    "type": ""
+    "description": "Adventure_getFileModTimeGlobal(str) - Retrieves the file modification time. Parameters are: Path.",
+    "example": "temp.modtime = Adventure_getFileModTimeGlobal(\"data.txt\");"
   },
   "Adventure_getWindowList": {
     "name": "Adventure_getWindowList",
+    "type": "function",
     "params": [],
     "returns": "array",
     "scope": "clientside",
-    "description": "Returns a list of open window tabs - returns array",
-    "example": "temp.windows = Adventure_getWindowList();",
-    "type": ""
+    "description": "Adventure_getWindowList() - Returns a list of open window tabs. Note: Non-functional on Worlds Client.",
+    "example": "temp.windows = Adventure_getWindowList();"
   },
   "Adventure_getApplicationFolder": {
     "name": "Adventure_getApplicationFolder",
+    "type": "function",
     "params": [
       "int"
     ],
     "returns": "str",
     "scope": "clientside",
-    "description": "Full path to Graal install (bool represented as int) - returns string.",
-    "example": "temp.appdir = Adventure_getApplicationFolder(true);",
-    "type": ""
+    "description": "Adventure_getApplicationFolder(int) - Full path to Graal install (bool represented as int).",
+    "example": "temp.appdir = Adventure_getApplicationFolder(true);"
   },
   "Adventure_getOSID": {
     "name": "Adventure_getOSID",
+    "type": "function",
     "params": [],
-    "returns": "string",
-    "description": "No matching script function found!",
-    "example": "temp.osid = Adventure_getOSID();",
+    "returns": "str",
     "scope": "clientside",
-    "type": ""
+    "description": "Adventure_getOSID() - Returns Operating system ID.",
+    "example": "temp.osid = Adventure_getOSID();"
   },
   "Adventure_getEditNickName": {
     "name": "Adventure_getEditNickName",
+    "type": "function",
     "params": [],
-    "returns": "string",
-    "description": "No matching script function found!",
-    "example": "temp.nick = Adventure_getEditNickName();",
+    "returns": "str",
     "scope": "clientside",
-    "type": ""
+    "description": "Adventure_getEditNickName() - Gets nickname from edit field on Login.",
+    "example": "temp.nick = Adventure_getEditNickName();"
   },
   "Adventure_getEditAccountNames": {
     "name": "Adventure_getEditAccountNames",
+    "type": "function",
     "params": [],
     "returns": "array",
-    "description": "No matching script function found!",
-    "example": "temp.accounts = Adventure_getEditAccountNames();",
     "scope": "clientside",
-    "type": ""
+    "description": "Adventure_getEditAccountNames()  - Gets account names from edit field on Login.",
+    "example": "temp.accounts = Adventure_getEditAccountNames();"
   },
   "Adventure_getControlBinding": {
     "name": "Adventure_getControlBinding",
+    "type": "function",
     "params": [],
     "returns": "object",
-    "description": "No matching script function found!",
-    "example": "temp.bindings = Adventure_getControlBinding();",
     "scope": "clientside",
-    "type": ""
+    "description": "Adventure_getControlBinding(int, int)  - Gets control key binding (action, bindslot). Returns an object with .keytext property.",
+    "example": "temp.bindings = Adventure_getControlBinding();"
   },
   "Adventure_reconnect": {
     "name": "Adventure_reconnect",
+    "type": "",
     "params": [],
     "returns": "void",
-    "description": "No matching script function found!",
-    "example": "Adventure_reconnect();",
     "scope": "clientside",
-    "type": ""
+    "description": "Adventure_reconnect() - Performs re-login.",
+    "example": "Adventure_reconnect();"
   },
   "Adventure_fileExists": {
     "name": "Adventure_fileExists",
+    "type": "function",
     "params": [
       "path"
     ],
-    "returns": "boolean",
-    "description": "No matching script function found!",
-    "example": "if (Adventure_fileExists(\"config.txt\")) { }",
+    "returns": "bool",
     "scope": "clientside",
-    "type": ""
+    "description": "Adventure_fileExists(str) - Checks if a file exists.",
+    "example": "if (Adventure_fileExists(\"config.txt\")) { }"
   },
   "Adventure_invokeKeyEvent": {
     "name": "Adventure_invokeKeyEvent",
+    "type": "function",
     "params": [
-      "x",
-      "y",
-      "text",
-      "value3"
+      "int",
+      "int",
+      "str",
+      "int"
     ],
     "returns": "void",
-    "description": "No matching script function found!",
-    "example": "Adventure_invokeKeyEvent(2, VK_D, \"\", 0);",
     "scope": "clientside",
-    "type": ""
+    "description": "Adventure_invokeKeyEvent(int, int, str, int) - Invokes key event (event type, key code, key name, modifier).",
+    "example": "Adventure_invokeKeyEvent(2, VK_D, \"\", 0);"
   },
   "Adventure_installGraal": {
     "name": "Adventure_installGraal",
+    "type": "function",
     "params": [
       "path",
       "install",
       "update"
     ],
     "returns": "void",
-    "description": "No matching script function found!",
-    "example": "Adventure_installGraal(\"/graal\", true, false);",
     "scope": "clientside",
-    "type": ""
+    "description": "Adventure_installGraal(str, bool, bool) - Installs Graal, used by the login-server to update the client.",
+    "example": "Adventure_installGraal(\"/graal\", true, false);"
   },
   "Adventure_openExternalPM": {
     "name": "Adventure_openExternalPM",
@@ -6970,50 +6970,50 @@
   },
   "Adventure_openServerList": {
     "name": "Adventure_openServerList",
+    "type": "function",
     "params": [],
     "returns": "void",
     "scope": "clientside",
-    "description": "This is a player world specific function. As name implies, it opens the Serverlist and is only available on the Login-Server.",
-    "example": "Adventure_openServerList();",
-    "type": ""
+    "description": "Adventure_openServerList() - This is a player world specific function. As name implies, it opens the Serverlist and is only available on the Login-Server.",
+    "example": "Adventure_openServerList();"
   },
   "Adventure_selectPath": {
     "name": "Adventure_selectPath",
+    "type": "function",
     "params": [
       "title"
     ],
     "returns": "object",
     "scope": "clientside",
-    "description": "Opens the file-browser",
-    "example": "temp.selected = Adventure_selectPath(\"Select file\");",
-    "type": ""
+    "description": "Adventure_selectPath(str) - Opens the file-browser.",
+    "example": "temp.selected = Adventure_selectPath(\"Select file\");"
   },
   "Adventure_updateMidiVolume": {
     "name": "Adventure_updateMidiVolume",
+    "type": "function",
     "params": [],
     "returns": "void",
-    "description": "No matching script function found!",
-    "example": "Adventure_updateMidiVolume();",
     "scope": "clientside",
-    "type": ""
+    "description": "Adventure_updateMidiVolume() \u2013 Updates the game\u2019s MIDI volume using the value set in the F5 settings menu.",
+    "example": "Adventure_updateMidiVolume();"
   },
   "Adventure_updateMp3Volume": {
     "name": "Adventure_updateMp3Volume",
+    "type": "function",
     "params": [],
     "returns": "void",
-    "description": "No matching script function found!",
-    "example": "Adventure_updateMp3Volume();",
     "scope": "clientside",
-    "type": ""
+    "description": "Adventure_updateMp3Volume() \u2013 Updates the game\u2019s MP3 volume using the value set in the F5 settings menu.",
+    "example": "Adventure_updateMp3Volume();"
   },
   "Adventure_updateRadioVolume": {
     "name": "Adventure_updateRadioVolume",
+    "type": "function",
     "params": [],
     "returns": "void",
-    "description": "No matching script function found!",
-    "example": "Adventure_updateRadioVolume();",
     "scope": "clientside",
-    "type": ""
+    "description": "Adventure_updateRadioVolume() \u2013 Updates the game\u2019s Radio volume using the value set in the F5 settings menu.",
+    "example": "Adventure_updateRadioVolume();"
   },
   "Adventure_openExternalOptions": {
     "name": "Adventure_openExternalOptions",
@@ -7972,14 +7972,14 @@
   },
   "hideplayer": {
     "name": "hideplayer",
+    "type": "function",
     "params": [
-      "float"
+      "duration"
     ],
     "returns": "void",
-    "description": "hideplayer(float)",
-    "example": "hideplayer();",
     "scope": "clientside",
-    "type": ""
+    "description": "hideplayer(float) - Hides or shows the player character for duration specified.",
+    "example": "// Hide player for a few seconds during a cut scene\nhideplayer(20);"
   },
   "hitobjects": {
     "name": "hitobjects",
@@ -8490,25 +8490,25 @@
   },
   "loadmap": {
     "name": "loadmap",
+    "type": "function",
     "params": [
       "str"
     ],
     "returns": "void",
-    "description": "loadmap(str)",
-    "example": "loadmap(\"overworld_map.png\");",
     "scope": "clientside",
-    "type": ""
+    "description": "loadmap(str) - Preloads a map or GMAP file into memory before the player is warped to it.",
+    "example": "// Preload map before warping player\nloadmap(\"overworld.gmap\");\n\n// Warp player after preload\nsleep(0.5);\nsetlevel2(\"overworld.gmap\", 50, 50)"
   },
   "loadtranslation": {
     "name": "loadtranslation",
+    "type": "function",
     "params": [
       "str"
     ],
     "returns": "void",
-    "description": "loadtranslation(str)",
-    "example": "loadtranslation(\"spanish\");",
     "scope": "clientside",
-    "type": ""
+    "description": "loadtranslation(str) - Loads a translation file for the specified language. (will download \"file_DOMAIN.po\" depending on the players language from the server)",
+    "example": "// Load Spanish translation\nloadtranslation(\"spanish\");\n\n// Or based on player preference\nif (player.language == \"es\") {\n  loadtranslation(\"spanish\");\n}"
   },
   "loadvars": {
     "name": "loadvars",
@@ -9236,25 +9236,25 @@
   },
   "opengraalurl": {
     "name": "opengraalurl",
+    "type": "function",
     "params": [
       "str"
     ],
     "returns": "void",
-    "description": "opengraalurl(str)",
-    "example": "opengraalurl(\"graal://server/level\");",
     "scope": "clientside",
-    "type": ""
+    "description": "opengraalurl(str) - opens a website of www.graalonline.com and automatically lets the player login to it (e.g. for the upgrade page or screenshot section)",
+    "example": "opengraalurl(\"www.graalonline.com\");"
   },
   "openurl": {
     "name": "openurl",
+    "type": "function",
     "params": [
       "str"
     ],
     "returns": "void",
-    "description": "openurl(str)",
-    "example": "openurl(\"http://example.com\");",
     "scope": "clientside",
-    "type": ""
+    "description": "openurl(str) - Opens a web URL in the system's default browser.",
+    "example": "// Open website in browser\nopenurl(\"www.graalonline.com\");\n\n// Open documentation\nopenurl(\"unity.gscript.dev\");"
   },
   "openurl2": {
     "name": "openurl2",
@@ -11288,6 +11288,7 @@
   },
   "rc4_cipher": {
     "name": "rc4_cipher",
+    "type": "function",
     "params": [
       "str",
       "str"
@@ -11295,8 +11296,7 @@
     "returns": "string",
     "scope": "global",
     "description": "rc4_cipher(str, str) - returns string - encrypts or decrypts data, parameters are the RC4 key and the data",
-    "example": "// Encrypting\ntemp.encrypted = base64encode(rc4_cipher(\"myKey\", base64encode(\"Hello World\")));\necho(\"Encrypted: \" @ temp.encrypted); // Output: pPNT3bcXPf5qKPVb6jxMBg==\n\n// Decrypting\ntemp.decrypted = base64decode(rc4_cipher(\"myKey\", base64decode(temp.encrypted)));\necho(\"Decrypted: \" @ temp.decrypted); // Output: Hello World",
-    "type": ""
+    "example": "// Encrypting\ntemp.encrypted = base64encode(rc4_cipher(\"myKey\", base64encode(\"Hello World\")));\necho(\"Encrypted: \" @ temp.encrypted); // Output: pPNT3bcXPf5qKPVb6jxMBg==\n\n// Decrypting\ntemp.decrypted = base64decode(rc4_cipher(\"myKey\", base64decode(temp.encrypted)));\necho(\"Decrypted: \" @ temp.decrypted); // Output: Hello World"
   },
   "reinstall": {
     "name": "reinstall",
@@ -19575,13 +19575,14 @@
   },
   "delete": {
     "name": "delete",
+    "type": "function",
     "params": [
       "index"
     ],
-    "returns": "void",
-    "description": "delete function",
-    "scope": "clientside",
-    "type": ""
+    "returns": "string",
+    "scope": "global",
+    "description": "delete(int) - Deletes an element from an array or collection at the specified index.",
+    "example": "temp.items = {\"apple\", \"banana\", \"cherry\"};\nitems.delete(1); // Removes \"banana\"\n// temp.items now has: {\"apple\", \"cherry\"}"
   },
   "deletefolder": {
     "name": "deletefolder",
@@ -19723,13 +19724,14 @@
   },
   "charat": {
     "name": "charat",
+    "type": "function",
     "params": [
       "pos"
     ],
-    "returns": "void",
-    "description": "charat function",
+    "returns": "string",
     "scope": "global",
-    "type": ""
+    "description": "charat(pos) - Returns the character at the specified position in a string.",
+    "example": "// Get first character of string\ntemp.text = \"hello\";\ntemp.first = temp.text.charat(0); // Returns \"h\"\n\n// Loop through characters\nfor (temp.i = 0; temp.i < temp.text.length(); temp.i++) {\n  echo(temp.text.charat(temp.i)); // print one letter at a line\n}"
   },
   "isipinranges": {
     "name": "isipinranges",
@@ -19786,13 +19788,14 @@
   },
   "ends": {
     "name": "ends",
+    "type": "function",
     "params": [
       "text"
     ],
-    "returns": "void",
-    "description": "ends function",
-    "scope": "clientside",
-    "type": ""
+    "returns": "str",
+    "scope": "global",
+    "description": "ends(str) - Checks if a string ends with the specified text/suffix.",
+    "example": "// Check file extension\ntemp.filename = \"image.png\";\nif (temp.filename.ends(\".png\")) {\n  // Handle PNG file\n}\n\n// Check if string ends with specific text\nif (player.chat.ends(\"!\")) {\n  // Player used exclamation\n}"
   },
   "onAcceleratorKeyEvent": {
     "name": "onAcceleratorKeyEvent",
@@ -19955,14 +19958,14 @@
   },
   "Adventure_addFileToIgnore": {
     "name": "Adventure_addFileToIgnore",
+    "type": "function",
     "params": [
       "str"
     ],
     "returns": "void",
     "scope": "clientside",
-    "description": "adds the file specified to an ignore list",
-    "example": "Adventure_addFileToIgnore(\"block.png\");",
-    "type": ""
+    "description": "Adds file to ignore list for downloads",
+    "example": "Adventure_addFileToIgnore(\"block.png\");"
   },
   "Adventure_requestUpdateModTime": {
     "name": "Adventure_requestUpdateModTime",
@@ -19999,6 +20002,7 @@
   },
   "Adventure_invokeMouseEvent": {
     "name": "Adventure_invokeMouseEvent",
+    "type": "function",
     "params": [
       "int",
       "int",
@@ -20010,18 +20014,17 @@
     ],
     "returns": "void",
     "scope": "clientside",
-    "description": "Invokes a mouse event, not necessarily needed.",
-    "example": "",
-    "type": ""
+    "description": "Adventure_invokeMouseEvent(int, int, int, int, double, double, int, bool) - Invokes a mouse event.\n\n`int` - Button ID (0 = no button, 1 = left, 2 = right, 3 = middle)\n`int` - X coordinate (integer)\n`int` - Y coordinate (integer)\n`int` - Modifier flags (0 = none, 1 = shift, 2 = ctrl, 3 = alt)\n`double` - X coordinate (floating point, for precise positioning)\n`double` - Y coordinate (floating point, for precise positioning)\n`int` - Wheel delta (scroll amount for wheel events, 0 for other events)\n`bool` - Pressed state (true = button down, false = button up; only used for button events)",
+    "example": "Adventure_invokeMouseEvent(2, 1, 0, 0, 0, 0);"
   },
   "Adventure_getFrameTick": {
     "name": "Adventure_getFrameTick",
+    "type": "function",
     "params": [],
     "returns": "int",
     "scope": "clientside",
-    "description": "Returns the current frame tick for the client",
-    "example": "temp.tick = Adventure_getFrameTick();",
-    "type": ""
+    "description": "Adventure_getFrameTick() - Gets current frame tick in milliseconds.",
+    "example": "temp.tick = Adventure_getFrameTick();"
   },
   "seteffect": {
     "name": "seteffect",
@@ -20399,14 +20402,14 @@
   },
   "GuiControl": {
     "name": "GuiControl",
+    "type": "function",
     "params": [
       "name"
     ],
     "returns": "GuiControl",
     "scope": "clientside",
     "description": "GuiControl is the base GUI control, therefore general functions listed here are available to all GUI controls. Most of the time it is used as container for positioning groups of other controls. It can either have a border (border=1..5) or just be plain transparent, and just display its child controls.",
-    "example": "new GuiControl(\"Test_Back\") {\n   useownprofile = true;\n   profile.border = 3;\n   x = 10;\n   y = 10;\n   width = 160;\n   height = 80;\n }",
-    "type": ""
+    "example": "new GuiControl(\"Test_Back\") {\n   useownprofile = true;\n   profile.border = 3;\n   x = 10;\n   y = 10;\n   width = 160;\n   height = 80;\n }"
   },
   "GuiWindowCtrl": {
     "name": "GuiWindowCtrl",
