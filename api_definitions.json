@@ -415,6 +415,7 @@
   },
   "setlevel2": {
     "name": "setlevel2",
+    "type": "function",
     "params": [
       "levelname",
       "x",
@@ -422,9 +423,8 @@
     ],
     "returns": "void",
     "scope": "serverside",
-    "description": "Warps the player to a new level and coordinates.",
-    "example": "function onPlayerTouchsMe() {\n    player.setlevel2(\"level.nw\", 32.5, 32);\n}",
-    "type": ""
+    "description": "setlevel2(levelname, x, y) - Warps the player to a new level and coordinates.",
+    "example": "function onPlayerTouchsMe() {\n    player.setlevel2(\"level.nw\", 32.5, 32);\n}"
   },
   "serverwarp": {
     "name": "serverwarp",
@@ -2029,12 +2029,12 @@
   },
   "getloginaccountname": {
     "name": "getloginaccountname",
+    "type": "function",
     "params": [],
-    "returns": "void",
-    "description": "getloginaccountname() - returns string",
-    "example": "getloginaccountname();",
+    "returns": "string",
     "scope": "clientside",
-    "type": ""
+    "description": "getloginaccountname() - returns the account name used to login as a string",
+    "example": "getloginaccountname();"
   },
   "log": {
     "name": "log",
@@ -4044,25 +4044,25 @@
   },
   "getmapx": {
     "name": "getmapx",
+    "type": "function",
     "params": [
       "str"
     ],
-    "returns": "void",
-    "description": "getmapx(str) - returns integer",
-    "example": "getmapx(param1);",
-    "scope": "clientside",
-    "type": ""
+    "returns": "int",
+    "scope": "global",
+    "description": "getmapx(str) - Gets the x coordinate location in the gmap of the level indicated by string. The top-left level starts at (0, 0).",
+    "example": "getmapx(\"overworld_a01.nw\");"
   },
   "getmapy": {
     "name": "getmapy",
+    "type": "function",
     "params": [
       "str"
     ],
-    "returns": "void",
-    "description": "getmapy(str) - returns integer",
-    "example": "getmapy(param1);",
-    "scope": "clientside",
-    "type": ""
+    "returns": "int",
+    "scope": "global",
+    "description": "getmapy(str) - Gets the y coordinate location in the gmap of the level indicated by string. The top-left level starts at (0, 0).",
+    "example": "getmapy(\"overworld_a01.nw\");"
   },
   "getmusicfilename": {
     "name": "getmusicfilename",
@@ -7013,24 +7013,6 @@
     "description": "Adventure_openExternalOptions() - Opens the external options window (F3).",
     "example": "Adventure_openExternalOptions();"
   },
-  "Adventure_enablePingConnection": {
-    "name": "Adventure_enablePingConnection",
-    "params": [],
-    "returns": "void",
-    "description": "No matching script function found!",
-    "example": "Adventure_enablePingConnection();",
-    "scope": "clientside",
-    "type": ""
-  },
-  "Adventure_disablePingConnection": {
-    "name": "Adventure_disablePingConnection",
-    "params": [],
-    "returns": "void",
-    "description": "No matching script function found!",
-    "example": "Adventure_disablePingConnection();",
-    "scope": "clientside",
-    "type": ""
-  },
   "Adventure_hasSignerKey": {
     "name": "Adventure_hasSignerKey",
     "type": "function",
@@ -7039,24 +7021,6 @@
     "scope": "clientside",
     "description": "Adventure_hasSignerKey() - Checks whether the client currently has a valid signer key loaded. Specific to mobile versions.",
     "example": "if (Adventure_hasSignerKey()) { }"
-  },
-  "Adventure_updatePlayerMuted": {
-    "name": "Adventure_updatePlayerMuted",
-    "params": [],
-    "returns": "void",
-    "description": "No matching script function found!",
-    "example": "Adventure_updatePlayerMuted();",
-    "scope": "clientside",
-    "type": ""
-  },
-  "Adventure_openDefaultViewer": {
-    "name": "Adventure_openDefaultViewer",
-    "params": [],
-    "returns": "void",
-    "description": "No matching script function found!",
-    "example": "Adventure_openDefaultViewer();",
-    "scope": "clientside",
-    "type": ""
   },
   "Adventure_saveGraalOptions": {
     "name": "Adventure_saveGraalOptions",
@@ -11724,12 +11688,12 @@
   },
   "allowloginreconnect": {
     "name": "allowloginreconnect",
+    "type": "variable",
     "params": [],
-    "returns": "void",
-    "description": "Clientside:",
-    "example": "allowloginreconnect()",
+    "returns": "bool",
     "scope": "clientside",
-    "type": ""
+    "description": "allowloginreconnect - Allows players to reconnect automatically without logging in again.",
+    "example": "allowloginreconnect = true;"
   },
   "allowmultipleselections": {
     "name": "allowmultipleselections",
@@ -13090,12 +13054,12 @@
   },
   "disableactionprojectile": {
     "name": "disableactionprojectile",
+    "type": "variable",
     "params": [],
-    "returns": "void",
-    "description": "Clientside:",
-    "example": "disableactionprojectile()",
+    "returns": "bool",
     "scope": "clientside",
-    "type": ""
+    "description": "disableactionprojectile - Disables all onActionProjectile event handlers from running.",
+    "example": "disableactionprojectile = true;"
   },
   "disableactionprojectile2": {
     "name": "disableactionprojectile2",
@@ -15389,12 +15353,12 @@
   },
   "loadingscreenenabled": {
     "name": "loadingscreenenabled",
+    "type": "variable",
     "params": [],
-    "returns": "void",
-    "description": "Clientside:",
-    "example": "loadingscreenenabled()",
+    "returns": "bool",
     "scope": "clientside",
-    "type": ""
+    "description": "loadingscreenenabled - Determines whether the loading screen is enabled. Must be disabled by script starting with v5.226.",
+    "example": "loadingscreenenabled = true;"
   },
   "localversion": {
     "name": "localversion",
@@ -20415,5 +20379,64 @@
     "description": "Works as a container for other control and displays a title bar and buttons for minimizing, maximizing and closing. With Ctrl+Tab you can switch between active windows.",
     "example": "new GuiWindowCtrl(\"Test_Window\") {\n  profile = GuiBlueWindowProfile;\n  x = 10;\n  y = 10;\n  width = 160;\n  height = 80;\n  text = \"Window\";\n}",
     "type": ""
+  },
+  "Adventure_uploadFile": {
+    "name": "Adventure_uploadFile",
+    "type": "function",
+    "params": [
+      "str"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "Adventure_uploadFile(str) - Displays the file in the File Browser/Echo tab as if it was uploaded, but does not actually upload it.",
+    "example": "Adventure_uploadFile(\"online_count.txt\");"
+  },
+  "Adventure_excludeFileFromBackup": {
+    "name": "Adventure_excludeFileFromBackup",
+    "type": "function",
+    "params": [
+      "str",
+      "bool"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "Adventure_excludeFileFromBackup(str, bool) - Sets whether a file or folder should be excluded from iOS backups.",
+    "example": "Adventure_excludeFileFromBackup(Adventure_getApplicationFolder(1) @ \"scriptfiles/\", true);"
+  },
+  "multitaskingenabled": {
+    "name": "multitaskingenabled",
+    "type": "variable",
+    "params": [],
+    "returns": "bool",
+    "scope": "clientside",
+    "description": "multitaskingenabled - Indicates whether multitasking support is turned on.",
+    "example": "multitaskingenabled = true;"
+  },
+  "Adventure_disablePingConnection": {
+    "name": "Adventure_disablePingConnection",
+    "type": "function",
+    "params": [],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "DEPRECATED",
+    "example": ""
+  },
+  "Adventure_enablePingConnection": {
+    "name": "Adventure_enablePingConnection",
+    "type": "function",
+    "params": [],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "DEPRECATED",
+    "example": ""
+  },
+  "Adventure_updatePlayerMuted": {
+    "name": "Adventure_updatePlayerMuted",
+    "type": "function",
+    "params": [],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "DEPRECATED",
+    "example": ""
   }
 }
