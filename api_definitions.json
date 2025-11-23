@@ -806,12 +806,12 @@
   },
   "chat": {
     "name": "chat",
+    "type": "variable",
     "params": [],
     "returns": "string",
     "scope": "global",
     "description": "TPlayer.chat - string\nTServerNPC.chat - string",
-    "example": "chat = \"Hello everyone!\"; // Would set an NPC's chat.\nplayer.chat = \"Hello world\"; // Would set the player chat.",
-    "type": ""
+    "example": "chat = \"Hello everyone!\"; // Would set an NPC's chat.\nplayer.chat = \"Hello world\"; // Would set the player chat."
   },
   "message": {
     "name": "message",
@@ -6818,30 +6818,30 @@
   },
   "Adventure_getIPhoneID": {
     "name": "Adventure_getIPhoneID",
+    "type": "function",
     "params": [],
-    "returns": "string",
-    "description": "No matching script function found!",
-    "example": "temp.deviceid = Adventure_getIPhoneID();",
+    "returns": "str",
     "scope": "clientside",
-    "type": ""
+    "description": "Adventure_getIPhoneID() - Returns the unique identifier for a device.",
+    "example": "temp.deviceid = Adventure_getIPhoneID();"
   },
   "Adventure_getAndroidDeviceModel": {
     "name": "Adventure_getAndroidDeviceModel",
+    "type": "function",
     "params": [],
-    "returns": "string",
-    "description": "No matching script function found!",
-    "example": "temp.model = Adventure_getAndroidDeviceModel();",
+    "returns": "str",
     "scope": "clientside",
-    "type": ""
+    "description": "Adventure_getAndroidDeviceModel() - Specific function for android builds to grab the device model.",
+    "example": "temp.model = Adventure_getAndroidDeviceModel();"
   },
   "Adventure_getAndroidOSVersion": {
     "name": "Adventure_getAndroidOSVersion",
+    "type": "function",
     "params": [],
-    "returns": "string",
-    "description": "No matching script function found!",
-    "example": "temp.osver = Adventure_getAndroidOSVersion();",
+    "returns": "str",
     "scope": "clientside",
-    "type": ""
+    "description": "Adventure_getAndroidOSVersion() - Specific function for android builds to grab the operating system version.",
+    "example": "temp.osver = Adventure_getAndroidOSVersion();"
   },
   "Adventure_getFileModTimeGlobal": {
     "name": "Adventure_getFileModTimeGlobal",
@@ -6977,24 +6977,13 @@
     "description": "Adventure_openServerList() - This is a player world specific function. As name implies, it opens the Serverlist and is only available on the Login-Server.",
     "example": "Adventure_openServerList();"
   },
-  "Adventure_selectPath": {
-    "name": "Adventure_selectPath",
-    "type": "function",
-    "params": [
-      "title"
-    ],
-    "returns": "object",
-    "scope": "clientside",
-    "description": "Adventure_selectPath(str) - Opens the file-browser.",
-    "example": "temp.selected = Adventure_selectPath(\"Select file\");"
-  },
   "Adventure_updateMidiVolume": {
     "name": "Adventure_updateMidiVolume",
     "type": "function",
     "params": [],
     "returns": "void",
     "scope": "clientside",
-    "description": "Adventure_updateMidiVolume() \u2013 Updates the game\u2019s MIDI volume using the value set in the F5 settings menu.",
+    "description": "Adventure_updateMidiVolume() \u2013 Updates the game\u2019s MIDI volume using the value set in the F3 settings menu.",
     "example": "Adventure_updateMidiVolume();"
   },
   "Adventure_updateMp3Volume": {
@@ -7003,7 +6992,7 @@
     "params": [],
     "returns": "void",
     "scope": "clientside",
-    "description": "Adventure_updateMp3Volume() \u2013 Updates the game\u2019s MP3 volume using the value set in the F5 settings menu.",
+    "description": "Adventure_updateMp3Volume() \u2013 Updates the game\u2019s MP3 volume using the value set in the F3 settings menu.",
     "example": "Adventure_updateMp3Volume();"
   },
   "Adventure_updateRadioVolume": {
@@ -7012,17 +7001,17 @@
     "params": [],
     "returns": "void",
     "scope": "clientside",
-    "description": "Adventure_updateRadioVolume() \u2013 Updates the game\u2019s Radio volume using the value set in the F5 settings menu.",
+    "description": "Adventure_updateRadioVolume() \u2013 Updates the game\u2019s Radio volume using the value set in the F3 settings menu.",
     "example": "Adventure_updateRadioVolume();"
   },
   "Adventure_openExternalOptions": {
     "name": "Adventure_openExternalOptions",
+    "type": "function",
     "params": [],
     "returns": "void",
-    "description": "No matching script function found!",
-    "example": "Adventure_openExternalOptions();",
     "scope": "clientside",
-    "type": ""
+    "description": "Adventure_openExternalOptions() - Opens the external options window (F3).",
+    "example": "Adventure_openExternalOptions();"
   },
   "Adventure_enablePingConnection": {
     "name": "Adventure_enablePingConnection",
@@ -7044,12 +7033,12 @@
   },
   "Adventure_hasSignerKey": {
     "name": "Adventure_hasSignerKey",
+    "type": "function",
     "params": [],
-    "returns": "boolean",
-    "description": "No matching script function found!",
-    "example": "if (Adventure_hasSignerKey()) { }",
+    "returns": "bool",
     "scope": "clientside",
-    "type": ""
+    "description": "Adventure_hasSignerKey() - Checks whether the client currently has a valid signer key loaded. Specific to mobile versions.",
+    "example": "if (Adventure_hasSignerKey()) { }"
   },
   "Adventure_updatePlayerMuted": {
     "name": "Adventure_updatePlayerMuted",
@@ -7071,12 +7060,12 @@
   },
   "Adventure_saveGraalOptions": {
     "name": "Adventure_saveGraalOptions",
+    "type": "function",
     "params": [],
     "returns": "void",
-    "description": "No matching script function found!",
-    "example": "Adventure_saveGraalOptions();",
     "scope": "clientside",
-    "type": ""
+    "description": "Adventure_saveGraalOptions()  - Saves Graal client options (F3) to disk.",
+    "example": "Adventure_saveGraalOptions();"
   },
   "Adventure_startOnlineMode": {
     "name": "Adventure_startOnlineMode",
@@ -7089,30 +7078,35 @@
   },
   "Adventure_requestFilesMove": {
     "name": "Adventure_requestFilesMove",
-    "params": [],
+    "type": "function",
+    "params": [
+      "str",
+      "str"
+    ],
     "returns": "void",
-    "description": "No matching script function found!",
-    "example": "Adventure_requestFilesMove();",
     "scope": "clientside",
-    "type": ""
+    "description": "Adventure_requestFilesMove(str, str) - Requests file move (New Path, Filename). This only works when the file\u2019s folder is currently open in the File Browser.",
+    "example": "Adventure_requestFilesMove(\"temp/\", \"olne_log.txt\"); moves olne_log.txt into the temp/ directory"
   },
   "Adventure_requestFileDeletion": {
     "name": "Adventure_requestFileDeletion",
-    "params": [],
+    "type": "function",
+    "params": [
+      "str"
+    ],
     "returns": "void",
-    "description": "No matching script function found!",
-    "example": "Adventure_requestFileDeletion();",
     "scope": "clientside",
-    "type": ""
+    "description": "Adventure_requestFileDeletion(str) \u2013 Requests deletion of a file from the server. This only works when the file\u2019s folder is currently open in the File Browser.",
+    "example": "Adventure_requestFileDeletion(\"bg.png\");"
   },
   "Adventure_requestFileRename": {
     "name": "Adventure_requestFileRename",
+    "type": "function",
     "params": [],
     "returns": "void",
-    "description": "No matching script function found!",
-    "example": "Adventure_requestFileRename();",
     "scope": "clientside",
-    "type": ""
+    "description": "Adventure_requestFileRename(str, str) \u2013 Requests renaming a file from oldName to newName. This only works when the file\u2019s folder is currently open in the File Browser.",
+    "example": "Adventure_requestFileRename(\"logo2.png\", \"logo3.png\");"
   },
   "addcontrol": {
     "name": "addcontrol",
@@ -19964,7 +19958,7 @@
     ],
     "returns": "void",
     "scope": "clientside",
-    "description": "Adds file to ignore list for downloads",
+    "description": "Adventure_addFileToIgnore(str) - Adds file to ignore list for downloads.",
     "example": "Adventure_addFileToIgnore(\"block.png\");"
   },
   "Adventure_requestUpdateModTime": {
@@ -19980,14 +19974,14 @@
   },
   "Adventure_requestDownload": {
     "name": "Adventure_requestDownload",
+    "type": "function",
     "params": [
       "str"
     ],
     "returns": "void",
     "scope": "clientside",
-    "description": "Requests file download from server (Used by IRC File Browser)",
-    "example": "Adventure_requestDownload(\"block.png\");",
-    "type": ""
+    "description": "Adventure_requestDownload(str) \u2013 Requests downloading a file from the server. This only works for files marked with the **file** type in folderconfig. The fileupdate() function calls this function.",
+    "example": "Adventure_requestDownload(\"block.png\");"
   },
   "Adventure_requestUpdateCRC": {
     "name": "Adventure_requestUpdateCRC",
