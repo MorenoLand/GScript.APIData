@@ -255,32 +255,32 @@
   },
   "freezeplayer": {
     "name": "freezeplayer",
+    "type": "function",
     "params": [
-      "x"
+      "time"
     ],
     "returns": "void",
-    "description": "TServerPlayer.unfreezeplayer() | unfreezeplayer()",
-    "example": "freezeplayer(2);",
     "scope": "clientside",
-    "type": ""
+    "description": "Freezes the player for a specified duration in seconds.",
+    "example": "freezeplayer(5); // Freeze for 5 seconds"
   },
   "freezeplayer2": {
     "name": "freezeplayer2",
+    "type": "function",
     "params": [],
     "returns": "void",
-    "description": "freezeplayer2() | TServerPlayer.freezeplayer2()",
-    "example": "freezeplayer2();",
-    "scope": "clientside",
-    "type": ""
+    "scope": "global",
+    "description": "TServerPlayer.freezeplayer2() - Freezes the player, preventing movement and disabling controls.",
+    "example": "// Clientside - freeze own player\nfreezeplayer2();\nsleep(3);\nunfreezeplayer();\n\n// Serverside - freeze another player\nwith (findplayer(\"accountname\")) {\n    freezeplayer2();\n}"
   },
   "unfreezeplayer": {
     "name": "unfreezeplayer",
+    "type": "",
     "params": [],
     "returns": "void",
-    "description": "TServerPlayer.unfreezeplayer() | unfreezeplayer()",
-    "example": "unfreezeplayer();",
     "scope": "clientside",
-    "type": ""
+    "description": "TServerPlayer.unfreezeplayer() - Unfreezes the player, restoring movement and controls.",
+    "example": "// Clientside\nfreezeplayer2();\nunfreezeplayer();\n\n// Serverside\nwith (findplayer(\"accountname\")) {\n    unfreezeplayer();\n}"
   },
   "setplayerdir": {
     "name": "setplayerdir",
@@ -307,15 +307,15 @@
   },
   "setani": {
     "name": "setani",
+    "type": "function",
     "params": [
       "str",
       "str"
     ],
     "returns": "void",
-    "description": "setani(str, str) | TServerPlayer.setani(str, str)",
-    "example": "setani(\"walk\");",
-    "scope": "clientside",
-    "type": ""
+    "scope": "global",
+    "description": "TServerPlayer.setani(str, str) - Sets the player's animation to the specified animation name. The second parameter is an optional parameter that can be accessed in the gani via PARAM1, PARAM2, etc., and can be used to pass data like image filenames to display icons or other visual elements.",
+    "example": "// Set animation with parameter for icon display\nsetani(\"chest_item\", \"mega_rupee.png\");\n// In the gani, PARAM1 would contain \"mega_rupee.png\" and can be used to display the icon\n\n// Set basic animation without parameters\nsetani(\"walk\", \"\");\n\n// Serverside - set another player's animation\nwith (findplayer(\"accountname\")) {\n    setani(\"idle\", \"\");\n}"
   },
   "setbody": {
     "name": "setbody",
@@ -5576,6 +5576,7 @@
   },
   "pokereval": {
     "name": "pokereval",
+    "type": "function",
     "params": [
       "str",
       "obj",
@@ -5584,10 +5585,9 @@
       "int"
     ],
     "returns": "void",
+    "scope": "serverside",
     "description": "pokereval(str, obj, obj, obj, int) - returns object - returns an array of chance to win a poker game, parameters are the poker type (holdem, holdem8, omaha, omaha8, 7stud, 7stud8, 7studnsq, razz, lowball27), an array of each players cards ({{\"as\",\"ah\"},{\"kd\",\"kc\"}}), the common cards, the dead cards...",
-    "example": "pokereval(param1, param2, param3, param4, param5);",
-    "scope": "clientside",
-    "type": ""
+    "example": "// Evaluate a Hold'em hand with two players\ntemp.playerCards = {{\"as\",\"ah\"}, {\"kd\",\"kc\"}};  // Player 1: AA, Player 2: KK\ntemp.commonCards = {\"qs\",\"qh\",\"qc\"};             // Flop: QQQ\ntemp.deadCards = {\"ac\"};                         // Known dead card\ntemp.iterations = 10000;                          // 10,000 simulations\n\ntemp.results = pokereval(\"holdem\", temp.playerCards, temp.commonCards, temp.deadCards, temp.iterations);\n// temp.results is now an array like {0.9124, 0.0876}\n\n// Access individual player probabilities\necho(\"Player 1 win chance: \" @ (temp.results[0] * 100) @ \"%\");\necho(\"Player 2 win chance: \" @ (temp.results[1] * 100) @ \"%\");\n\n// Or display all results\necho(temp.results); // Outputs: 0.9124,0.0876"
   },
   "reflow": {
     "name": "reflow",
@@ -7033,12 +7033,12 @@
   },
   "Adventure_startOnlineMode": {
     "name": "Adventure_startOnlineMode",
+    "type": "function",
     "params": [],
     "returns": "void",
-    "description": "No matching script function found!",
-    "example": "Adventure_startOnlineMode();",
     "scope": "clientside",
-    "type": ""
+    "description": "DEPRECATED",
+    "example": ""
   },
   "Adventure_requestFilesMove": {
     "name": "Adventure_requestFilesMove",
@@ -20438,5 +20438,23 @@
     "scope": "clientside",
     "description": "DEPRECATED",
     "example": ""
+  },
+  "Adventure_openDefaultViewer": {
+    "name": "Adventure_openDefaultViewer",
+    "type": "function",
+    "params": [],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "Adventure_openDefaultViewer(str, int)  -  Opens default file viewer (path, type). DEPRECATED.",
+    "example": ""
+  },
+  "TSocket": {
+    "name": "TSocket",
+    "type": "function",
+    "params": [],
+    "returns": "object",
+    "scope": "global",
+    "description": "TSocket() - Creates a socket object used to configure and open a connection to a destination. On server-side, socket connections are only enabled for iPhone Servers.",
+    "example": "//#CLIENTSIDE\nfunction onCreated() {\n  // Enables TSocket destination\n  Adventure_setAllowedSocketsConnect(\"127.0.0.1:8002\");\n  \n  temp.socket = new TSocket(); // Create the TSocket object\n  \n  // Setup socket handlers\n  this.catchEvent(temp.socket, \"onConnect\", \"onHandleSocketConnection\");\n  this.catchEvent(temp.socket, \"onReceiveData\", \"onHandleIncomingSocketMessage\");\n  this.catchEvent(temp.socket, \"onClose\", \"onHandleSocketClosure\");\n\n  // Connect socket to the endpoint\n  temp.socket.connect(\"127.0.0.1\", 8002);\n}\n\nfunction onHandleSocketConnection() {\n  echo(\"TSocket Connection has been established\");\n}\n\nfunction onHandleIncomingSocketMessage(temp.obj) {\n  echo(\"TSocket Server Sent: \" @ temp.obj.data);\n}\n\nfunction onHandleSocketClosure(temp.obj) {\n  echo(\"TSocket Connection has been closed\");\n}"
   }
 }
