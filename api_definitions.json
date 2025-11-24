@@ -1,6 +1,7 @@
 {
   "showimg": {
     "name": "showimg",
+    "type": "variable",
     "params": [
       "index",
       "imageFile",
@@ -10,8 +11,7 @@
     "returns": "void",
     "scope": "clientside",
     "description": "Creates a new, independent visual element. The 'index' is critical: indices >= 200 are private to the local client, while indices < 200 are public and visible to all nearby players.\n\nreturns object",
-    "example": "showimg(1, \"block.png\", player.x, player.y);",
-    "type": ""
+    "example": "showimg(1, \"block.png\", player.x, player.y);"
   },
   "findimg": {
     "name": "findimg",
@@ -4749,14 +4749,14 @@
   },
   "makefirstresponder": {
     "name": "makefirstresponder",
+    "type": "variable",
     "params": [
       "bool"
     ],
     "returns": "void",
     "scope": "clientside",
     "description": "Makes the control the first responder for key input.",
-    "example": "GraalControl.makefirstresponder(bool);\n//bring focus to main game window\n\nGuiControl.makefirstresponder(bool);\n//give focus to a specific GUI control",
-    "type": ""
+    "example": "GraalControl.makefirstresponder(bool);\n//bring focus to main game window\n\nGuiControl.makefirstresponder(bool);\n//give focus to a specific GUI control"
   },
   "makescreenshot2": {
     "name": "makescreenshot2",
@@ -19788,11 +19788,12 @@
   },
   "onCloseQuery": {
     "name": "onCloseQuery",
+    "type": "",
     "params": [],
     "returns": "void",
-    "description": "Called when the window is about to close, can prevent closing",
-    "scope": "serverside",
-    "type": ""
+    "scope": "clientside",
+    "description": "onCloseQuery() - Event triggered when the user clicks the close button on a GuiWindowCtrl where the 'closequery' property is set to true.\nThis allows the script to intercept the close action.",
+    "example": "function createWindow() {\n    new GuiWindowCtrl(\"MyMainWindow\") {\n        profile = GuiBlueWindowProfile;\n        extent = \"300 150\";\n        text = \"Main Window\";\n        visible = true;\n        \n        // This property is essential for onCloseQuery to work.\n        closequery = true;\n    };\n}\n\n// When the user clicks the 'X' on MyMainWindow...\nfunction MyMainWindow.onCloseQuery() {\n    // ...create a confirmation dialog instead of closing immediately.\n    new GuiWindowCtrl(\"ConfirmDialog\") {\n        profile = GuiBlueWindowProfile;\n        extent = \"200 80\";\n        text = \"Are you sure?\";\n        visible = true;\n        modal = true; // Prevents clicking the main window\n\n        new GuiButtonCtrl(\"YesButton\") {\n            position = \"20 20\";\n            extent = \"70 25\";\n            text = \"Yes\";\n        };\n        new GuiButtonCtrl(\"NoButton\") {\n            position = \"110 20\";"
   },
   "onGaniAttributeChanged": {
     "name": "onGaniAttributeChanged",
@@ -20456,5 +20457,47 @@
     "scope": "global",
     "description": "TSocket() - Creates a socket object used to configure and open a connection to a destination. On server-side, socket connections are only enabled for iPhone Servers.",
     "example": "//#CLIENTSIDE\nfunction onCreated() {\n  // Enables TSocket destination\n  Adventure_setAllowedSocketsConnect(\"127.0.0.1:8002\");\n  \n  temp.socket = new TSocket(); // Create the TSocket object\n  \n  // Setup socket handlers\n  this.catchEvent(temp.socket, \"onConnect\", \"onHandleSocketConnection\");\n  this.catchEvent(temp.socket, \"onReceiveData\", \"onHandleIncomingSocketMessage\");\n  this.catchEvent(temp.socket, \"onClose\", \"onHandleSocketClosure\");\n\n  // Connect socket to the endpoint\n  temp.socket.connect(\"127.0.0.1\", 8002);\n}\n\nfunction onHandleSocketConnection() {\n  echo(\"TSocket Connection has been established\");\n}\n\nfunction onHandleIncomingSocketMessage(temp.obj) {\n  echo(\"TSocket Server Sent: \" @ temp.obj.data);\n}\n\nfunction onHandleSocketClosure(temp.obj) {\n  echo(\"TSocket Connection has been closed\");\n}"
+  },
+  "GuiButtonCtrl": {
+    "name": "GuiButtonCtrl",
+    "type": "",
+    "params": [
+      "instanceName"
+    ],
+    "returns": "object",
+    "scope": "clientside",
+    "description": "GuiButtonCtrl - A standard clickable button control used in GUIs. Its primary event is onAction(), which is triggered when the user clicks it.",
+    "example": "new GuiButtonCtrl(\"MyExampleButton\") {\n        profile = GuiBlueButtonProfile;\n        extent = \"100 30\";\n        position = \"50 30\";\n        text = \"Click Me\";\n    };\n};\n\n// The function name is always [instanceName].onAction().\nfunction MyExampleButton.onAction() {\n    player.chat = \"Button was clicked!\";\n}"
+  },
+  "GuiTextCtrl": {
+    "name": "GuiTextCtrl",
+    "type": "function",
+    "params": [
+      "instanceName"
+    ],
+    "returns": "object",
+    "scope": "clientside",
+    "description": "GuiTextCtrl - A simple control for displaying a single line of static text.\n\nIf you need to display more than one line, then use a GuiMLTextCtrl.",
+    "example": "function onCreated() {\n    new GuiWindowCtrl(\"MyWindow\") {\n        profile = GuiBlueWindowProfile;\n        extent = \"200 100\";\n        text = \"This is the window title\";\n        visible = true;\n        \n        // \"MyLabel\" is the instanceName for this control.\n        new GuiTextCtrl(\"MyLabel\") {\n            profile = GuiBlueTextProfile;\n            position = \"10 20\";\n            text = \"Initial Text...\";\n        };\n    };\n\n    // Schedule an event to run in 2 seconds.\n    scheduleevent(2.0, \"updateMyLabel\");\n}\n\n// The engine calls this event handler after the 2-second delay.\nfunction onupdateMyLabel() {\n    if (isObject(\"MyLabel\")) {\n        MyLabel.text = \"Text has been updated!\";\n    }\n}"
+  },
+  "GuiTextListCtrl": {
+    "name": "GuiTextListCtrl",
+    "type": "",
+    "params": [],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "",
+    "example": ""
+  },
+  "GuiTabCtrl": {
+    "name": "GuiTabCtrl",
+    "type": "function",
+    "params": [
+      "instanceName"
+    ],
+    "returns": "object",
+    "scope": "clientside",
+    "description": "GuiTabCtrl - A control that displays a row of clickable tabs. It triggers an onSelect event when a tab is clicked, but the script is responsible for showing or hiding the associated content panes.",
+    "example": "function onCreated() {\n    new GuiWindowCtrl(\"MyTabWindow\") {\n        profile = GuiBlueWindowProfile;\n        extent = \"300 200\";\n        text = \"Tab Control Example\";\n        visible = true;\n\n        // Create the tab control.\n        new GuiTabCtrl(\"MyTabs\") {\n            profile = GuiBlueTabProfile;\n            position = \"10 20\";\n            extent = \"280 30\";\n        };\n\n        // Create the content panes for each tab.\n        new GuiTextCtrl(\"Pane1\") {\n            position = \"10 50\";\n            extent = \"280 140\";\n            text = \"This is the content for the first tab.\";\n            visible = true; // Initially visible\n        };\n        new GuiTextCtrl(\"Pane2\") {\n            position = \"10 50\";\n            extent = \"280 140\";\n            text = \"This is the content for the second tab.\";\n            visible = false; // Initially hidden\n        };\n    };\n\n    // Add tabs to the control.\n    MyTabs.addrow(1, \"First Tab\");\n    MyTabs.addrow(2, \"Second Tab\");\n\n    // Set the def"
   }
 }
