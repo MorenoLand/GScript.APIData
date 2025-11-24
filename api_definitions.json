@@ -952,16 +952,16 @@
   },
   "scheduleevent": {
     "name": "scheduleevent",
+    "type": "function",
     "params": [
       "float",
       "str",
       "params..."
     ],
     "returns": "void",
-    "description": "TGraalVar.scheduleevent(float, str, params...) - returns object - invokes an event (onEventname) after the specified delay (in seconds), second parameter is the event name, followed by the parameters",
-    "example": "scheduleevent(10, \"customEvent\", \"param1\");",
-    "scope": "clientside",
-    "type": ""
+    "scope": "global",
+    "description": "TGraalVar.scheduleevent(float, str, params...) - returns object - invokes an event (onEventname) after the specified delay (in seconds), second parameter is the event name, followed by the optional parameters",
+    "example": "scheduleevent(10, \"customEvent\", \"param1\");"
   },
   "timeout": {
     "name": "timeout",
@@ -20499,5 +20499,27 @@
     "scope": "clientside",
     "description": "GuiTabCtrl - A control that displays a row of clickable tabs. It triggers an onSelect event when a tab is clicked, but the script is responsible for showing or hiding the associated content panes.",
     "example": "function onCreated() {\n    new GuiWindowCtrl(\"MyTabWindow\") {\n        profile = GuiBlueWindowProfile;\n        extent = \"300 200\";\n        text = \"Tab Control Example\";\n        visible = true;\n\n        // Create the tab control.\n        new GuiTabCtrl(\"MyTabs\") {\n            profile = GuiBlueTabProfile;\n            position = \"10 20\";\n            extent = \"280 30\";\n        };\n\n        // Create the content panes for each tab.\n        new GuiTextCtrl(\"Pane1\") {\n            position = \"10 50\";\n            extent = \"280 140\";\n            text = \"This is the content for the first tab.\";\n            visible = true; // Initially visible\n        };\n        new GuiTextCtrl(\"Pane2\") {\n            position = \"10 50\";\n            extent = \"280 140\";\n            text = \"This is the content for the second tab.\";\n            visible = false; // Initially hidden\n        };\n    };\n\n    // Add tabs to the control.\n    MyTabs.addrow(1, \"First Tab\");\n    MyTabs.addrow(2, \"Second Tab\");\n\n    // Set the def"
+  },
+  "GuiTextEditCtrl": {
+    "name": "GuiTextEditCtrl",
+    "type": "function",
+    "params": [
+      "instanceName"
+    ],
+    "returns": "object",
+    "scope": "clientside",
+    "description": "GuiTextEditCtrl - A single-line text input field that allows user input. Triggers an onAction event when the user presses Enter.",
+    "example": "//#CLIENTSIDE\n\nfunction onCreated() {\n    new GuiWindowCtrl(\"MyWindow\") {\n        profile = GuiBlueWindowProfile;\n        extent = \"250 100\";\n        text = \"Input Example\";\n        visible = true;\n\n        // Create the text input field.\n        new GuiTextEditCtrl(\"MyInputField\") {\n            profile = GuiTextEditProfile;\n            position = \"20 30\";\n            extent = \"210 30\";\n        };\n    };\n}\n\n// Focus the input field when the window appears.\nfunction MyWindow.onWake() {\n    MyInputField.makefirstresponder(true);\n}\n\n// Handle the Enter key press.\nfunction MyInputField.onAction() {\n    // Read the content from the text field.\n    temp.userInput = MyInputField.text;\n    player.chat = \"You typed: \" @ temp.userInput;\n\n    // Clear the field for the next input.\n    MyInputField.text = \"\";\n}"
+  },
+  "GuiPopUpMenuCtrl": {
+    "name": "GuiPopUpMenuCtrl",
+    "type": "function",
+    "params": [
+      "instanceName"
+    ],
+    "returns": "object",
+    "scope": "clientside",
+    "description": "GuiPopUpMenuCtrl - A dropdown menu control (combo box) that allows a user to select one option from a predefined list. Triggers an onSelect event when a selection is made.",
+    "example": "function onCreated() {\n    new GuiWindowCtrl(\"MyWindow\") {\n        profile = GuiBlueWindowProfile;\n        extent = \"250 150\";\n        text = \"Popup Menu Example\";\n        visible = true;\n\n        new GuiPopUpMenuCtrl(\"MyPopupMenu\") {\n            // Profile for the main combo box itself\n            profile = GuiBluePopUpMenuProfile;\n            \n            // Profile for the text in the dropdown list (styles the rows)\n            textprofile = GuiBlueTextListProfile;\n\n            // Profile for the scrollbar in the dropdown\n            scrollprofile = GuiBlueScrollProfile;\n\n            position = \"20 30\";\n            extent = \"210 30\";\n        };\n    };\n\n    // Populate the menu with options.\n    MyPopupMenu.addrow(1, \"Option A\");\n    MyPopupMenu.addrow(2, \"Option B\");\n    MyPopupMenu.addrow(3, \"Option C\");\n\n    // Set the default displayed option.\n    MyPopupMenu.setselectedrow(0);\n}\n\n// Handle the selection event.\nfunction MyPopupMenu.onSelect(selectedId, selectedText, selectedIndex"
   }
 }
