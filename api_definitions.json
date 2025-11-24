@@ -11056,6 +11056,7 @@
   },
   "adddnsentry": {
     "name": "adddnsentry",
+    "type": "function",
     "params": [
       "hostname",
       "ip"
@@ -11063,8 +11064,7 @@
     "returns": "void",
     "scope": "clientside",
     "description": "adddnsentry(str, str) - Adds a custom DNS entry to the client's DNS cache, mapping a hostname to an IP address.",
-    "example": "adddnsentry(\"example.com\", \"192.168.1.1\");",
-    "type": ""
+    "example": "adddnsentry(\"example.com\", \"192.168.1.1\");"
   },
   "clearemptyglobalvars": {
     "name": "clearemptyglobalvars",
