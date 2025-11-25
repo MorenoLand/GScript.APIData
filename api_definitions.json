@@ -15956,14 +15956,14 @@
   },
   "params": {
     "name": "params",
+    "type": "variable",
     "params": [
-      "str"
+      "none"
     ],
-    "returns": "void",
-    "description": "setshootparams(str)",
-    "example": "params()",
-    "scope": "clientside",
-    "type": ""
+    "returns": "array",
+    "scope": "global",
+    "description": "params - A built-in array variable that contains the parameters passed to the current function. Access individual parameters using array indexing, where params[0] is the first parameter, params[1] is the second, and so on.",
+    "example": "function onActionServerSide() { switch (params[0]) { case \"test\": echo(params[1]); } }"
   },
   "parent": {
     "name": "parent",
