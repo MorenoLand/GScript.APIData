@@ -2788,7 +2788,7 @@
   },
   "play2": {
     "name": "play2",
-    "type": "",
+    "type": "function",
     "params": [
       "soundFile",
       "x",
