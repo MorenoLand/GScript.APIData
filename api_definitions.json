@@ -9380,17 +9380,17 @@
   },
   "resize": {
     "name": "resize",
+    "type": "",
     "params": [
-      "int",
-      "int",
-      "int",
-      "int"
+      "x",
+      "y",
+      "width",
+      "height"
     ],
     "returns": "void",
-    "description": "GuiControl.resize(int, int, int, int)",
-    "example": "this.resize(200, 100);",
     "scope": "clientside",
-    "type": ""
+    "description": "GuiControl.resize(int, int, int, int) - Resizes and repositions the control. Sets both the position and size in one call. The four integer parameters are: x position, y position, width, and height.",
+    "example": "this.resize(0, 0, 16, 16);  // Position at (0,0) with size 16x16\nthis.resize(100, 50, 200, 150);  // Position at (100,50) with size 200x150"
   },
   "resolvehost": {
     "name": "resolvehost",
