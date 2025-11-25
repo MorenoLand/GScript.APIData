@@ -20541,5 +20541,14 @@
     "scope": "clientside",
     "description": "GuiTreeViewCtrl - A GUI control that displays hierarchical data in a tree structure with expandable and collapsible nodes. Useful for displaying file systems, directory structures, category lists, or any hierarchical data.",
     "example": "new GuiTreeViewCtrl(\"FileTree\") { temp.root = this.addnode(\"Files\"); }"
+  },
+  "TStaticVar": {
+    "name": "TStaticVar",
+    "type": "",
+    "params": [],
+    "returns": "TStaticVar",
+    "scope": "global",
+    "description": "Creates an empty TStaticVar Object.",
+    "example": "temp.bankData = new TStaticVar();\ntemp.bankData.currency  = \"Gralats\";\ntemp.bankData.owner = findplayer(\"ruanf\");\ntemp.bankData.active = true;"
   }
 }
