@@ -20530,5 +20530,16 @@
     "scope": "global",
     "description": "Function event called when npcserver starts",
     "example": "function onInitialized() {\n  onCreated(); \n}"
+  },
+  "GuiTreeViewCtrl": {
+    "name": "GuiTreeViewCtrl",
+    "type": "function",
+    "params": [
+      "name"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "GuiTreeViewCtrl - A GUI control that displays hierarchical data in a tree structure with expandable and collapsible nodes. Useful for displaying file systems, directory structures, category lists, or any hierarchical data.",
+    "example": "new GuiTreeViewCtrl(\"FileTree\") { temp.root = this.addnode(\"Files\"); }"
   }
 }
