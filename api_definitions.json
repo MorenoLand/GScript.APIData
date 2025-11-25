@@ -586,12 +586,12 @@
   },
   "destroy": {
     "name": "destroy",
+    "type": "function",
     "params": [],
     "returns": "void",
-    "description": "TProjectile.destroy() | TServerNPC.destroy()",
-    "example": "destroy();",
-    "scope": "clientside",
-    "type": ""
+    "scope": "global",
+    "description": "destroy() - Removes and deletes the object from memory. The object is permanently destroyed and can no longer be used.",
+    "example": "// Destroy a GUI control\ntemp.button = findobject(\"Button1\");\ntemp.button.destroy();\n\n// Destroy an NPC\nthis.destroy();"
   },
   "sleep": {
     "name": "sleep",
