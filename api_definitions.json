@@ -20521,5 +20521,14 @@
     "scope": "clientside",
     "description": "GuiPopUpMenuCtrl - A dropdown menu control (combo box) that allows a user to select one option from a predefined list. Triggers an onSelect event when a selection is made.",
     "example": "function onCreated() {\n    new GuiWindowCtrl(\"MyWindow\") {\n        profile = GuiBlueWindowProfile;\n        extent = \"250 150\";\n        text = \"Popup Menu Example\";\n        visible = true;\n\n        new GuiPopUpMenuCtrl(\"MyPopupMenu\") {\n            // Profile for the main combo box itself\n            profile = GuiBluePopUpMenuProfile;\n            \n            // Profile for the text in the dropdown list (styles the rows)\n            textprofile = GuiBlueTextListProfile;\n\n            // Profile for the scrollbar in the dropdown\n            scrollprofile = GuiBlueScrollProfile;\n\n            position = \"20 30\";\n            extent = \"210 30\";\n        };\n    };\n\n    // Populate the menu with options.\n    MyPopupMenu.addrow(1, \"Option A\");\n    MyPopupMenu.addrow(2, \"Option B\");\n    MyPopupMenu.addrow(3, \"Option C\");\n\n    // Set the default displayed option.\n    MyPopupMenu.setselectedrow(0);\n}\n\n// Handle the selection event.\nfunction MyPopupMenu.onSelect(selectedId, selectedText, selectedIndex"
+  },
+  "onInitialized": {
+    "name": "onInitialized",
+    "type": "",
+    "params": [],
+    "returns": "void",
+    "scope": "global",
+    "description": "Function event called when npcserver starts",
+    "example": "function onInitialized() {\n  onCreated(); \n}"
   }
 }
