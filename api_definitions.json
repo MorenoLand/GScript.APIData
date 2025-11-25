@@ -7376,16 +7376,16 @@
   },
   "catchevent": {
     "name": "catchevent",
+    "type": "function",
     "params": [
-      "str",
-      "str",
-      "str"
+      "object",
+      "eventName",
+      "functionName"
     ],
     "returns": "void",
+    "scope": "global",
     "description": "TGraalVar.catchevent(str, str, str) - adds an event handler for the specified object and event, third parameter is the function which receives the event (first parameter of the event will be the object for which the event occured)",
-    "example": "catchevent(\"playerenters\");",
-    "scope": "clientside",
-    "type": ""
+    "example": "this.catchevent(temp.button, \"onAction\", \"onButtonClick\");"
   },
   "clearrows": {
     "name": "clearrows",
