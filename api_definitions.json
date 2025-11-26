@@ -16858,12 +16858,14 @@
   },
   "shieldimg": {
     "name": "shieldimg",
-    "params": [],
-    "returns": "void",
-    "description": "TServerNPC.shieldimg - string",
-    "example": "shieldimg()",
-    "scope": "clientside",
-    "type": ""
+    "type": "variable",
+    "params": [
+      "image"
+    ],
+    "returns": "string",
+    "scope": "global",
+    "description": "TServerPlayer.shieldimg | TServerNPC.shieldimg - The filename of the shield image currently equipped by the player or NPC. This property exists for compatibility with GS1; use shield instead for new code.",
+    "example": "player.shieldimg = \"no-shield.png\";"
   },
   "shieldpower": {
     "name": "shieldpower",
