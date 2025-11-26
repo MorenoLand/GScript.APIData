@@ -9282,16 +9282,16 @@
   },
   "putbomb": {
     "name": "putbomb",
+    "type": "function",
     "params": [
       "int",
       "float",
       "float"
     ],
     "returns": "void",
-    "description": "TServerLevel.putbomb(int, float, float) - adds a classic bomb with the specified power, x and y",
-    "example": "putbomb(player.x, player.y, 3);",
     "scope": "clientside",
-    "type": ""
+    "description": "TServerLevel.putbomb(int, float, float) - adds a classic bomb with the specified power, x and y",
+    "example": "putbomb(player.x, player.y, 3);"
   },
   "putleaps": {
     "name": "putleaps",
