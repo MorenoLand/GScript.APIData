@@ -20555,5 +20555,14 @@
     "scope": "global",
     "description": "Creates an empty TStaticVar Object.",
     "example": "temp.bankData = new TStaticVar();\ntemp.bankData.currency  = \"Gralats\";\ntemp.bankData.owner = findplayer(\"ruanf\");\ntemp.bankData.active = true;"
+  },
+  "Adventure_setAllowedPortsBind": {
+    "name": "Adventure_setAllowedPortsBind",
+    "type": "function",
+    "params": [],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "Adventure_setAllowedPortsBind(int) - Sets allowed ports for binding.",
+    "example": "Adventure_setAllowedPortsBind(12345);"
   }
 }
