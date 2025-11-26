@@ -812,7 +812,7 @@
     ],
     "returns": "string",
     "scope": "global",
-    "description": "TServerPlayer.chat | TServerNPC.chat - The chat message text displayed above the player or NPC. Setting this property will display the message above the character's head. The message will automatically fade after a period of time.",
+    "description": "TServerPlayer.chat | TServerNPC.chat - The chat message text displayed above the player or NPC. Setting this property will display the message above the character's head. The message will automatically fade after a period of time for players.",
     "example": "chat = \"Hello everyone!\"; // Would set an NPC's chat.\nplayer.chat = \"Hello world\"; // Would set the player chat."
   },
   "message": {
