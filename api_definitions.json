@@ -17321,14 +17321,14 @@
   },
   "sword": {
     "name": "sword",
+    "type": "variable",
     "params": [
       "str"
     ],
     "returns": "void",
-    "description": "encryptpassword(str) - returns string | setsword(str, int)",
-    "example": "sword()",
-    "scope": "clientside",
-    "type": ""
+    "scope": "global",
+    "description": "TPlayer.sword - The filename or path of the sword image currently equipped by the player. Can be read to check which sword the player has, or set to change the player's sword appearance.",
+    "example": "player.sword = \"sword1.png\""
   },
   "swordimg": {
     "name": "swordimg",
