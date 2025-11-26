@@ -20578,5 +20578,14 @@
     "scope": "clientside",
     "description": "Adventure_fileSize(str) - Gets file size in bytes. Param is: Path.",
     "example": "temp.file_size = Adventure_fileSize(\"scriptfiles/jail.nw\");"
+  },
+  "Adventure_clearFilesToIgnore": {
+    "name": "Adventure_clearFilesToIgnore",
+    "type": "function",
+    "params": [],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "Adventure_clearFilesToIgnore() - Clears all files from the ignore list set via Adventure_addFileToIgnore(str).",
+    "example": "Adventure_clearFilesToIgnore();"
   }
 }
