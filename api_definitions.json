@@ -17147,12 +17147,12 @@
   },
   "sqrt1_2": {
     "name": "sqrt1_2",
+    "type": "variable",
     "params": [],
     "returns": "void",
-    "description": "Clientside:",
-    "example": "sqrt1_2()",
     "scope": "clientside",
-    "type": ""
+    "description": "sqrt1_2 - DEPRECATED",
+    "example": ""
   },
   "sqrt2": {
     "name": "sqrt2",
