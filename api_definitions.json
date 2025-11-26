@@ -1730,7 +1730,7 @@
   },
   "savestring": {
     "name": "savestring",
-    "type": "",
+    "type": "function",
     "params": [
       "str",
       "int"
