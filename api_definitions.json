@@ -11515,12 +11515,12 @@
   },
   "account": {
     "name": "account",
+    "type": "variable",
     "params": [],
     "returns": "string",
     "scope": "global",
     "description": "TServerPlayer.account - string (read only)",
-    "example": "chat = \"Hello\" SPC player.account @ \"!\"; // Hello Denveous!",
-    "type": ""
+    "example": "chat = \"Hello\" SPC player.account @ \"!\"; // Hello Denveous!"
   },
   "accounts": {
     "name": "accounts",
