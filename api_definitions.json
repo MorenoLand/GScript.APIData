@@ -17332,12 +17332,12 @@
   },
   "swordimg": {
     "name": "swordimg",
+    "type": "variable",
     "params": [],
-    "returns": "void",
-    "description": "TServerNPC.swordimg - string",
-    "example": "swordimg()",
-    "scope": "clientside",
-    "type": ""
+    "returns": "string",
+    "scope": "global",
+    "description": "TServerNPC.swordimg - The filename or path of the sword image currently equipped by the player. Can be read to check which sword the player has, or set to change the player's sword appearance.",
+    "example": "player.swordimg = \"sword1.png\";"
   },
   "swordpower": {
     "name": "swordpower",
