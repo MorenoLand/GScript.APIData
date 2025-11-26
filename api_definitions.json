@@ -16847,15 +16847,14 @@
   },
   "shield": {
     "name": "shield",
+    "type": "variable",
     "params": [
-      "str",
-      "int"
+      "image"
     ],
-    "returns": "void",
-    "description": "setshield(str, int) | TServerPlayer.setshield(str, int)",
-    "example": "shield()",
-    "scope": "clientside",
-    "type": ""
+    "returns": "string",
+    "scope": "global",
+    "description": "TServerPlayer.shield | TServerNPC.shield - The filename or path of the shield image currently equipped by the player or NPC. Can be read to check which shield is equipped, or set to change the shield appearance.",
+    "example": "if (player.shield == \"shield1.png\") echo(\"Player has basic shield\");"
   },
   "shieldimg": {
     "name": "shieldimg",
