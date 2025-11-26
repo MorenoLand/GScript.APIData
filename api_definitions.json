@@ -20560,7 +20560,9 @@
   "Adventure_setAllowedPortsBind": {
     "name": "Adventure_setAllowedPortsBind",
     "type": "function",
-    "params": [],
+    "params": [
+      "int"
+    ],
     "returns": "void",
     "scope": "clientside",
     "description": "Adventure_setAllowedPortsBind(int) - Sets allowed ports for binding.",
