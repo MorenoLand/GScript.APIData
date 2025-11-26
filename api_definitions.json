@@ -1730,15 +1730,15 @@
   },
   "savestring": {
     "name": "savestring",
+    "type": "",
     "params": [
       "str",
       "int"
     ],
     "returns": "void",
-    "description": "TGraalVar.savestring(str, int) - saves the value as string into a file, the second parameter is the save mode (0 - overwrite, 1 - append) | generatezipstring(obj) - returns string - creates a zip in memory from the array you provide like {filename, content, filename, content, ...}, save to file usin...",
-    "example": "savestring(param1, param2);",
     "scope": "clientside",
-    "type": ""
+    "description": "TGraalVar.savestring(str, int) - saves the value as string into a file, the second parameter is the save mode (0 - overwrite, 1 - append).",
+    "example": "savestring(param1, param2);"
   },
   "showfile": {
     "name": "showfile",
