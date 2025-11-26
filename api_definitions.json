@@ -20567,5 +20567,16 @@
     "scope": "clientside",
     "description": "Adventure_setAllowedPortsBind(int) - Sets allowed ports for binding.",
     "example": "Adventure_setAllowedPortsBind(12345);"
+  },
+  "Adventure_fileSize": {
+    "name": "Adventure_fileSize",
+    "type": "function",
+    "params": [
+      "str"
+    ],
+    "returns": "int",
+    "scope": "clientside",
+    "description": "Adventure_fileSize(str) - Gets file size in bytes. Param is: Path.",
+    "example": "temp.file_size = Adventure_fileSize(\"scriptfiles/jail.nw\");"
   }
 }
