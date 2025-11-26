@@ -10693,14 +10693,15 @@
   },
   "bind": {
     "name": "bind",
+    "type": "function",
     "params": [
       "int",
       "bool"
     ],
     "returns": "void",
-    "description": "TSocket.bind(int, bool) - binds the given port, second parameter says if it should be udp; when a client connects an onNewClient(newsocket) event will be invoked",
     "scope": "clientside",
-    "type": ""
+    "description": "TSocket.bind(int, bool) - binds the given port, second parameter says if it should be udp; when a client connects an onNewClient(newsocket) event will be invoked",
+    "example": "//#CLIENTSIDE\nfunction onCreated() {\n  temp.port = 12345;\n\n  // Authorize port binding\n  Adventure_setAllowedPortsBind(temp.port);\n  \n  this.socket = new TSocket();\n  this.socket.bind(temp.port, 0);\n  \n  this.catchEvent(this.socket, \"onNewClient\", \"onHandleClientConnection\");\n}\n\n// Event gets called when a new client connects\nfunction onHandleClientConnection(temp.obj) {\n  echo(\"New Client Connected.\");\n  \n  // Loop over all connected clients\n  for (temp.client: this.socket.clients) {\n    // Send a packet to all connected clients\n    temp.packet = {};\n    temp.packet.packet_id = \"NEW_CLIENT\";\n    temp.packet.packet_data = player.account;\n    temp.client.send(temp.packet.savejsontostring(1));\n  }\n  \n}"
   },
   "connect": {
     "name": "connect",
