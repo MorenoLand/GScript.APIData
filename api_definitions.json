@@ -17149,7 +17149,7 @@
     "name": "sqrt1_2",
     "type": "variable",
     "params": [],
-    "returns": "void",
+    "returns": "float",
     "scope": "clientside",
     "description": "sqrt1_2 - DEPRECATED",
     "example": ""
