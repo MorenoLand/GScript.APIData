@@ -3693,18 +3693,6 @@
     "scope": "clientside",
     "type": ""
   },
-  "formatTimeString": {
-    "name": "formatTimeString",
-    "params": [
-      "str",
-      "float"
-    ],
-    "returns": "void",
-    "description": "formattimestring(str, float) - returns string - formats a string like the strftime unix function, parameters are the format and time",
-    "example": "formatTimeString(param1, param2);",
-    "scope": "clientside",
-    "type": ""
-  },
   "freeallresources": {
     "name": "freeallresources",
     "params": [],
