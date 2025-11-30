@@ -1167,12 +1167,12 @@
   },
   "onCreated": {
     "name": "onCreated",
+    "type": "function",
     "params": [],
     "returns": "void",
     "scope": "global",
     "description": "Defined when an NPC is Created, this is only called once per load of the level from the server or upon first connecting, update the level to call this again.",
-    "example": "function onCreated() {\n    this.x = 30;\n    this.y = 30;\n}",
-    "type": ""
+    "example": "function onCreated() {\n    this.x = 30;\n    this.y = 30;\n}"
   },
   "onPlayerEnters": {
     "name": "onPlayerEnters",
