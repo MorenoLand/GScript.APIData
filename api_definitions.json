@@ -19517,13 +19517,14 @@
   },
   "ipaddresshash": {
     "name": "ipaddresshash",
+    "type": "variable",
     "params": [
       "str"
     ],
-    "returns": "void",
-    "description": "ipaddresshash function",
-    "scope": "clientside",
-    "type": ""
+    "returns": "string",
+    "scope": "serverside",
+    "description": "TServerPlayer.ipaddresshash - A read-only string property containing the MD5 hash of the player's IP address as a 32-character hexadecimal string. Useful for detecting players connecting from the same IP address without exposing the actual IP address.",
+    "example": "function checkSameIP(account1, account2) {\n  temp.p1 = findplayer(account1);\n  temp.p2 = findplayer(account2);\n  if (p1 && p2 && p1.ipaddresshash == p2.ipaddresshash) {\n    echo(\"Same IP hash\");\n    return true;\n  }\n  return false;\n}"
   },
   "delete": {
     "name": "delete",
