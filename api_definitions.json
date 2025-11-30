@@ -20366,14 +20366,14 @@
   },
   "GuiWindowCtrl": {
     "name": "GuiWindowCtrl",
+    "type": "function",
     "params": [
       "name"
     ],
     "returns": "GuiWindowCtrl",
     "scope": "clientside",
     "description": "Works as a container for other control and displays a title bar and buttons for minimizing, maximizing and closing. With Ctrl+Tab you can switch between active windows.",
-    "example": "new GuiWindowCtrl(\"Test_Window\") {\n  profile = GuiBlueWindowProfile;\n  x = 10;\n  y = 10;\n  width = 160;\n  height = 80;\n  text = \"Window\";\n}",
-    "type": ""
+    "example": "new GuiWindowCtrl(\"Test_Window\") {\n  profile = GuiBlueWindowProfile;\n  x = 10;\n  y = 10;\n  width = 160;\n  height = 80;\n  text = \"Window\";\n}"
   },
   "Adventure_uploadFile": {
     "name": "Adventure_uploadFile",
