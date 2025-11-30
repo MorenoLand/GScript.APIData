@@ -595,14 +595,14 @@
   },
   "sleep": {
     "name": "sleep",
+    "type": "function",
     "params": [
       "time"
     ],
     "returns": "void",
     "scope": "global",
     "description": "sleep(float) - Suspends/pauses the current script execution for the specified time duration in seconds. (Will interrupt timeouts)",
-    "example": "function onCreated() {\n   sleep(1); // wait one second\n   chat = \"Hello there\": \n}",
-    "type": ""
+    "example": "function onCreated() {\n   sleep(1); // wait one second\n   chat = \"Hello there\": \n}"
   },
   "move": {
     "name": "move",
