@@ -20576,5 +20576,14 @@
     "scope": "clientside",
     "description": "Adventure_clearFilesToIgnore() - Clears all files from the ignore list set via Adventure_addFileToIgnore(str).",
     "example": "Adventure_clearFilesToIgnore();"
+  },
+  "GuiBitmapCtrl": {
+    "name": "GuiBitmapCtrl",
+    "type": "",
+    "params": [],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "This control is simply displaying a stretched or tiled bitmap.",
+    "example": "new GuiBitmapCtrl(\"Test_Bitmap\") {\n   x = 10;\n   y = 10;\n   width = 160;\n   height = 80;\n   bitmap = \"2002_sysmsgbg.png\";\n }"
   }
 }
