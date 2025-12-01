@@ -1227,12 +1227,12 @@
   },
   "onPlayerTouchsMe": {
     "name": "onPlayerTouchsMe",
+    "type": "function",
     "params": [],
     "returns": "void",
-    "description": "No matching script function found!",
-    "example": "function onPlayerTouchsMe() {\n    message(\"Hello!\");\n}",
-    "scope": "clientside",
-    "type": ""
+    "scope": "global",
+    "description": "onPlayerTouchsMe - Event handler that fires when a player touches or collides with the NPC or object.",
+    "example": "function onPlayerTouchsMe() {\n  if (player.rupees >= 50) {\n    player.rupees -= 50;\n    player.bombs += 1;\n    chat = \"Here's a bomb! You have \" @ player.rupees @ \" rupees left.\";\n  } else {\n    chat = \"You need 50 rupees for a bomb!\";\n  }\n}"
   },
   "onWeaponFired": {
     "name": "onWeaponFired",
