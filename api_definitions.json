@@ -2800,7 +2800,7 @@
     "returns": "void",
     "scope": "clientside",
     "description": "play2 - parameters are sound file, x, y and volume (0..1)\n\nPlays a sound effect once at a specific location in the game world. The volume and stereo panning are determined by the player's distance from the coordinates.",
-    "example": "//#CLIENTSIDE\nfunction onCreated() {\n    // Create a transparent control that covers the entire game screen.\n    // This control will \"catch\" all mouse events.\n    new GuiControl(\"ClickCatcher\") {\n        // Position it at the top-left of the game window.\n        position = \"0 0\";\n        // Make it the same size as the game window.\n        extent = GraalControl.extent;\n        // Make it resize automatically if the game window resizes.\n        horizsizing = \"width\";\n        vertsizing = \"height\";\n    };\n    \n    // Add our catcher control to the main game view.\n    GraalControl.addcontrol(ClickCatcher);\n}\n\n// This event is triggered when the user clicks on our \"ClickCatcher\" control.\n// Because it covers the screen, it captures all clicks.\nfunction ClickCatcher.onMouseDown(keymodifier, mousescreenx, mousescreeny, clickcount) {\n    // The onMouseDown event gives us SCREEN coordinates.\n    // We must convert them to WORLD coordinates for play2().\n    temp.worldX = worldx(mousescreenx,"
+    "example": "play2(\"put.wav\", 20, 20, 1); // play a sound at x 20, y 20 in the level"
   },
   "play3d": {
     "name": "play3d",
