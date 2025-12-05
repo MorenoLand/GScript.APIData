@@ -735,17 +735,6 @@
     "scope": "clientside",
     "type": ""
   },
-  "strtoupper": {
-    "name": "strtoupper",
-    "params": [
-      "string"
-    ],
-    "returns": "string",
-    "description": "No matching script function found!",
-    "example": "temp.upper = strtoupper(\"hello\");",
-    "scope": "clientside",
-    "type": ""
-  },
   "strpos": {
     "name": "strpos",
     "params": [
