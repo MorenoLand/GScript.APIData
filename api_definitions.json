@@ -735,17 +735,6 @@
     "scope": "clientside",
     "type": ""
   },
-  "strtolower": {
-    "name": "strtolower",
-    "params": [
-      "string"
-    ],
-    "returns": "string",
-    "description": "No matching script function found!",
-    "example": "temp.lower = strtolower(\"HELLO\");",
-    "scope": "clientside",
-    "type": ""
-  },
   "strtoupper": {
     "name": "strtoupper",
     "params": [
