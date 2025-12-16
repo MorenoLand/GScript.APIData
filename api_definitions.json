@@ -15,14 +15,14 @@
   },
   "findimg": {
     "name": "findimg",
+    "type": "function",
     "params": [
       "int"
     ],
     "returns": "object",
-    "description": "TServerNPC.findimg(int) - returns object",
-    "example": "with (findimg(200)) { layer = 1; x = player.x; }",
     "scope": "clientside",
-    "type": ""
+    "description": "TServerNPC.findimg(int) - returns object\nRetrieves a handle to a TShowImg object at a specific index. If no object exists at that index, a new one is created.",
+    "example": "with (findimg(200)) { layer = 1; x = player.x; }"
   },
   "changeimgvis": {
     "name": "changeimgvis",
