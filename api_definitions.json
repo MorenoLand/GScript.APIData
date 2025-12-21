@@ -1495,14 +1495,14 @@
   },
   "tokenize": {
     "name": "tokenize",
+    "type": "function",
     "params": [
-      "[delimiters]"
+      "delimiters"
     ],
     "returns": "array",
-    "description": "string.tokenize([delimiters])",
-    "example": "temp.parts = \"a,b,c\".tokenize(\",\");",
-    "scope": "clientside",
-    "type": ""
+    "scope": "global",
+    "description": "string.tokenize([delimiters]) | Splits a string into an array wherever the delimiters occur.\n\nIf no delimiters are specified, defaults to spaces and commas. When delimiter is newline ('\\n'), it also skips line feeds ('\\r') in front of newlines.",
+    "example": "// Split by comma\ntemp.parts = \"apple,banana,cherry\".tokenize(\",\");\n\n// Default delimiters (spaces and commas)\ntemp.tokens = \"hello world test\".tokenize();\n\n// Split by equals for key-value pairs\ntemp.tok = \"key=value\".tokenize(\"=\");\n\n// Split by newline to process lines\ntemp.lines = \"line1\\nline2\\nline3\".tokenize(\"\\n\");"
   },
   "findplayer": {
     "name": "findplayer",
