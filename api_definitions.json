@@ -1562,14 +1562,14 @@
   },
   "findnpc": {
     "name": "findnpc",
+    "type": "function",
     "params": [
-      "str"
+      "npcName"
     ],
-    "returns": "void",
-    "scope": "clientside",
-    "description": "findnpc(str) - returns object",
-    "example": "findnpc(\"Control-NPC\").foobar = true;",
-    "type": ""
+    "returns": "object",
+    "scope": "serverside",
+    "description": "findnpc(str) - Returns the NPC object with the specified name/identifier. Can be used to access variables and call functions on other NPCs. Used to locate database NPCs by their unique identifier.",
+    "example": "// Access another NPC's variables\ntemp.controlnpc = findnpc(\"Control-NPC\");\nthis.player_data = temp.controlnpc.player_data;\n\n// Call a function on another NPC\nfindnpc(\"BossSpawner\").onSpawnBoss();\n\n// Access NPC properties directly\nthis.where_is_waldo = findnpc(\"Waldo\").level.name;\n\n// Use with with() statement\nwith (findnpc(\"Turret\")) {\n  x = 30;\n}"
   },
   "findnpcbyid": {
     "name": "findnpcbyid",
