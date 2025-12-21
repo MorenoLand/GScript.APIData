@@ -9712,14 +9712,14 @@
   },
   "showstats": {
     "name": "showstats",
+    "type": "function",
     "params": [
-      "int"
+      "statsflag"
     ],
     "returns": "void",
-    "description": "showstats(int)",
-    "example": "showstats();",
     "scope": "clientside",
-    "type": ""
+    "description": "TServerNPC.showstats | Controls which status bar elements are visible using flag values.\n\nUse `allstats` to show all default elements, then subtract specific flags to hide them.\n\n`0x1` = ASD\n`0x2` = icons (for rupees, bombs, arrows)\n`0x4` = rupees count\n`0x8` = bombs count\n`0x10` = arrows count\n`0x20` = hearts\n`0x40` = AP bar\n`0x80` = MP bar\n`0x100` = minimap\n`0x200` = inventory\n`0x400` = player",
+    "example": "// Show all stats\nshowstats(allstats);\n\n// Show all except hearts\nshowstats(allstats - 0x20);\n\n// Hide all stats\nshowstats(0);\n\n// Show only rupees and bombs\nshowstats(0x4 + 0x8);\n\n// Show all except minimap\nshowstats(allstats - 0x100);"
   },
   "startrecordvideo": {
     "name": "startrecordvideo",
