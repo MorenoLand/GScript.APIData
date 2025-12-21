@@ -17024,14 +17024,14 @@
   },
   "sound": {
     "name": "sound",
+    "type": "function",
     "params": [
       "params..."
     ],
-    "returns": "void",
-    "description": "Sound.sound(params...) - returns object | stopsound(str) - stops a sound effect",
-    "example": "sound()",
+    "returns": "object",
     "scope": "clientside",
-    "type": ""
+    "description": "DEPRECATED - TStaticVar.Sound.sound(params...) - returns object\n\nCreates and returns a Sound object. Sound is a TStaticVar type used for sound effect management.\n\nNote: This function appears to be deprecated as calling sound() results in \"Function sound not found\" errors in the console. Use play(), play2(), playlooped(), or playlooped2() instead for sound playback.\n\nUse stopsound(str) to stop a sound effect by filename.",
+    "example": "DEPRECATED"
   },
   "soundbuttondown": {
     "name": "soundbuttondown",
