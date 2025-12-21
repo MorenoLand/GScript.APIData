@@ -1358,16 +1358,16 @@
   },
   "setshape2": {
     "name": "setshape2",
+    "type": "function",
     "params": [
-      "int",
-      "int",
-      "obj"
+      "width",
+      "height",
+      "tileTypes"
     ],
     "returns": "void",
-    "description": "TServerNPC.setshape2(int, int, obj) - enables tile-based blocking behaviour. Parameters are tile width, height and an array of tile types; you have to set it on both server-side and client-side to make it blocking on both server and client | TServerNPC.setshape2(int, int, obj)",
-    "example": "setshape2(2, 2, {0,1,1,0});",
-    "scope": "clientside",
-    "type": ""
+    "scope": "global",
+    "description": "TServerNPC.setshape2 | Enables tile-based blocking behaviour. Parameters are tile width, height and an array of tile types.\n\nSupported tile types:\n- 0 = Nonblocking\n- 2 = Hurting underground\n- 3 = Chair\n- 4 = Bed upper side\n- 5 = Bed lower side\n- 6 = Swamp\n- 7 = Lava swamp\n- 8 = Near water\n- 9 = Near lava\n- 11 = Water\n- 12 = Lava\n- 20 = Throw-through (fences)\n- 21 = Jumping stone\n- 22 = Blocking tile",
+    "example": "// Create a 2x2 chair\nsetshape2(2, 2, {3, 3, 3, 3});\n\n// Create a 2x2 blocking shape\nsetshape2(2, 2, {22, 22, 22, 22});\n\n// Using array variable\ntemp.tiles = {22, 22, 0, 0};\nsetshape2(2, 2, temp.tiles);"
   },
   "setcoloreffect": {
     "name": "setcoloreffect",
