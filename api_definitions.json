@@ -195,16 +195,16 @@
   },
   "setshape": {
     "name": "setshape",
+    "type": "function",
     "params": [
-      "int",
-      "int",
-      "int"
+      "shapeType",
+      "width",
+      "height"
     ],
     "returns": "void",
-    "description": "TServerNPC.setshape(int, int, int) - enables rectangular blocking behaviour for the NPC. Parameters are shape type (right now only 1 for rectangular is supported), and the width and height in pixels; you have to set it on both server-side and client-side to make it blocking on both server and client...",
-    "example": "setshape(1, 32, 32);",
-    "scope": "clientside",
-    "type": ""
+    "scope": "global",
+    "description": "TServerNPC.setshape | Enables rectangular blocking behaviour for the NPC. Parameters are shape type (right now only 1 for rectangular is supported), and the width and height in pixels.\n\nWidth and height are expressed in pixels, not tiles (one tile is 16x16 pixels).",
+    "example": "setshape(1, 32, 32); // this would be 2x2 in tiles"
   },
   "setimg": {
     "name": "setimg",
