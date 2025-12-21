@@ -1573,14 +1573,14 @@
   },
   "findnpcbyid": {
     "name": "findnpcbyid",
+    "type": "function",
     "params": [
-      "int"
+      "npcId"
     ],
-    "returns": "void",
-    "description": "findnpcbyid(int) - returns object",
-    "example": "findnpcbyid(param1);",
-    "scope": "clientside",
-    "type": ""
+    "returns": "object",
+    "scope": "serverside",
+    "description": "findnpcbyid(int) - Returns the NPC object with the specified ID. Can be used to access variables and call functions on NPCs by their numeric ID rather than name. Returns null if the NPC with that ID doesn't exist.",
+    "example": "// Get NPC by ID and check if it exists\ntemp.npc = findnpcbyid(123);\nif (temp.npc != null) {\n  player.chat = \"Found NPC at \" @ temp.npc.x @ \", \" @ temp.npc.y;\n}\n\n// Access NPC properties directly\nplayer.x = findnpcbyid(456).x;\nplayer.y = findnpcbyid(456).y;\n\n// Use with() to modify NPC\nwith (findnpcbyid(789)) {\n  x = 30;\n  y = 40;\n}\n\n// Check if NPC exists before using\ntemp.target = findnpcbyid(100);\nif (temp.target == null) {\n  player.chat = \"NPC not found\";\n  return;\n}\ntemp.target.chat = \"Hello\";"
   },
   "findlevel": {
     "name": "findlevel",
