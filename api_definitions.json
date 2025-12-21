@@ -2757,14 +2757,14 @@
   },
   "play": {
     "name": "play",
+    "type": "function",
     "params": [
-      "str"
+      "soundFile"
     ],
     "returns": "void",
-    "description": "TServerPlayer - object type, parent type is TGaniObject",
-    "example": "play(param1);",
     "scope": "clientside",
-    "type": ""
+    "description": "Plays a sound file at the player position.",
+    "example": "play(\"put.wav\");"
   },
   "play2": {
     "name": "play2",
