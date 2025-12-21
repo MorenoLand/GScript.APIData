@@ -7464,12 +7464,12 @@
   },
   "drawaslight": {
     "name": "drawaslight",
+    "type": "function",
     "params": [],
     "returns": "void",
-    "description": "TServerNPC.drawaslight()",
-    "example": "drawaslight();",
     "scope": "clientside",
-    "type": ""
+    "description": "TServerNPC.drawaslight | Draws the NPC above the day/night effects area (between drawoverplayer and the stats).\n\nUsed for light effects, fire effects, and other visual elements that should appear above the day/night overlay but below the status bar.",
+    "example": "// Light source effect\nfunction onCreated() {\n  setimg(\"light2.png\");\n  drawaslight();\n  dontblock();\n  setcoloreffect(1, 1, 0, 0.5);\n}\n\n// Fire effect\nfunction onCreated() {\n  setimg(\"fire.gif\");\n  drawaslight();\n  dontblock();\n  setcoloreffect(1, 0.5, 0, 0.9);\n}"
   },
   "drawoverplayer": {
     "name": "drawoverplayer",
