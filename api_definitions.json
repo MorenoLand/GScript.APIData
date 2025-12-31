@@ -20574,5 +20574,14 @@
     "scope": "clientside",
     "description": "This is basicly a wrapper around TShowImg for displaying all kind of Graal content inside the GUI, including animations (ganis) and particle effects.\n\nNote: like with normal GUI controls the content of this control might be clipped at the control border, so use width and height to resize the control, and offsetx and offsety to shift the content so that animations or particles are not drawn half.\n\nVariables\nAll variables from TShowImg are available for this control as well. Additional variables:\n\nName\tType\tDescription\noffsetx\tinteger\tdisplay offset for 'showimg' inside the control\noffsety\tinteger\tdisplay offset for 'showimg' inside the control\nshowimg\tobject\tthe actual TShowImg object which contains all the logic",
     "example": "new GuiShowImgCtrl(\"Test_ShowImg\") {\n  x = 10;\n  y = 10;\n  width = 60;\n  height = 60;\n  ani = \"walk\";\n}"
+  },
+  "Adventure_getInstallationPath": {
+    "name": "Adventure_getInstallationPath",
+    "type": "function",
+    "params": [],
+    "returns": "str",
+    "scope": "clientside",
+    "description": "Adventure_getInstallationPath() - Gets Graal installation path. Same as Adventure_getApplicationFolder()",
+    "example": "temp.path = Adventure_getInstallationPath();"
   }
 }
