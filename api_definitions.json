@@ -11042,16 +11042,6 @@
     "scope": "clientside",
     "type": ""
   },
-  "findobject": {
-    "name": "findobject",
-    "params": [
-      "str"
-    ],
-    "returns": "object",
-    "description": "findobject(str) - returns object - finds a global variable",
-    "scope": "clientside",
-    "type": ""
-  },
   "getdownloadprogress": {
     "name": "getdownloadprogress",
     "params": [
