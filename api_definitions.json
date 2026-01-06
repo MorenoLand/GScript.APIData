@@ -20584,7 +20584,7 @@
   },
   "onActionClientSide": {
     "name": "onActionClientSide",
-    "type": "",
+    "type": "function",
     "params": [
       "index",
       "y"
