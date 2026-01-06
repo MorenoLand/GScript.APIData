@@ -20592,5 +20592,16 @@
     "scope": "serverside",
     "description": "function onActionServerSide(param0, ...) - This is called when either a npc-db or weapon-npc has had triggerServer/triggerAction called to it - Parameters are all user identified.",
     "example": "function onActionServerSide(text, params) {\n    if (text == \"saveData\") { }\n}"
+  },
+  "findObject": {
+    "name": "findObject",
+    "type": "",
+    "params": [
+      "objectName"
+    ],
+    "returns": "object",
+    "scope": "clientside",
+    "description": "findObject(str) - returns object - finds a global variable",
+    "example": ""
   }
 }
