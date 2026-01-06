@@ -20590,8 +20590,8 @@
       "objectName"
     ],
     "returns": "object",
-    "scope": "clientside",
-    "description": "findObject(str) - returns object - finds a global variable",
-    "example": ""
+    "scope": "global",
+    "description": "TServerPlayer.findobject(string) - Finds and returns a global variable by name.",
+    "example": "with (findobject(\"ControlsContainer\")) {\n  new GuiControl(\"MyControl\") {\n    visible = true;\n  }\n}"
   }
 }
