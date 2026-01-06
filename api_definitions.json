@@ -15396,10 +15396,10 @@
     "name": "maxchars",
     "type": "variable",
     "params": [],
-    "returns": "void",
+    "returns": "int",
     "scope": "clientside",
-    "description": "Clientside:",
-    "example": "maxchars()"
+    "description": "GuiControl.maxchars() - Sets the maximum character limit for text input controls (default 255, set to 0 for unlimited).",
+    "example": "new GuiTextCtrl(\"nameInput\") {\n  width = 160;\n  height = 24;\n  maxchars = 30;\n  text = \"\";\n}"
   },
   "maxhp": {
     "name": "maxhp",
