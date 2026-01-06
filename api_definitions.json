@@ -1179,18 +1179,6 @@
     "scope": "clientside",
     "type": ""
   },
-  "onActionClientside": {
-    "name": "onActionClientside",
-    "params": [
-      "index",
-      "y"
-    ],
-    "returns": "void",
-    "description": "No matching script function found!",
-    "example": "function onActionClientside(text, params) {\n    if (text == \"showGUI\") { }\n}",
-    "scope": "clientside",
-    "type": ""
-  },
   "onPlayerTouchsMe": {
     "name": "onPlayerTouchsMe",
     "type": "function",
