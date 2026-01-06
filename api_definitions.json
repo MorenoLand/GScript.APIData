@@ -20585,7 +20585,7 @@
   },
   "findObject": {
     "name": "findObject",
-    "type": "",
+    "type": "function",
     "params": [
       "objectName"
     ],
