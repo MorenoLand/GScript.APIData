@@ -20583,5 +20583,26 @@
     "scope": "clientside",
     "description": "Adventure_getInstallationPath() - Gets Graal installation path. Same as Adventure_getApplicationFolder()",
     "example": "temp.path = Adventure_getInstallationPath();"
+  },
+  "Adventure_addMenuLink": {
+    "name": "Adventure_addMenuLink",
+    "type": "",
+    "params": [],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "",
+    "example": ""
+  },
+  "onActionServerSide": {
+    "name": "onActionServerSide",
+    "type": "",
+    "params": [
+      "param0",
+      "..."
+    ],
+    "returns": "void",
+    "scope": "serverside",
+    "description": "function onActionServerSide(param0, ...) - This is called when either a npc-db or weapon-npc has had triggerServer/triggerAction called to it - Parameters are all user identified.",
+    "example": "function onActionServerside(text, params) {\n    if (text == \"saveData\") { }\n}"
   }
 }
