@@ -20593,5 +20593,17 @@
     "scope": "global",
     "description": "TServerPlayer.findobject(string) - Finds and returns a global variable by name.",
     "example": "with (findobject(\"ControlsContainer\")) {\n  new GuiControl(\"MyControl\") {\n    visible = true;\n  }\n}"
+  },
+  "onActionClientSide": {
+    "name": "onActionClientSide",
+    "type": "",
+    "params": [
+      "index",
+      "y"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "No matching script function found!",
+    "example": "function onActionClientSide(text, params) {\n    if (text == \"showGUI\") { }\n}"
   }
 }
