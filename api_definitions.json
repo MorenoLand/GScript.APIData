@@ -15394,12 +15394,12 @@
   },
   "maxchars": {
     "name": "maxchars",
+    "type": "variable",
     "params": [],
     "returns": "void",
-    "description": "Clientside:",
-    "example": "maxchars()",
     "scope": "clientside",
-    "type": ""
+    "description": "Clientside:",
+    "example": "maxchars()"
   },
   "maxhp": {
     "name": "maxhp",
