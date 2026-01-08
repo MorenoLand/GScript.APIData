@@ -12601,7 +12601,7 @@
     "returns": "boolean",
     "scope": "clientside",
     "description": "GuiControl.closequery - Controls whether the window's close button triggers an onCloseQuery() event (true) or just hides the window (false).",
-    "example": "new GuiWindowCtrl(\"MyWindow\") {\n  closequery = true;\n  thiso.catchevent(this, \"onCloseQuery\", \"onWindowClose\");\n}"
+    "example": "new GuiWindowCtrl(\"MyWindow\") {\n  closequery = true;\n  thiso.catchevent(this, \"onCloseQuery\", \"handleClose\");\n}\n\nfunction handleClose() {\n  // Custom close logic here\n}"
   },
   "code": {
     "name": "code",
