@@ -1347,17 +1347,17 @@
   },
   "setcoloreffect": {
     "name": "setcoloreffect",
+    "type": "function",
     "params": [
-      "float",
-      "float",
-      "float",
-      "float"
+      "red",
+      "green",
+      "blue",
+      "alpha"
     ],
     "returns": "void",
-    "description": "TServerNPC.setcoloreffect(float, float, float, float) - sets red, green, blue and alpha value of the NPC (values between 0 and 1), this must be called on client-side | TGaniObject.setcoloreffect(float, float, float, float)",
-    "example": "setcoloreffect(1, 0.5, 0.5, 0.8);",
     "scope": "clientside",
-    "type": ""
+    "description": "TServerNPC.setcoloreffect(red, green, blue, alpha) - Sets the color and alpha transparency of the NPC (values 0-1, default 1,1,1,1).",
+    "example": "setcoloreffect(1, 0.5, 0.2, 0.6); // Orange light effect\nseteffectmode(1); // Make it transparent instead of additive"
   },
   "setzoomeffect": {
     "name": "setzoomeffect",
