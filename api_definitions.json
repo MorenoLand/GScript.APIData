@@ -12594,12 +12594,12 @@
   },
   "closequery": {
     "name": "closequery",
+    "type": "variable",
     "params": [],
-    "returns": "void",
-    "description": "Clientside:",
-    "example": "closequery()",
+    "returns": "bool",
     "scope": "clientside",
-    "type": ""
+    "description": "GuiControl.closequery - Controls whether the window's close button triggers an onCloseQuery() event (true) or just hides the window (false).",
+    "example": "new GuiWindowCtrl(\"MyWindow\") {\n  closequery = true;\n  thiso.catchevent(this, \"onCloseQuery\", \"onWindowClose\");\n}"
   },
   "code": {
     "name": "code",
