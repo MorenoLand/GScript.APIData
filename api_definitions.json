@@ -19734,7 +19734,7 @@
     "returns": "void",
     "scope": "clientside",
     "description": "onCloseQuery() - Event triggered when the user clicks the close button on a GuiWindowCtrl where the 'closequery' property is set to true.\nThis allows the script to intercept the close action.",
-    "example": "function onCreated() {\n    new GuiWindowCtrl(\"MyMainWindow\") {\n        profile = GuiBlueWindowProfile;\n        extent = \"300 150\";\n        text = \"Main Window\";\n        visible = true;\n        closequery = true;         // This property is essential for onCloseQuery to work.\n   };\n}\n\n// When the user clicks the 'X' on MyMainWindow...\nfunction MyMainWindow.onCloseQuery() {\n  // Custom close logic here\n}"
+    "example": "function onCreated() {\n    new GuiWindowCtrl(\"MyMainWindow\") {\n        profile = GuiBlueWindowProfile;\n        extent = \"300 150\";\n        text = \"Main Window\";\n        visible = true;\n        closequery = true; // onCloseQuery is called if this is true\n   };\n}\n\n// When the user clicks the 'X' on MyMainWindow...\nfunction MyMainWindow.onCloseQuery() {\n  // Custom close logic here\n}"
   },
   "onGaniAttributeChanged": {
     "name": "onGaniAttributeChanged",
