@@ -12595,7 +12595,9 @@
   "closequery": {
     "name": "closequery",
     "type": "variable",
-    "params": [],
+    "params": [
+      "true/false"
+    ],
     "returns": "boolean",
     "scope": "clientside",
     "description": "GuiControl.closequery - Controls whether the window's close button triggers an onCloseQuery() event (true) or just hides the window (false).",
