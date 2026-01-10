@@ -6697,12 +6697,16 @@
   },
   "Adventure_setControlBinding": {
     "name": "Adventure_setControlBinding",
-    "params": [],
+    "type": "",
+    "params": [
+      "int",
+      "int",
+      "int"
+    ],
     "returns": "void",
-    "description": "No matching script function found!",
-    "example": "Adventure_setControlBinding();",
     "scope": "clientside",
-    "type": ""
+    "description": "Adventure_setControlBinding(int, int, int) - Sets control key binding (key, pressed, status).",
+    "example": "Adventure_setControlBinding();"
   },
   "Adventure_setAllowRecordByScript": {
     "name": "Adventure_setAllowRecordByScript",
