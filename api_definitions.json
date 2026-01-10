@@ -20599,5 +20599,16 @@
     "scope": "clientside",
     "description": "No matching script function found!",
     "example": "function onActionClientSide(text, params) {\n    if (text == \"showGUI\") { }\n}"
+  },
+  "Adventure_fileIsFolder": {
+    "name": "Adventure_fileIsFolder",
+    "type": "function",
+    "params": [
+      "str"
+    ],
+    "returns": "bool",
+    "scope": "clientside",
+    "description": "Adventure_fileIsFolder(str) - Checks if path is a folder - returns bool.",
+    "example": "temp.isFolder = Adventure_fileIsFolder(\"scriptfiles/Testbed3D\");"
   }
 }
