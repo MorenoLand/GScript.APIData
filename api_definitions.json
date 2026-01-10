@@ -6903,14 +6903,14 @@
   },
   "Adventure_openExternalPM": {
     "name": "Adventure_openExternalPM",
+    "type": "function",
     "params": [
-      "x"
+      "recipient"
     ],
     "returns": "boolean",
-    "description": "No matching script function found!",
-    "example": "Adventure_openExternalPM({account: \"player123\"});",
     "scope": "clientside",
-    "type": ""
+    "description": "Adventure_openExternalPM(object) - Opens external PM window for recipient object. Returns true on success.",
+    "example": "with (findplayer(\"PlayerName\")) {\n  Adventure_openExternalPM(this);\n}"
   },
   "Adventure_openServerList": {
     "name": "Adventure_openServerList",
