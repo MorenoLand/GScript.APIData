@@ -446,7 +446,7 @@
     "returns": "void",
     "scope": "serverside",
     "description": "TServerPlayer.seturllevel(string) - Warps the player to a level via URL (without the leading http://!). (DEPRECATED)",
-    "example": "seturllevel(\"example.com/level.nw\");"
+    "example": "seturllevel(\"example.com/level.nw\");\nseturllevel(\"graal://Classic/castle.nw\");"
   },
   "say": {
     "name": "say",
