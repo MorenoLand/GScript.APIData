@@ -737,15 +737,15 @@
   },
   "strpos": {
     "name": "strpos",
+    "type": "function",
     "params": [
-      "x",
-      "param1"
+      "string",
+      "substring"
     ],
-    "returns": "number",
-    "description": "No matching script function found!",
-    "example": "temp.pos = strpos(\"hello world\", \"world\");",
-    "scope": "clientside",
-    "type": ""
+    "returns": "integer",
+    "scope": "global",
+    "description": "strpos(string, substring) - Returns the position of the first occurrence of substring in string, or -1 if not found.",
+    "example": "temp.pos = strpos(\"hello world\", \"world\");\n\ntemp.colon = strpos(data, \":\");\nif (temp.colon > -1) {\n  temp.key = data.substring(0, temp.colon);\n}"
   },
   "arraylen": {
     "name": "arraylen",
