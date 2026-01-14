@@ -838,17 +838,6 @@
     "scope": "clientside",
     "type": ""
   },
-  "ceiling": {
-    "name": "ceiling",
-    "params": [
-      "index"
-    ],
-    "returns": "number",
-    "description": "No matching script function found!",
-    "example": "temp.result = ceiling(3.2);",
-    "scope": "clientside",
-    "type": ""
-  },
   "random": {
     "name": "random",
     "params": [
