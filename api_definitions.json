@@ -726,14 +726,14 @@
   },
   "strlen": {
     "name": "strlen",
+    "type": "",
     "params": [
       "string"
     ],
-    "returns": "number",
-    "description": "No matching script function found!",
-    "example": "temp.len = strlen(\"hello\");",
+    "returns": "int",
     "scope": "clientside",
-    "type": ""
+    "description": "strlen(string) - Returns the length of a string.",
+    "example": "temp.len = strlen(\"hello\");\n\nif (strlen(#s(this.notes)) >= this.notes_max) {\n  this.notes = \"\";\n}"
   },
   "strpos": {
     "name": "strpos",
