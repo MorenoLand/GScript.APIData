@@ -439,14 +439,14 @@
   },
   "seturllevel": {
     "name": "seturllevel",
+    "type": "function",
     "params": [
-      "x"
+      "url"
     ],
     "returns": "void",
-    "description": "No matching script function found!",
-    "example": "seturllevel(\"graal://example.com/level\");",
-    "scope": "clientside",
-    "type": ""
+    "scope": "serverside",
+    "description": "TServerPlayer.seturllevel(string) - Warps the player to a level via URL (without the leading http://!). (DEPRECATED)",
+    "example": "seturllevel(\"example.com/level.nw\");"
   },
   "say": {
     "name": "say",
