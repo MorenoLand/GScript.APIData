@@ -726,12 +726,12 @@
   },
   "strlen": {
     "name": "strlen",
-    "type": "",
+    "type": "function",
     "params": [
       "string"
     ],
     "returns": "int",
-    "scope": "clientside",
+    "scope": "global",
     "description": "strlen(string) - Returns the length of a string.",
     "example": "temp.len = strlen(\"hello\");\n\nif (strlen(#s(this.notes)) >= this.notes_max) {\n  this.notes = \"\";\n}"
   },
