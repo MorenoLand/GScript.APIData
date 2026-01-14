@@ -20574,5 +20574,19 @@
     "scope": "clientside",
     "description": "Adventure_fileIsFolder(str) - Checks if path is a folder - returns bool.",
     "example": "temp.isFolder = Adventure_fileIsFolder(\"scriptfiles/Testbed3D\");"
+  },
+  "triggerServer": {
+    "name": "triggerServer",
+    "type": "function",
+    "params": [
+      "type",
+      "target",
+      "command",
+      "...additionalParams"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "triggerserver(string, string, string, ...) - Triggers a server-side action on a weapon or NPC database. Calls the onActionServerSide function on the target.\n\nNote: The `type` parameter can be \"gui\" or \"weapon\" (for weapons) or \"NPC\" (for NPC databases). Additional parameters after `command` are passed to the `onActionServerSide` function on the server side.",
+    "example": "triggerserver(\"gui\", this.name, \"useItem\", \"Health Potion\");"
   }
 }
