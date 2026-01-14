@@ -818,15 +818,17 @@
   },
   "triggerserver": {
     "name": "triggerserver",
+    "type": "function",
     "params": [
-      "str",
-      "str"
+      "type",
+      "target",
+      "command",
+      "...additionalParams"
     ],
     "returns": "void",
-    "description": "triggerserver(str, str)",
-    "example": "triggerserver(\"levelmod\", \"updatetile\", player.x, player.y);",
     "scope": "clientside",
-    "type": ""
+    "description": "triggerserver(string, string, string, ...) - Triggers a server-side action on a weapon or NPC database. Calls the onActionServerSide function on the target.\n\nNote: The `type` parameter can be \"gui\" or \"weapon\" (for weapons) or \"NPC\" (for NPC databases). Additional parameters after `command` are passed to the `onActionServerSide` function on the server side.",
+    "example": "triggerserver(\"gui\", name, \"syncTimevar\");\ntriggerserver(\"gui\", this.name, \"Log\", \"videoPepared_classic=\" @ temp.videoPlayer.objecttype());"
   },
   "abs": {
     "name": "abs",
