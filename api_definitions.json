@@ -1851,14 +1851,14 @@
   },
   "ceil": {
     "name": "ceil",
+    "type": "function",
     "params": [
       "float"
     ],
-    "returns": "void",
-    "description": "Math.ceil(float) - returns float",
-    "example": "ceil(param1);",
+    "returns": "float",
     "scope": "clientside",
-    "type": ""
+    "description": "Math.ceil(float) - Rounds a number up to the nearest integer.",
+    "example": "temp.w = ceil(GraalControl.width / 1024) + 3;"
   },
   "checksum": {
     "name": "checksum",
