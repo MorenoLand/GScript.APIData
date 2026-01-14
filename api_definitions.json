@@ -758,18 +758,6 @@
     "example": "temp._array = {\"ore\", \"boat\", \"water\"};\necho(arraylen(_array)); // Result: 3",
     "type": ""
   },
-  "arrayremove": {
-    "name": "arrayremove",
-    "params": [
-      "x",
-      "value1"
-    ],
-    "returns": "void",
-    "description": "No matching script function found!",
-    "example": "arrayremove(temp.list, 0);",
-    "scope": "clientside",
-    "type": ""
-  },
   "chat": {
     "name": "chat",
     "type": "variable",
