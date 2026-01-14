@@ -319,14 +319,14 @@
   },
   "setbody": {
     "name": "setbody",
+    "type": "function",
     "params": [
-      "x"
+      "filename"
     ],
     "returns": "void",
-    "description": "No matching script function found!",
-    "example": "setbody(\"body_red.png\");",
-    "scope": "clientside",
-    "type": ""
+    "scope": "serverside",
+    "description": "TServerPlayer.setbody(string) - Sets the player's body image filename.",
+    "example": "setbody(\"body2.png\");\nplayer.bodyimg = \"body2.png\";"
   },
   "sethead": {
     "name": "sethead",
