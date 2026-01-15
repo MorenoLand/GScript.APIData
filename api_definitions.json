@@ -1107,12 +1107,12 @@
   },
   "onPlayerEnters": {
     "name": "onPlayerEnters",
+    "type": "function",
     "params": [],
     "returns": "void",
-    "description": "No matching script function found!",
-    "example": "function onPlayerEnters() {\n    message(\"Welcome!\" SPC player.nick);\n}",
-    "scope": "clientside",
-    "type": ""
+    "scope": "global",
+    "description": "onPlayerEnters() - Event handler called when a player enters the level.",
+    "example": "function onPlayerEnters() {\n  this.chat = \"Welcome \" @ player.nick @ \"!\";\n}"
   },
   "onPlayerChats": {
     "name": "onPlayerChats",
