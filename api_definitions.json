@@ -20577,5 +20577,14 @@
     "scope": "clientside",
     "description": "triggerserver(string, string, string, ...) - Triggers a server-side action on a weapon or NPC database. Calls the onActionServerSide function on the target.\n\nNote: The `type` parameter can be \"gui\" or \"weapon\" (for weapons) or \"NPC\" (for NPC databases). Additional parameters after `command` are passed to the `onActionServerSide` function on the server side.",
     "example": "triggerserver(\"gui\", this.name, \"useItem\", \"Health Potion\");"
+  },
+  "testXp": {
+    "name": "testXp",
+    "type": "",
+    "params": [],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "Only test",
+    "example": "function onCreated() {\n  this.xpCurrent = 178;\n  this.xpRequired = 150;\n  this.currentLevel = 1;\n\n  temp.missingXp = this.xpRequired - this.xpCurrent;\n  temp.hasEnoughXp = (this.xpCurrent >= this.xpRequired);\n\n  if (temp.hasEnoughXp) {\n    this.currentLevel++;\n    player.chat = \"Congratulations, you leveled up to level \" @ this.currentLevel @ \"!\";\n  } else {\n    player.chat = \"You need \" @ temp.missingXp @ \" more XP to level up.\";\n  }\n}"
   }
 }
