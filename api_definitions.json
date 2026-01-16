@@ -4368,18 +4368,6 @@
     "description": "hidesword(float) - Hides or shows the player's sword/weapon.",
     "example": "// Hide weapon during cutscene\nhidesword(0);\n\n// Show weapon again\nhidesword(1);"
   },
-  "if": {
-    "name": "if",
-    "params": [
-      "x",
-      "y"
-    ],
-    "returns": "void",
-    "description": "sqlitedefragment(str)",
-    "example": "if(param1, param2);",
-    "scope": "clientside",
-    "type": ""
-  },
   "indexof": {
     "name": "indexof",
     "params": [
