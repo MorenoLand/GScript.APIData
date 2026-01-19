@@ -20574,5 +20574,14 @@
     "scope": "clientside",
     "description": "Only test",
     "example": "function onCreated() {\n  this.xpCurrent = 178;\n  this.xpRequired = 150;\n  this.currentLevel = 1;\n\n  temp.missingXp = this.xpRequired - this.xpCurrent;\n  temp.hasEnoughXp = (this.xpCurrent >= this.xpRequired);\n\n  if (temp.hasEnoughXp) {\n    this.currentLevel++;\n    player.chat = \"Congratulations, you leveled up to level \" @ this.currentLevel @ \"!\";\n  } else {\n    player.chat = \"You need \" @ temp.missingXp @ \" more XP to level up.\";\n  }\n}"
+  },
+  "testSales": {
+    "name": "testSales",
+    "type": "",
+    "params": [],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "Only a test",
+    "example": "```js\nfunction onCreated() {\n  // stock count\n  this.stock = 20;\n\n  // price per item\n  const PRICE_FOR_ITEM = 4200;\n\n  // example player money\n  this.playerCoinCurrenty = 21672;\n\n  this.PRICE = PRICE_FOR_ITEM;\n}\n\n// Player touches the NPC to buy\nfunction onPlayerTouchsMe() {\n  this.onSystemSales();\n}\n\nfunction onSystemSales() {\n  if (this.playerCoinCurrenty >= this.PRICE && this.stock > 0) {\n    this.playerCoinCurrenty -= this.PRICE;\n    this.stock--;\n\n    player.chat =\n      \"You purchased an item! Wallet:\" SPC @\n      this.playerCoinCurrenty @\n      \"coins. Stock left:\" SPC @\n      this.stock;\n  }\n  else if (this.stock <= 0) {\n    player.chat = \"Item out of stock.\";\n  }\n  else {\n    player.chat = \"You do not have enough funds.\";\n  }\n}\n```"
   }
 }
