@@ -20565,14 +20565,5 @@
     "scope": "clientside",
     "description": "triggerserver(string, string, string, ...) - Triggers a server-side action on a weapon or NPC database. Calls the onActionServerSide function on the target.\n\nNote: The `type` parameter can be \"gui\" or \"weapon\" (for weapons) or \"NPC\" (for NPC databases). Additional parameters after `command` are passed to the `onActionServerSide` function on the server side.",
     "example": "triggerserver(\"gui\", this.name, \"useItem\", \"Health Potion\");"
-  },
-  "testSales": {
-    "name": "testSales",
-    "type": "",
-    "params": [],
-    "returns": "void",
-    "scope": "clientside",
-    "description": "Only a test",
-    "example": "function onCreated() {\n  // stock count\n  this.stock = 20;\n\n  // price per item\n  const PRICE_FOR_ITEM = 4200;\n\n  // example player money\n  this.playerCoinCurrenty = 21672;\n\n  this.PRICE = PRICE_FOR_ITEM;\n}\n\n// Player touches the NPC to buy\nfunction onPlayerTouchsMe() {\n  this.onSystemSales();\n}\n\nfunction onSystemSales() {\n  if (this.playerCoinCurrenty >= this.PRICE && this.stock > 0) {\n    this.playerCoinCurrenty -= this.PRICE;\n    this.stock--;\n\n    player.chat =\n      \"You purchased an item! Wallet:\" SPC @\n      this.playerCoinCurrenty @\n      \"coins. Stock left:\" SPC @\n      this.stock;\n  }\n  else if (this.stock <= 0) {\n    player.chat = \"Item out of stock.\";\n  }\n  else {\n    player.chat = \"You do not have enough funds.\";\n  }\n}"
   }
 }
