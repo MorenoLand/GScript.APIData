@@ -18857,12 +18857,16 @@
   },
   "onKeyDown": {
     "name": "onKeyDown",
-    "params": [],
+    "type": "function",
+    "params": [
+      "keycode",
+      "keystring",
+      "scancode"
+    ],
     "returns": "void",
     "scope": "clientside",
-    "description": "Event triggered when key is pressed down",
-    "example": "",
-    "type": ""
+    "description": "GuiControl.onKeyDown(keycode, keystring, scancode) - Event handler called when a key is pressed while a GUI control has input focus.",
+    "example": "function onKeyDown(keycode, keytext, scancode) {\n  // Handle special keys using VK constants\n  if (keycode == VK_RETURN || keycode == 13) { // Enter key\n    submitForm();\n  } else if (keycode == VK_ESCAPE || keycode == 27) { // Escape key  \n    closeDialog();\n  } else if (keycode == VK_UP) { // Up arrow\n    navigateUp();\n  } else if (keycode == VK_DOWN) { // Down arrow\n    navigateDown();\n  }\n  \n  // Handle character input by checking keytext content\n  if (keytext == \"t\") { // Letter 't' pressed\n    toggleSetting();\n  } else if (keytext == \"1\") { // Number '1' pressed\n    selectOption(1);\n  }\n}"
   },
   "onKeyUp": {
     "name": "onKeyUp",
