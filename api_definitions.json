@@ -20598,5 +20598,32 @@
     "scope": "clientside",
     "description": "switchOpenGLDeviceScale(float) - sets the internal OpenGL render buffer to the specified virtual height. the width is automatically scaled to maintain the aspect ratio.",
     "example": "switchOpenGLDeviceScale(640 * (screenwidth / screenheight));"
+  },
+  "onFabzatEvent": {
+    "name": "onFabzatEvent",
+    "type": "",
+    "params": [],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "",
+    "example": ""
+  },
+  "ongoogleplaypurchase": {
+    "name": "ongoogleplaypurchase",
+    "type": "",
+    "params": [],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "",
+    "example": ""
+  },
+  "onDeviceOrientationChanges": {
+    "name": "onDeviceOrientationChanges",
+    "type": "",
+    "params": [],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "onDeviceOrientationChanges() - Triggered when the device switches between portrait and landscape orientations.",
+    "example": ""
   }
 }
