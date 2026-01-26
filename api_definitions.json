@@ -20641,7 +20641,7 @@
     "params": [],
     "returns": "void",
     "scope": "clientside",
-    "description": "onAccelerator() - Triggered when new accelerometer (motion) data is received from the device sensors.",
+    "description": "onAccelerator() - (DEPRECATED) Triggered when new accelerometer (motion) data is received from the device sensors.",
     "example": ""
   }
 }
