@@ -20569,5 +20569,14 @@
     "scope": "clientside",
     "description": "triggerserver(string, string, string, ...) - Triggers a server-side action on a weapon or NPC database. Calls the onActionServerSide function on the target.\n\nNote: The `type` parameter can be \"gui\" or \"weapon\" (for weapons) or \"NPC\" (for NPC databases). Additional parameters after `command` are passed to the `onActionServerSide` function on the server side.",
     "example": "triggerserver(\"gui\", this.name, \"useItem\", \"Health Potion\");"
+  },
+  "androidGetDisplayAttributes": {
+    "name": "androidGetDisplayAttributes",
+    "type": "function",
+    "params": [],
+    "returns": "array",
+    "scope": "clientside",
+    "description": "androidGetDisplayAttributes() \u2014 Android specific function that returns screen density attributes: osdpi, xdpi, ydpi, and scale.",
+    "example": "temp.attrs = androidGetDisplayAttributes();"
   }
 }
