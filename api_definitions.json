@@ -20634,5 +20634,14 @@
     "scope": "clientside",
     "description": "onDisconnectedFromServer() - Triggered when the connection to the server is closed or lost.",
     "example": ""
+  },
+  "onAccelerator": {
+    "name": "onAccelerator",
+    "type": "",
+    "params": [],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "onAccelerator() - Triggered when new accelerometer (motion) data is received from the device sensors.",
+    "example": ""
   }
 }
