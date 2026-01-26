@@ -20578,5 +20578,14 @@
     "scope": "clientside",
     "description": "androidGetDisplayAttributes() \u2014 Android specific function that returns screen density attributes: osdpi, xdpi, ydpi, and scale.",
     "example": "temp.attrs = androidGetDisplayAttributes();"
+  },
+  "setRetinaDisplayNoAntialias": {
+    "name": "setRetinaDisplayNoAntialias",
+    "type": "function",
+    "params": [],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "setRetinaDisplayNoAntialias() - iOS specific function that turns on Retina rendering with no anti-aliasing to prevent smoothing or blurring.",
+    "example": "setRetinaDisplayNoAntialias();"
   }
 }
