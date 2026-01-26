@@ -19645,17 +19645,6 @@
     "description": "ends(str) - Checks if a string ends with the specified text/suffix.",
     "example": "// Check file extension\ntemp.filename = \"image.png\";\nif (temp.filename.ends(\".png\")) {\n  // Handle PNG file\n}\n\n// Check if string ends with specific text\nif (player.chat.ends(\"!\")) {\n  // Player used exclamation\n}"
   },
-  "onAcceleratorKeyEvent": {
-    "name": "onAcceleratorKeyEvent",
-    "params": [
-      "object",
-      "bool"
-    ],
-    "returns": "void",
-    "description": "Called when an accelerator key combination is pressed",
-    "scope": "clientside",
-    "type": ""
-  },
   "onChildMouseDown": {
     "name": "onChildMouseDown",
     "params": [
