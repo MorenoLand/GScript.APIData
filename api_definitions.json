@@ -20587,5 +20587,16 @@
     "scope": "clientside",
     "description": "setRetinaDisplayNoAntialias() - iOS specific function that turns on Retina rendering with no anti-aliasing to prevent smoothing or blurring.",
     "example": "setRetinaDisplayNoAntialias();"
+  },
+  "switchOpenGLDeviceScale": {
+    "name": "switchOpenGLDeviceScale",
+    "type": "function",
+    "params": [
+      "float"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "switchOpenGLDeviceScale(float) - Function that sets the internal OpenGL rendering scale, allowing control over the virtual screen resolution while maintaining the display aspect ratio.",
+    "example": "switchOpenGLDeviceScale(640 * (screenwidth / screenheight));"
   }
 }
