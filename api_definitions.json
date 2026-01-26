@@ -20625,5 +20625,14 @@
     "scope": "clientside",
     "description": "onDeviceOrientationChanges() - Triggered when the device switches between portrait and landscape orientations.",
     "example": ""
+  },
+  "onDisconnectedFromServer": {
+    "name": "onDisconnectedFromServer",
+    "type": "",
+    "params": [],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "onDisconnectedFromServer() - Triggered when the connection to the server is closed or lost.",
+    "example": ""
   }
 }
