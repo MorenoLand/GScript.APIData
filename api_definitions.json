@@ -20596,7 +20596,7 @@
     ],
     "returns": "void",
     "scope": "clientside",
-    "description": "switchOpenGLDeviceScale(float) - Function that sets the internal OpenGL rendering scale, allowing control over the virtual screen resolution while maintaining the display aspect ratio.",
+    "description": "switchOpenGLDeviceScale(float) - Function that sets the internal OpenGL render scale using the given virtual height in pixels; the width is adjusted automatically to maintain the display aspect ratio.",
     "example": "switchOpenGLDeviceScale(640 * (screenwidth / screenheight));"
   }
 }
