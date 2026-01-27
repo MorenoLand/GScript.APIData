@@ -6607,12 +6607,12 @@
     "name": "Adventure_setCheatWindows",
     "type": "function",
     "params": [
-      "str"
+      "array"
     ],
     "returns": "void",
     "scope": "clientside",
-    "description": "Adventure_setCheatWindows(str) - Adds a window/tab name to the banned cheat-window list, used with the cheatwindows server option.",
-    "example": "Adventure_setCheatWindows(\"Cheat_Engine\");"
+    "description": "Adventure_setCheatWindows(array) \u2013 Adds one or more window or tab names to the banned cheat-window list. Any window listed in this array will be recognized as a cheat tool by the client. You can also define banned cheat windows directly in the server options using cheatwindows.",
+    "example": "Adventure_setCheatWindows({\n    \"CheatEngine\",\n    \"Cheat Engine\",\n    \"GraalRelay\",\n    \"Graal Hack Trainer 1.2\"\n});"
   },
   "Adventure_setGraalControlRecreate": {
     "name": "Adventure_setGraalControlRecreate",
@@ -20631,6 +20631,15 @@
     "returns": "void",
     "scope": "clientside",
     "description": "onAccelerator() - (DEPRECATED) Triggered when new accelerometer (motion) data is received from the device sensors.",
+    "example": ""
+  },
+  "activeplayer": {
+    "name": "activeplayer",
+    "type": "",
+    "params": [],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "",
     "example": ""
   }
 }
