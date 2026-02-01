@@ -20641,5 +20641,16 @@
     "scope": "clientside",
     "description": "",
     "example": ""
+  },
+  "Adventure_selectFileShowHiddenFiles": {
+    "name": "Adventure_selectFileShowHiddenFiles",
+    "type": "function",
+    "params": [
+      "bool"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "Adventure_selectFileShowHiddenFiles(bool) - Toggles whether hidden files are visible in the file selector using the IRC File Browser.",
+    "example": "Adventure_selectFileShowHiddenFiles(true);"
   }
 }
