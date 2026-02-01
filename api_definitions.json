@@ -20663,5 +20663,16 @@
     "scope": "clientside",
     "description": "Adventure_selectFileSetFolderByText(str) -Changes the current folder using a string path (Only works with IRC File Browser).",
     "example": "Adventure_selectFileSetFolderByText(\"levels/images\");"
+  },
+  "Adventure_selectFileSetFolder": {
+    "name": "Adventure_selectFileSetFolder",
+    "type": "function",
+    "params": [
+      "int"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "Adventure_selectFileSetFolder(int) - Changes the current folder based on a selection index from the folder/search list (Only works with IRC File Browser).",
+    "example": "Adventure_selectFileSetFolder(1);"
   }
 }
