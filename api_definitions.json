@@ -20365,8 +20365,8 @@
     "params": [],
     "returns": "void",
     "scope": "clientside",
-    "description": "",
-    "example": ""
+    "description": "profile = GuiBlueTextListProfile;",
+    "example": "new GuiTextListCtrl(\"Test_List\") {\n     profile = GuiBlueTextListProfile;\n     x = y = 0;\n     width = 140;\n     fitparentwidth = true;\n     \n     clearrows();\n     addrow(0,\"TextList\");\n     addrow(1,\"Second line\");\n     setSelectedRow(1);\n   }"
   },
   "GuiTabCtrl": {
     "name": "GuiTabCtrl",
