@@ -1795,15 +1795,15 @@
   },
   "hasright": {
     "name": "hasright",
+    "type": "function",
     "params": [
       "str",
       "str"
     ],
     "returns": "boolean",
+    "scope": "serverside",
     "description": "hasright(str, str) - returns boolean | TServerPlayer.hasright(str, str) - returns boolean - parameters are the rights (e.g. \"rw\") and the filename",
-    "example": "if (player.hasright(\"put\", \"levels/house.nw\")) echo(\"Has edit rights\");",
-    "scope": "clientside",
-    "type": ""
+    "example": "if (player.hasright(\"rw\", \"levels/house.nw\")) echo(\"Has edit rights\");"
   },
   "removeweapon": {
     "name": "removeweapon",
