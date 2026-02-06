@@ -20685,5 +20685,16 @@
     "scope": "clientside",
     "description": "Adventure_selectFileSelect(str) - Selects a chosen filename in the current folder (Only works with IRC File Browser).",
     "example": "Adventure_selectFileSelect(\"block.png\");"
+  },
+  "MRandomLCG": {
+    "name": "MRandomLCG",
+    "type": "function",
+    "params": [
+      "void"
+    ],
+    "returns": "object",
+    "scope": "clientside",
+    "description": "new MRandomLCG() \u2013 creates a linear congruential random number generator that can produce random integers randint() and normalized random floating-point values randfloat().",
+    "example": "temp.random_number = new MRandomLCG(\"num_object\");\nplayer.chat = temp.random_number.randint();\ntemp.random_number.destroy();"
   }
 }
