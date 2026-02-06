@@ -20703,7 +20703,7 @@
     "params": [],
     "returns": "void",
     "scope": "clientside",
-    "description": "new MRandomR250(\"num_object\") \u2013 creates a random number generator using the R250 algorithm, seeded with the given identifier, and provides methods such as randint() for generating random integers and randfloat() for generating random floating-point values.",
+    "description": "new MRandomR250() \u2013 creates a random number generator using the R250 algorithm, seeded with the given identifier, and provides methods such as randint() for generating random integers and randfloat() for generating random floating-point values.",
     "example": "temp.random_number = new MRandomR250(\"num_object\");\nplayer.chat = temp.random_number.randint();\ntemp.random_number.destroy();"
   }
 }
