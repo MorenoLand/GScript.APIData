@@ -20705,5 +20705,14 @@
     "scope": "clientside",
     "description": "new MRandomR250() \u2013 creates a random number generator using the R250 algorithm, seeded with the given identifier, and provides methods such as randint() for generating random integers and randfloat() for generating random floating-point values.",
     "example": "temp.random_number = new MRandomR250(\"num_object\");\nplayer.chat = temp.random_number.randint();\ntemp.random_number.destroy();"
+  },
+  "TActionScriptVar": {
+    "name": "TActionScriptVar",
+    "type": "function",
+    "params": [],
+    "returns": "object",
+    "scope": "clientside",
+    "description": "new TActionScriptVar() - Creates a new ActionScript variable object. These variables can be accessed via ActionScript. (DEPRECATED)",
+    "example": ""
   }
 }
