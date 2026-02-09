@@ -8,9 +8,9 @@
       "x",
       "y"
     ],
-    "returns": "void",
+    "returns": "object",
     "scope": "clientside",
-    "description": "Creates a new, independent visual element. The 'index' is critical: indices >= 200 are private to the local client, while indices < 200 are public and visible to all nearby players.\n\nreturns object",
+    "description": "Creates a new, independent visual element. The 'index' is critical: indices >= 200 are private to the local client, while indices < 200 are public and visible to all nearby players.",
     "example": "showimg(1, \"block.png\", player.x, player.y);"
   },
   "findimg": {
@@ -771,14 +771,14 @@
   },
   "message": {
     "name": "message",
+    "type": "",
     "params": [
       "str"
     ],
     "returns": "void",
     "scope": "global",
     "description": "TServerNPC.message(str) - Displays a text message over the NPC that is visible to players.",
-    "example": "message(\"Welcome to the server!\");",
-    "type": ""
+    "example": "message(\"Welcome to the server!\"); // test"
   },
   "toall": {
     "name": "toall",
