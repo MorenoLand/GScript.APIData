@@ -778,7 +778,7 @@
     "returns": "void",
     "scope": "global",
     "description": "TServerNPC.message(str) - Displays a text message over the NPC that is visible to players.",
-    "example": "message(\"Welcome to the server!\"); // test"
+    "example": "message(\"Welcome to the server!\");"
   },
   "toall": {
     "name": "toall",
