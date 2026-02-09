@@ -10,7 +10,7 @@
     ],
     "returns": "void",
     "scope": "clientside",
-    "description": "Creates a new, independent visual element. The 'index' is critical: indices >= 200 are private to the local client, while indices < 200 are public and visible to all nearby players.\ntest\nreturns object",
+    "description": "Creates a new, independent visual element. The 'index' is critical: indices >= 200 are private to the local client, while indices < 200 are public and visible to all nearby players.\n\nreturns object",
     "example": "showimg(1, \"block.png\", player.x, player.y);"
   },
   "findimg": {
