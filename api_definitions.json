@@ -9714,17 +9714,17 @@
   },
   "triggeraction": {
     "name": "triggeraction",
+    "type": "function",
     "params": [
-      "float",
-      "float",
-      "str",
-      "str"
+      "x",
+      "y",
+      "actionname",
+      "params..."
     ],
     "returns": "void",
-    "description": "TServerLevel.triggeraction(float, float, str, str) | triggeraction(float, float, str, params...)",
-    "example": "triggeraction(\"updateUI\", \"score\");",
-    "scope": "clientside",
-    "type": ""
+    "scope": "global",
+    "description": "TServerLevel.triggeraction(float, float, str, params...) - Triggers an event on all NPCs at the specified x,y position. The event name is appended to \"onAction\" to call the matching handler (e.g. \"warpPlayer\" calls onActionwarpPlayer()). Additional params are passed to the handler.",
+    "example": "triggeraction(this.x + 1, this.y + 1, \"warpPlayer\");\n// Calls onActionwarpPlayer() on NPCs at that position\ntriggeraction(this.x + 1, this.y + 1, \"CreateInstance\", this.instance_id);\n// Calls onActionCreateInstance(instance_id)"
   },
   "undo": {
     "name": "undo",
