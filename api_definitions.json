@@ -17502,12 +17502,12 @@
   },
   "timevar2": {
     "name": "timevar2",
+    "type": "variable",
     "params": [],
-    "returns": "void",
-    "description": "timevar2 - float (read only)",
-    "example": "timevar2()",
-    "scope": "clientside",
-    "type": ""
+    "returns": "float",
+    "scope": "global",
+    "description": "TGraalVar.timevar2 - Unix timestamp as a float (seconds since January 1st, 1970). Read-only.",
+    "example": "if (this.lastused > timevar2) return;\nthis.lastused = timevar2 + 5; // 5 seconds cooldown"
   },
   "timing": {
     "name": "timing",
