@@ -5851,15 +5851,15 @@
   },
   "setcharprop": {
     "name": "setcharprop",
+    "type": "function",
     "params": [
-      "varname",
+      "code",
       "string"
     ],
     "returns": "void",
-    "description": "setcharprop(varname,string)",
-    "example": "setcharprop(param1, param2);",
-    "scope": "clientside",
-    "type": ""
+    "scope": "global",
+    "description": "TServerNPC.setcharprop(property, value) - Sets character properties on an NPC. GS1/legacy function - in GS2 use direct property assignment instead (e.g. chat = \"hello\" instead of setcharprop #c,hello;).",
+    "example": "// GS1 (legacy)\nsetcharprop #c,Welcome to the shop!;\n// GS2 equivalent:\nchat = \"Welcome to the shop!\";"
   },
   "setcoatcolor": {
     "name": "setcoatcolor",
