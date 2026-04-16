@@ -18704,12 +18704,12 @@
   },
   "onCancel": {
     "name": "onCancel",
+    "type": "function",
     "params": [],
     "returns": "void",
     "scope": "clientside",
-    "description": "Event triggered when cancelled",
-    "example": "",
-    "type": ""
+    "description": "GuiPopupMenu.onCancel() - Event triggered when a popup menu is closed without selecting any entry. Paired with onSelect() which fires when an entry is chosen. Hidden from listscriptfunctions.",
+    "example": "function Profile_Menu.onCancel() {\n  if (Profile_SubMenu.visible) {\n    Profile_SubMenu.close();\n  }\n}"
   },
   "onClassesDownloaded": {
     "name": "onClassesDownloaded",
