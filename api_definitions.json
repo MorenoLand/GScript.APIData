@@ -17493,12 +17493,12 @@
   },
   "timevar": {
     "name": "timevar",
+    "type": "variable",
     "params": [],
-    "returns": "void",
-    "description": "timevar - integer (read only)",
-    "example": "timevar()",
-    "scope": "clientside",
-    "type": ""
+    "returns": "integer",
+    "scope": "global",
+    "description": "TGraalVar.timevar - Graal timer increased by 1 every 5 seconds, synchronized between server and clients. Started on 2001-02-01 at 18:33:34 Paris time (opening of Graal2001). Read-only.",
+    "example": "if (this.lastaction + 20 < timevar) return;\n// 20 ticks = 100 seconds since last action"
   },
   "timevar2": {
     "name": "timevar2",
