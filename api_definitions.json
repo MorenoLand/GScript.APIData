@@ -65,15 +65,15 @@
   },
   "changeimgmode": {
     "name": "changeimgmode",
+    "type": "function",
     "params": [
-      "int",
-      "int"
+      "index",
+      "mode"
     ],
     "returns": "void",
-    "description": "TServerNPC.changeimgmode(int, int)",
-    "example": "changeimgmode(1, 1);",
     "scope": "clientside",
-    "type": ""
+    "description": "TServerNPC.changeimgmode(index, mode) - Sets the drawing mode for a showimg on the NPC. Values: 0=add, 1=transparent, 2=subtract, 3=daynight.",
+    "example": "showimg(200, \"glow.png\", this.x, this.y);\nchangeimgmode(200, 1); // transparent"
   },
   "changeimgpart": {
     "name": "changeimgpart",
