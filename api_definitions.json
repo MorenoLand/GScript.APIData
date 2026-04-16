@@ -11711,12 +11711,12 @@
   },
   "anistep": {
     "name": "anistep",
+    "type": "variable",
     "params": [],
-    "returns": "void",
-    "description": "Clientside:",
-    "example": "anistep()",
+    "returns": "integer",
     "scope": "clientside",
-    "type": ""
+    "description": "showimg.anistep - Current animation step/frame of the NPC or player character. Read-only.",
+    "example": "if (this.anistep == 0) {\n  // standing frame\n}"
   },
   "ap": {
     "name": "ap",
