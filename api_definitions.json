@@ -1,17 +1,17 @@
 {
   "showimg": {
     "name": "showimg",
-    "type": "variable",
+    "type": "function",
     "params": [
       "index",
-      "imageFile",
+      "image",
       "x",
       "y"
     ],
-    "returns": "object",
+    "returns": "void",
     "scope": "clientside",
-    "description": "Creates a new, independent visual element. The 'index' is critical: indices >= 200 are private to the local client, while indices < 200 are public and visible to all nearby players.",
-    "example": "showimg(1, \"block.png\", player.x, player.y);"
+    "description": "TServerLevel.showimg(index, imageFile, x, y) - Creates an image at the given position. Indices >= 200 are client-only, indices < 200 are public (visible to other players). Returns an object reference to modify properties (x, y, red, green, blue, alpha, zoom, rotation, etc.).",
+    "example": "showimg(200, \"fire.gif\", player.x + 0.5, player.y - 1.5);\nwith (findimg(200)) {\n  x = player.x + 0.5;\n  y = player.y - 1.5;\n  red = random(0, 0.3);\n}"
   },
   "findimg": {
     "name": "findimg",
