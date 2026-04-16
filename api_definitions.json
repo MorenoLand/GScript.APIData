@@ -4964,14 +4964,14 @@
   },
   "onLevelFileUpdated": {
     "name": "onLevelFileUpdated",
+    "type": "function",
     "params": [
       "filename"
     ],
     "returns": "void",
-    "description": "onLevelFileUpdated(str) event - a file in the levels/ folder or sub-folder has been updated",
-    "example": "onLevelFileUpdated(param1);",
-    "scope": "clientside",
-    "type": ""
+    "scope": "serverside",
+    "description": "onLevelFileUpdated(filename) - Event triggered when a file in the levels/ folder or subfolder has been updated. Useful for detecting map changes without polling.",
+    "example": "function onLevelFileUpdated(filename) {\n  echo(\"Updated: \" @ filename);\n}"
   },
   "onMapClick": {
     "name": "onMapClick",
