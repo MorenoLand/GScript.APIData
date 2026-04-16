@@ -11239,7 +11239,7 @@
       "text"
     ],
     "returns": "string",
-    "description": "returns string - calculates a hash, parameters are algorithm (e.g. sha256 or md5), data and key",
+    "description": "hash_hmac | returns string - calculates a hash, parameters are algorithm (e.g. sha256 or md5), data and key",
     "scope": "clientside",
     "type": ""
   },
@@ -18605,12 +18605,12 @@
   },
   "onAction": {
     "name": "onAction",
+    "type": "function",
     "params": [],
     "returns": "void",
-    "scope": "clientside",
-    "description": "Event triggered when an action occurs",
-    "example": "",
-    "type": ""
+    "scope": "global",
+    "description": "onAction() - General event handler for GUI control interactions (button press, enter in text field, slider move) and triggeraction() events.\n\nUse ControlName.onAction() for GUI, or onAction{EventName}() when triggeraction() fires a matching name. Hidden from listscriptfunctions.",
+    "example": "// GUI button\nfunction CloseButton.onAction() {\n  MyWindow.visible = false;\n}\n\n\n// triggeraction calls onActionCreateInstance on NPCs at that position\ntriggeraction(this.x + 1, this.y + 1, \"CreateInstance\", this.instance_id);\n// Handler on the receiving NPC:\nfunction onActionCreateInstance(instance_id) {\n  this.link = instance_id;\n}"
   },
   "onAdd": {
     "name": "onAdd",
@@ -20713,6 +20713,222 @@
     "returns": "object",
     "scope": "clientside",
     "description": "new TActionScriptVar() - Creates a new ActionScript variable object. These variables can be accessed via ActionScript. (DEPRECATED)",
+    "example": ""
+  },
+  "TNetService": {
+    "name": "TNetService",
+    "type": "variable",
+    "params": [],
+    "returns": "object",
+    "scope": "clientside",
+    "description": "TNetService - object type, parent type is TStaticVar",
+    "example": ""
+  },
+  "TNetService.host - string": {
+    "name": "TNetService.host - string",
+    "type": "function",
+    "params": [
+      "read only"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "TNetService.host - string (read only)",
+    "example": ""
+  },
+  "TNetService.interface - integer": {
+    "name": "TNetService.interface - integer",
+    "type": "function",
+    "params": [
+      "read only"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "TNetService.interface - integer (read only)",
+    "example": ""
+  },
+  "TNetService.onNameCollision": {
+    "name": "TNetService.onNameCollision",
+    "type": "function",
+    "params": [],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "the name has already been used on the network",
+    "example": ""
+  },
+  "TNetService.port - integer": {
+    "name": "TNetService.port - integer",
+    "type": "function",
+    "params": [
+      "read only"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "TNetService.port - integer (read only)",
+    "example": ""
+  },
+  "TNetService.protocol - string": {
+    "name": "TNetService.protocol - string",
+    "type": "function",
+    "params": [
+      "read only"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "TNetService.protocol - string (read only)",
+    "example": ""
+  },
+  "TNetService.publish": {
+    "name": "TNetService.publish",
+    "type": "function",
+    "params": [
+      "obj",
+      "str",
+      "str",
+      "str"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "- returns boolean - publishes a service over bonjour/zeroconf, parameters are a TSocket, type, domain, name",
+    "example": ""
+  },
+  "TNetService.servicedomain - string": {
+    "name": "TNetService.servicedomain - string",
+    "type": "function",
+    "params": [
+      "read only"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "TNetService.servicedomain - string (read only)",
+    "example": ""
+  },
+  "TNetService.servicename - string": {
+    "name": "TNetService.servicename - string",
+    "type": "function",
+    "params": [
+      "read only"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "TNetService.servicename - string (read only)",
+    "example": ""
+  },
+  "TNetService.servicetype - string": {
+    "name": "TNetService.servicetype - string",
+    "type": "function",
+    "params": [
+      "read only"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "TNetService.servicetype - string (read only)",
+    "example": ""
+  },
+  "TNetService.unpublish": {
+    "name": "TNetService.unpublish",
+    "type": "function",
+    "params": [],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "- un-publishes a previously publish()ed service; this is automatically done when destroy()ing the service",
+    "example": ""
+  },
+  "TNetServiceBrowser": {
+    "name": "TNetServiceBrowser",
+    "type": "variable",
+    "params": [],
+    "returns": "object",
+    "scope": "clientside",
+    "description": "TNetServiceBrowser - object type, parent type is TStaticVar",
+    "example": ""
+  },
+  "TNetServiceBrowser.findservice": {
+    "name": "TNetServiceBrowser.findservice",
+    "type": "function",
+    "params": [
+      "str"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "- returns object - gets the main service associated with the provided name",
+    "example": ""
+  },
+  "TNetServiceBrowser.onNewInterface": {
+    "name": "TNetServiceBrowser.onNewInterface",
+    "type": "function",
+    "params": [
+      "obj"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "an alternative interface for a service has been discovered (e.g. ipv6)",
+    "example": ""
+  },
+  "TNetServiceBrowser.onNewService": {
+    "name": "TNetServiceBrowser.onNewService",
+    "type": "function",
+    "params": [
+      "obj"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "a new service has been discovered",
+    "example": ""
+  },
+  "TNetServiceBrowser.onRemoveService": {
+    "name": "TNetServiceBrowser.onRemoveService",
+    "type": "function",
+    "params": [
+      "str",
+      "str",
+      "str"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "a service has been removed (name, type, domain)",
+    "example": ""
+  },
+  "TNetServiceBrowser.search": {
+    "name": "TNetServiceBrowser.search",
+    "type": "function",
+    "params": [
+      "str",
+      "str"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "- returns boolean - searches for TNetServices of the given id and domain",
+    "example": ""
+  },
+  "TSocket.connecttoservice": {
+    "name": "TSocket.connecttoservice",
+    "type": "function",
+    "params": [
+      "obj"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "- connects to a TNetService, use TNetServiceBrowser to discover services",
+    "example": ""
+  },
+  "$pref::video::resolution": {
+    "name": "$pref::video::resolution",
+    "type": "variable",
+    "params": [],
+    "returns": "integer",
+    "scope": "clientside",
+    "description": "$pref::video::resolution - integer",
+    "example": ""
+  },
+  "sha1": {
+    "name": "sha1",
+    "type": "function",
+    "params": [
+      "str"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "- returns string - calculates a sha1 hash",
     "example": ""
   }
 }
