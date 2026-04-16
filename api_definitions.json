@@ -2183,14 +2183,14 @@
   },
   "base64encode": {
     "name": "base64encode",
+    "type": "function",
     "params": [
-      "str"
+      "text"
     ],
-    "returns": "void",
-    "description": "base64encode(str) - returns string - encodes a string with base64 scheme | base64encode(str) - returns string - encodes a string with base64 scheme and makes it compatible to be used in URL paths and parameters (replaces + with - and / with _)",
-    "example": "base64encode(param1);",
-    "scope": "clientside",
-    "type": ""
+    "returns": "string",
+    "scope": "global",
+    "description": "TGraalVar.base64encode(str) - Encodes a string to base64 format.",
+    "example": "temp.encoded = base64encode(\"hello world\");"
   },
   "contains": {
     "name": "contains",
