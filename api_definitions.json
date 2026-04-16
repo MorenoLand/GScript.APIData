@@ -77,18 +77,18 @@
   },
   "changeimgpart": {
     "name": "changeimgpart",
+    "type": "function",
     "params": [
-      "int",
-      "int",
-      "int",
-      "int",
-      "int"
+      "index",
+      "x",
+      "y",
+      "width",
+      "height"
     ],
     "returns": "void",
-    "description": "TServerNPC.changeimgpart(int, int, int, int, int)",
-    "example": "changeimgpart(1, 0, 0, 32, 32);",
-    "scope": "clientside",
-    "type": ""
+    "scope": "global",
+    "description": "TServerNPC.changeimgpart(index, x, y, width, height) - Changes the visible part (crop region) of a showimg image. Reset to full image when showimg is called again.",
+    "example": "showimg(200, \"spritesheet.png\", this.x, this.y);\nchangeimgpart(200, 5, 12, 32, 32);"
   },
   "showimg2": {
     "name": "showimg2",
