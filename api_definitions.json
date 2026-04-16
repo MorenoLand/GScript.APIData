@@ -2172,14 +2172,14 @@
   },
   "base64decode": {
     "name": "base64decode",
+    "type": "function",
     "params": [
-      "str"
+      "text"
     ],
-    "returns": "void",
-    "description": "base64decode(str) - returns string - converts a url to base64 format by replacing - with + and _ with / and then decodes with base64 scheme | base64decode(str) - returns string - decodes a string with base64 scheme",
-    "example": "base64decode(param1);",
-    "scope": "clientside",
-    "type": ""
+    "returns": "string",
+    "scope": "global",
+    "description": "TGraalVar.base64decode(str) - Decodes a base64 encoded string. Also handles URL-safe base64 by replacing - with + and _ with / before decoding.",
+    "example": "temp.decoded = base64decode(temp.encoded);"
   },
   "base64encode": {
     "name": "base64encode",
