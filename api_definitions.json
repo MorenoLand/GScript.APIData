@@ -14562,12 +14562,14 @@
   },
   "isblockingprojectiles": {
     "name": "isblockingprojectiles",
-    "params": [],
+    "type": "variable",
+    "params": [
+      "true/false"
+    ],
     "returns": "void",
-    "description": "TServerNPC.isblockingprojectiles - boolean",
-    "example": "isblockingprojectiles()",
-    "scope": "clientside",
-    "type": ""
+    "scope": "global",
+    "description": "TServerNPC.isblockingprojectiles - Boolean indicating whether the NPC blocks projectiles.",
+    "example": "if (this.isblockingprojectiles) {\n  chat = \"I can't be hit by projectiles\";\n}"
   },
   "isbuddy": {
     "name": "isbuddy",
