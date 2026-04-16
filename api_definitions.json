@@ -1748,16 +1748,16 @@
   },
   "requestsql2": {
     "name": "requestsql2",
+    "type": "function",
     "params": [
-      "str",
-      "str",
-      "bool"
+      "database",
+      "query",
+      "expectResult"
     ],
-    "returns": "void",
-    "description": "requestsql2(str, str, bool) - returns object - like requestSQL(), but allows you to select the database, parameters are database identifier, query, expect result (true/false)",
-    "example": "requestsql2(param1, param2, param3);",
-    "scope": "clientside",
-    "type": ""
+    "returns": "object",
+    "scope": "serverside",
+    "description": "TGraalVar.requestsql2(database, query, expectResult) - Executes a SQL query on a specific database by identifier. Otherwise identical to requestsql(). Returns an event object with rows, error, lastinsertid, and completed properties.",
+    "example": "temp.req = requestsql2(\"secondary_db\", \"SELECT score FROM stats WHERE account = '\" @ acc.escape() @ \"'\", true);\nwaitfor(req, \"onReceiveData\", 60);\necho(req.rows);"
   },
   "addweapon": {
     "name": "addweapon",
