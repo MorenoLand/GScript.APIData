@@ -771,14 +771,14 @@
   },
   "message": {
     "name": "message",
-    "type": "",
+    "type": "function",
     "params": [
-      "str"
+      "text"
     ],
     "returns": "void",
     "scope": "global",
-    "description": "TServerNPC.message(str) - Displays a text message over the NPC that is visible to players.",
-    "example": "message(\"Welcome to the server!\");"
+    "description": "TServerNPC.message(text) - Displays a text message over the NPC visible to players. GS1/legacy command - in GS2 use direct assignment: chat = \"text\";",
+    "example": "// GS1 (legacy)\nmessage Welcome to the shop!;\n// GS2 equivalent:\nchat = \"Welcome to the shop!\";"
   },
   "toall": {
     "name": "toall",
