@@ -1736,15 +1736,15 @@
   },
   "requestsql": {
     "name": "requestsql",
+    "type": "function",
     "params": [
-      "str",
-      "bool"
+      "query",
+      "expectResult"
     ],
     "returns": "void",
-    "description": "requestsql(str, bool) - returns object - executes a sql query for the default database, parameters are the query string and if you expect a result (e.g. from a select-query); the result is an event object, call waitfor(requestobj,\"onReceiveData\",60) and then use requestobj.rows, error and lastinsert...",
-    "example": "requestsql(param1, param2);",
-    "scope": "clientside",
-    "type": ""
+    "scope": "serverside",
+    "description": "TGraalVar.requestsql(query, expectResult) - Executes a SQL query on the default database. Returns an event object with rows, error, lastinsertid, and completed properties. Use waitfor(req, \"onReceiveData\", 60) for async results.",
+    "example": "temp.req = requestsql(\"SELECT * FROM players WHERE account = '\" @ acc.escape() @ \"'\", true);\nwaitfor(req, \"onReceiveData\", 60);\necho(req.rows);"
   },
   "requestsql2": {
     "name": "requestsql2",
