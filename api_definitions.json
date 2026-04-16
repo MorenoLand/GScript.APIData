@@ -1741,7 +1741,7 @@
       "query",
       "expectResult"
     ],
-    "returns": "void",
+    "returns": "object",
     "scope": "serverside",
     "description": "TGraalVar.requestsql(query, expectResult) - Executes a SQL query on the default database. Returns an event object with rows, error, lastinsertid, and completed properties. Use waitfor(req, \"onReceiveData\", 60) for async results.",
     "example": "temp.req = requestsql(\"SELECT * FROM players WHERE account = '\" @ acc.escape() @ \"'\", true);\nwaitfor(req, \"onReceiveData\", 60);\necho(req.rows);"
