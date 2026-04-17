@@ -20932,5 +20932,25 @@
     "scope": "clientside",
     "description": "- returns string - calculates a sha1 hash",
     "example": ""
+  },
+  "GuiScrollCTrl": {
+    "name": "GuiScrollCTrl",
+    "type": "",
+    "params": [],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "",
+    "example": ""
+  },
+  "GuiScrollCtrl": {
+    "name": "GuiScrollCtrl",
+    "type": "function",
+    "params": [
+      "name"
+    ],
+    "returns": "object",
+    "scope": "clientside",
+    "description": "GuiScrollCtrl(GuiControl) - Scrollable container that displays vertical and horizontal scroll bars for child controls.",
+    "example": "new GuiScrollCtrl(\"Test_ScrollField\") {\n  profile = GuiBlueScrollProfile;\n  x = 10; y = 10; width = 160; height = 80;\n  hScrollBar = \"dynamic\";\n  vScrollBar = \"alwaysOn\";\n}"
   }
 }
