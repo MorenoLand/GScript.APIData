@@ -11933,7 +11933,7 @@
     "name": "backgroundimage",
     "params": [],
     "returns": "void",
-    "description": "Clientside:",
+    "description": "GuiAccordionCtrl.backgroundimage | Clientside:",
     "example": "backgroundimage()",
     "scope": "clientside",
     "type": ""
@@ -12469,7 +12469,7 @@
     "name": "clientrelative",
     "params": [],
     "returns": "void",
-    "description": "Clientside:",
+    "description": "GuiWindowCtrl.clientrelative | Clientside:",
     "example": "clientrelative()",
     "scope": "clientside",
     "type": ""
@@ -12485,12 +12485,12 @@
   },
   "clipchildren": {
     "name": "clipchildren",
+    "type": "variable",
     "params": [],
-    "returns": "void",
-    "description": "Clientside:",
-    "example": "clipchildren()",
+    "returns": "boolean",
     "scope": "clientside",
-    "type": ""
+    "description": "GuiControl.clipchildren - Whether child controls are visually clipped to the parent's width/height area. Default true.",
+    "example": "new GuiControl(\"MountMovement_DPad\") {\n  clipchildren = false;\n  new GuiBitmapCtrl(\"MountMovement_OverlayBack\") {\n    resize(0, 24, 138, 200);\n    bitmap = \"eraiphone_movement1.png\";\n  }\n}"
   },
   "clipcolumntext": {
     "name": "clipcolumntext",
@@ -20952,5 +20952,14 @@
     "scope": "clientside",
     "description": "GuiScrollCtrl(GuiControl) - Scrollable container that displays vertical and horizontal scroll bars for child controls.",
     "example": "new GuiScrollCtrl(\"Test_ScrollField\") {\n  profile = GuiBlueScrollProfile;\n  x = 10; y = 10; width = 160; height = 80;\n  hScrollBar = \"dynamic\";\n  vScrollBar = \"alwaysOn\";\n}"
+  },
+  "GuiAccordionCtrl": {
+    "name": "GuiAccordionCtrl",
+    "type": "variable",
+    "params": [],
+    "returns": "object",
+    "scope": "clientside",
+    "description": "GuiAccordionCtrl - object type, parent type is GuiAnimationCtrl",
+    "example": ""
   }
 }
