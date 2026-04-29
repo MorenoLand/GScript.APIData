@@ -2317,14 +2317,14 @@
   },
   "getstringkeys": {
     "name": "getstringkeys",
+    "type": "function",
     "params": [
       "str"
     ],
-    "returns": "void",
-    "description": "getstringkeys(str) - returns object",
-    "example": "getstringkeys(param1, param2);",
-    "scope": "clientside",
-    "type": ""
+    "returns": "array",
+    "scope": "global",
+    "description": "TGraalVar.getstringkeys(string) - Returns an array of variable name endings matching the given prefix.",
+    "example": "this.modtime_foo = 1;\nthis.modtime_bar = 2;\nfor (temp.key: getstringkeys(\"this.modtime_\")) {\n  echo(temp.key); // \"foo\", \"bar\"\n}"
   },
   "insertstring": {
     "name": "insertstring",
