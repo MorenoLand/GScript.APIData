@@ -3043,7 +3043,7 @@
     "name": "close",
     "params": [],
     "returns": "void",
-    "description": "TSocket.close() - closes the socket, which means it will be disconnected or not longer bound | GuiContextMenuCtrl.close()",
+    "description": "GuiPopUpEditCtrl.close | TSocket.close() - closes the socket, which means it will be disconnected or not longer bound | GuiContextMenuCtrl.close()",
     "example": "close();",
     "scope": "clientside",
     "type": ""
@@ -3061,7 +3061,7 @@
     "name": "getselectedrows",
     "params": [],
     "returns": "array",
-    "description": "GuiContextMenuCtrl.getselectedrows() - returns object - array of row indices | GuiPopUpEditCtrl.getselectedrows() - returns object - array of row indices",
+    "description": "GuiPopUpEditCtrl.getselectedrows | GuiContextMenuCtrl.getselectedrows() - returns object - array of row indices | GuiPopUpEditCtrl.getselectedrows() - returns object - array of row indices",
     "example": "temp.rows = this.getselectedrows();",
     "scope": "clientside",
     "type": ""
@@ -3208,7 +3208,7 @@
       "bool"
     ],
     "returns": "void",
-    "description": "GuiMLTextCtrl.addtext(str, bool) | GuiPopUpEditCtrl.addtext(str, int) - deprecated, use addRow() instead",
+    "description": "GuiPopUpEditCtrl.addtext | GuiMLTextCtrl.addtext(str, bool) | GuiPopUpEditCtrl.addtext(str, int) - deprecated, use addRow() instead",
     "example": "addtext(param1, param2);",
     "scope": "clientside",
     "type": ""
@@ -4084,7 +4084,7 @@
       "int"
     ],
     "returns": "integer",
-    "description": "GuiContextMenuCtrl.getrowatpoint(int, int) - returns integer - row index | GuiPopUpEditCtrl.getrowatpoint(int, int) - returns integer - row index",
+    "description": "GuiPopUpEditCtrl.getrowatpoint | GuiContextMenuCtrl.getrowatpoint(int, int) - returns integer - row index | GuiPopUpEditCtrl.getrowatpoint(int, int) - returns integer - row index",
     "example": "temp.row = this.getrowatpoint(100, 50);",
     "scope": "clientside",
     "type": ""
@@ -4105,7 +4105,7 @@
       "int"
     ],
     "returns": "integer",
-    "description": "GuiContextMenuCtrl.getrowidatpoint(int, int) - returns integer - row id | GuiPopUpEditCtrl.getrowidatpoint(int, int) - returns integer - row id",
+    "description": "GuiPopUpEditCtrl.getrowidatpoint | GuiContextMenuCtrl.getrowidatpoint(int, int) - returns integer - row id | GuiPopUpEditCtrl.getrowidatpoint(int, int) - returns integer - row id",
     "example": "temp.id = this.getrowidatpoint(100, 50);",
     "scope": "clientside",
     "type": ""
@@ -4116,7 +4116,7 @@
       "int"
     ],
     "returns": "integer",
-    "description": "GuiContextMenuCtrl.getrownumbyid(int) - returns integer | GuiPopUpEditCtrl.getrownumbyid(int) - returns integer",
+    "description": "GuiPopUpEditCtrl.getrownumbyid | GuiContextMenuCtrl.getrownumbyid(int) - returns integer | GuiPopUpEditCtrl.getrownumbyid(int) - returns integer",
     "example": "temp.index = this.getrownumbyid(5);",
     "scope": "clientside",
     "type": ""
@@ -4148,7 +4148,7 @@
     "name": "getselectedids",
     "params": [],
     "returns": "array",
-    "description": "GuiContextMenuCtrl.getselectedids() - returns object - array of row ids | GuiPopUpEditCtrl.getselectedids() - returns object - array of row ids",
+    "description": "GuiPopUpEditCtrl.getselectedids | GuiContextMenuCtrl.getselectedids() - returns object - array of row ids | GuiPopUpEditCtrl.getselectedids() - returns object - array of row ids",
     "example": "temp.ids = this.getselectedids();",
     "scope": "clientside",
     "type": ""
@@ -4466,7 +4466,7 @@
       "int"
     ],
     "returns": "boolean",
-    "description": "GuiContextMenuCtrl.isidselected(int) - returns boolean | GuiPopUpEditCtrl.isidselected(int) - returns boolean",
+    "description": "GuiPopUpEditCtrl.isidselected | GuiContextMenuCtrl.isidselected(int) - returns boolean | GuiPopUpEditCtrl.isidselected(int) - returns boolean",
     "example": "if (this.isidselected(5)) { }",
     "scope": "clientside",
     "type": ""
@@ -4495,7 +4495,7 @@
     "name": "isopen",
     "params": [],
     "returns": "void",
-    "description": "GuiContextMenuCtrl.isopen() - returns boolean | GuiPopUpEditCtrl.isopen() - returns boolean",
+    "description": "GuiPopUpEditCtrl.isopen | GuiContextMenuCtrl.isopen() - returns boolean | GuiPopUpEditCtrl.isopen() - returns boolean",
     "example": "isopen();",
     "scope": "clientside",
     "type": ""
@@ -4515,7 +4515,7 @@
       "int"
     ],
     "returns": "boolean",
-    "description": "GuiContextMenuCtrl.isrowselected(int) - returns boolean | GuiPopUpEditCtrl.isrowselected(int) - returns boolean",
+    "description": "GuiPopUpEditCtrl.isrowselected | GuiContextMenuCtrl.isrowselected(int) - returns boolean | GuiPopUpEditCtrl.isrowselected(int) - returns boolean",
     "example": "if (this.isrowselected(2)) { }",
     "scope": "clientside",
     "type": ""
@@ -4666,7 +4666,7 @@
       "int"
     ],
     "returns": "void",
-    "description": "GuiContextMenuCtrl.makevisiblebyid(int) | GuiPopUpEditCtrl.makevisiblebyid(int)",
+    "description": "GuiPopUpEditCtrl.makevisiblebyid | GuiContextMenuCtrl.makevisiblebyid(int) | GuiPopUpEditCtrl.makevisiblebyid(int)",
     "example": "this.makevisiblebyid(5);",
     "scope": "clientside",
     "type": ""
@@ -5445,7 +5445,7 @@
       "int"
     ],
     "returns": "void",
-    "description": "GuiContextMenuCtrl.open(int, int) - opens the menu at the specified screen position, if possible use openAtMouse() instead | GuiPopUpEditCtrl.open(int, int) - opens the menu at the specified screen position, if possible use openAtMouse() instead",
+    "description": "GuiPopUpEditCtrl.open | GuiContextMenuCtrl.open(int, int) - opens the menu at the specified screen position, if possible use openAtMouse() instead | GuiPopUpEditCtrl.open(int, int) - opens the menu at the specified screen position, if possible use openAtMouse() instead",
     "example": "this.open(100, 200);",
     "scope": "clientside",
     "type": ""
@@ -5454,7 +5454,7 @@
     "name": "openatmouse",
     "params": [],
     "returns": "void",
-    "description": "GuiContextMenuCtrl.openatmouse() | GuiPopUpEditCtrl.openatmouse()",
+    "description": "GuiPopUpEditCtrl.openatmouse | GuiContextMenuCtrl.openatmouse() | GuiPopUpEditCtrl.openatmouse()",
     "example": "openatmouse();",
     "scope": "clientside",
     "type": ""
@@ -7003,7 +7003,7 @@
       "int"
     ],
     "returns": "object",
-    "description": "GuiAccordionCtrl.addrow(int) - returns object - parameter is id, returns the added row | GuiContextMenuCtrl.addrow(int, str) - returns object - the added row",
+    "description": "GuiPopUpEditCtrl.addrow | GuiAccordionCtrl.addrow(int) - returns object - parameter is id, returns the added row | GuiContextMenuCtrl.addrow(int, str) - returns object - the added row",
     "example": "temp.row = this.addrow(1, \"Item 1\");",
     "scope": "clientside",
     "type": ""
@@ -7280,7 +7280,7 @@
     "name": "clearrows",
     "params": [],
     "returns": "void",
-    "description": "GuiAccordionCtrl.clearrows() | GuiContextMenuCtrl.clearrows()",
+    "description": "GuiPopUpEditCtrl.clearrows | GuiAccordionCtrl.clearrows() | GuiContextMenuCtrl.clearrows()",
     "example": "this.clearrows();",
     "scope": "clientside",
     "type": ""
@@ -7289,7 +7289,7 @@
     "name": "clearselection",
     "params": [],
     "returns": "void",
-    "description": "GuiContextMenuCtrl.clearselection() | GuiPopUpEditCtrl.clearselection()",
+    "description": "GuiPopUpEditCtrl.clearselection | GuiContextMenuCtrl.clearselection() | GuiPopUpEditCtrl.clearselection()",
     "example": "this.clearselection();",
     "scope": "clientside",
     "type": ""
@@ -7449,7 +7449,7 @@
       "str"
     ],
     "returns": "integer",
-    "description": "GuiContextMenuCtrl.findtext(str) - returns integer - row index | GuiMLTextCtrl.findtext(str, int) - returns integer - searches for a sub string in the current text, returns the position if found, otherwise -1; second parameter are flags: 1 (wrap at text end) + 2 (case sensitive)",
+    "description": "GuiPopUpEditCtrl.findtext | GuiContextMenuCtrl.findtext(str) - returns integer - row index | GuiMLTextCtrl.findtext(str, int) - returns integer - searches for a sub string in the current text, returns the position if found, otherwise -1; second parameter are flags: 1 (wrap at text end) + 2 (case sensitive)",
     "example": "temp.index = this.findtext(\"search\");",
     "scope": "clientside",
     "type": ""
@@ -7460,7 +7460,7 @@
       "str"
     ],
     "returns": "integer",
-    "description": "GuiContextMenuCtrl.findtextid(str) - returns integer - row id | GuiPopUpEditCtrl.findtextid(str) - returns integer - row id",
+    "description": "GuiPopUpEditCtrl.findtextid | GuiContextMenuCtrl.findtextid(str) - returns integer - row id | GuiPopUpEditCtrl.findtextid(str) - returns integer - row id",
     "example": "temp.id = this.findtextid(\"search\");",
     "scope": "clientside",
     "type": ""
@@ -7745,7 +7745,7 @@
     "name": "getselectedid",
     "params": [],
     "returns": "integer",
-    "description": "GuiContextMenuCtrl.getselectedid() - returns integer - row id | GuiPopUpEditCtrl.getselectedid() - returns integer - row id",
+    "description": "GuiPopUpEditCtrl.getselectedid | GuiContextMenuCtrl.getselectedid() - returns integer - row id | GuiPopUpEditCtrl.getselectedid() - returns integer - row id",
     "example": "temp.id = this.getselectedid();",
     "scope": "clientside",
     "type": ""
@@ -7754,7 +7754,7 @@
     "name": "getselectedrow",
     "params": [],
     "returns": "integer",
-    "description": "GuiAnimationCtrl.getselectedrow() - returns integer - row index | GuiContextMenuCtrl.getselectedrow() - returns integer - row index",
+    "description": "GuiPopUpEditCtrl.getselectedrow | GuiAnimationCtrl.getselectedrow() - returns integer - row index | GuiContextMenuCtrl.getselectedrow() - returns integer - row index",
     "example": "temp.row = this.getselectedrow();",
     "scope": "clientside",
     "type": ""
@@ -7763,7 +7763,7 @@
     "name": "getselectedtext",
     "params": [],
     "returns": "string",
-    "description": "GuiContextMenuCtrl.getselectedtext() - returns string | GuiPopUpEditCtrl.getselectedtext() - returns string",
+    "description": "GuiPopUpEditCtrl.getselectedtext | GuiContextMenuCtrl.getselectedtext() - returns string | GuiPopUpEditCtrl.getselectedtext() - returns string",
     "example": "temp.text = this.getselectedtext();",
     "scope": "clientside",
     "type": ""
@@ -7871,7 +7871,7 @@
       "int"
     ],
     "returns": "object",
-    "description": "GuiAccordionCtrl.insertrow(int, int) - returns object - parameters are the insert position and id, returns the inserted row | GuiContextMenuCtrl.insertrow(int, int, str) - returns object - the inserted row",
+    "description": "GuiPopUpEditCtrl.insertrow | GuiAccordionCtrl.insertrow(int, int) - returns object - parameters are the insert position and id, returns the inserted row | GuiContextMenuCtrl.insertrow(int, int, str) - returns object - the inserted row",
     "example": "temp.row = this.insertrow(2, 10, \"Inserted Item\");",
     "scope": "clientside",
     "type": ""
@@ -8452,7 +8452,7 @@
       "int"
     ],
     "returns": "void",
-    "description": "GuiContextMenuCtrl.makevisible(int) | GuiPopUpEditCtrl.makevisible(int)",
+    "description": "GuiPopUpEditCtrl.makevisible | GuiContextMenuCtrl.makevisible(int) | GuiPopUpEditCtrl.makevisible(int)",
     "example": "this.makevisible(10);",
     "scope": "clientside",
     "type": ""
@@ -9213,7 +9213,7 @@
       "int"
     ],
     "returns": "void",
-    "description": "GuiAccordionCtrl.removerow(int) | GuiContextMenuCtrl.removerow(int)",
+    "description": "GuiPopUpEditCtrl.removerow | GuiAccordionCtrl.removerow(int) | GuiContextMenuCtrl.removerow(int)",
     "example": "this.removerow(3);",
     "scope": "clientside",
     "type": ""
@@ -9224,7 +9224,7 @@
       "int"
     ],
     "returns": "void",
-    "description": "GuiAccordionCtrl.removerowbyid(int) | GuiContextMenuCtrl.removerowbyid(int)",
+    "description": "GuiPopUpEditCtrl.removerowbyid | GuiAccordionCtrl.removerowbyid(int) | GuiContextMenuCtrl.removerowbyid(int)",
     "example": "this.removerowbyid(10);",
     "scope": "clientside",
     "type": ""
@@ -9354,7 +9354,7 @@
     "name": "rowcount",
     "params": [],
     "returns": "integer",
-    "description": "GuiAnimationCtrl.rowcount() - returns integer | GuiContextMenuCtrl.rowcount() - returns integer",
+    "description": "GuiPopUpEditCtrl.rowcount | GuiAnimationCtrl.rowcount() - returns integer | GuiContextMenuCtrl.rowcount() - returns integer",
     "example": "temp.count = this.rowcount();",
     "scope": "clientside",
     "type": ""
@@ -12496,7 +12496,7 @@
     "name": "clipcolumntext",
     "params": [],
     "returns": "void",
-    "description": "Clientside:",
+    "description": "GuiPopUpEditCtrl.clipcolumntext | Clientside:",
     "example": "clipcolumntext()",
     "scope": "clientside",
     "type": ""
@@ -12618,7 +12618,7 @@
     "name": "columns",
     "params": [],
     "returns": "void",
-    "description": "Clientside:",
+    "description": "GuiPopUpEditCtrl.columns | Clientside:",
     "example": "columns()",
     "scope": "clientside",
     "type": ""
@@ -13263,7 +13263,7 @@
     "name": "enumerate",
     "params": [],
     "returns": "void",
-    "description": "Clientside:",
+    "description": "GuiPopUpEditCtrl.enumerate | Clientside:",
     "example": "enumerate()",
     "scope": "clientside",
     "type": ""
@@ -13490,7 +13490,7 @@
     "name": "fitparentwidth",
     "params": [],
     "returns": "void",
-    "description": "Clientside:",
+    "description": "GuiPopUpEditCtrl.fitparentwidth | Clientside:",
     "example": "fitparentwidth()",
     "scope": "clientside",
     "type": ""
@@ -14121,7 +14121,7 @@
     "name": "groupsortorder",
     "params": [],
     "returns": "void",
-    "description": "Clientside:",
+    "description": "GuiPopUpEditCtrl.groupsortorder | Clientside:",
     "example": "groupsortorder()",
     "scope": "clientside",
     "type": ""
@@ -15378,7 +15378,7 @@
     "name": "maxpopupheight",
     "params": [],
     "returns": "void",
-    "description": "Clientside:",
+    "description": "GuiPopUpEditCtrl.maxpopupheight | Clientside:",
     "example": "maxpopupheight()",
     "scope": "clientside",
     "type": ""
@@ -16178,7 +16178,7 @@
     "name": "profile",
     "params": [],
     "returns": "void",
-    "description": "GuiControlProfile - object type, parent type is TGraalVar",
+    "description": "GuiPopUpEditCtrl.profile | GuiControlProfile - object type, parent type is TGraalVar",
     "example": "profile()",
     "scope": "clientside",
     "type": ""
@@ -16305,7 +16305,7 @@
     "name": "resizecell",
     "params": [],
     "returns": "void",
-    "description": "Clientside:",
+    "description": "GuiPopUpEditCtrl.resizecell | Clientside:",
     "example": "resizecell()",
     "scope": "clientside",
     "type": ""
@@ -16563,7 +16563,7 @@
     "name": "scrollprofile",
     "params": [],
     "returns": "void",
-    "description": "Clientside:",
+    "description": "GuiPopUpEditCtrl.scrollprofile | Clientside:",
     "example": "scrollprofile()",
     "scope": "clientside",
     "type": ""
@@ -16601,7 +16601,7 @@
     "name": "selectedid",
     "params": [],
     "returns": "void",
-    "description": "GuiContextMenuCtrl.getselectedid() - returns integer - row id | GuiPopUpEditCtrl.getselectedid() - returns integer - row id",
+    "description": "GuiPopUpEditCtrl.selectedid | GuiContextMenuCtrl.getselectedid() - returns integer - row id | GuiPopUpEditCtrl.getselectedid() - returns integer - row id",
     "example": "selectedid()",
     "scope": "clientside",
     "type": ""
@@ -18710,7 +18710,7 @@
     "params": [],
     "returns": "void",
     "scope": "clientside",
-    "description": "GuiPopupMenu.onCancel() - Event triggered when a popup menu is closed without selecting any entry. Paired with onSelect() which fires when an entry is chosen. Hidden from listscriptfunctions.",
+    "description": "GuiPopUpEditCtrl.onCancel | GuiPopupMenu.onCancel() - Event triggered when a popup menu is closed without selecting any entry. Paired with onSelect() which fires when an entry is chosen. Hidden from listscriptfunctions.",
     "example": "function Profile_Menu.onCancel() {\n  if (Profile_SubMenu.visible) {\n    Profile_SubMenu.close();\n  }\n}"
   },
   "onClassesDownloaded": {
@@ -19100,7 +19100,7 @@
     "params": [],
     "returns": "void",
     "scope": "clientside",
-    "description": "Event triggered when selected",
+    "description": "GuiPopUpEditCtrl.onSelect | Event triggered when selected",
     "example": "",
     "type": ""
   },
@@ -20933,15 +20933,6 @@
     "description": "- returns string - calculates a sha1 hash",
     "example": ""
   },
-  "GuiScrollCTrl": {
-    "name": "GuiScrollCTrl",
-    "type": "",
-    "params": [],
-    "returns": "void",
-    "scope": "clientside",
-    "description": "",
-    "example": ""
-  },
   "GuiScrollCtrl": {
     "name": "GuiScrollCtrl",
     "type": "function",
@@ -20960,6 +20951,59 @@
     "returns": "object",
     "scope": "clientside",
     "description": "GuiAccordionCtrl - object type, parent type is GuiAnimationCtrl",
+    "example": ""
+  },
+  "GuiPopUpEditCtrl": {
+    "name": "GuiPopUpEditCtrl",
+    "type": "variable",
+    "params": [],
+    "returns": "object",
+    "scope": "clientside",
+    "description": "GuiPopUpEditCtrl - object type, parent type is GuiTextCtrl",
+    "example": ""
+  },
+  "GuiPopUpEditCtrl.iconheight - integer": {
+    "name": "GuiPopUpEditCtrl.iconheight - integer",
+    "type": "function",
+    "params": [
+      "read only"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "GuiPopUpEditCtrl.iconheight - integer (read only)",
+    "example": ""
+  },
+  "GuiPopUpEditCtrl.iconwidth - integer": {
+    "name": "GuiPopUpEditCtrl.iconwidth - integer",
+    "type": "function",
+    "params": [
+      "read only"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "GuiPopUpEditCtrl.iconwidth - integer (read only)",
+    "example": ""
+  },
+  "GuiPopUpEditCtrl.rows - object": {
+    "name": "GuiPopUpEditCtrl.rows - object",
+    "type": "function",
+    "params": [
+      "read only"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "GuiPopUpEditCtrl.rows - object (read only)",
+    "example": ""
+  },
+  "GuiPopUpEditCtrl.selected - object": {
+    "name": "GuiPopUpEditCtrl.selected - object",
+    "type": "function",
+    "params": [
+      "read only"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "GuiPopUpEditCtrl.selected - object (read only)",
     "example": ""
   }
 }
