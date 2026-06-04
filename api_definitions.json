@@ -10354,11 +10354,12 @@
   },
   "timereverywhere": {
     "name": "timereverywhere",
+    "type": "function",
     "params": [],
     "returns": "void",
-    "description": "TServerNPC.timereverywhere()",
     "scope": "clientside",
-    "type": ""
+    "description": "TServerNPC.timereverywhere() - Prevents the client from stopping this NPC's timeout when the player leaves the level.",
+    "example": "//#CLIENTSIDE\nfunction onPlayerEnters() {\n  timerEverywhere();\n  setTimer(0.05);\n}\nfunction onTimeOut() {\n  // continues firing even after player leaves the level\n  timerEverywhere();\n  setTimer(0.05);\n}"
   },
   "float": {
     "name": "float",
