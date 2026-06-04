@@ -19385,13 +19385,14 @@
   },
   "lastreturnscript": {
     "name": "lastreturnscript",
+    "type": "variable",
     "params": [
       "str"
     ],
     "returns": "void",
-    "description": "lastreturnscript function",
     "scope": "global",
-    "type": ""
+    "description": "TCallStackEntry.lastreturnscript - Name of the script that was being called. Read-only.",
+    "example": "temp.stack = getcallstack();\n   for (temp.entry : temp.stack) {\n     echo(temp.entry.lastreturnscript);\n   }"
   },
   "scriptline": {
     "name": "scriptline",
