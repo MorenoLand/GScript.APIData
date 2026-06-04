@@ -19392,7 +19392,7 @@
     "returns": "void",
     "scope": "global",
     "description": "TCallStackEntry.lastreturnscript - Name of the script that was being called. Read-only.",
-    "example": "temp.stack = getcallstack();\n   for (temp.entry : temp.stack) {\n     echo(temp.entry.lastreturnscript);\n   }"
+    "example": "temp.stack = getcallstack();\n for (temp.entry : temp.stack) {\n   echo(temp.entry.lastreturnscript);\n }"
   },
   "scriptline": {
     "name": "scriptline",
