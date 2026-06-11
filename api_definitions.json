@@ -3043,7 +3043,7 @@
     "name": "close",
     "params": [],
     "returns": "void",
-    "description": "GuiPopUpEditCtrl.close | TSocket.close() - closes the socket, which means it will be disconnected or not longer bound | GuiContextMenuCtrl.close()",
+    "description": "TSocket.close | GuiPopUpEditCtrl.close | TSocket.close() - closes the socket, which means it will be disconnected or not longer bound | GuiContextMenuCtrl.close()",
     "example": "close();",
     "scope": "clientside",
     "type": ""
@@ -3317,7 +3317,7 @@
     "name": "disableweapons",
     "params": [],
     "returns": "void",
-    "description": "disableweapons() | TServerPlayer.disableweapons()",
+    "description": "TServerPlayer.disableweapons | disableweapons() | TServerPlayer.disableweapons()",
     "example": "disableweapons();",
     "scope": "clientside",
     "type": ""
@@ -5195,7 +5195,7 @@
       "data"
     ],
     "returns": "void",
-    "description": "TCURLRequest.onReceiveData() event - request finished, received data",
+    "description": "TSocket.onReceiveData | TCURLRequest.onReceiveData() event - request finished, received data",
     "example": "onReceiveData(param1);",
     "scope": "clientside",
     "type": ""
@@ -6079,14 +6079,14 @@
   },
   "setshootparams": {
     "name": "setshootparams",
+    "type": "function",
     "params": [
       "str"
     ],
     "returns": "void",
-    "description": "setshootparams(str)",
-    "example": "setshootparams(param1);",
-    "scope": "clientside",
-    "type": ""
+    "scope": "global",
+    "description": "TServerNPC.setshootparams(string) - Sets extra parameters passed to projectile action events before calling shoot().",
+    "example": "temp.shot_id = random(0, 1000000);\nsetshootparams(\"spawnspiderling\", temp.shot_id);\nshoot(this.x, this.y + 1, .8, temp.sangle, temp.zangle, temp.power, \"symm_anansi-venomball\", null);"
   },
   "setskincolor": {
     "name": "setskincolor",
@@ -12790,7 +12790,7 @@
       "good"
     ],
     "returns": "void",
-    "description": "GuiShowImgCtrl.uniqueparticle - boolean - says if each particle should store it's own data (good for text emitters) | TShowImg.uniqueparticle - boolean - says if each particle should store it's own data (good for text emitters)",
+    "description": "TSocket.data | GuiShowImgCtrl.uniqueparticle - boolean - says if each particle should store it's own data (good for text emitters) | TShowImg.uniqueparticle - boolean - says if each particle should store it's own data (good for text emitters)",
     "example": "data()",
     "scope": "clientside",
     "type": ""
@@ -20756,7 +20756,7 @@
     "params": [],
     "returns": "void",
     "scope": "clientside",
-    "description": "the name has already been used on the network",
+    "description": "TNetService.onNameCollision | the name has already been used on the network",
     "example": ""
   },
   "TNetService.port - integer": {
@@ -20792,7 +20792,7 @@
     ],
     "returns": "void",
     "scope": "clientside",
-    "description": "- returns boolean - publishes a service over bonjour/zeroconf, parameters are a TSocket, type, domain, name",
+    "description": "TNetService.publish | - returns boolean - publishes a service over bonjour/zeroconf, parameters are a TSocket, type, domain, name",
     "example": ""
   },
   "TNetService.servicedomain - string": {
@@ -20834,7 +20834,7 @@
     "params": [],
     "returns": "void",
     "scope": "clientside",
-    "description": "- un-publishes a previously publish()ed service; this is automatically done when destroy()ing the service",
+    "description": "TNetService.unpublish | - un-publishes a previously publish()ed service; this is automatically done when destroy()ing the service",
     "example": ""
   },
   "TNetServiceBrowser": {
@@ -20912,7 +20912,7 @@
     ],
     "returns": "void",
     "scope": "clientside",
-    "description": "- connects to a TNetService, use TNetServiceBrowser to discover services",
+    "description": "TSocket.connecttoservice | - connects to a TNetService, use TNetServiceBrowser to discover services",
     "example": ""
   },
   "$pref::video::resolution": {
@@ -21006,6 +21006,146 @@
     "returns": "void",
     "scope": "clientside",
     "description": "GuiPopUpEditCtrl.selected - object (read only)",
+    "example": ""
+  },
+  "TSocket.address - string": {
+    "name": "TSocket.address - string",
+    "type": "function",
+    "params": [
+      "read only"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "- the server address this socket connected to",
+    "example": ""
+  },
+  "TSocket.enablessl - boolean - enables SSL on the connection, enable this before calling connect": {
+    "name": "TSocket.enablessl - boolean - enables SSL on the connection, enable this before calling connect",
+    "type": "function",
+    "params": [],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "TSocket.enablessl - boolean - enables SSL on the connection, enable this before calling connect()",
+    "example": ""
+  },
+  "TSocket.error - string": {
+    "name": "TSocket.error - string",
+    "type": "function",
+    "params": [
+      "read only"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "- gives the error string if there was a problem",
+    "example": ""
+  },
+  "TSocket.ipaddress - string": {
+    "name": "TSocket.ipaddress - string",
+    "type": "function",
+    "params": [
+      "read only"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "- gives the ipv4-address as string",
+    "example": ""
+  },
+  "TSocket.isconnected - boolean": {
+    "name": "TSocket.isconnected - boolean",
+    "type": "function",
+    "params": [
+      "read only"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "- says if the socket is currently connected or bound",
+    "example": ""
+  },
+  "TSocket.outdatalength - integer": {
+    "name": "TSocket.outdatalength - integer",
+    "type": "function",
+    "params": [
+      "read only"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "- how much data is not transferred to the other side yet",
+    "example": ""
+  },
+  "TSocket.packagedelimiter - string - if a delimiter is specified then the engine will automatically split the incoming data into packages and invoke onReceiveDataPackage": {
+    "name": "TSocket.packagedelimiter - string - if a delimiter is specified then the engine will automatically split the incoming data into packages and invoke onReceiveDataPackage",
+    "type": "function",
+    "params": [
+      "string"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "; note that setting this delimiter will immediately invoke onReceiveDataPackage events, so do this after joining the classes which contain the event handler functions",
+    "example": ""
+  },
+  "TSocket.parent - object": {
+    "name": "TSocket.parent - object",
+    "type": "function",
+    "params": [
+      "read only"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "- the server socket this client is belonging to (in parent.clients)",
+    "example": ""
+  },
+  "TSocket.port - integer": {
+    "name": "TSocket.port - integer",
+    "type": "function",
+    "params": [
+      "read only"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "- the port this socket is bound or connected to",
+    "example": ""
+  },
+  "TSocket.sslcipherlist - string - sets the SSL encryption and integrity check": {
+    "name": "TSocket.sslcipherlist - string - sets the SSL encryption and integrity check",
+    "type": "function",
+    "params": [
+      "e.g. AES-128-MD5"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "TSocket.sslcipherlist - string - sets the SSL encryption and integrity check (e.g. AES-128-MD5)",
+    "example": ""
+  },
+  "TSocket.sslprotocol - string - sets the SSL protocol": {
+    "name": "TSocket.sslprotocol - string - sets the SSL protocol",
+    "type": "function",
+    "params": [
+      "SSLv3",
+      "TLSv1 etc."
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": ", but normally not needed",
+    "example": ""
+  },
+  "TSocket.sslverifycert - string - sets the SSL verification certificate or certificate chain": {
+    "name": "TSocket.sslverifycert - string - sets the SSL verification certificate or certificate chain",
+    "type": "function",
+    "params": [
+      "buffer not file"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "TSocket.sslverifycert - string - sets the SSL verification certificate or certificate chain (buffer not file)",
+    "example": ""
+  },
+  "TSocket.usegraalsockets": {
+    "name": "TSocket.usegraalsockets",
+    "type": "variable",
+    "params": [],
+    "returns": "boolean",
+    "scope": "clientside",
+    "description": "bind clients using the graal protocol, only on authorized servers",
     "example": ""
   }
 }
