@@ -6081,7 +6081,8 @@
     "name": "setshootparams",
     "type": "function",
     "params": [
-      "str"
+      "action",
+      "params..."
     ],
     "returns": "void",
     "scope": "global",
