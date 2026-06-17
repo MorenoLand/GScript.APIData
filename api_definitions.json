@@ -4213,16 +4213,16 @@
   },
   "gettextheight": {
     "name": "gettextheight",
+    "type": "function",
     "params": [
-      "float",
-      "str",
-      "str"
+      "zoom",
+      "font",
+      "style"
     ],
-    "returns": "void",
-    "description": "GuiControlProfile.gettextheight() - returns integer - get the text height when displayed with the profile font | gettextheight(float, str, str) - returns integer",
-    "example": "gettextheight(param1, param2, param3);",
+    "returns": "int",
     "scope": "clientside",
-    "type": ""
+    "description": "GuiControlProfile.gettextheight() - Gets the text height using the profile font. Also usable as gettextheight(float, string,\n string) with zoom, font, and style.",
+    "example": "temp.tHeight = getTextHeight(.6, \"Arial\", NULL);"
   },
   "gettextwidth": {
     "name": "gettextwidth",
