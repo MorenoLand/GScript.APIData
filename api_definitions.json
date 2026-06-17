@@ -1602,15 +1602,15 @@
   },
   "savelines": {
     "name": "savelines",
+    "type": "function",
     "params": [
-      "str",
-      "int"
+      "filename",
+      "savemode"
     ],
     "returns": "void",
-    "description": "TGraalVar.savelines(str, int) - saves the array line by line into a file, the second parameter is the save mode (0 - overwrite, 1 - append)",
-    "example": "savelines(param1, param2);",
-    "scope": "clientside",
-    "type": ""
+    "scope": "global",
+    "description": "TGraalVar.savelines(string, int) - Saves the array line by line into a file. Second parameter is save mode: 0 = overwrite, 1 = append.",
+    "example": "temp.lines.loadlines(\"levels/icons/icons.txt\");\n temp.lines.add((temp.h @ \",\" @ newname @ \",0\"));\n temp.lines.savelines(\"levels/icons/icons.txt\", 0);"
   },
   "savelog": {
     "name": "savelog",
