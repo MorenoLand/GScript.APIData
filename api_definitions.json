@@ -2304,17 +2304,6 @@
     "scope": "clientside",
     "type": ""
   },
-  "getextension": {
-    "name": "getextension",
-    "params": [
-      "str"
-    ],
-    "returns": "void",
-    "description": "getextension(str) - returns string - same as extractFileExt()",
-    "example": "getextension(param1);",
-    "scope": "clientside",
-    "type": ""
-  },
   "getstringkeys": {
     "name": "getstringkeys",
     "type": "function",
@@ -4237,14 +4226,17 @@
   },
   "gettextwidth": {
     "name": "gettextwidth",
+    "type": "function",
     "params": [
-      "str"
+      "zoom",
+      "font",
+      "style",
+      "text"
     ],
-    "returns": "void",
-    "description": "GuiControlProfile.gettextwidth(str) - returns integer - get the width of text when displayed with the profile font | gettextwidth(float, str, str, str) - returns integer",
-    "example": "gettextwidth(param1, param2, param3, param4);",
+    "returns": "int",
     "scope": "clientside",
-    "type": ""
+    "description": "GuiControlProfile.gettextwidth(string) - Returns the pixel width of text using this profile's font.",
+    "example": "temp.control.textwidth = temp.control.profile.gettextwidth(temp.control.text);"
   },
   "gettileset": {
     "name": "gettileset",
@@ -4367,18 +4359,6 @@
     "scope": "clientside",
     "description": "hidesword(float) - Hides or shows the player's sword/weapon.",
     "example": "// Hide weapon during cutscene\nhidesword(0);\n\n// Show weapon again\nhidesword(1);"
-  },
-  "indexof": {
-    "name": "indexof",
-    "params": [
-      "float",
-      "obj"
-    ],
-    "returns": "void",
-    "description": "aindexof(float, obj) - returns integer",
-    "example": "indexof(param1, param2);",
-    "scope": "clientside",
-    "type": ""
   },
   "lastindexof": {
     "name": "lastindexof",
@@ -6163,17 +6143,6 @@
     "returns": "void",
     "description": "GuiButtonBaseCtrl.settext(str) | GuiMLTextCtrl.settext(str)",
     "example": "settext(param1);",
-    "scope": "clientside",
-    "type": ""
-  },
-  "settimer": {
-    "name": "settimer",
-    "params": [
-      "float"
-    ],
-    "returns": "void",
-    "description": "TGraalVar.settimer(float) - invokes an onTimeout event after the specified time, similar to 'timeout=value'",
-    "example": "settimer(param1);",
     "scope": "clientside",
     "type": ""
   },
@@ -10171,7 +10140,7 @@
     "name": "sendping",
     "params": [],
     "returns": "object",
-    "description": "returns object - pings the player, returns a request object which will get an onReceivePing(time) event (use catchevent() on the object)",
+    "description": "TServerPlayer.sendping | returns object - pings the player, returns a request object which will get an onReceivePing(time) event (use catchevent() on the object)",
     "scope": "clientside",
     "type": ""
   },
@@ -10205,14 +10174,6 @@
     ],
     "returns": "void",
     "description": "head changes: new and old head filename",
-    "scope": "clientside",
-    "type": ""
-  },
-  "showprofile": {
-    "name": "showprofile",
-    "params": [],
-    "returns": "void",
-    "description": "TServerPlayer.showprofile()",
     "scope": "clientside",
     "type": ""
   },
@@ -11087,14 +11048,6 @@
     "scope": "clientside",
     "type": ""
   },
-  "popdialog": {
-    "name": "popdialog",
-    "params": [],
-    "returns": "void",
-    "description": "popdialog() | popdialog()",
-    "scope": "clientside",
-    "type": ""
-  },
   "preloadanimation": {
     "name": "preloadanimation",
     "params": [
@@ -11113,16 +11066,6 @@
     ],
     "returns": "void",
     "description": "preloadimage(str, bool) - forces loading of an image and, if the second parameter is true, keeps it in memory until a script calls freeAllResources()",
-    "scope": "clientside",
-    "type": ""
-  },
-  "pushdialog": {
-    "name": "pushdialog",
-    "params": [
-      "obj"
-    ],
-    "returns": "void",
-    "description": "pushdialog(obj) | pushdialog(obj)",
     "scope": "clientside",
     "type": ""
   },
@@ -20602,15 +20545,6 @@
     "description": "",
     "example": ""
   },
-  "ongoogleplaypurchase": {
-    "name": "ongoogleplaypurchase",
-    "type": "",
-    "params": [],
-    "returns": "void",
-    "scope": "clientside",
-    "description": "",
-    "example": ""
-  },
   "onDeviceOrientationChanges": {
     "name": "onDeviceOrientationChanges",
     "type": "",
@@ -20855,7 +20789,7 @@
     ],
     "returns": "void",
     "scope": "clientside",
-    "description": "- returns object - gets the main service associated with the provided name",
+    "description": "TNetServiceBrowser.findservice | - returns object - gets the main service associated with the provided name",
     "example": ""
   },
   "TNetServiceBrowser.onNewInterface": {
@@ -20866,7 +20800,7 @@
     ],
     "returns": "void",
     "scope": "clientside",
-    "description": "an alternative interface for a service has been discovered (e.g. ipv6)",
+    "description": "TNetServiceBrowser.onNewInterface | an alternative interface for a service has been discovered (e.g. ipv6)",
     "example": ""
   },
   "TNetServiceBrowser.onNewService": {
@@ -20877,7 +20811,7 @@
     ],
     "returns": "void",
     "scope": "clientside",
-    "description": "a new service has been discovered",
+    "description": "TNetServiceBrowser.onNewService | a new service has been discovered",
     "example": ""
   },
   "TNetServiceBrowser.onRemoveService": {
@@ -20890,7 +20824,7 @@
     ],
     "returns": "void",
     "scope": "clientside",
-    "description": "a service has been removed (name, type, domain)",
+    "description": "TNetServiceBrowser.onRemoveService | a service has been removed (name, type, domain)",
     "example": ""
   },
   "TNetServiceBrowser.search": {
@@ -20902,7 +20836,7 @@
     ],
     "returns": "void",
     "scope": "clientside",
-    "description": "- returns boolean - searches for TNetServices of the given id and domain",
+    "description": "TNetServiceBrowser.search | - returns boolean - searches for TNetServices of the given id and domain",
     "example": ""
   },
   "TSocket.connecttoservice": {
