@@ -10133,11 +10133,12 @@
   },
   "sendping": {
     "name": "sendping",
+    "type": "function",
     "params": [],
     "returns": "object",
+    "scope": "serverside",
     "description": "TServerPlayer.sendping | returns object - pings the player, returns a request object which will get an onReceivePing(time) event (use catchevent() on the object)",
-    "scope": "clientside",
-    "type": ""
+    "example": "temp.ping = player.sendping();\nthis.catchEvent(temp.ping, \u0022onReceivePing\u0022, \u0022onPingReply\u0022);\n\nfunction onPingReply(obj, pl, time) {\n  temp.ms = int(time * 1000); // ping in milliseconds\n}"
   },
   "onBodyChanges": {
     "name": "onBodyChanges",
