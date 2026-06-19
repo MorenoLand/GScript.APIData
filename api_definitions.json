@@ -6157,14 +6157,12 @@
   },
   "showProfile": {
     "name": "showProfile",
-    "params": [
-      "x"
-    ],
+    "type": "",
+    "params": [],
     "returns": "void",
-    "description": "TServerPlayer.showprofile()",
-    "example": "showProfile(param1);",
     "scope": "clientside",
-    "type": ""
+    "description": "TServerPlayer.showprofile() - Opens the profile window for this player.",
+    "example": "// Right-click a player NPC to open their profile\nif (temp.dist \u003C= 2) {\n findplayer(attr[5]).showprofile();\n}"
   },
   "showhistory": {
     "name": "showhistory",
