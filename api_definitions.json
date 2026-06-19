@@ -38,7 +38,7 @@
   },
   "changeimgcolors": {
     "name": "changeimgcolors",
-    "type": "",
+    "type": "function",
     "params": [
       "index",
       "red",
