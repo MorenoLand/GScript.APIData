@@ -898,15 +898,15 @@
   },
   "timeout": {
     "name": "timeout",
+    "type": "variable",
     "params": [
       "duration",
       "function"
     ],
-    "returns": "void",
-    "description": "TGraalVar.timeout - float",
-    "example": "timeout(5, \u0022onTimeout\u0022);",
-    "scope": "clientside",
-    "type": ""
+    "returns": "float",
+    "scope": "global",
+    "description": "TGraalVar.timeout - Float timer property. When set, counts down to 0 and triggers onTimeout().",
+    "example": "function onCreated() timeout = 0.05;\n\n function onTimeout() {\n   // fires after 0.05 seconds\n   timeout = 0.05;\n }"
   },
   "setstring": {
     "name": "setstring",
