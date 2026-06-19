@@ -48,7 +48,7 @@
     ],
     "returns": "void",
     "scope": "clientside",
-    "description": "Tints a TShowImg object (created by showimg, findimg, etc.) with a specific color and sets its transparency. test",
+    "description": "Tints a TShowImg object (created by showimg, findimg, etc.) with a specific color and sets its transparency.",
     "example": "changeimgcolors(1, 1, 0.5, 0.5, 0.8);"
   },
   "changeimgzoom": {
