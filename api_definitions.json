@@ -219,6 +219,7 @@
   },
   "setimgpart": {
     "name": "setimgpart",
+    "type": "",
     "params": [
       "imageFile",
       "startX",
@@ -229,8 +230,7 @@
     "returns": "void",
     "scope": "clientside",
     "description": "Sets the NPC\u0027s main graphic to a specific rectangular portion of a larger image file.",
-    "example": "setimgpart(\u0022block.png\u0022, 0, 0, 16, 16);",
-    "type": ""
+    "example": "setimgpart(\u0022block.png\u0022, 0, 0, 16, 16);\n\necho(1); // test"
   },
   "attachplayertoobj": {
     "name": "attachplayertoobj",
