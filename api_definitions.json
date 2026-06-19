@@ -5770,15 +5770,15 @@
   },
   "sendtoirc": {
     "name": "sendtoirc",
+    "type": "function",
     "params": [
-      "str",
-      "str"
+      "command",
+      "params"
     ],
     "returns": "void",
-    "description": "TServerPlayer.sendtoirc(str, str) - sends an irc message to the player/RC, parameters are command and parameters, possible commands are join (channel), part (channel), topic (channel,topic), privmsg (source,channel,message), notice (source,channel,message)",
-    "example": "sendtoirc(param1, param2);",
-    "scope": "clientside",
-    "type": ""
+    "scope": "serverside",
+    "description": "TServerPlayer.sendtoirc(string, string) - Sends an IRC message to the player/RC. Commands: join (channel), part (channel), topic (channel, topic), privmsg (source, channel, message), notice (source, channel, message).",
+    "example": "player.sendtoirc(\u0022join\u0022, \u0022#guildchat\u0022);\nplayer.sendtoirc(\u0022privmsg\u0022, player.nick, \u0022#guildchat\u0022, \u0022Hello everyone!\u0022);\nplayer.sendtoirc(\u0022topic\u0022, \u0022#guildchat\u0022, \u0022Welcome to the guild channel\u0022);"
   },
   "setactivelanguage": {
     "name": "setactivelanguage",
