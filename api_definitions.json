@@ -10,8 +10,8 @@
     ],
     "returns": "void",
     "scope": "clientside",
-    "description": "TServerLevel.showimg(index, imageFile, x, y) - Creates an image at the given position. Indices >= 200 are client-only, indices < 200 are public (visible to other players). Returns an object reference to modify properties (x, y, red, green, blue, alpha, zoom, rotation, etc.).",
-    "example": "showimg(200, \"fire.gif\", player.x + 0.5, player.y - 1.5);\nwith (findimg(200)) {\n  x = player.x + 0.5;\n  y = player.y - 1.5;\n  red = random(0, 0.3);\n}"
+    "description": "TServerLevel.showimg(index, imageFile, x, y) - Creates an image at the given position. Indices \u003E= 200 are client-only, indices \u003C 200 are public (visible to other players). Returns an object reference to modify properties (x, y, red, green, blue, alpha, zoom, rotation, etc.).",
+    "example": "showimg(200, \u0022fire.gif\u0022, player.x \u002B 0.5, player.y - 1.5);\nwith (findimg(200)) {\n  x = player.x \u002B 0.5;\n  y = player.y - 1.5;\n  red = random(0, 0.3);\n}"
   },
   "findimg": {
     "name": "findimg",
@@ -38,6 +38,7 @@
   },
   "changeimgcolors": {
     "name": "changeimgcolors",
+    "type": "",
     "params": [
       "index",
       "red",
@@ -47,9 +48,8 @@
     ],
     "returns": "void",
     "scope": "clientside",
-    "description": "Tints a TShowImg object (created by showimg, findimg, etc.) with a specific color and sets its transparency.",
-    "example": "changeimgcolors(1, 1, 0.5, 0.5, 0.8);",
-    "type": ""
+    "description": "Tints a TShowImg object (created by showimg, findimg, etc.) with a specific color and sets its transparency.asdasdasdadasdasdasdasdasdasd\n\nfunction onCreated",
+    "example": "changeimgcolors(1, 1, 0.5, 0.5, 0.8);"
   },
   "changeimgzoom": {
     "name": "changeimgzoom",
@@ -73,7 +73,7 @@
     "returns": "void",
     "scope": "clientside",
     "description": "TServerNPC.changeimgmode(index, mode) - Sets the drawing mode for a showimg on the NPC. Values: 0=add, 1=transparent, 2=subtract, 3=daynight.",
-    "example": "showimg(200, \"glow.png\", this.x, this.y);\nchangeimgmode(200, 1); // transparent"
+    "example": "showimg(200, \u0022glow.png\u0022, this.x, this.y);\nchangeimgmode(200, 1); // transparent"
   },
   "changeimgpart": {
     "name": "changeimgpart",
@@ -88,7 +88,7 @@
     "returns": "void",
     "scope": "global",
     "description": "TServerNPC.changeimgpart(index, x, y, width, height) - Changes the visible part (crop region) of a showimg image. Reset to full image when showimg is called again.",
-    "example": "showimg(200, \"spritesheet.png\", this.x, this.y);\nchangeimgpart(200, 5, 12, 32, 32);"
+    "example": "showimg(200, \u0022spritesheet.png\u0022, this.x, this.y);\nchangeimgpart(200, 5, 12, 32, 32);"
   },
   "showimg2": {
     "name": "showimg2",
@@ -101,7 +101,7 @@
     ],
     "returns": "object",
     "description": "TServerNPC.showimg2(int, str, float, float, float) - returns object",
-    "example": "showimg2(1, \"sprite.png\", player.x, player.y, 1);",
+    "example": "showimg2(1, \u0022sprite.png\u0022, player.x, player.y, 1);",
     "scope": "clientside",
     "type": ""
   },
@@ -117,7 +117,7 @@
     ],
     "returns": "object",
     "description": "TServerNPC.showtext(int, float, float, str, str, str) - returns object",
-    "example": "showtext(10, player.x, player.y, \"Arial\", \"bold\", \"Hello\");",
+    "example": "showtext(10, player.x, player.y, \u0022Arial\u0022, \u0022bold\u0022, \u0022Hello\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -134,7 +134,7 @@
     ],
     "returns": "object",
     "description": "TServerNPC.showtext2(int, float, float, float, str, str, str) - returns object",
-    "example": "showtext2(10, player.x, player.y, 2, \"Arial\", \"bold\", \"Hello\");",
+    "example": "showtext2(10, player.x, player.y, 2, \u0022Arial\u0022, \u0022bold\u0022, \u0022Hello\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -149,7 +149,7 @@
     ],
     "returns": "object",
     "description": "TServerNPC.showani(int, float, float, int, str) - returns object",
-    "example": "showani(5, player.x, player.y, 2, \"explosion\");",
+    "example": "showani(5, player.x, player.y, 2, \u0022explosion\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -165,7 +165,7 @@
     ],
     "returns": "object",
     "description": "TServerNPC.showani2(int, float, float, float, int, str) - returns object",
-    "example": "showani2(5, player.x, player.y, 1, 2, \"explosion\");",
+    "example": "showani2(5, player.x, player.y, 1, 2, \u0022explosion\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -213,8 +213,8 @@
     ],
     "returns": "void",
     "scope": "clientside",
-    "description": "Sets the NPC's main graphic to display a full image file.",
-    "example": "setimg(\"block.png\");",
+    "description": "Sets the NPC\u0027s main graphic to display a full image file.",
+    "example": "setimg(\u0022block.png\u0022);",
     "type": ""
   },
   "setimgpart": {
@@ -228,8 +228,8 @@
     ],
     "returns": "void",
     "scope": "clientside",
-    "description": "Sets the NPC's main graphic to a specific rectangular portion of a larger image file.",
-    "example": "setimgpart(\"block.png\", 0, 0, 16, 16);",
+    "description": "Sets the NPC\u0027s main graphic to a specific rectangular portion of a larger image file.",
+    "example": "setimgpart(\u0022block.png\u0022, 0, 0, 16, 16);",
     "type": ""
   },
   "attachplayertoobj": {
@@ -271,7 +271,7 @@
     "returns": "void",
     "scope": "global",
     "description": "TServerPlayer.freezeplayer2() - Freezes the player, preventing movement and disabling controls.",
-    "example": "// Clientside - freeze own player\nfreezeplayer2();\nsleep(3);\nunfreezeplayer();\n\n// Serverside - freeze another player\nwith (findplayer(\"accountname\")) {\n    freezeplayer2();\n}"
+    "example": "// Clientside - freeze own player\nfreezeplayer2();\nsleep(3);\nunfreezeplayer();\n\n// Serverside - freeze another player\nwith (findplayer(\u0022accountname\u0022)) {\n    freezeplayer2();\n}"
   },
   "unfreezeplayer": {
     "name": "unfreezeplayer",
@@ -280,7 +280,7 @@
     "returns": "void",
     "scope": "clientside",
     "description": "TServerPlayer.unfreezeplayer() - Unfreezes the player, restoring movement and controls.",
-    "example": "// Clientside\nfreezeplayer2();\nunfreezeplayer();\n\n// Serverside\nwith (findplayer(\"accountname\")) {\n    unfreezeplayer();\n}"
+    "example": "// Clientside\nfreezeplayer2();\nunfreezeplayer();\n\n// Serverside\nwith (findplayer(\u0022accountname\u0022)) {\n    unfreezeplayer();\n}"
   },
   "setplayerdir": {
     "name": "setplayerdir",
@@ -301,7 +301,7 @@
     ],
     "returns": "void",
     "description": "setplayerprop(varname,string)",
-    "example": "setplayerprop(\"headimg\", \"head1.png\");",
+    "example": "setplayerprop(\u0022headimg\u0022, \u0022head1.png\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -314,8 +314,8 @@
     ],
     "returns": "void",
     "scope": "global",
-    "description": "TServerPlayer.setani(str, str) - Sets the player's animation to the specified animation name. The second parameter is an optional parameter that can be accessed in the gani via PARAM1, PARAM2, etc., and can be used to pass data like image filenames to display icons or other visual elements.",
-    "example": "// Set animation with parameter for icon display\nsetani(\"chest_item\", \"mega_rupee.png\");\n// In the gani, PARAM1 would contain \"mega_rupee.png\" and can be used to display the icon\n\n// Set basic animation without parameters\nsetani(\"walk\", \"\");\n\n// Serverside - set another player's animation\nwith (findplayer(\"accountname\")) {\n    setani(\"idle\", \"\");\n}"
+    "description": "TServerPlayer.setani(str, str) - Sets the player\u0027s animation to the specified animation name. The second parameter is an optional parameter that can be accessed in the gani via PARAM1, PARAM2, etc., and can be used to pass data like image filenames to display icons or other visual elements.",
+    "example": "// Set animation with parameter for icon display\nsetani(\u0022chest_item\u0022, \u0022mega_rupee.png\u0022);\n// In the gani, PARAM1 would contain \u0022mega_rupee.png\u0022 and can be used to display the icon\n\n// Set basic animation without parameters\nsetani(\u0022walk\u0022, \u0022\u0022);\n\n// Serverside - set another player\u0027s animation\nwith (findplayer(\u0022accountname\u0022)) {\n    setani(\u0022idle\u0022, \u0022\u0022);\n}"
   },
   "setbody": {
     "name": "setbody",
@@ -325,8 +325,8 @@
     ],
     "returns": "void",
     "scope": "serverside",
-    "description": "TServerPlayer.setbody(string) - Sets the player's body image filename.",
-    "example": "setbody(\"body2.png\");\nplayer.bodyimg = \"body2.png\";"
+    "description": "TServerPlayer.setbody(string) - Sets the player\u0027s body image filename.",
+    "example": "setbody(\u0022body2.png\u0022);\nplayer.bodyimg = \u0022body2.png\u0022;"
   },
   "sethead": {
     "name": "sethead",
@@ -335,7 +335,7 @@
     ],
     "returns": "void",
     "description": "sethead(str) | TServerPlayer.sethead(str)",
-    "example": "sethead(\"head_blue.png\");",
+    "example": "sethead(\u0022head_blue.png\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -347,7 +347,7 @@
     ],
     "returns": "void",
     "description": "setsword(str, int) | TServerPlayer.setsword(str, int)",
-    "example": "setsword(\"sword_iron.png\", 5);",
+    "example": "setsword(\u0022sword_iron.png\u0022, 5);",
     "scope": "clientside",
     "type": ""
   },
@@ -359,7 +359,7 @@
     ],
     "returns": "void",
     "description": "setshield(str, int) | TServerPlayer.setshield(str, int)",
-    "example": "setshield(\"shield_wood.png\", 2);",
+    "example": "setshield(\u0022shield_wood.png\u0022, 2);",
     "scope": "clientside",
     "type": ""
   },
@@ -370,7 +370,7 @@
     ],
     "returns": "void",
     "description": "setgender(str) | TServerPlayer.setgender(str)",
-    "example": "setgender(\"male\");",
+    "example": "setgender(\u0022male\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -424,7 +424,7 @@
     "returns": "void",
     "scope": "serverside",
     "description": "setlevel2(levelname, x, y) - Warps the player to a new level and coordinates.",
-    "example": "function onPlayerTouchsMe() {\n    player.setlevel2(\"level.nw\", 32.5, 32);\n}"
+    "example": "function onPlayerTouchsMe() {\n    player.setlevel2(\u0022level.nw\u0022, 32.5, 32);\n}"
   },
   "serverwarp": {
     "name": "serverwarp",
@@ -434,7 +434,7 @@
     "returns": "void",
     "scope": "clientside",
     "description": "serverwarp(str) - Warps the player to another server by server name.",
-    "example": "serverwarp(\"graal2001\");",
+    "example": "serverwarp(\u0022graal2001\u0022);",
     "type": ""
   },
   "seturllevel": {
@@ -446,7 +446,7 @@
     "returns": "void",
     "scope": "serverside",
     "description": "TServerPlayer.seturllevel(string) - Warps the player to a level via URL (without the leading http://!). (DEPRECATED)",
-    "example": "seturllevel(\"example.com/level.nw\");\nseturllevel(\"graal://Classic/castle.nw\");"
+    "example": "seturllevel(\u0022example.com/level.nw\u0022);\nseturllevel(\u0022graal://Classic/castle.nw\u0022);"
   },
   "say": {
     "name": "say",
@@ -466,7 +466,7 @@
     ],
     "returns": "void",
     "description": "say2(str) | TServerPlayer.say2(str)",
-    "example": "say2(\"Welcome to the town!\");",
+    "example": "say2(\u0022Welcome to the town!\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -504,7 +504,7 @@
     ],
     "returns": "void",
     "description": "TServerPlayer - object type, parent type is TGaniObject",
-    "example": "lay(\"heart\");",
+    "example": "lay(\u0022heart\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -515,8 +515,8 @@
     ],
     "returns": "void",
     "scope": "global",
-    "description": "TServerNPC.take(str) - Takes/collects an item from the ground if it's available in front of the NPC's location.",
-    "example": "take(\"heart\");  // attempts to take a heart\ntake(\"gralat\"); // attempts to take a gralat",
+    "description": "TServerNPC.take(str) - Takes/collects an item from the ground if it\u0027s available in front of the NPC\u0027s location.",
+    "example": "take(\u0022heart\u0022);  // attempts to take a heart\ntake(\u0022gralat\u0022); // attempts to take a gralat",
     "type": ""
   },
   "take2": {
@@ -537,7 +537,7 @@
     ],
     "returns": "void",
     "description": "TServerNPC.carryobject(str)",
-    "example": "carryobject(\"bush\");",
+    "example": "carryobject(\u0022bush\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -591,7 +591,7 @@
     "returns": "void",
     "scope": "global",
     "description": "destroy() - Removes and deletes the object from memory. The object is permanently destroyed and can no longer be used.",
-    "example": "// Destroy a GUI control\ntemp.button = findobject(\"Button1\");\ntemp.button.destroy();\n\n// Destroy an NPC\nthis.destroy();"
+    "example": "// Destroy a GUI control\ntemp.button = findobject(\u0022Button1\u0022);\ntemp.button.destroy();\n\n// Destroy an NPC\nthis.destroy();"
   },
   "sleep": {
     "name": "sleep",
@@ -602,7 +602,7 @@
     "returns": "void",
     "scope": "global",
     "description": "sleep(float) - Suspends/pauses the current script execution for the specified time duration in seconds. (Will interrupt timeouts)",
-    "example": "function onCreated() {\n   sleep(1); // wait one second\n   chat = \"Hello there\": \n}"
+    "example": "function onCreated() {\n   sleep(1); // wait one second\n   chat = \u0022Hello there\u0022: \n}"
   },
   "move": {
     "name": "move",
@@ -613,7 +613,7 @@
       "int"
     ],
     "returns": "void",
-    "description": "TServerNPC.move(float, float, float, int) - moves the npc smoothly, parameters are delta x, delta y, time and options:  cache type (0, 1-cache, 2-append) + blockcheck(4) + eventwhendone(8) + applydir(16) | array.remove(object)",
+    "description": "TServerNPC.move(float, float, float, int) - moves the npc smoothly, parameters are delta x, delta y, time and options:  cache type (0, 1-cache, 2-append) \u002B blockcheck(4) \u002B eventwhendone(8) \u002B applydir(16) | array.remove(object)",
     "example": "move(2, 0, 1.0, 4);",
     "scope": "clientside",
     "type": ""
@@ -636,7 +636,7 @@
     ],
     "returns": "void",
     "description": "TServerNPC.warpto(str, float, float)",
-    "example": "warpto(\"overworld.nw\", 30, 30);",
+    "example": "warpto(\u0022overworld.nw\u0022, 30, 30);",
     "scope": "clientside",
     "type": ""
   },
@@ -647,7 +647,7 @@
     ],
     "returns": "void",
     "description": "TGraalVar.join(str) - lets the object join a class and inherit all functions and event handlers of that class",
-    "example": "join(\"DoorClass\");",
+    "example": "join(\u0022DoorClass\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -659,7 +659,7 @@
     "returns": "boolean",
     "scope": "clientside",
     "description": "TGraalVar.isinclass(str) - returns boolean - checks if the object has joined the specified class",
-    "example": "if (isinclass(\"DoorClass\")) { }\n\nif (player.isinclass(\"health_functions\")) { }",
+    "example": "if (isinclass(\u0022DoorClass\u0022)) { }\n\nif (player.isinclass(\u0022health_functions\u0022)) { }",
     "type": ""
   },
   "leave": {
@@ -669,7 +669,7 @@
     ],
     "returns": "void",
     "description": "TGraalVar.leave(str) - leaves a previously joined class",
-    "example": "leave(\"DoorClass\");",
+    "example": "leave(\u0022DoorClass\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -682,7 +682,7 @@
     ],
     "returns": "object",
     "description": "TServerLevel.putnpc2(float, float, str) - returns object",
-    "example": "temp.npc = putnpc2(30, 30, \"GuardNPC\");",
+    "example": "temp.npc = putnpc2(30, 30, \u0022GuardNPC\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -709,7 +709,7 @@
     "returns": "void",
     "scope": "global",
     "description": "callnpc(int, params...) - Calls the script of another NPC by its index, passing optional parameters.",
-    "example": "// Call all NPCs in the npcs array for the current level/gmap\nfor (temp.npc: npcs) {\n  callnpc(npc.id, \"onCallTest\", \"Hello world!\");\n}\n\n// In the target NPC:\nfunction onCallTest(data) {\n  chat = \"Called: \" @ data; // Would make the chat \"Called: Hello world!\"\n}\n\n// Or call a specific NPC by ID\ncallnpc(5, \"onCallTest\", \"Hello world!\");",
+    "example": "// Call all NPCs in the npcs array for the current level/gmap\nfor (temp.npc: npcs) {\n  callnpc(npc.id, \u0022onCallTest\u0022, \u0022Hello world!\u0022);\n}\n\n// In the target NPC:\nfunction onCallTest(data) {\n  chat = \u0022Called: \u0022 @ data; // Would make the chat \u0022Called: Hello world!\u0022\n}\n\n// Or call a specific NPC by ID\ncallnpc(5, \u0022onCallTest\u0022, \u0022Hello world!\u0022);",
     "type": ""
   },
   "setcharani": {
@@ -720,7 +720,7 @@
     ],
     "returns": "void",
     "description": "TServerNPC.setcharani(str, str)",
-    "example": "setcharani(\"walk\", \"right\");",
+    "example": "setcharani(\u0022walk\u0022, \u0022right\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -733,7 +733,7 @@
     "returns": "int",
     "scope": "global",
     "description": "strlen(string) - Returns the length of a string.",
-    "example": "temp.len = strlen(\"hello\");\n\nif (strlen(#s(this.notes)) >= this.notes_max) {\n  this.notes = \"\";\n}"
+    "example": "temp.len = strlen(\u0022hello\u0022);\n\nif (strlen(#s(this.notes)) \u003E= this.notes_max) {\n  this.notes = \u0022\u0022;\n}"
   },
   "strpos": {
     "name": "strpos",
@@ -745,7 +745,7 @@
     "returns": "integer",
     "scope": "global",
     "description": "strpos(string, substring) - Returns the position of the first occurrence of substring in string, or -1 if not found.",
-    "example": "temp.pos = strpos(\"hello world\", \"world\");\n\ntemp.colon = strpos(data, \":\");\nif (temp.colon > -1) {\n  temp.key = data.substring(0, temp.colon);\n}"
+    "example": "temp.pos = strpos(\u0022hello world\u0022, \u0022world\u0022);\n\ntemp.colon = strpos(data, \u0022:\u0022);\nif (temp.colon \u003E -1) {\n  temp.key = data.substring(0, temp.colon);\n}"
   },
   "arraylen": {
     "name": "arraylen",
@@ -755,7 +755,7 @@
     "returns": "integer",
     "scope": "global",
     "description": "arraylen(array) - Returns the number of elements in an array.",
-    "example": "temp._array = {\"ore\", \"boat\", \"water\"};\necho(arraylen(_array)); // Result: 3",
+    "example": "temp._array = {\u0022ore\u0022, \u0022boat\u0022, \u0022water\u0022};\necho(arraylen(_array)); // Result: 3",
     "type": ""
   },
   "chat": {
@@ -766,8 +766,8 @@
     ],
     "returns": "string",
     "scope": "global",
-    "description": "TServerPlayer.chat | TServerNPC.chat - The chat message text displayed above the player or NPC. Setting this property will display the message above the character's head. The message will automatically fade after a period of time for players.",
-    "example": "chat = \"Hello everyone!\"; // Would set an NPC's chat.\nplayer.chat = \"Hello world\"; // Would set the player chat."
+    "description": "TServerPlayer.chat | TServerNPC.chat - The chat message text displayed above the player or NPC. Setting this property will display the message above the character\u0027s head. The message will automatically fade after a period of time for players.",
+    "example": "chat = \u0022Hello everyone!\u0022; // Would set an NPC\u0027s chat.\nplayer.chat = \u0022Hello world\u0022; // Would set the player chat."
   },
   "message": {
     "name": "message",
@@ -777,8 +777,8 @@
     ],
     "returns": "void",
     "scope": "global",
-    "description": "TServerNPC.message(text) - Displays a text message over the NPC visible to players. GS1/legacy command - in GS2 use direct assignment: chat = \"text\";",
-    "example": "// GS1 (legacy)\nmessage Welcome to the shop!;\n// GS2 equivalent:\nchat = \"Welcome to the shop!\";"
+    "description": "TServerNPC.message(text) - Displays a text message over the NPC visible to players. GS1/legacy command - in GS2 use direct assignment: chat = \u0022text\u0022;",
+    "example": "// GS1 (legacy)\nmessage Welcome to the shop!;\n// GS2 equivalent:\nchat = \u0022Welcome to the shop!\u0022;"
   },
   "toall": {
     "name": "toall",
@@ -787,7 +787,7 @@
     ],
     "returns": "void",
     "description": "wordfiltertext(str, str)",
-    "example": "toall(\"Server restart in 5 minutes!\");",
+    "example": "toall(\u0022Server restart in 5 minutes!\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -798,8 +798,8 @@
       "params..."
     ],
     "returns": "void",
-    "description": "TGraalVar.trigger(str, params...) - invokes an event on the object (onEventname) with the specified event name and parameters, doesn't interrupt the current script",
-    "example": "trigger(\"onPlayerEnter\");",
+    "description": "TGraalVar.trigger(str, params...) - invokes an event on the object (onEventname) with the specified event name and parameters, doesn\u0027t interrupt the current script",
+    "example": "trigger(\u0022onPlayerEnter\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -812,7 +812,7 @@
     ],
     "returns": "void",
     "description": "triggerclient(str, str, str) | TServerPlayer.triggerclient(str, str, str)",
-    "example": "triggerclient(\"gui\", \"showmenu\", \"mainmenu\");",
+    "example": "triggerclient(\u0022gui\u0022, \u0022showmenu\u0022, \u0022mainmenu\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -878,7 +878,7 @@
       "float"
     ],
     "returns": "void",
-    "description": "TGraalVar.settimer(float) - invokes an onTimeout event after the specified time, similar to 'timeout=value'",
+    "description": "TGraalVar.settimer(float) - invokes an onTimeout event after the specified time, similar to \u0027timeout=value\u0027",
     "example": "setTimer(5);",
     "scope": "clientside",
     "type": ""
@@ -894,7 +894,7 @@
     "returns": "void",
     "scope": "global",
     "description": "TGraalVar.scheduleevent(float, str, params...) - returns object - invokes an event (onEventname) after the specified delay (in seconds), second parameter is the event name, followed by the optional parameters",
-    "example": "scheduleevent(10, \"customEvent\", \"param1\");"
+    "example": "scheduleevent(10, \u0022customEvent\u0022, \u0022param1\u0022);"
   },
   "timeout": {
     "name": "timeout",
@@ -904,7 +904,7 @@
     ],
     "returns": "void",
     "description": "TGraalVar.timeout - float",
-    "example": "timeout(5, \"onTimeout\");",
+    "example": "timeout(5, \u0022onTimeout\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -916,7 +916,7 @@
     ],
     "returns": "void",
     "description": "setstring(varname,string)",
-    "example": "setstring(\"player.\" @ player.account @ \".score\", temp.score);",
+    "example": "setstring(\u0022player.\u0022 @ player.account @ \u0022.score\u0022, temp.score);",
     "scope": "clientside",
     "type": ""
   },
@@ -927,7 +927,7 @@
     ],
     "returns": "string",
     "description": "getstring(varname)",
-    "example": "temp.score = getstring(\"player.\" @ player.account @ \".score\");",
+    "example": "temp.score = getstring(\u0022player.\u0022 @ player.account @ \u0022.score\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -938,7 +938,7 @@
     ],
     "returns": "array",
     "description": "No matching script function found!",
-    "example": "temp.results = dbQuery(\"SELECT * FROM players WHERE account='\" @ player.account.escape() @ \"'\");",
+    "example": "temp.results = dbQuery(\u0022SELECT * FROM players WHERE account=\u0027\u0022 @ player.account.escape() @ \u0022\u0027\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -949,7 +949,7 @@
     ],
     "returns": "array",
     "description": "No matching script function found!",
-    "example": "temp.data = executeQuery(\"SELECT score FROM highscores ORDER BY score DESC LIMIT 10\");",
+    "example": "temp.data = executeQuery(\u0022SELECT score FROM highscores ORDER BY score DESC LIMIT 10\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -999,7 +999,7 @@
     "returns": "void",
     "scope": "global",
     "description": "echo(str) - same as trace(str)\n\nserverside will echo to Remote Control\nclientside will echo to F2",
-    "example": "echo(\"Debug: player.x = \" @ player.x);",
+    "example": "echo(\u0022Debug: player.x = \u0022 @ player.x);",
     "type": ""
   },
   "int": {
@@ -1017,7 +1017,7 @@
     "name": "escape",
     "params": [],
     "returns": "string",
-    "description": "string.escape() | escapestring(str) - returns string - adds \\ in front of \", ' and \\, and removes non-printable characters; made for mysql queries, same as string.escape()",
+    "description": "string.escape() | escapestring(str) - returns string - adds \\ in front of \u0022, \u0027 and \\, and removes non-printable characters; made for mysql queries, same as string.escape()",
     "example": "temp.safe = player.account.escape();",
     "scope": "clientside",
     "type": ""
@@ -1031,7 +1031,7 @@
     "returns": "boolean",
     "scope": "global",
     "description": "string.starts(text) - Checks if the string starts with the specified text/prefix.",
-    "example": "// Check if a command starts with a prefix\nif (player.chat.starts(\"/warp\")) {\n  // Handle warp command\n}\n\n// Check level prefix\nif (player.level.starts(\"overworld_\")) {\n\n}"
+    "example": "// Check if a command starts with a prefix\nif (player.chat.starts(\u0022/warp\u0022)) {\n  // Handle warp command\n}\n\n// Check level prefix\nif (player.level.starts(\u0022overworld_\u0022)) {\n\n}"
   },
   "trim": {
     "name": "trim",
@@ -1040,7 +1040,7 @@
     "returns": "string",
     "scope": "global",
     "description": "string.trim() - Removes leading and trailing whitespace characters from the string.",
-    "example": "// Clean user input\ntemp.userInput = \"  my name  \";\ntemp.clean = temp.userInput.trim(); // Returns \"my name\""
+    "example": "// Clean user input\ntemp.userInput = \u0022  my name  \u0022;\ntemp.clean = temp.userInput.trim(); // Returns \u0022my name\u0022"
   },
   "indexOf": {
     "name": "indexOf",
@@ -1050,7 +1050,7 @@
     ],
     "returns": "integer",
     "description": "aindexof(float, obj) - returns integer",
-    "example": "temp.index = \"hello world\".indexOf(\"world\");",
+    "example": "temp.index = \u0022hello world\u0022.indexOf(\u0022world\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -1072,7 +1072,7 @@
     ],
     "returns": "void",
     "description": "array.add(object) | rotationadd(str, str) - returns string",
-    "example": "temp.list.add(\"newItem\");",
+    "example": "temp.list.add(\u0022newItem\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -1092,7 +1092,7 @@
     ],
     "returns": "integer",
     "description": "array.index(object) | getplayerindex(str) - returns integer",
-    "example": "temp.pos = temp.list.index(\"searchItem\");",
+    "example": "temp.pos = temp.list.index(\u0022searchItem\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -1112,7 +1112,7 @@
     "returns": "void",
     "scope": "global",
     "description": "onPlayerEnters() - Event handler called when a player enters the level.",
-    "example": "function onPlayerEnters() {\n  this.chat = \"Welcome \" @ player.nick @ \"!\";\n}"
+    "example": "function onPlayerEnters() {\n  this.chat = \u0022Welcome \u0022 @ player.nick @ \u0022!\u0022;\n}"
   },
   "onPlayerChats": {
     "name": "onPlayerChats",
@@ -1128,7 +1128,7 @@
     "params": [],
     "returns": "void",
     "description": "TGraalVar.settimer(float)",
-    "example": "function onTimeout() {\n    temp.counter += 1;\n    setTimer(1);\n}",
+    "example": "function onTimeout() {\n    temp.counter \u002B= 1;\n    setTimer(1);\n}",
     "scope": "clientside",
     "type": ""
   },
@@ -1139,7 +1139,7 @@
     "returns": "void",
     "scope": "global",
     "description": "onPlayerTouchsMe - Event handler that fires when a player touches or collides with the NPC or object.",
-    "example": "function onPlayerTouchsMe() {\n  if (player.rupees >= 50) {\n    player.rupees -= 50;\n    player.bombs += 1;\n    chat = \"Here's a bomb! You have \" @ player.rupees @ \" rupees left.\";\n  } else {\n    chat = \"You need 50 rupees for a bomb!\";\n  }\n}"
+    "example": "function onPlayerTouchsMe() {\n  if (player.rupees \u003E= 50) {\n    player.rupees -= 50;\n    player.bombs \u002B= 1;\n    chat = \u0022Here\u0027s a bomb! You have \u0022 @ player.rupees @ \u0022 rupees left.\u0022;\n  } else {\n    chat = \u0022You need 50 rupees for a bomb!\u0022;\n  }\n}"
   },
   "onWeaponFired": {
     "name": "onWeaponFired",
@@ -1157,7 +1157,7 @@
     ],
     "returns": "void",
     "description": "No matching script function found!",
-    "example": "function onKeyPressed(key) {\n    if (key == \"space\") { }\n}",
+    "example": "function onKeyPressed(key) {\n    if (key == \u0022space\u0022) { }\n}",
     "scope": "clientside",
     "type": ""
   },
@@ -1168,7 +1168,7 @@
     ],
     "returns": "void",
     "description": "No matching script function found!",
-    "example": "function onKeyReleased(key) {\n    if (key == \"w\") { }\n}",
+    "example": "function onKeyReleased(key) {\n    if (key == \u0022w\u0022) { }\n}",
     "scope": "clientside",
     "type": ""
   },
@@ -1180,7 +1180,7 @@
     ],
     "returns": "void",
     "description": "Clientside:",
-    "example": "function onRCChat(cmd, params) {\n    if (cmd == \"reset\") { }\n}",
+    "example": "function onRCChat(cmd, params) {\n    if (cmd == \u0022reset\u0022) { }\n}",
     "scope": "clientside",
     "type": ""
   },
@@ -1216,7 +1216,7 @@
     ],
     "returns": "void",
     "description": "TServerLevel.shoot(float, float, float, float, float, float, str, str) | TBilliardCalculation.emulateshoot()",
-    "example": "shoot(player.x, player.y, 0, 1.57, 0, 3, \"arrow\", \"\");",
+    "example": "shoot(player.x, player.y, 0, 1.57, 0, 3, \u0022arrow\u0022, \u0022\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -1282,7 +1282,7 @@
     ],
     "returns": "void",
     "scope": "clientside",
-    "description": "spyfire(int, int) - Shoots a \"horse\" fire with length and power",
+    "description": "spyfire(int, int) - Shoots a \u0022horse\u0022 fire with length and power",
     "example": "spyfire(2, 5);"
   },
   "setshape2": {
@@ -1332,7 +1332,7 @@
     ],
     "returns": "string",
     "description": "wraptext(int, str, str) - returns object",
-    "example": "temp.wrapped = wraptext(40, \" \", \"Long text here\");",
+    "example": "temp.wrapped = wraptext(40, \u0022 \u0022, \u0022Long text here\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -1346,7 +1346,7 @@
     ],
     "returns": "string",
     "description": "wraptext2(int, float, str, str) - returns object",
-    "example": "temp.wrapped = wraptext2(200, 1.0, \" \", \"Long text here\");",
+    "example": "temp.wrapped = wraptext2(200, 1.0, \u0022 \u0022, \u0022Long text here\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -1357,7 +1357,7 @@
     ],
     "returns": "void",
     "description": "trace(str) - same as echo()",
-    "example": "trace(\"Debug message\");",
+    "example": "trace(\u0022Debug message\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -1369,15 +1369,15 @@
     ],
     "returns": "void",
     "scope": "clientside",
-    "description": "enablefeatures(int) - Enables specific client features based on a feature flag bitmask.\n\nUse `allfeatures` to get all features, then subtract specific feature values to disable them. \n\n`1` = M key (map),\n`2` = P key (pause)\n`4` = Q key (weapon select)\n`8` = R key (show ratings)\n`0x10` = S+A drop items\n`0x20` = S+D switch weapons \n`0x40` = TAB key\n`0x80` = chat text display\n`0x100` = hearts over player heads\n`0x200` = nicknames\n`0x800` = right-click profile\n`0x1000` = emoticons\n`0x8000` = F2 output (savelog/echo)",
-    "example": "// Disable hearts over player heads\nenablefeatures(allfeatures - 0x100);\n\n// Disable multiple features (map and pause)\nenablefeatures(allfeatures - 1 - 2);\n\n// Enable only specific features\nenablefeatures(1 + 2 + 4); // Enable map, pause, and weapon select"
+    "description": "enablefeatures(int) - Enables specific client features based on a feature flag bitmask.\n\nUse \u0060allfeatures\u0060 to get all features, then subtract specific feature values to disable them. \n\n\u00601\u0060 = M key (map),\n\u00602\u0060 = P key (pause)\n\u00604\u0060 = Q key (weapon select)\n\u00608\u0060 = R key (show ratings)\n\u00600x10\u0060 = S\u002BA drop items\n\u00600x20\u0060 = S\u002BD switch weapons \n\u00600x40\u0060 = TAB key\n\u00600x80\u0060 = chat text display\n\u00600x100\u0060 = hearts over player heads\n\u00600x200\u0060 = nicknames\n\u00600x800\u0060 = right-click profile\n\u00600x1000\u0060 = emoticons\n\u00600x8000\u0060 = F2 output (savelog/echo)",
+    "example": "// Disable hearts over player heads\nenablefeatures(allfeatures - 0x100);\n\n// Disable multiple features (map and pause)\nenablefeatures(allfeatures - 1 - 2);\n\n// Enable only specific features\nenablefeatures(1 \u002B 2 \u002B 4); // Enable map, pause, and weapon select"
   },
   "length": {
     "name": "length",
     "params": [],
     "returns": "number",
     "description": "string.length() | GuiMLTextCtrl.getselectedlength() - returns integer - returns the length of the current selection, -1 if there is none",
-    "example": "temp.len = \"Hello\".length();",
+    "example": "temp.len = \u0022Hello\u0022.length();",
     "scope": "clientside",
     "type": ""
   },
@@ -1388,7 +1388,7 @@
     "returns": "string",
     "scope": "global",
     "description": "string.upper() - Converts all characters in the string to uppercase.",
-    "example": "temp.test_name = \"graal online\";\ntemp.display = temp.test_name.upper(); \necho(display); // Returns \"GRAAL ONLINE\"\n\n// Useful for displaying text in uppercase\necho(\"Welcome to \" @ servername.upper());"
+    "example": "temp.test_name = \u0022graal online\u0022;\ntemp.display = temp.test_name.upper(); \necho(display); // Returns \u0022GRAAL ONLINE\u0022\n\n// Useful for displaying text in uppercase\necho(\u0022Welcome to \u0022 @ servername.upper());"
   },
   "lower": {
     "name": "lower",
@@ -1397,7 +1397,7 @@
     "returns": "string",
     "scope": "global",
     "description": "string.lower() - Converts all characters in the string to lowercase.",
-    "example": "temp.input = \"HELLO WORLD\";\ntemp.normalized = temp.input.lower(); // Returns \"hello world\"\n\n// Useful for case-insensitive comparisons\nif (player.chat.lower() == \"hello\") {\n  // Matches \"hello\", \"HELLO\", \"Hello\", etc.\n}"
+    "example": "temp.input = \u0022HELLO WORLD\u0022;\ntemp.normalized = temp.input.lower(); // Returns \u0022hello world\u0022\n\n// Useful for case-insensitive comparisons\nif (player.chat.lower() == \u0022hello\u0022) {\n  // Matches \u0022hello\u0022, \u0022HELLO\u0022, \u0022Hello\u0022, etc.\n}"
   },
   "substring": {
     "name": "substring",
@@ -1407,7 +1407,7 @@
     ],
     "returns": "string",
     "description": "string.substring(index[,length])",
-    "example": "temp.sub = \"Hello World\".substring(0, 5);",
+    "example": "temp.sub = \u0022Hello World\u0022.substring(0, 5);",
     "scope": "clientside",
     "type": ""
   },
@@ -1418,7 +1418,7 @@
     ],
     "returns": "number",
     "description": "string.pos(substring) | TGaniObject.getspriteforspritepos(obj) - returns object",
-    "example": "temp.index = \"Hello World\".pos(\"World\");",
+    "example": "temp.index = \u0022Hello World\u0022.pos(\u0022World\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -1430,8 +1430,8 @@
     ],
     "returns": "array",
     "scope": "global",
-    "description": "string.tokenize([delimiters]) | Splits a string into an array wherever the delimiters occur.\n\nIf no delimiters are specified, defaults to spaces and commas. When delimiter is newline ('\\n'), it also skips line feeds ('\\r') in front of newlines.",
-    "example": "// Split by comma\ntemp.parts = \"apple,banana,cherry\".tokenize(\",\");\n\n// Default delimiters (spaces and commas)\ntemp.tokens = \"hello world test\".tokenize();\n\n// Split by equals for key-value pairs\ntemp.tok = \"key=value\".tokenize(\"=\");\n\n// Split by newline to process lines\ntemp.lines = \"line1\\nline2\\nline3\".tokenize(\"\\n\");"
+    "description": "string.tokenize([delimiters]) | Splits a string into an array wherever the delimiters occur.\n\nIf no delimiters are specified, defaults to spaces and commas. When delimiter is newline (\u0027\\n\u0027), it also skips line feeds (\u0027\\r\u0027) in front of newlines.",
+    "example": "// Split by comma\ntemp.parts = \u0022apple,banana,cherry\u0022.tokenize(\u0022,\u0022);\n\n// Default delimiters (spaces and commas)\ntemp.tokens = \u0022hello world test\u0022.tokenize();\n\n// Split by equals for key-value pairs\ntemp.tok = \u0022key=value\u0022.tokenize(\u0022=\u0022);\n\n// Split by newline to process lines\ntemp.lines = \u0022line1\\nline2\\nline3\u0022.tokenize(\u0022\\n\u0022);"
   },
   "findplayer": {
     "name": "findplayer",
@@ -1463,7 +1463,7 @@
     "returns": "object",
     "scope": "global",
     "description": "findplayerbycommunityname(str) - returns object",
-    "example": "temp.pl = findplayerbycommunityname(\"Bob\");\ntemp.pl.hearts -= 1;",
+    "example": "temp.pl = findplayerbycommunityname(\u0022Bob\u0022);\ntemp.pl.hearts -= 1;",
     "type": ""
   },
   "findplayerbyid": {
@@ -1498,7 +1498,7 @@
     "returns": "object",
     "scope": "serverside",
     "description": "findnpc(str) - Returns the NPC object with the specified name/identifier. Can be used to access variables and call functions on other NPCs. Used to locate database NPCs by their unique identifier.",
-    "example": "// Access another NPC's variables\ntemp.controlnpc = findnpc(\"Control-NPC\");\nthis.player_data = temp.controlnpc.player_data;\n\n// Call a function on another NPC\nfindnpc(\"BossSpawner\").onSpawnBoss();\n\n// Access NPC properties directly\nthis.where_is_waldo = findnpc(\"Waldo\").level.name;\n\n// Use with with() statement\nwith (findnpc(\"Turret\")) {\n  x = 30;\n}"
+    "example": "// Access another NPC\u0027s variables\ntemp.controlnpc = findnpc(\u0022Control-NPC\u0022);\nthis.player_data = temp.controlnpc.player_data;\n\n// Call a function on another NPC\nfindnpc(\u0022BossSpawner\u0022).onSpawnBoss();\n\n// Access NPC properties directly\nthis.where_is_waldo = findnpc(\u0022Waldo\u0022).level.name;\n\n// Use with with() statement\nwith (findnpc(\u0022Turret\u0022)) {\n  x = 30;\n}"
   },
   "findnpcbyid": {
     "name": "findnpcbyid",
@@ -1508,8 +1508,8 @@
     ],
     "returns": "object",
     "scope": "serverside",
-    "description": "findnpcbyid(int) - Returns the NPC object with the specified ID. Can be used to access variables and call functions on NPCs by their numeric ID rather than name. Returns null if the NPC with that ID doesn't exist.",
-    "example": "// Get NPC by ID and check if it exists\ntemp.npc = findnpcbyid(123);\nif (temp.npc != null) {\n  player.chat = \"Found NPC at \" @ temp.npc.x @ \", \" @ temp.npc.y;\n}\n\n// Access NPC properties directly\nplayer.x = findnpcbyid(456).x;\nplayer.y = findnpcbyid(456).y;\n\n// Use with() to modify NPC\nwith (findnpcbyid(789)) {\n  x = 30;\n  y = 40;\n}\n\n// Check if NPC exists before using\ntemp.target = findnpcbyid(100);\nif (temp.target == null) {\n  player.chat = \"NPC not found\";\n  return;\n}\ntemp.target.chat = \"Hello\";"
+    "description": "findnpcbyid(int) - Returns the NPC object with the specified ID. Can be used to access variables and call functions on NPCs by their numeric ID rather than name. Returns null if the NPC with that ID doesn\u0027t exist.",
+    "example": "// Get NPC by ID and check if it exists\ntemp.npc = findnpcbyid(123);\nif (temp.npc != null) {\n  player.chat = \u0022Found NPC at \u0022 @ temp.npc.x @ \u0022, \u0022 @ temp.npc.y;\n}\n\n// Access NPC properties directly\nplayer.x = findnpcbyid(456).x;\nplayer.y = findnpcbyid(456).y;\n\n// Use with() to modify NPC\nwith (findnpcbyid(789)) {\n  x = 30;\n  y = 40;\n}\n\n// Check if NPC exists before using\ntemp.target = findnpcbyid(100);\nif (temp.target == null) {\n  player.chat = \u0022NPC not found\u0022;\n  return;\n}\ntemp.target.chat = \u0022Hello\u0022;"
   },
   "findlevel": {
     "name": "findlevel",
@@ -1610,7 +1610,7 @@
     "returns": "void",
     "scope": "global",
     "description": "TGraalVar.savelines(string, int) - Saves the array line by line into a file. Second parameter is save mode: 0 = overwrite, 1 = append.",
-    "example": "temp.lines.loadlines(\"levels/icons/icons.txt\");\n temp.lines.add((temp.h @ \",\" @ newname @ \",0\"));\n temp.lines.savelines(\"levels/icons/icons.txt\", 0);"
+    "example": "temp.lines.loadlines(\u0022levels/icons/icons.txt\u0022);\n temp.lines.add((temp.h @ \u0022,\u0022 @ newname @ \u0022,0\u0022));\n temp.lines.savelines(\u0022levels/icons/icons.txt\u0022, 0);"
   },
   "savelog": {
     "name": "savelog",
@@ -1621,7 +1621,7 @@
     "returns": "void",
     "scope": "clientside",
     "description": "savelog(str) - Logs a message to the F2 game messages window.",
-    "example": "savelog(\"Welcome to\" SPC servername);"
+    "example": "savelog(\u0022Welcome to\u0022 SPC servername);"
   },
   "savelog2": {
     "name": "savelog2",
@@ -1633,7 +1633,7 @@
     "returns": "void",
     "scope": "serverside",
     "description": "savelog2(str, str) - Saves a log message to a file in the logs/ folder.",
-    "example": "savelog2(\"olle_log.txt\", format(\"%s updated links in %s!\", player.account, temp.file));\n\nsavelog2(\"hacking.txt\", \"There was a player hacking detected:\" SPC player.account);"
+    "example": "savelog2(\u0022olle_log.txt\u0022, format(\u0022%s updated links in %s!\u0022, player.account, temp.file));\n\nsavelog2(\u0022hacking.txt\u0022, \u0022There was a player hacking detected:\u0022 SPC player.account);"
   },
   "savestring": {
     "name": "savestring",
@@ -1687,7 +1687,7 @@
     ],
     "returns": "object",
     "description": "No matching script function found!",
-    "example": "temp.img = loadimg(\"sprite.png\");",
+    "example": "temp.img = loadimg(\u0022sprite.png\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -1698,7 +1698,7 @@
     ],
     "returns": "void",
     "description": "loadclass(str) - preloads the clientside script of a class",
-    "example": "loadclass(\"TServerWeapon\");",
+    "example": "loadclass(\u0022TServerWeapon\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -1708,7 +1708,7 @@
       "int"
     ],
     "returns": "void",
-    "description": "TGraalVar.savejsontostring(int) - returns string - saves the variable to a json formated string,  parameter is the format flags (0 - normal, +1 - beautify: add newlines and indents, +2 - force strings with comma as array)",
+    "description": "TGraalVar.savejsontostring(int) - returns string - saves the variable to a json formated string,  parameter is the format flags (0 - normal, \u002B1 - beautify: add newlines and indents, \u002B2 - force strings with comma as array)",
     "example": "savejsontostring(param1);",
     "scope": "clientside",
     "type": ""
@@ -1743,8 +1743,8 @@
     ],
     "returns": "object",
     "scope": "serverside",
-    "description": "TGraalVar.requestsql(query, expectResult) - Executes a SQL query on the default database. Returns an event object with rows, error, lastinsertid, and completed properties. Use waitfor(req, \"onReceiveData\", 60) for async results.",
-    "example": "temp.req = requestsql(\"SELECT * FROM players WHERE account = '\" @ acc.escape() @ \"'\", true);\nwaitfor(req, \"onReceiveData\", 60);\necho(req.rows);"
+    "description": "TGraalVar.requestsql(query, expectResult) - Executes a SQL query on the default database. Returns an event object with rows, error, lastinsertid, and completed properties. Use waitfor(req, \u0022onReceiveData\u0022, 60) for async results.",
+    "example": "temp.req = requestsql(\u0022SELECT * FROM players WHERE account = \u0027\u0022 @ acc.escape() @ \u0022\u0027\u0022, true);\nwaitfor(req, \u0022onReceiveData\u0022, 60);\necho(req.rows);"
   },
   "requestsql2": {
     "name": "requestsql2",
@@ -1757,7 +1757,7 @@
     "returns": "object",
     "scope": "serverside",
     "description": "TGraalVar.requestsql2(database, query, expectResult) - Executes a SQL query on a specific database by identifier. Otherwise identical to requestsql(). Returns an event object with rows, error, lastinsertid, and completed properties.",
-    "example": "temp.req = requestsql2(\"secondary_db\", \"SELECT score FROM stats WHERE account = '\" @ acc.escape() @ \"'\", true);\nwaitfor(req, \"onReceiveData\", 60);\necho(req.rows);"
+    "example": "temp.req = requestsql2(\u0022secondary_db\u0022, \u0022SELECT score FROM stats WHERE account = \u0027\u0022 @ acc.escape() @ \u0022\u0027\u0022, true);\nwaitfor(req, \u0022onReceiveData\u0022, 60);\necho(req.rows);"
   },
   "addweapon": {
     "name": "addweapon",
@@ -1766,8 +1766,8 @@
     ],
     "returns": "void",
     "scope": "serverside",
-    "description": "addweapon(str) - Adds a weapon script to a player's weapon list.",
-    "example": "findplayer(\"dabblercody\").addweapon(this.name); //Current Weapon \nfindplayer(\"dabblercody\").addweapon(\"Staff/Boots\");",
+    "description": "addweapon(str) - Adds a weapon script to a player\u0027s weapon list.",
+    "example": "findplayer(\u0022dabblercody\u0022).addweapon(this.name); //Current Weapon \nfindplayer(\u0022dabblercody\u0022).addweapon(\u0022Staff/Boots\u0022);",
     "type": ""
   },
   "callweapon": {
@@ -1802,8 +1802,8 @@
     ],
     "returns": "boolean",
     "scope": "serverside",
-    "description": "hasright(str, str) - returns boolean | TServerPlayer.hasright(str, str) - returns boolean - parameters are the rights (e.g. \"rw\") and the filename",
-    "example": "if (player.hasright(\"rw\", \"levels/house.nw\")) echo(\"Has edit rights\");"
+    "description": "hasright(str, str) - returns boolean | TServerPlayer.hasright(str, str) - returns boolean - parameters are the rights (e.g. \u0022rw\u0022) and the filename",
+    "example": "if (player.hasright(\u0022rw\u0022, \u0022levels/house.nw\u0022)) echo(\u0022Has edit rights\u0022);"
   },
   "removeweapon": {
     "name": "removeweapon",
@@ -1846,7 +1846,7 @@
     "returns": "float",
     "scope": "global",
     "description": "arctan(float) - Returns the arctangent (inverse tangent) of a value, giving the angle in radians whose tangent is the input value.",
-    "example": "temp.angle = arctan(1.0); // Returns \u03c0/4 radians (45 degrees) in float value (0.785...)",
+    "example": "temp.angle = arctan(1.0); // Returns \u03C0/4 radians (45 degrees) in float value (0.785...)",
     "type": ""
   },
   "ceil": {
@@ -1858,7 +1858,7 @@
     "returns": "float",
     "scope": "clientside",
     "description": "Math.ceil(float) - Rounds a number up to the nearest integer.",
-    "example": "temp.w = ceil(GraalControl.width / 1024) + 3;"
+    "example": "temp.w = ceil(GraalControl.width / 1024) \u002B 3;"
   },
   "checksum": {
     "name": "checksum",
@@ -2145,7 +2145,7 @@
     "returns": "float",
     "scope": "global",
     "description": "vecx(dir) - Returns the X component of a direction vector.",
-    "example": "// Calculate movement based on direction\ntemp.dir = 1; // Right\ntemp.dx = vecx(temp.dir); // Returns 1.0\ntemp.dy = vecy(temp.dir); // Returns 0.0\n\n// Move NPC in that direction\nthis.x += temp.dx;\nthis.y += temp.dy;"
+    "example": "// Calculate movement based on direction\ntemp.dir = 1; // Right\ntemp.dx = vecx(temp.dir); // Returns 1.0\ntemp.dy = vecy(temp.dir); // Returns 0.0\n\n// Move NPC in that direction\nthis.x \u002B= temp.dx;\nthis.y \u002B= temp.dy;"
   },
   "vecy": {
     "name": "vecy",
@@ -2156,7 +2156,7 @@
     "returns": "float",
     "scope": "global",
     "description": "vecy(dir) - Returns the Y component of a direction vector.",
-    "example": "// Get Y movement component for up direction\ntemp.dir = 0; // Up\ntemp.dy = vecy(temp.dir); // Returns -1.0\n\n// Use in movement calculations\nthis.y += temp.dy * 2; // Move up by 2 tiles"
+    "example": "// Get Y movement component for up direction\ntemp.dir = 0; // Up\ntemp.dy = vecy(temp.dir); // Returns -1.0\n\n// Use in movement calculations\nthis.y \u002B= temp.dy * 2; // Move up by 2 tiles"
   },
   "addstring": {
     "name": "addstring",
@@ -2167,7 +2167,7 @@
     "returns": "array",
     "scope": "global",
     "description": "addstring varname,string - Adds a string value to a string array variable. (deprecated with gs2 array.add)",
-    "example": "temp._array = {\"ore\", \"boat\", \"water\"};\naddstring temp._array, \"shore\";\necho(_array); // result: ore,boat,water,\"\"\"shore\"\"\"",
+    "example": "temp._array = {\u0022ore\u0022, \u0022boat\u0022, \u0022water\u0022};\naddstring temp._array, \u0022shore\u0022;\necho(_array); // result: ore,boat,water,\u0022\u0022\u0022shore\u0022\u0022\u0022",
     "type": ""
   },
   "base64decode": {
@@ -2178,7 +2178,7 @@
     ],
     "returns": "string",
     "scope": "global",
-    "description": "TGraalVar.base64decode(str) - Decodes a base64 encoded string. Also handles URL-safe base64 by replacing - with + and _ with / before decoding.",
+    "description": "TGraalVar.base64decode(str) - Decodes a base64 encoded string. Also handles URL-safe base64 by replacing - with \u002B and _ with / before decoding.",
     "example": "temp.decoded = base64decode(temp.encoded);"
   },
   "base64encode": {
@@ -2190,7 +2190,7 @@
     "returns": "string",
     "scope": "global",
     "description": "TGraalVar.base64encode(str) - Encodes a string to base64 format.",
-    "example": "temp.encoded = base64encode(\"hello world\");"
+    "example": "temp.encoded = base64encode(\u0022hello world\u0022);"
   },
   "contains": {
     "name": "contains",
@@ -2233,7 +2233,7 @@
       "str"
     ],
     "returns": "void",
-    "description": "escapestring(str) - returns string - adds \\ in front of \", ' and \\, and removes non-printable characters; made for mysql queries, same as string.escape()",
+    "description": "escapestring(str) - returns string - adds \\ in front of \u0022, \u0027 and \\, and removes non-printable characters; made for mysql queries, same as string.escape()",
     "example": "escapestring(param1);",
     "scope": "clientside",
     "type": ""
@@ -2244,7 +2244,7 @@
       "str"
     ],
     "returns": "void",
-    "description": "escapestring2(str) - returns string - replaces ' with '' and removes non-printable characters; made for sqlite queries",
+    "description": "escapestring2(str) - returns string - replaces \u0027 with \u0027\u0027 and removes non-printable characters; made for sqlite queries",
     "example": "escapestring2(param1);",
     "scope": "clientside",
     "type": ""
@@ -2255,7 +2255,7 @@
       "str"
     ],
     "returns": "void",
-    "description": "escapestringkeepnewline(str) - returns string - adds \\ in front of \", ' and \\, and removes non-printable characters, but keeps new line characters",
+    "description": "escapestringkeepnewline(str) - returns string - adds \\ in front of \u0022, \u0027 and \\, and removes non-printable characters, but keeps new line characters",
     "example": "escapestringkeepnewline(param1);",
     "scope": "clientside",
     "type": ""
@@ -2313,7 +2313,7 @@
     "returns": "array",
     "scope": "global",
     "description": "TGraalVar.getstringkeys(string) - Returns an array of variable name endings matching the given prefix.",
-    "example": "this.modtime_foo = 1;\nthis.modtime_bar = 2;\nfor (temp.key: getstringkeys(\"this.modtime_\")) {\n  echo(temp.key); // \"foo\", \"bar\"\n}"
+    "example": "this.modtime_foo = 1;\nthis.modtime_bar = 2;\nfor (temp.key: getstringkeys(\u0022this.modtime_\u0022)) {\n  echo(temp.key); // \u0022foo\u0022, \u0022bar\u0022\n}"
   },
   "insertstring": {
     "name": "insertstring",
@@ -2682,7 +2682,7 @@
     "returns": "void",
     "scope": "clientside",
     "description": "Plays a sound file at the player position.",
-    "example": "play(\"put.wav\");"
+    "example": "play(\u0022put.wav\u0022);"
   },
   "play2": {
     "name": "play2",
@@ -2695,8 +2695,8 @@
     ],
     "returns": "void",
     "scope": "clientside",
-    "description": "play2 - parameters are sound file, x, y and volume (0..1)\n\nPlays a sound effect once at a specific location in the game world. The volume and stereo panning are determined by the player's distance from the coordinates.",
-    "example": "play2(\"put.wav\", 20, 20, 1); // play a sound at x 20, y 20 in the level"
+    "description": "play2 - parameters are sound file, x, y and volume (0..1)\n\nPlays a sound effect once at a specific location in the game world. The volume and stereo panning are determined by the player\u0027s distance from the coordinates.",
+    "example": "play2(\u0022put.wav\u0022, 20, 20, 1); // play a sound at x 20, y 20 in the level"
   },
   "play3d": {
     "name": "play3d",
@@ -2725,7 +2725,7 @@
     "returns": "void",
     "scope": "clientside",
     "description": "playlooped(str) - Plays a sound file in a loop, continuously repeating until stopped.",
-    "example": "// Play background music\nplaylooped(\"music/background.ogg\");\n\n// Stop it later\nstopmusic();"
+    "example": "// Play background music\nplaylooped(\u0022music/background.ogg\u0022);\n\n// Stop it later\nstopmusic();"
   },
   "playlooped2": {
     "name": "playlooped2",
@@ -2806,7 +2806,7 @@
     "returns": "void",
     "scope": "clientside",
     "description": "takeplayercarry() - Removes the object that the player is currently carrying.",
-    "example": "// Force player to drop carried object\ntakeplayercarry();\n\n// Useful in scripted sequences\nmessage(\"You must drop that to proceed!\");\nif (player.iscarrying) {\n  takeplayercarry();\n}"
+    "example": "// Force player to drop carried object\ntakeplayercarry();\n\n// Useful in scripted sequences\nmessage(\u0022You must drop that to proceed!\u0022);\nif (player.iscarrying) {\n  takeplayercarry();\n}"
   },
   "takeplayerhorse": {
     "name": "takeplayerhorse",
@@ -2815,7 +2815,7 @@
     "returns": "void",
     "scope": "clientside",
     "description": "takeplayerhorse() - Removes the horse/mount that the player is currently riding.",
-    "example": "// Dismount player in certain areas\nif (player.level.name.starts(\"inside_\")) {\n  takeplayerhorse();\n  player.chat = \"Horses not allowed here!\";\n}"
+    "example": "// Dismount player in certain areas\nif (player.level.name.starts(\u0022inside_\u0022)) {\n  takeplayerhorse();\n  player.chat = \u0022Horses not allowed here!\u0022;\n}"
   },
   "testplayer": {
     "name": "testplayer",
@@ -2837,7 +2837,7 @@
     ],
     "returns": "string",
     "description": "TServerLevel.tiletype(float, float) - returns integer",
-    "example": "if (tiletype(player.x, player.y) == \"water\") playerenters(\"swimming.nw\");",
+    "example": "if (tiletype(player.x, player.y) == \u0022water\u0022) playerenters(\u0022swimming.nw\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -2890,7 +2890,7 @@
       "obj"
     ],
     "returns": "void",
-    "description": "TGraalVar.copyfrom(obj) - copies all variables and array values from another object, doesn't work for protected variables like players though",
+    "description": "TGraalVar.copyfrom(obj) - copies all variables and array values from another object, doesn\u0027t work for protected variables like players though",
     "example": "copyfrom(param1);",
     "scope": "clientside",
     "type": ""
@@ -2953,7 +2953,7 @@
       "float"
     ],
     "returns": "void",
-    "description": "converttimetostring(float) - returns string - prints the timevar2 like 'Wed Apr  8 20:53:13 2009', see formatTimeString() for more options",
+    "description": "converttimetostring(float) - returns string - prints the timevar2 like \u0027Wed Apr  8 20:53:13 2009\u0027, see formatTimeString() for more options",
     "example": "converttimetostring(param1);",
     "scope": "clientside",
     "type": ""
@@ -3165,7 +3165,7 @@
     "returns": "void",
     "scope": "serverside",
     "description": "sendtonc(str) - Sends a message to users connected to NPC Control on Remote Control.",
-    "example": "// Send debug message to NPC Control\nsendtonc(\"NPC \" @ this.name @ \" reached position \" @ this.x @ \",\" @ this.y);"
+    "example": "// Send debug message to NPC Control\nsendtonc(\u0022NPC \u0022 @ this.name @ \u0022 reached position \u0022 @ this.x @ \u0022,\u0022 @ this.y);"
   },
   "sendtorc": {
     "name": "sendtorc",
@@ -3261,7 +3261,7 @@
       "int"
     ],
     "returns": "void",
-    "description": "decompressfile(str, str, str, int) - returns boolean - parameters are filename, file name pattern (*), destination folder and flags (1 (keep zip paths) + 2 (keep original modification time)); unzips a file into the specified folder; on server-side the npcserver needs to have 'rw *' access on the des...",
+    "description": "decompressfile(str, str, str, int) - returns boolean - parameters are filename, file name pattern (*), destination folder and flags (1 (keep zip paths) \u002B 2 (keep original modification time)); unzips a file into the specified folder; on server-side the npcserver needs to have \u0027rw *\u0027 access on the des...",
     "example": "decompressfile(param1, param2, param3, param4);",
     "scope": "clientside",
     "type": ""
@@ -3306,7 +3306,7 @@
     "name": "disableweapons",
     "params": [],
     "returns": "void",
-    "description": "TServerPlayer.disableweapons | disableweapons() | TServerPlayer.disableweapons()",
+    "description": "disableweapons | TServerPlayer.disableweapons | disableweapons() | TServerPlayer.disableweapons()",
     "example": "disableweapons();",
     "scope": "clientside",
     "type": ""
@@ -3318,7 +3318,7 @@
       "str"
     ],
     "returns": "void",
-    "description": "downloadfiletofolder(str, str) - download a file (from the currently opened folder in scripted RC) to the specified destination (folder+name), if the script has access to the folder",
+    "description": "downloadfiletofolder(str, str) - download a file (from the currently opened folder in scripted RC) to the specified destination (folder\u002Bname), if the script has access to the folder",
     "example": "downloadfiletofolder(param1, param2);",
     "scope": "clientside",
     "type": ""
@@ -3332,7 +3332,7 @@
     ],
     "returns": "void",
     "description": "Clientside:",
-    "example": "downloadfile(\"http://example.com/file.txt\", \"local.txt\", \"onDownloadComplete\");",
+    "example": "downloadfile(\u0022http://example.com/file.txt\u0022, \u0022local.txt\u0022, \u0022onDownloadComplete\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -3345,7 +3345,7 @@
     ],
     "returns": "void",
     "description": "No matching script function found!",
-    "example": "downloadurltoarray(\"http://api.example.com/data\", \"\", \"onDataReceived\");",
+    "example": "downloadurltoarray(\u0022http://api.example.com/data\u0022, \u0022\u0022, \u0022onDataReceived\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -3359,7 +3359,7 @@
     ],
     "returns": "void",
     "description": "No matching script function found!",
-    "example": "downloadurltofile(\"http://example.com/data.json\", \"data.json\", \"\", \"onDownloaded\");",
+    "example": "downloadurltofile(\u0022http://example.com/data.json\u0022, \u0022data.json\u0022, \u0022\u0022, \u0022onDownloaded\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -3542,7 +3542,7 @@
       "int"
     ],
     "returns": "void",
-    "description": "findpathinarray(obj, obj, obj, obj, obj, int, int, int) - returns object - simple pathfinding: parameters are a two-dimensional array ('tiles'), tiles were we are allowed to walk, tiles where we are not allowed to walk, tiles where we may stop, tiles where we should not stop, start x and y, maximum ...",
+    "description": "findpathinarray(obj, obj, obj, obj, obj, int, int, int) - returns object - simple pathfinding: parameters are a two-dimensional array (\u0027tiles\u0027), tiles were we are allowed to walk, tiles where we are not allowed to walk, tiles where we may stop, tiles where we should not stop, start x and y, maximum ...",
     "example": "findpathinarray(param1, param2, param3, param4, param5, param6, param7, param8);",
     "scope": "clientside",
     "type": ""
@@ -3572,7 +3572,7 @@
       "y"
     ],
     "returns": "void",
-    "description": "GuiPopUpMenuCtrl.columns - string - of format \"0 16\", offset of the tabulators",
+    "description": "GuiPopUpMenuCtrl.columns - string - of format \u00220 16\u0022, offset of the tabulators",
     "example": "format(param1, param2);",
     "scope": "clientside",
     "type": ""
@@ -3607,7 +3607,7 @@
     "returns": "void",
     "scope": "clientside",
     "description": "freefileresources(str) - Used for clearing cached resource when files are deleted or updated.",
-    "example": "// Free resources for a specific file\nfreefileresources(\"overworld_map.png\");"
+    "example": "// Free resources for a specific file\nfreefileresources(\u0022overworld_map.png\u0022);"
   },
   "generatezipstring": {
     "name": "generatezipstring",
@@ -3748,7 +3748,7 @@
     "name": "getcallstackinfo",
     "params": [],
     "returns": "void",
-    "description": "getcallstackinfo() - returns string - returns a string which lists the call stack like 'in myfunction() at line 11 by Caller.onCreated() at line 5'",
+    "description": "getcallstackinfo() - returns string - returns a string which lists the call stack like \u0027in myfunction() at line 11 by Caller.onCreated() at line 5\u0027",
     "example": "getcallstackinfo();",
     "scope": "clientside",
     "type": ""
@@ -3870,7 +3870,7 @@
     "name": "getfunctions",
     "params": [],
     "returns": "void",
-    "description": "TGraalVar.getfunctions() - returns object - gets the names of all functions of the object as array, also each entry has subvariables which give more information about the function (\"parameters\", \"description\", \"scope\")",
+    "description": "TGraalVar.getfunctions() - returns object - gets the names of all functions of the object as array, also each entry has subvariables which give more information about the function (\u0022parameters\u0022, \u0022description\u0022, \u0022scope\u0022)",
     "example": "getfunctions();",
     "scope": "clientside",
     "type": ""
@@ -3937,7 +3937,7 @@
     "returns": "int",
     "scope": "global",
     "description": "getmapx(str) - Gets the x coordinate location in the gmap of the level indicated by string. The top-left level starts at (0, 0).",
-    "example": "getmapx(\"overworld_a01.nw\");"
+    "example": "getmapx(\u0022overworld_a01.nw\u0022);"
   },
   "getmapy": {
     "name": "getmapy",
@@ -3948,7 +3948,7 @@
     "returns": "int",
     "scope": "global",
     "description": "getmapy(str) - Gets the y coordinate location in the gmap of the level indicated by string. The top-left level starts at (0, 0).",
-    "example": "getmapy(\"overworld_a01.nw\");"
+    "example": "getmapy(\u0022overworld_a01.nw\u0022);"
   },
   "getmusicfilename": {
     "name": "getmusicfilename",
@@ -4222,7 +4222,7 @@
     "returns": "int",
     "scope": "clientside",
     "description": "GuiControlProfile.gettextheight() - Gets the text height using the profile font. Also usable as gettextheight(float, string,\n string) with zoom, font, and style.",
-    "example": "temp.tHeight = getTextHeight(.6, \"Arial\", NULL);"
+    "example": "temp.tHeight = getTextHeight(.6, \u0022Arial\u0022, NULL);"
   },
   "gettextwidth": {
     "name": "gettextwidth",
@@ -4235,7 +4235,7 @@
     ],
     "returns": "int",
     "scope": "clientside",
-    "description": "GuiControlProfile.gettextwidth(string) - Returns the pixel width of text using this profile's font.",
+    "description": "GuiControlProfile.gettextwidth(string) - Returns the pixel width of text using this profile\u0027s font.",
     "example": "temp.control.textwidth = temp.control.profile.gettextwidth(temp.control.text);"
   },
   "gettileset": {
@@ -4280,7 +4280,7 @@
     "name": "getutctime",
     "params": [],
     "returns": "float",
-    "description": "getutctime() - returns integer - get's the local time in seconds since 1970, is the same as int(timevar2) on server-side",
+    "description": "getutctime() - returns integer - get\u0027s the local time in seconds since 1970, is the same as int(timevar2) on server-side",
     "example": "temp.timestamp = getutctime();",
     "scope": "clientside",
     "type": ""
@@ -4357,7 +4357,7 @@
     ],
     "returns": "void",
     "scope": "clientside",
-    "description": "hidesword(float) - Hides or shows the player's sword/weapon.",
+    "description": "hidesword(float) - Hides or shows the player\u0027s sword/weapon.",
     "example": "// Hide weapon during cutscene\nhidesword(0);\n\n// Show weapon again\nhidesword(1);"
   },
   "lastindexof": {
@@ -4368,7 +4368,7 @@
     ],
     "returns": "integer",
     "description": "No matching script function found!",
-    "example": "temp.pos = lastindexof(\"hello world hello\", \"hello\");",
+    "example": "temp.pos = lastindexof(\u0022hello world hello\u0022, \u0022hello\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -4467,7 +4467,7 @@
     ],
     "returns": "boolean",
     "description": "isobject(str) - returns boolean",
-    "example": "if (isobject(\"temp.myvar\")) echo(\"Variable exists\");",
+    "example": "if (isobject(\u0022temp.myvar\u0022)) echo(\u0022Variable exists\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -4635,7 +4635,7 @@
       "int"
     ],
     "returns": "void",
-    "description": "makescreenshot2(str, int, float, float, float, int, int) - makes a screenshot without gui, parameters are filename, render bit flags (1 (local player) + 2 (other players) + 4 (npcs) + 8 (particles from removed objects) + 0x10 (weapon showimgs) + 0x20 (daynight effect), or 0x3f for everything), level...",
+    "description": "makescreenshot2(str, int, float, float, float, int, int) - makes a screenshot without gui, parameters are filename, render bit flags (1 (local player) \u002B 2 (other players) \u002B 4 (npcs) \u002B 8 (particles from removed objects) \u002B 0x10 (weapon showimgs) \u002B 0x20 (daynight effect), or 0x3f for everything), level...",
     "example": "makescreenshot2(param1, param2, param3, param4, param5, param6, param7, param8);",
     "scope": "clientside",
     "type": ""
@@ -4951,7 +4951,7 @@
     "returns": "void",
     "scope": "serverside",
     "description": "onLevelFileUpdated(filename) - Event triggered when a file in the levels/ folder or subfolder has been updated. Useful for detecting map changes without polling.",
-    "example": "function onLevelFileUpdated(filename) {\n  echo(\"Updated: \" @ filename);\n}"
+    "example": "function onLevelFileUpdated(filename) {\n  echo(\u0022Updated: \u0022 @ filename);\n}"
   },
   "onMapClick": {
     "name": "onMapClick",
@@ -5451,8 +5451,8 @@
     ],
     "returns": "void",
     "scope": "serverside",
-    "description": "pokereval(str, obj, obj, obj, int) - returns object - returns an array of chance to win a poker game, parameters are the poker type (holdem, holdem8, omaha, omaha8, 7stud, 7stud8, 7studnsq, razz, lowball27), an array of each players cards ({{\"as\",\"ah\"},{\"kd\",\"kc\"}}), the common cards, the dead cards...",
-    "example": "// Evaluate a Hold'em hand with two players\ntemp.playerCards = {{\"as\",\"ah\"}, {\"kd\",\"kc\"}};  // Player 1: AA, Player 2: KK\ntemp.commonCards = {\"qs\",\"qh\",\"qc\"};             // Flop: QQQ\ntemp.deadCards = {\"ac\"};                         // Known dead card\ntemp.iterations = 10000;                          // 10,000 simulations\n\ntemp.results = pokereval(\"holdem\", temp.playerCards, temp.commonCards, temp.deadCards, temp.iterations);\n// temp.results is now an array like {0.9124, 0.0876}\n\n// Access individual player probabilities\necho(\"Player 1 win chance: \" @ (temp.results[0] * 100) @ \"%\");\necho(\"Player 2 win chance: \" @ (temp.results[1] * 100) @ \"%\");\n\n// Or display all results\necho(temp.results); // Outputs: 0.9124,0.0876"
+    "description": "pokereval(str, obj, obj, obj, int) - returns object - returns an array of chance to win a poker game, parameters are the poker type (holdem, holdem8, omaha, omaha8, 7stud, 7stud8, 7studnsq, razz, lowball27), an array of each players cards ({{\u0022as\u0022,\u0022ah\u0022},{\u0022kd\u0022,\u0022kc\u0022}}), the common cards, the dead cards...",
+    "example": "// Evaluate a Hold\u0027em hand with two players\ntemp.playerCards = {{\u0022as\u0022,\u0022ah\u0022}, {\u0022kd\u0022,\u0022kc\u0022}};  // Player 1: AA, Player 2: KK\ntemp.commonCards = {\u0022qs\u0022,\u0022qh\u0022,\u0022qc\u0022};             // Flop: QQQ\ntemp.deadCards = {\u0022ac\u0022};                         // Known dead card\ntemp.iterations = 10000;                          // 10,000 simulations\n\ntemp.results = pokereval(\u0022holdem\u0022, temp.playerCards, temp.commonCards, temp.deadCards, temp.iterations);\n// temp.results is now an array like {0.9124, 0.0876}\n\n// Access individual player probabilities\necho(\u0022Player 1 win chance: \u0022 @ (temp.results[0] * 100) @ \u0022%\u0022);\necho(\u0022Player 2 win chance: \u0022 @ (temp.results[1] * 100) @ \u0022%\u0022);\n\n// Or display all results\necho(temp.results); // Outputs: 0.9124,0.0876"
   },
   "reflow": {
     "name": "reflow",
@@ -5503,7 +5503,7 @@
       "str"
     ],
     "returns": "void",
-    "description": "removetiledefs(str) - parameter is the 'levelstart', removes all tile definitions for levels that start with 'levelstart' | removetiledefs(str)",
+    "description": "removetiledefs(str) - parameter is the \u0027levelstart\u0027, removes all tile definitions for levels that start with \u0027levelstart\u0027 | removetiledefs(str)",
     "example": "removetiledefs(param1);",
     "scope": "clientside",
     "type": ""
@@ -5560,7 +5560,7 @@
       "str"
     ],
     "returns": "void",
-    "description": "requesthttp(str, int, str) - returns object - parameters are host, port and file; on server works only if it's authorized | requesthttp(str, int, str) - returns object",
+    "description": "requesthttp(str, int, str) - returns object - parameters are host, port and file; on server works only if it\u0027s authorized | requesthttp(str, int, str) - returns object",
     "example": "requesthttp(param1, param2, param3);",
     "scope": "clientside",
     "type": ""
@@ -5583,7 +5583,7 @@
       "str"
     ],
     "returns": "void",
-    "description": "requesturl(str) - returns object - requests the content of an URL, the returned object is firing a onReceiveData event; on server works only if it's authorized | requesturl(str) - returns object",
+    "description": "requesturl(str) - returns object - requests the content of an URL, the returned object is firing a onReceiveData event; on server works only if it\u0027s authorized | requesturl(str) - returns object",
     "example": "requesturl(param1);",
     "scope": "clientside",
     "type": ""
@@ -5838,8 +5838,8 @@
     ],
     "returns": "void",
     "scope": "global",
-    "description": "TServerNPC.setcharprop(property, value) - Sets character properties on an NPC. GS1/legacy function - in GS2 use direct property assignment instead (e.g. chat = \"hello\" instead of setcharprop #c,hello;).",
-    "example": "// GS1 (legacy)\nsetcharprop #c,Welcome to the shop!;\n// GS2 equivalent:\nchat = \"Welcome to the shop!\";"
+    "description": "TServerNPC.setcharprop(property, value) - Sets character properties on an NPC. GS1/legacy function - in GS2 use direct property assignment instead (e.g. chat = \u0022hello\u0022 instead of setcharprop #c,hello;).",
+    "example": "// GS1 (legacy)\nsetcharprop #c,Welcome to the shop!;\n// GS2 equivalent:\nchat = \u0022Welcome to the shop!\u0022;"
   },
   "setcoatcolor": {
     "name": "setcoatcolor",
@@ -6008,7 +6008,7 @@
     ],
     "returns": "void",
     "description": "GuiContextMenuCtrl.setrowbyid(int, str) | GuiPopUpEditCtrl.setrowbyid(int, str)",
-    "example": "this.setrowbyid(5, \"Updated Text\");",
+    "example": "this.setrowbyid(5, \u0022Updated Text\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -6067,7 +6067,7 @@
     "returns": "void",
     "scope": "global",
     "description": "TServerNPC.setshootparams(string) - Sets extra parameters passed to projectile action events before calling shoot().",
-    "example": "temp.shot_id = random(0, 1000000);\nsetshootparams(\"spawnspiderling\", temp.shot_id);\nshoot(this.x, this.y + 1, .8, temp.sangle, temp.zangle, temp.power, \"symm_anansi-venomball\", null);"
+    "example": "temp.shot_id = random(0, 1000000);\nsetshootparams(\u0022spawnspiderling\u0022, temp.shot_id);\nshoot(this.x, this.y \u002B 1, .8, temp.sangle, temp.zangle, temp.power, \u0022symm_anansi-venomball\u0022, null);"
   },
   "setskincolor": {
     "name": "setskincolor",
@@ -6208,7 +6208,7 @@
       "bool"
     ],
     "returns": "void",
-    "description": "TGraalVar.sortbyvalue(str, str, bool) - sorts an array, specify the variable of the array members which is compared, also the variable type and if it should be sorted ascending; variable type can be \"string\", otherwise it is sorted by floating point value",
+    "description": "TGraalVar.sortbyvalue(str, str, bool) - sorts an array, specify the variable of the array members which is compared, also the variable type and if it should be sorted ascending; variable type can be \u0022string\u0022, otherwise it is sorted by floating point value",
     "example": "sortbyvalue(param1, param2, param3);",
     "scope": "clientside",
     "type": ""
@@ -6411,7 +6411,7 @@
       "str"
     ],
     "returns": "void",
-    "description": "wordfiltertext(str, str) - returns integer - filters text with the rules defined in wordfilter/rules.txt, second parameter is the text type (chat, pm, toall or nick), result is a combination of 1 (log) + 2 (tell admins) + 4 (replace) + 8 (warn) + 16 (jail) + 32 (ban); use getWordFilterNewText(), get...",
+    "description": "wordfiltertext(str, str) - returns integer - filters text with the rules defined in wordfilter/rules.txt, second parameter is the text type (chat, pm, toall or nick), result is a combination of 1 (log) \u002B 2 (tell admins) \u002B 4 (replace) \u002B 8 (warn) \u002B 16 (jail) \u002B 32 (ban); use getWordFilterNewText(), get...",
     "example": "wordfiltertext(param1, param2);",
     "scope": "clientside",
     "type": ""
@@ -6502,7 +6502,7 @@
     "returns": "void",
     "scope": "clientside",
     "description": "Adventure_setAccountName(str) - Sets account name for login using the specified string.",
-    "example": "Adventure_setAccountName(\"myaccount\");"
+    "example": "Adventure_setAccountName(\u0022myaccount\u0022);"
   },
   "Adventure_setPassword": {
     "name": "Adventure_setPassword",
@@ -6513,7 +6513,7 @@
     "returns": "void",
     "scope": "clientside",
     "description": "Adventure_setPassword(str) - Sets account password for login using the specified string.",
-    "example": "Adventure_setPassword(\"mypassword\");"
+    "example": "Adventure_setPassword(\u0022mypassword\u0022);"
   },
   "Adventure_setChat": {
     "name": "Adventure_setChat",
@@ -6524,7 +6524,7 @@
     "returns": "void",
     "scope": "clientside",
     "description": "Adventure_setChat(str) - Sets the public overhead chat to the specified string.",
-    "example": "Adventure_setChat(\"Hello world!\");"
+    "example": "Adventure_setChat(\u0022Hello world!\u0022);"
   },
   "Adventure_setNickName": {
     "name": "Adventure_setNickName",
@@ -6535,7 +6535,7 @@
     "returns": "str",
     "scope": "clientside",
     "description": "Adventure_setNickName(str) - Sets the nickname used during login to the specified string.",
-    "example": "Adventure_setNickName(\"NewNick\");"
+    "example": "Adventure_setNickName(\u0022NewNick\u0022);"
   },
   "Adventure_setTextEditText": {
     "name": "Adventure_setTextEditText",
@@ -6547,7 +6547,7 @@
     "returns": "void",
     "scope": "clientside",
     "description": "Adventure_setTextEditText(obj, str) - Sets the text of a GuiTextEdit control.",
-    "example": "Adventure_setTextEditText(Test_TextEditCtrl, \"Testing\");"
+    "example": "Adventure_setTextEditText(Test_TextEditCtrl, \u0022Testing\u0022);"
   },
   "Adventure_setRemoveVars": {
     "name": "Adventure_setRemoveVars",
@@ -6571,7 +6571,7 @@
     "returns": "bool",
     "scope": "clientside",
     "description": "Adventure_setFileContent(str, str, int) - Writes content to file (path, content, mode). The third parameter is the save mode (0 - overwrite, 1 - append).",
-    "example": "Adventure_setFileContent(\"scriptfiles/foo.txt\", \"bar\", 0);"
+    "example": "Adventure_setFileContent(\u0022scriptfiles/foo.txt\u0022, \u0022bar\u0022, 0);"
   },
   "Adventure_setCheatWindows": {
     "name": "Adventure_setCheatWindows",
@@ -6582,7 +6582,7 @@
     "returns": "void",
     "scope": "clientside",
     "description": "Adventure_setCheatWindows(array) \u2013 Adds one or more window or tab names to the banned cheat-window list. Any window listed in this array will be recognized as a cheat tool by the client. You can also define banned cheat windows directly in the server options using cheatwindows.",
-    "example": "Adventure_setCheatWindows({\n    \"CheatEngine\",\n    \"Cheat Engine\",\n    \"GraalRelay\",\n    \"Graal Hack Trainer 1.2\"\n});"
+    "example": "Adventure_setCheatWindows({\n    \u0022CheatEngine\u0022,\n    \u0022Cheat Engine\u0022,\n    \u0022GraalRelay\u0022,\n    \u0022Graal Hack Trainer 1.2\u0022\n});"
   },
   "Adventure_setGraalControlRecreate": {
     "name": "Adventure_setGraalControlRecreate",
@@ -6639,7 +6639,7 @@
     "returns": "void",
     "scope": "clientside",
     "description": "Adventure_setAllowedSocketsConnect(str) - Authorizes a TSocket connection to the specified endpoint. The value must be in the format ip:port.",
-    "example": "Adventure_setAllowedSocketsConnect(\"127.0.0.1:4000\");"
+    "example": "Adventure_setAllowedSocketsConnect(\u0022127.0.0.1:4000\u0022);"
   },
   "Adventure_getFileContent": {
     "name": "Adventure_getFileContent",
@@ -6650,7 +6650,7 @@
     "returns": "str",
     "scope": "clientside",
     "description": "Adventure_getFileContent(str) - Reads file content from path.",
-    "example": "temp.content = Adventure_getFileContent(\"scriptfiles/foo.txt\");"
+    "example": "temp.content = Adventure_getFileContent(\u0022scriptfiles/foo.txt\u0022);"
   },
   "Adventure_getFolder": {
     "name": "Adventure_getFolder",
@@ -6664,7 +6664,7 @@
     "returns": "array",
     "scope": "clientside",
     "description": "Adventure_getFolder(str, str, bool, bool) - Retrieves files from a path. Parameters are: path, wildcard, include files (bool), include directories/recursive (bool).",
-    "example": "temp.files = Adventure_getFolder(\"levels/\", \"*.nw\", true, true);"
+    "example": "temp.files = Adventure_getFolder(\u0022levels/\u0022, \u0022*.nw\u0022, true, true);"
   },
   "Adventure_getBuildTime": {
     "name": "Adventure_getBuildTime",
@@ -6711,7 +6711,7 @@
     "returns": "int",
     "scope": "clientside",
     "description": "Adventure_getFileModTimeGlobal(str) - Retrieves the file modification time. Parameters are: Path.",
-    "example": "temp.modtime = Adventure_getFileModTimeGlobal(\"data.txt\");"
+    "example": "temp.modtime = Adventure_getFileModTimeGlobal(\u0022data.txt\u0022);"
   },
   "Adventure_getWindowList": {
     "name": "Adventure_getWindowList",
@@ -6787,7 +6787,7 @@
     "returns": "bool",
     "scope": "clientside",
     "description": "Adventure_fileExists(str) - Checks if a file exists.",
-    "example": "if (Adventure_fileExists(\"config.txt\")) { }"
+    "example": "if (Adventure_fileExists(\u0022config.txt\u0022)) { }"
   },
   "Adventure_invokeKeyEvent": {
     "name": "Adventure_invokeKeyEvent",
@@ -6801,7 +6801,7 @@
     "returns": "void",
     "scope": "clientside",
     "description": "Adventure_invokeKeyEvent(int, int, str, int) - Invokes key event (event type, key code, key name, modifier).",
-    "example": "Adventure_invokeKeyEvent(2, VK_D, \"\", 0);"
+    "example": "Adventure_invokeKeyEvent(2, VK_D, \u0022\u0022, 0);"
   },
   "Adventure_installGraal": {
     "name": "Adventure_installGraal",
@@ -6814,7 +6814,7 @@
     "returns": "void",
     "scope": "clientside",
     "description": "Adventure_installGraal(str, bool, bool) - Installs Graal, used by the login-server to update the client.",
-    "example": "Adventure_installGraal(\"/graal\", true, false);"
+    "example": "Adventure_installGraal(\u0022/graal\u0022, true, false);"
   },
   "Adventure_openExternalPM": {
     "name": "Adventure_openExternalPM",
@@ -6825,7 +6825,7 @@
     "returns": "boolean",
     "scope": "clientside",
     "description": "Adventure_openExternalPM(object) - Opens external PM window for recipient object. Returns true on success.",
-    "example": "with (findplayer(\"PlayerName\")) {\n  Adventure_openExternalPM(this);\n}"
+    "example": "with (findplayer(\u0022PlayerName\u0022)) {\n  Adventure_openExternalPM(this);\n}"
   },
   "Adventure_openServerList": {
     "name": "Adventure_openServerList",
@@ -6909,7 +6909,7 @@
     "returns": "void",
     "scope": "clientside",
     "description": "Adventure_requestFilesMove(str, str) - Requests file move (New Path, Filename). This only works when the file\u2019s folder is currently open in the File Browser.",
-    "example": "Adventure_requestFilesMove(\"temp/\", \"olne_log.txt\"); moves olne_log.txt into the temp/ directory"
+    "example": "Adventure_requestFilesMove(\u0022temp/\u0022, \u0022olne_log.txt\u0022); moves olne_log.txt into the temp/ directory"
   },
   "Adventure_requestFileDeletion": {
     "name": "Adventure_requestFileDeletion",
@@ -6920,7 +6920,7 @@
     "returns": "void",
     "scope": "clientside",
     "description": "Adventure_requestFileDeletion(str) \u2013 Requests deletion of a file from the server. This only works when the file\u2019s folder is currently open in the File Browser.",
-    "example": "Adventure_requestFileDeletion(\"bg.png\");"
+    "example": "Adventure_requestFileDeletion(\u0022bg.png\u0022);"
   },
   "Adventure_requestFileRename": {
     "name": "Adventure_requestFileRename",
@@ -6929,7 +6929,7 @@
     "returns": "void",
     "scope": "clientside",
     "description": "Adventure_requestFileRename(str, str) \u2013 Requests renaming a file from oldName to newName. This only works when the file\u2019s folder is currently open in the File Browser.",
-    "example": "Adventure_requestFileRename(\"logo2.png\", \"logo3.png\");"
+    "example": "Adventure_requestFileRename(\u0022logo2.png\u0022, \u0022logo3.png\u0022);"
   },
   "addcontrol": {
     "name": "addcontrol",
@@ -6952,7 +6952,7 @@
     "returns": "void",
     "scope": "serverside",
     "description": "addguildmember(str, str, str) - Adds a player to a guild",
-    "example": "function onPlayerTouchsMe() { // Touch the NPC to join the guild \"Knights\"\n  addguildmember(\"Knights\", player.account, player.nick);\n}",
+    "example": "function onPlayerTouchsMe() { // Touch the NPC to join the guild \u0022Knights\u0022\n  addguildmember(\u0022Knights\u0022, player.account, player.nick);\n}",
     "type": ""
   },
   "addmaterialmapping": {
@@ -6963,7 +6963,7 @@
     ],
     "returns": "void",
     "description": "No matching script function found!",
-    "example": "addmaterialmapping(\"wood\", \"wood_texture.png\");",
+    "example": "addmaterialmapping(\u0022wood\u0022, \u0022wood_texture.png\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -6974,7 +6974,7 @@
     ],
     "returns": "object",
     "description": "GuiPopUpEditCtrl.addrow | GuiAccordionCtrl.addrow(int) - returns object - parameter is id, returns the added row | GuiContextMenuCtrl.addrow(int, str) - returns object - the added row",
-    "example": "temp.row = this.addrow(1, \"Item 1\");",
+    "example": "temp.row = this.addrow(1, \u0022Item 1\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -6986,8 +6986,8 @@
       "int"
     ],
     "returns": "void",
-    "description": "addtiledef(str, str, int) - parameters: image,levelstart,type; specifys the tiles images for all levels that start with 'levelstart' (0-standard type, 1-new order) | addtiledef(str, str, int)",
-    "example": "addtiledef(\"tiles.png\", \"level_\", 0);",
+    "description": "addtiledef(str, str, int) - parameters: image,levelstart,type; specifys the tiles images for all levels that start with \u0027levelstart\u0027 (0-standard type, 1-new order) | addtiledef(str, str, int)",
+    "example": "addtiledef(\u0022tiles.png\u0022, \u0022level_\u0022, 0);",
     "scope": "clientside",
     "type": ""
   },
@@ -7000,8 +7000,8 @@
       "int"
     ],
     "returns": "void",
-    "description": "addtiledef2(str, str, int, int) - parameters: image,levelstart,x,y; replaces parts of the tiles image for all levels that start with 'levelstart' | addtiledef2(str, str, int, int)",
-    "example": "addtiledef2(\"tiles.png\", \"level_\", 0, 1);",
+    "description": "addtiledef2(str, str, int, int) - parameters: image,levelstart,x,y; replaces parts of the tiles image for all levels that start with \u0027levelstart\u0027 | addtiledef2(str, str, int, int)",
+    "example": "addtiledef2(\u0022tiles.png\u0022, \u0022level_\u0022, 0, 1);",
     "scope": "clientside",
     "type": ""
   },
@@ -7014,7 +7014,7 @@
     ],
     "returns": "void",
     "description": "No matching script function found!",
-    "example": "addutf8fontrange(\"myfont.ttf\", 1, 10);",
+    "example": "addutf8fontrange(\u0022myfont.ttf\u0022, 1, 10);",
     "scope": "clientside",
     "type": ""
   },
@@ -7069,7 +7069,7 @@
     ],
     "returns": "boolean",
     "description": "bodyexists(str) - returns boolean",
-    "example": "if (bodyexists(\"body_red.png\")) { }",
+    "example": "if (bodyexists(\u0022body_red.png\u0022)) { }",
     "scope": "clientside",
     "type": ""
   },
@@ -7212,7 +7212,7 @@
     ],
     "returns": "void",
     "description": "TServerNPC.canwarp2()",
-    "example": "canwarp2(\"overworld.nw\");",
+    "example": "canwarp2(\u0022overworld.nw\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -7244,7 +7244,7 @@
     "returns": "void",
     "scope": "global",
     "description": "TGraalVar.catchevent(str, str, str) - adds an event handler for the specified object and event, third parameter is the function which receives the event (first parameter of the event will be the object for which the event occured)",
-    "example": "this.catchevent(temp.button, \"onAction\", \"onButtonClick\");"
+    "example": "this.catchevent(temp.button, \u0022onAction\u0022, \u0022onButtonClick\u0022);"
   },
   "clearrows": {
     "name": "clearrows",
@@ -7294,7 +7294,7 @@
     ],
     "returns": "void",
     "description": "copylevel(str, str) - parameters are the source level filename and the destination filename; the destination is relative to the levels/ folder",
-    "example": "copylevel(\"template.nw\", \"newlevel.nw\");",
+    "example": "copylevel(\u0022template.nw\u0022, \u0022newlevel.nw\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -7305,7 +7305,7 @@
     ],
     "returns": "void",
     "description": "deletelevel(str) - returns boolean - deletes a level or other file, only works if the npcserver has write rights, returns true if it was successful",
-    "example": "deletelevel(\"oldlevel.nw\");",
+    "example": "deletelevel(\u0022oldlevel.nw\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -7330,7 +7330,7 @@
     "returns": "string",
     "scope": "global",
     "description": "des_encrypt(str, str) - returns string - encrypts data with DES algorithm, parameters are key and data",
-    "example": "temp.encrypted = base64encode(des_encrypt(\"12345678\", \"Hello World\")); // DES requires an 8-byte key\necho(\"Encrypted: \" @ temp.encrypted); // Output: kXpHvNl03HZybGQ=",
+    "example": "temp.encrypted = base64encode(des_encrypt(\u002212345678\u0022, \u0022Hello World\u0022)); // DES requires an 8-byte key\necho(\u0022Encrypted: \u0022 @ temp.encrypted); // Output: kXpHvNl03HZybGQ=",
     "type": ""
   },
   "destroymudobject": {
@@ -7360,7 +7360,7 @@
     "returns": "void",
     "scope": "clientside",
     "description": "TServerNPC.drawaslight | Draws the NPC above the day/night effects area (between drawoverplayer and the stats).\n\nUsed for light effects, fire effects, and other visual elements that should appear above the day/night overlay but below the status bar.",
-    "example": "// Light source effect\nfunction onCreated() {\n  setimg(\"light2.png\");\n  drawaslight();\n  dontblock();\n  setcoloreffect(1, 1, 0, 0.5);\n}\n\n// Fire effect\nfunction onCreated() {\n  setimg(\"fire.gif\");\n  drawaslight();\n  dontblock();\n  setcoloreffect(1, 0.5, 0, 0.9);\n}"
+    "example": "// Light source effect\nfunction onCreated() {\n  setimg(\u0022light2.png\u0022);\n  drawaslight();\n  dontblock();\n  setcoloreffect(1, 1, 0, 0.5);\n}\n\n// Fire effect\nfunction onCreated() {\n  setimg(\u0022fire.gif\u0022);\n  drawaslight();\n  dontblock();\n  setcoloreffect(1, 0.5, 0, 0.9);\n}"
   },
   "drawoverplayer": {
     "name": "drawoverplayer",
@@ -7398,7 +7398,7 @@
     ],
     "returns": "object",
     "description": "findani(str) - returns object",
-    "example": "temp.ani = findani(\"walk\");",
+    "example": "temp.ani = findani(\u0022walk\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -7409,7 +7409,7 @@
     ],
     "returns": "object",
     "description": "No matching script function found!",
-    "example": "temp.arch = findarchetype(\"sword\");",
+    "example": "temp.arch = findarchetype(\u0022sword\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -7419,8 +7419,8 @@
       "str"
     ],
     "returns": "integer",
-    "description": "GuiPopUpEditCtrl.findtext | GuiContextMenuCtrl.findtext(str) - returns integer - row index | GuiMLTextCtrl.findtext(str, int) - returns integer - searches for a sub string in the current text, returns the position if found, otherwise -1; second parameter are flags: 1 (wrap at text end) + 2 (case sensitive)",
-    "example": "temp.index = this.findtext(\"search\");",
+    "description": "GuiPopUpEditCtrl.findtext | GuiContextMenuCtrl.findtext(str) - returns integer - row index | GuiMLTextCtrl.findtext(str, int) - returns integer - searches for a sub string in the current text, returns the position if found, otherwise -1; second parameter are flags: 1 (wrap at text end) \u002B 2 (case sensitive)",
+    "example": "temp.index = this.findtext(\u0022search\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -7431,7 +7431,7 @@
     ],
     "returns": "integer",
     "description": "GuiPopUpEditCtrl.findtextid | GuiContextMenuCtrl.findtextid(str) - returns integer - row id | GuiPopUpEditCtrl.findtextid(str) - returns integer - row id",
-    "example": "temp.id = this.findtextid(\"search\");",
+    "example": "temp.id = this.findtextid(\u0022search\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -7442,7 +7442,7 @@
     ],
     "returns": "object",
     "description": "findweapon(str) - returns object | TServerPlayer.findweapon(str) - returns object",
-    "example": "temp.weapon = findweapon(\"sword\");",
+    "example": "temp.weapon = findweapon(\u0022sword\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -7453,7 +7453,7 @@
     ],
     "returns": "object",
     "description": "findweaponnpc(str) - returns object - finds a weapon objects",
-    "example": "temp.weaponnpc = findweaponnpc(\"BowWeapon\");",
+    "example": "temp.weaponnpc = findweaponnpc(\u0022BowWeapon\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -7465,7 +7465,7 @@
     ],
     "returns": "string",
     "description": "formattimestring(str, float) - returns string - formats a string like the strftime unix function, parameters are the format and time",
-    "example": "temp.formatted = formattimestring(\"%Y-%m-%d %H:%M:%S\", timevar2);",
+    "example": "temp.formatted = formattimestring(\u0022%Y-%m-%d %H:%M:%S\u0022, timevar2);",
     "scope": "clientside",
     "type": ""
   },
@@ -7476,7 +7476,7 @@
     ],
     "returns": "string",
     "description": "getextension(str) - returns string - same as extractFileExt()",
-    "example": "temp.ext = getExtension(\"image.png\");",
+    "example": "temp.ext = getExtension(\u0022image.png\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -7485,7 +7485,7 @@
     "params": [],
     "returns": "number",
     "description": "No matching script function found!",
-    "example": "temp.timestamp = getSystemTime(); scheduleevent((entry.time - start) / 1000.0, \"playNote\", note);",
+    "example": "temp.timestamp = getSystemTime(); scheduleevent((entry.time - start) / 1000.0, \u0022playNote\u0022, note);",
     "scope": "clientside",
     "type": ""
   },
@@ -7558,7 +7558,7 @@
     ],
     "returns": "integer",
     "description": "getimgheight(str) - returns integer",
-    "example": "temp.height = getimgheight(\"sprite.png\");",
+    "example": "temp.height = getimgheight(\u0022sprite.png\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -7571,7 +7571,7 @@
     ],
     "returns": "integer",
     "description": "getimgpixel(str, int, int) - returns object",
-    "example": "temp.color = getimgpixel(\"sprite.png\", 10, 10);",
+    "example": "temp.color = getimgpixel(\u0022sprite.png\u0022, 10, 10);",
     "scope": "clientside",
     "type": ""
   },
@@ -7582,7 +7582,7 @@
     ],
     "returns": "integer",
     "description": "getimgwidth(str) - returns integer",
-    "example": "temp.width = getimgwidth(\"sprite.png\");",
+    "example": "temp.width = getimgwidth(\u0022sprite.png\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -7594,7 +7594,7 @@
     ],
     "returns": "boolean",
     "description": "No matching script function found!",
-    "example": "if (getkingdomhasright(player.account, \"admin\")) { }",
+    "example": "if (getkingdomhasright(player.account, \u0022admin\u0022)) { }",
     "scope": "clientside",
     "type": ""
   },
@@ -7606,7 +7606,7 @@
     ],
     "returns": "boolean",
     "description": "No matching script function found!",
-    "example": "if (getkingdomisally(\"red\", \"blue\")) { }",
+    "example": "if (getkingdomisally(\u0022red\u0022, \u0022blue\u0022)) { }",
     "scope": "clientside",
     "type": ""
   },
@@ -7618,7 +7618,7 @@
     ],
     "returns": "boolean",
     "description": "No matching script function found!",
-    "example": "if (getkingdomisenemy(\"red\", \"blue\")) { }",
+    "example": "if (getkingdomisenemy(\u0022red\u0022, \u0022blue\u0022)) { }",
     "scope": "clientside",
     "type": ""
   },
@@ -7630,7 +7630,7 @@
     ],
     "returns": "boolean",
     "description": "No matching script function found!",
-    "example": "if (getkingdomisinkingdom(player.account, \"red\")) { }",
+    "example": "if (getkingdomisinkingdom(player.account, \u0022red\u0022)) { }",
     "scope": "clientside",
     "type": ""
   },
@@ -7642,7 +7642,7 @@
     ],
     "returns": "boolean",
     "description": "No matching script function found!",
-    "example": "if (getkingdomismember(player.account, \"red\")) { }",
+    "example": "if (getkingdomismember(player.account, \u0022red\u0022)) { }",
     "scope": "clientside",
     "type": ""
   },
@@ -7774,7 +7774,7 @@
     ],
     "returns": "boolean",
     "description": "headexists(str) - returns boolean",
-    "example": "if (headexists(\"head1.png\")) { }",
+    "example": "if (headexists(\u0022head1.png\u0022)) { }",
     "scope": "clientside",
     "type": ""
   },
@@ -7819,7 +7819,7 @@
     ],
     "returns": "void",
     "description": "TGraalVar.ignoreevent(str, str) - lets the object ignore an event (second parameter) of the specified object name",
-    "example": "ignoreevent(\"playerchats\");",
+    "example": "ignoreevent(\u0022playerchats\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -7842,7 +7842,7 @@
     ],
     "returns": "object",
     "description": "GuiPopUpEditCtrl.insertrow | GuiAccordionCtrl.insertrow(int, int) - returns object - parameters are the insert position and id, returns the inserted row | GuiContextMenuCtrl.insertrow(int, int, str) - returns object - the inserted row",
-    "example": "temp.row = this.insertrow(2, 10, \"Inserted Item\");",
+    "example": "temp.row = this.insertrow(2, 10, \u0022Inserted Item\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -7873,7 +7873,7 @@
     ],
     "returns": "boolean",
     "description": "isclassloaded(str) - returns boolean",
-    "example": "if (isclassloaded(\"TServerWeapon\")) { }",
+    "example": "if (isclassloaded(\u0022TServerWeapon\u0022)) { }",
     "scope": "clientside",
     "type": ""
   },
@@ -7908,7 +7908,7 @@
     ],
     "returns": "boolean",
     "description": "isimgrectangletransparent(str, int, int, int, int) - returns boolean",
-    "example": "if (isimgrectangletransparent(\"sprite.png\", 0, 0, 16, 16)) { }",
+    "example": "if (isimgrectangletransparent(\u0022sprite.png\u0022, 0, 0, 16, 16)) { }",
     "scope": "clientside",
     "type": ""
   },
@@ -7919,7 +7919,7 @@
     ],
     "returns": "void",
     "description": "No matching script function found!",
-    "example": "kingdomadd(\"RedKingdom\");",
+    "example": "kingdomadd(\u0022RedKingdom\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -7931,7 +7931,7 @@
     ],
     "returns": "void",
     "description": "No matching script function found!",
-    "example": "kingdomaddally(\"red\", \"blue\");",
+    "example": "kingdomaddally(\u0022red\u0022, \u0022blue\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -7943,7 +7943,7 @@
     ],
     "returns": "void",
     "description": "No matching script function found!",
-    "example": "kingdomaddenemy(\"red\", \"blue\");",
+    "example": "kingdomaddenemy(\u0022red\u0022, \u0022blue\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -7955,7 +7955,7 @@
     ],
     "returns": "void",
     "description": "No matching script function found!",
-    "example": "kingdomaddmember(\"red\", player.account);",
+    "example": "kingdomaddmember(\u0022red\u0022, player.account);",
     "scope": "clientside",
     "type": ""
   },
@@ -7967,7 +7967,7 @@
     ],
     "returns": "void",
     "description": "No matching script function found!",
-    "example": "kingdomaddrank(\"red\", \"soldier\");",
+    "example": "kingdomaddrank(\u0022red\u0022, \u0022soldier\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -7990,7 +7990,7 @@
     ],
     "returns": "void",
     "description": "No matching script function found!",
-    "example": "kingdomjoin(\"red\", player.account);",
+    "example": "kingdomjoin(\u0022red\u0022, player.account);",
     "scope": "clientside",
     "type": ""
   },
@@ -8001,7 +8001,7 @@
     ],
     "returns": "array",
     "description": "No matching script function found!",
-    "example": "temp.allies = kingdomlistallies(\"red\");",
+    "example": "temp.allies = kingdomlistallies(\u0022red\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -8012,7 +8012,7 @@
     ],
     "returns": "array",
     "description": "No matching script function found!",
-    "example": "temp.enemies = kingdomlistenemies(\"red\");",
+    "example": "temp.enemies = kingdomlistenemies(\u0022red\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -8032,7 +8032,7 @@
     ],
     "returns": "array",
     "description": "No matching script function found!",
-    "example": "temp.members = kingdomlistmembers(\"red\");",
+    "example": "temp.members = kingdomlistmembers(\u0022red\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -8044,7 +8044,7 @@
     ],
     "returns": "array",
     "description": "No matching script function found!",
-    "example": "temp.members = kingdomlistrankmembers(\"red\", \"soldier\");",
+    "example": "temp.members = kingdomlistrankmembers(\u0022red\u0022, \u0022soldier\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -8055,7 +8055,7 @@
     ],
     "returns": "array",
     "description": "No matching script function found!",
-    "example": "temp.ranks = kingdomlistranks(\"red\");",
+    "example": "temp.ranks = kingdomlistranks(\u0022red\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -8067,7 +8067,7 @@
     ],
     "returns": "void",
     "description": "No matching script function found!",
-    "example": "kingdommessage(\"red\", \"Rally at the castle!\");",
+    "example": "kingdommessage(\u0022red\u0022, \u0022Rally at the castle!\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -8080,7 +8080,7 @@
     ],
     "returns": "void",
     "description": "No matching script function found!",
-    "example": "kingdommessage2(\"red\", \"soldier\", \"Prepare for battle!\");",
+    "example": "kingdommessage2(\u0022red\u0022, \u0022soldier\u0022, \u0022Prepare for battle!\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -8091,7 +8091,7 @@
     ],
     "returns": "object",
     "description": "No matching script function found!",
-    "example": "temp.profile = kingdomprofilekingdom(\"red\");",
+    "example": "temp.profile = kingdomprofilekingdom(\u0022red\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -8103,7 +8103,7 @@
     ],
     "returns": "object",
     "description": "No matching script function found!",
-    "example": "temp.profile = kingdomprofilemember(\"red\", player.account);",
+    "example": "temp.profile = kingdomprofilemember(\u0022red\u0022, player.account);",
     "scope": "clientside",
     "type": ""
   },
@@ -8115,7 +8115,7 @@
     ],
     "returns": "object",
     "description": "No matching script function found!",
-    "example": "temp.profile = kingdomprofilerank(\"red\", \"soldier\");",
+    "example": "temp.profile = kingdomprofilerank(\u0022red\u0022, \u0022soldier\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -8126,7 +8126,7 @@
     ],
     "returns": "void",
     "description": "No matching script function found!",
-    "example": "kingdomremove(\"red\");",
+    "example": "kingdomremove(\u0022red\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -8138,7 +8138,7 @@
     ],
     "returns": "void",
     "description": "No matching script function found!",
-    "example": "kingdomremoveally(\"red\", \"blue\");",
+    "example": "kingdomremoveally(\u0022red\u0022, \u0022blue\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -8150,7 +8150,7 @@
     ],
     "returns": "void",
     "description": "No matching script function found!",
-    "example": "kingdomremoveenemy(\"red\", \"blue\");",
+    "example": "kingdomremoveenemy(\u0022red\u0022, \u0022blue\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -8162,7 +8162,7 @@
     ],
     "returns": "void",
     "description": "No matching script function found!",
-    "example": "kingdomremovemember(\"red\", player.account);",
+    "example": "kingdomremovemember(\u0022red\u0022, player.account);",
     "scope": "clientside",
     "type": ""
   },
@@ -8174,7 +8174,7 @@
     ],
     "returns": "void",
     "description": "No matching script function found!",
-    "example": "kingdomremoverank(\"red\", \"soldier\");",
+    "example": "kingdomremoverank(\u0022red\u0022, \u0022soldier\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -8187,7 +8187,7 @@
     ],
     "returns": "void",
     "description": "No matching script function found!",
-    "example": "kingdomrenamemember(\"red\", player.account, \"Hero\");",
+    "example": "kingdomrenamemember(\u0022red\u0022, player.account, \u0022Hero\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -8200,7 +8200,7 @@
     ],
     "returns": "void",
     "description": "No matching script function found!",
-    "example": "kingdomrenamerank(\"red\", \"soldier\", \"warrior\");",
+    "example": "kingdomrenamerank(\u0022red\u0022, \u0022soldier\u0022, \u0022warrior\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -8213,7 +8213,7 @@
     ],
     "returns": "void",
     "description": "No matching script function found!",
-    "example": "kingdomsetrank(\"red\", player.account, \"captain\");",
+    "example": "kingdomsetrank(\u0022red\u0022, player.account, \u0022captain\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -8226,7 +8226,7 @@
     ],
     "returns": "void",
     "description": "No matching script function found!",
-    "example": "kingdomsetrankparent(\"red\", \"soldier\", \"captain\");",
+    "example": "kingdomsetrankparent(\u0022red\u0022, \u0022soldier\u0022, \u0022captain\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -8239,7 +8239,7 @@
     ],
     "returns": "void",
     "description": "No matching script function found!",
-    "example": "kingdomsetrankrights(\"red\", \"soldier\", {\"recruit\", \"chat\"});",
+    "example": "kingdomsetrankrights(\u0022red\u0022, \u0022soldier\u0022, {\u0022recruit\u0022, \u0022chat\u0022});",
     "scope": "clientside",
     "type": ""
   },
@@ -8252,7 +8252,7 @@
     ],
     "returns": "void",
     "description": "No matching script function found!",
-    "example": "kingdomsetranktitle(\"red\", \"soldier\", \"Brave Warrior\");",
+    "example": "kingdomsetranktitle(\u0022red\u0022, \u0022soldier\u0022, \u0022Brave Warrior\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -8265,7 +8265,7 @@
     ],
     "returns": "void",
     "description": "No matching script function found!",
-    "example": "kingdomsettitle(\"red\", player.account, \"Hero\");",
+    "example": "kingdomsettitle(\u0022red\u0022, player.account, \u0022Hero\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -8279,7 +8279,7 @@
     "returns": "void",
     "scope": "clientside",
     "description": "lay2(str, float, float)",
-    "example": "lay2(\"heart\", player.x, player.y);",
+    "example": "lay2(\u0022heart\u0022, player.x, player.y);",
     "type": ""
   },
   "levelexists": {
@@ -8289,7 +8289,7 @@
     ],
     "returns": "boolean",
     "description": "levelexists(str) - returns boolean",
-    "example": "if (levelexists(\"town.nw\")) { }",
+    "example": "if (levelexists(\u0022town.nw\u0022)) { }",
     "scope": "clientside",
     "type": ""
   },
@@ -8300,8 +8300,8 @@
       "int"
     ],
     "returns": "void",
-    "description": "TGraalVar.loadfolder(str, int) - loads the content of a folder into the variable, you must specify the folder name and pattern (e.g. \"levels/bodies/*.png\") and if it should be recursive | TServerPlayer.getpersonaluploadfolder() - returns string - returns the folder where uploads are stored (requestt...",
-    "example": "loadfolder(\"weapons\");",
+    "description": "TGraalVar.loadfolder(str, int) - loads the content of a folder into the variable, you must specify the folder name and pattern (e.g. \u0022levels/bodies/*.png\u0022) and if it should be recursive | TServerPlayer.getpersonaluploadfolder() - returns string - returns the folder where uploads are stored (requestt...",
+    "example": "loadfolder(\u0022weapons\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -8314,7 +8314,7 @@
     "returns": "void",
     "scope": "clientside",
     "description": "loadmap(str) - Preloads a map or GMAP file into memory before the player is warped to it.",
-    "example": "// Preload map before warping player\nloadmap(\"overworld.gmap\");\n\n// Warp player after preload\nsleep(0.5);\nsetlevel2(\"overworld.gmap\", 50, 50)"
+    "example": "// Preload map before warping player\nloadmap(\u0022overworld.gmap\u0022);\n\n// Warp player after preload\nsleep(0.5);\nsetlevel2(\u0022overworld.gmap\u0022, 50, 50)"
   },
   "loadtranslation": {
     "name": "loadtranslation",
@@ -8324,8 +8324,8 @@
     ],
     "returns": "void",
     "scope": "clientside",
-    "description": "loadtranslation(str) - Loads a translation file for the specified language. (will download \"file_DOMAIN.po\" depending on the players language from the server)",
-    "example": "// Load Spanish translation\nloadtranslation(\"spanish\");\n\n// Or based on player preference\nif (player.language == \"es\") {\n  loadtranslation(\"spanish\");\n}"
+    "description": "loadtranslation(str) - Loads a translation file for the specified language. (will download \u0022file_DOMAIN.po\u0022 depending on the players language from the server)",
+    "example": "// Load Spanish translation\nloadtranslation(\u0022spanish\u0022);\n\n// Or based on player preference\nif (player.language == \u0022es\u0022) {\n  loadtranslation(\u0022spanish\u0022);\n}"
   },
   "loadvars": {
     "name": "loadvars",
@@ -8334,7 +8334,7 @@
     ],
     "returns": "void",
     "description": "TGraalVar.loadvars(str) - loads the variables from a file where each line has the format varname=value",
-    "example": "loadvars(\"playerdata.txt\");",
+    "example": "loadvars(\u0022playerdata.txt\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -8374,7 +8374,7 @@
     ],
     "returns": "object",
     "description": "No matching script function found!",
-    "example": "temp.obj = makemudobject(\"sword\", player.x, player.y);",
+    "example": "temp.obj = makemudobject(\u0022sword\u0022, player.x, player.y);",
     "scope": "clientside",
     "type": ""
   },
@@ -8385,7 +8385,7 @@
     ],
     "returns": "void",
     "description": "Clientside:",
-    "example": "makescreenshot(\"screenshot.png\");",
+    "example": "makescreenshot(\u0022screenshot.png\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -8398,7 +8398,7 @@
     ],
     "returns": "void",
     "description": "makescreenshotfull(str, int, int) - makes a screenshot including gui and saves under the specified filename and width and height, pass values of -1 for width and height if you want to use the screen size",
-    "example": "makescreenshotfull(\"screenshot.png\", -1, -1);",
+    "example": "makescreenshotfull(\u0022screenshot.png\u0022, -1, -1);",
     "scope": "clientside",
     "type": ""
   },
@@ -8411,8 +8411,8 @@
       "int"
     ],
     "returns": "void",
-    "description": "makescreenshotgame(str, int, int, int) - makes a screenshot without gui, parameters are filename, render bit flags (1 (local player) + 2 (other players) + 4 (npcs) + 8 (particles from removed objects) + 0x10 (weapon showimgs) + 0x20 (daynight effect), or 0x3f for everything), pixelwidth and pixelhei...",
-    "example": "makescreenshotgame(\"game.png\", 0x3f, 800, 600);",
+    "description": "makescreenshotgame(str, int, int, int) - makes a screenshot without gui, parameters are filename, render bit flags (1 (local player) \u002B 2 (other players) \u002B 4 (npcs) \u002B 8 (particles from removed objects) \u002B 0x10 (weapon showimgs) \u002B 0x20 (daynight effect), or 0x3f for everything), pixelwidth and pixelhei...",
+    "example": "makescreenshotgame(\u0022game.png\u0022, 0x3f, 800, 600);",
     "scope": "clientside",
     "type": ""
   },
@@ -8549,7 +8549,7 @@
     ],
     "returns": "void",
     "description": "No matching script function found!",
-    "example": "mudcastspell(\"fireball\", temp.monsterid);",
+    "example": "mudcastspell(\u0022fireball\u0022, temp.monsterid);",
     "scope": "clientside",
     "type": ""
   },
@@ -8560,7 +8560,7 @@
     ],
     "returns": "void",
     "description": "No matching script function found!",
-    "example": "mudcommand(\"examine sword\");",
+    "example": "mudcommand(\u0022examine sword\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -8571,7 +8571,7 @@
     ],
     "returns": "integer",
     "description": "No matching script function found!",
-    "example": "temp.count = mudcountinvobject(\"potion\");",
+    "example": "temp.count = mudcountinvobject(\u0022potion\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -8648,7 +8648,7 @@
     ],
     "returns": "object",
     "description": "No matching script function found!",
-    "example": "temp.obj = mudfindinvobject(\"sword\");",
+    "example": "temp.obj = mudfindinvobject(\u0022sword\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -8659,7 +8659,7 @@
     ],
     "returns": "void",
     "description": "No matching script function found!",
-    "example": "mudfirespell(\"fireball\");",
+    "example": "mudfirespell(\u0022fireball\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -8671,7 +8671,7 @@
     ],
     "returns": "void",
     "description": "No matching script function found!",
-    "example": "mudfirespell2(\"fireball\", 2);",
+    "example": "mudfirespell2(\u0022fireball\u0022, 2);",
     "scope": "clientside",
     "type": ""
   },
@@ -8682,7 +8682,7 @@
     ],
     "returns": "boolean",
     "description": "No matching script function found!",
-    "example": "if (mudhaskey(\"gold_key\")) { }",
+    "example": "if (mudhaskey(\u0022gold_key\u0022)) { }",
     "scope": "clientside",
     "type": ""
   },
@@ -8704,7 +8704,7 @@
     ],
     "returns": "boolean",
     "description": "No matching script function found!",
-    "example": "if (mudhaveskill(\"lockpicking\")) { }",
+    "example": "if (mudhaveskill(\u0022lockpicking\u0022)) { }",
     "scope": "clientside",
     "type": ""
   },
@@ -8809,7 +8809,7 @@
     ],
     "returns": "integer",
     "description": "No matching script function found!",
-    "example": "temp.count = mudnpccountinvobject(temp.npcid, \"gold\");",
+    "example": "temp.count = mudnpccountinvobject(temp.npcid, \u0022gold\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -8845,7 +8845,7 @@
     ],
     "returns": "string",
     "description": "No matching script function found!",
-    "example": "temp.value = mudobjectattr(temp.objid, \"power\");",
+    "example": "temp.value = mudobjectattr(temp.objid, \u0022power\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -8939,7 +8939,7 @@
     ],
     "returns": "void",
     "description": "No matching script function found!",
-    "example": "mudselectspell(\"fireball\");",
+    "example": "mudselectspell(\u0022fireball\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -8950,7 +8950,7 @@
     ],
     "returns": "void",
     "description": "No matching script function found!",
-    "example": "mudsetplayerclass(\"warrior\");",
+    "example": "mudsetplayerclass(\u0022warrior\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -8961,7 +8961,7 @@
     ],
     "returns": "integer",
     "description": "No matching script function found!",
-    "example": "temp.level = mudskilllevel(\"lockpicking\");",
+    "example": "temp.level = mudskilllevel(\u0022lockpicking\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -8972,7 +8972,7 @@
     ],
     "returns": "integer",
     "description": "No matching script function found!",
-    "example": "temp.num = mudspellnumber(\"fireball\");",
+    "example": "temp.num = mudspellnumber(\u0022fireball\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -8983,7 +8983,7 @@
     ],
     "returns": "void",
     "description": "No matching script function found!",
-    "example": "mudstartspell(\"fireball\");",
+    "example": "mudstartspell(\u0022fireball\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -9015,7 +9015,7 @@
     ],
     "returns": "void",
     "description": "No matching script function found!",
-    "example": "muduseskill(\"lockpicking\");",
+    "example": "muduseskill(\u0022lockpicking\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -9027,7 +9027,7 @@
     ],
     "returns": "void",
     "description": "No matching script function found!",
-    "example": "muduseskill2(\"steal\", temp.targetid);",
+    "example": "muduseskill2(\u0022steal\u0022, temp.targetid);",
     "scope": "clientside",
     "type": ""
   },
@@ -9060,7 +9060,7 @@
     "returns": "void",
     "scope": "clientside",
     "description": "opengraalurl(str) - opens a website of www.graalonline.com and automatically lets the player login to it (e.g. for the upgrade page or screenshot section)",
-    "example": "opengraalurl(\"www.graalonline.com\");"
+    "example": "opengraalurl(\u0022www.graalonline.com\u0022);"
   },
   "openurl": {
     "name": "openurl",
@@ -9070,8 +9070,8 @@
     ],
     "returns": "void",
     "scope": "clientside",
-    "description": "openurl(str) - Opens a web URL in the system's default browser.",
-    "example": "// Open website in browser\nopenurl(\"www.graalonline.com\");\n\n// Open documentation\nopenurl(\"unity.gscript.dev\");"
+    "description": "openurl(str) - Opens a web URL in the system\u0027s default browser.",
+    "example": "// Open website in browser\nopenurl(\u0022www.graalonline.com\u0022);\n\n// Open documentation\nopenurl(\u0022unity.gscript.dev\u0022);"
   },
   "openurl2": {
     "name": "openurl2",
@@ -9082,7 +9082,7 @@
     ],
     "returns": "void",
     "description": "openurl2(str, int, int)",
-    "example": "openurl2(\"http://example.com\", \"_blank\");",
+    "example": "openurl2(\u0022http://example.com\u0022, \u0022_blank\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -9133,7 +9133,7 @@
     "params": [],
     "returns": "array",
     "description": "No matching script function found!",
-    "example": "for (temp pl: playersinlevel) { pl.chat = \"Hello!\"; }",
+    "example": "for (temp pl: playersinlevel) { pl.chat = \u0022Hello!\u0022; }",
     "scope": "clientside",
     "type": ""
   },
@@ -9173,7 +9173,7 @@
     ],
     "returns": "object",
     "description": "TServerLevel.putnpc2(float, float, str) - returns object",
-    "example": "temp.npc = putnpc(\"mylevel.nw\", 10, 10, \"function onCreated() { this.image = 'guard.png'; }\");",
+    "example": "temp.npc = putnpc(\u0022mylevel.nw\u0022, 10, 10, \u0022function onCreated() { this.image = \u0027guard.png\u0027; }\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -9207,7 +9207,7 @@
     ],
     "returns": "void",
     "description": "replaceani(str, str)",
-    "example": "replaceani(\"walk\", \"walk_fast\");",
+    "example": "replaceani(\u0022walk\u0022, \u0022walk_fast\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -9219,7 +9219,7 @@
     ],
     "returns": "void",
     "description": "No matching script function found!",
-    "example": "requestmysql(\"gamedb\", \"SELECT * FROM players\");",
+    "example": "requestmysql(\u0022gamedb\u0022, \u0022SELECT * FROM players\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -9233,7 +9233,7 @@
     ],
     "returns": "object",
     "description": "requesturlasgamefile(str, str, int, bool) - returns object - works similar to redirects in the folder configuration: you can use this function to download files from the web and treat them like files downloaded from the server; parameters are the url, the download filename, modification time (0 for ...",
-    "example": "requesturlasgamefile(\"http://example.com/file.png\", \"myfile.png\", 0, false);",
+    "example": "requesturlasgamefile(\u0022http://example.com/file.png\u0022, \u0022myfile.png\u0022, 0, false);",
     "scope": "clientside",
     "type": ""
   },
@@ -9258,7 +9258,7 @@
     ],
     "returns": "string",
     "description": "resolvehost(str) - returns string - DNS lookup: resolves the host name (e.g. graalonline.com) to an ipv4 like 1.2.3.4",
-    "example": "temp.ip = resolvehost(\"graalonline.com\");",
+    "example": "temp.ip = resolvehost(\u0022graalonline.com\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -9374,7 +9374,7 @@
     ],
     "returns": "boolean",
     "description": "rsa_verify(str, str, str) - returns boolean - verififies a signature, parameters are the public RSA key, the data and the signature",
-    "example": "if (rsa_verify(publicKey, data, signature)) { echo(\"Valid!\"); }",
+    "example": "if (rsa_verify(publicKey, data, signature)) { echo(\u0022Valid!\u0022); }",
     "scope": "clientside",
     "type": ""
   },
@@ -9395,7 +9395,7 @@
     ],
     "returns": "void",
     "description": "TGraalVar.savevars(str, int) - saves the subvars in the format varname=value into a file, the second parameter is the save mode (0 - overwrite, 1 - append)",
-    "example": "savevars(\"playerdata.txt\");",
+    "example": "savevars(\u0022playerdata.txt\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -9415,7 +9415,7 @@
     ],
     "returns": "void",
     "description": "TServerNPC.setchargender(str)",
-    "example": "setchargender(\"female\");",
+    "example": "setchargender(\u0022female\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -9437,7 +9437,7 @@
     ],
     "returns": "void",
     "description": "setcursor2(str)",
-    "example": "setcursor2(\"cursor_hand.png\");",
+    "example": "setcursor2(\u0022cursor_hand.png\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -9472,7 +9472,7 @@
     ],
     "returns": "void",
     "description": "setletters(str)",
-    "example": "setletters(\"ABC\");",
+    "example": "setletters(\u0022ABC\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -9485,7 +9485,7 @@
     ],
     "returns": "void",
     "description": "No matching script function found!",
-    "example": "setmap(\"map.png\", 0, 0);",
+    "example": "setmap(\u0022map.png\u0022, 0, 0);",
     "scope": "clientside",
     "type": ""
   },
@@ -9555,7 +9555,7 @@
     ],
     "returns": "void",
     "description": "setspritesimage(str)",
-    "example": "setspritesimage(\"sprites.png\");",
+    "example": "setspritesimage(\u0022sprites.png\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -9566,7 +9566,7 @@
     ],
     "returns": "void",
     "description": "setstatusimage(str)",
-    "example": "setstatusimage(\"statusbar.png\");",
+    "example": "setstatusimage(\u0022statusbar.png\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -9577,7 +9577,7 @@
     ],
     "returns": "boolean",
     "description": "setstreamingmode(str) - returns boolean",
-    "example": "setstreamingmode(\"rtmp\");",
+    "example": "setstreamingmode(\u0022rtmp\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -9588,7 +9588,7 @@
     ],
     "returns": "boolean",
     "description": "shieldexists(str) - returns boolean",
-    "example": "if (shieldexists(\"shield1.png\")) { }",
+    "example": "if (shieldexists(\u0022shield1.png\u0022)) { }",
     "scope": "clientside",
     "type": ""
   },
@@ -9609,8 +9609,8 @@
     ],
     "returns": "void",
     "scope": "clientside",
-    "description": "TServerNPC.showstats | Controls which status bar elements are visible using flag values.\n\nUse `allstats` to show all default elements, then subtract specific flags to hide them.\n\n`0x1` = ASD\n`0x2` = icons (for rupees, bombs, arrows)\n`0x4` = rupees count\n`0x8` = bombs count\n`0x10` = arrows count\n`0x20` = hearts\n`0x40` = AP bar\n`0x80` = MP bar\n`0x100` = minimap\n`0x200` = inventory\n`0x400` = player",
-    "example": "// Show all stats\nshowstats(allstats);\n\n// Show all except hearts\nshowstats(allstats - 0x20);\n\n// Hide all stats\nshowstats(0);\n\n// Show only rupees and bombs\nshowstats(0x4 + 0x8);\n\n// Show all except minimap\nshowstats(allstats - 0x100);"
+    "description": "TServerNPC.showstats | Controls which status bar elements are visible using flag values.\n\nUse \u0060allstats\u0060 to show all default elements, then subtract specific flags to hide them.\n\n\u00600x1\u0060 = ASD\n\u00600x2\u0060 = icons (for rupees, bombs, arrows)\n\u00600x4\u0060 = rupees count\n\u00600x8\u0060 = bombs count\n\u00600x10\u0060 = arrows count\n\u00600x20\u0060 = hearts\n\u00600x40\u0060 = AP bar\n\u00600x80\u0060 = MP bar\n\u00600x100\u0060 = minimap\n\u00600x200\u0060 = inventory\n\u00600x400\u0060 = player",
+    "example": "// Show all stats\nshowstats(allstats);\n\n// Show all except hearts\nshowstats(allstats - 0x20);\n\n// Hide all stats\nshowstats(0);\n\n// Show only rupees and bombs\nshowstats(0x4 \u002B 0x8);\n\n// Show all except minimap\nshowstats(allstats - 0x100);"
   },
   "startrecordvideo": {
     "name": "startrecordvideo",
@@ -9619,7 +9619,7 @@
     ],
     "returns": "void",
     "description": "startrecordvideo() - returns boolean",
-    "example": "startrecordvideo(\"gameplay.avi\");",
+    "example": "startrecordvideo(\u0022gameplay.avi\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -9637,7 +9637,7 @@
     "params": [],
     "returns": "boolean",
     "description": "supportsopenglshader() - returns boolean",
-    "example": "if (supportsopenglshader()) { echo(\"Shaders supported!\"); }",
+    "example": "if (supportsopenglshader()) { echo(\u0022Shaders supported!\u0022); }",
     "scope": "clientside",
     "type": ""
   },
@@ -9648,7 +9648,7 @@
     ],
     "returns": "boolean",
     "description": "swordexists(str) - returns boolean",
-    "example": "if (swordexists(\"sword1.png\")) { }",
+    "example": "if (swordexists(\u0022sword1.png\u0022)) { }",
     "scope": "clientside",
     "type": ""
   },
@@ -9693,8 +9693,8 @@
     ],
     "returns": "void",
     "scope": "global",
-    "description": "TServerLevel.triggeraction(float, float, str, params...) - Triggers an event on all NPCs at the specified x,y position. The event name is appended to \"onAction\" to call the matching handler (e.g. \"warpPlayer\" calls onActionwarpPlayer()). Additional params are passed to the handler.",
-    "example": "triggeraction(this.x + 1, this.y + 1, \"warpPlayer\");\n// Calls onActionwarpPlayer() on NPCs at that position\ntriggeraction(this.x + 1, this.y + 1, \"CreateInstance\", this.instance_id);\n// Calls onActionCreateInstance(instance_id)"
+    "description": "TServerLevel.triggeraction(float, float, str, params...) - Triggers an event on all NPCs at the specified x,y position. The event name is appended to \u0022onAction\u0022 to call the matching handler (e.g. \u0022warpPlayer\u0022 calls onActionwarpPlayer()). Additional params are passed to the handler.",
+    "example": "triggeraction(this.x \u002B 1, this.y \u002B 1, \u0022warpPlayer\u0022);\n// Calls onActionwarpPlayer() on NPCs at that position\ntriggeraction(this.x \u002B 1, this.y \u002B 1, \u0022CreateInstance\u0022, this.instance_id);\n// Calls onActionCreateInstance(instance_id)"
   },
   "undo": {
     "name": "undo",
@@ -9770,7 +9770,7 @@
     ],
     "returns": "string",
     "description": "urldecode(str) - returns string - decode a parameter of a http request (?param) | urldecode(str) - returns string",
-    "example": "temp.decoded = urldecode(\"Hello%20World\");",
+    "example": "temp.decoded = urldecode(\u0022Hello%20World\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -9781,7 +9781,7 @@
     ],
     "returns": "string",
     "description": "urlencode(str) - returns string - encode a parameter for use in http urls (?param) | urlencode(str) - returns string",
-    "example": "temp.encoded = urlencode(\"Hello World\");",
+    "example": "temp.encoded = urlencode(\u0022Hello World\u0022);",
     "scope": "clientside",
     "type": ""
   },
@@ -10105,7 +10105,7 @@
     "name": "getpersonaluploadfolder",
     "params": [],
     "returns": "string",
-    "description": "returns string - returns the folder where uploads are stored (requesttext(\"folder\",\"PERSONAL\"), uploadfile(filename))",
+    "description": "returns string - returns the folder where uploads are stored (requesttext(\u0022folder\u0022,\u0022PERSONAL\u0022), uploadfile(filename))",
     "scope": "clientside",
     "type": ""
   },
@@ -10320,7 +10320,7 @@
     "params": [],
     "returns": "void",
     "scope": "clientside",
-    "description": "TServerNPC.timereverywhere() - Prevents the client from stopping this NPC's timeout when the player leaves the level.",
+    "description": "TServerNPC.timereverywhere() - Prevents the client from stopping this NPC\u0027s timeout when the player leaves the level.",
     "example": "//#CLIENTSIDE\nfunction onPlayerEnters() {\n  timerEverywhere();\n  setTimer(0.05);\n}\nfunction onTimeOut() {\n  // continues firing even after player leaves the level\n  timerEverywhere();\n  setTimer(0.05);\n}"
   },
   "float": {
@@ -10551,7 +10551,7 @@
     "returns": "void",
     "scope": "clientside",
     "description": "TSocket.bind(int, bool) - binds the given port, second parameter says if it should be udp; when a client connects an onNewClient(newsocket) event will be invoked",
-    "example": "//#CLIENTSIDE\nfunction onCreated() {\n  temp.port = 12345;\n\n  // Authorize port binding\n  Adventure_setAllowedPortsBind(temp.port);\n  \n  this.socket = new TSocket();\n  this.socket.bind(temp.port, 0);\n  \n  this.catchEvent(this.socket, \"onNewClient\", \"onHandleClientConnection\");\n}\n\n// Event gets called when a new client connects\nfunction onHandleClientConnection(temp.obj) {\n  echo(\"New Client Connected.\");\n  \n  // Loop over all connected clients\n  for (temp.client: this.socket.clients) {\n    // Send a packet to all connected clients\n    temp.packet = {};\n    temp.packet.packet_id = \"NEW_CLIENT\";\n    temp.packet.packet_data = player.account;\n    temp.client.send(temp.packet.savejsontostring(1));\n  }\n  \n}"
+    "example": "//#CLIENTSIDE\nfunction onCreated() {\n  temp.port = 12345;\n\n  // Authorize port binding\n  Adventure_setAllowedPortsBind(temp.port);\n  \n  this.socket = new TSocket();\n  this.socket.bind(temp.port, 0);\n  \n  this.catchEvent(this.socket, \u0022onNewClient\u0022, \u0022onHandleClientConnection\u0022);\n}\n\n// Event gets called when a new client connects\nfunction onHandleClientConnection(temp.obj) {\n  echo(\u0022New Client Connected.\u0022);\n  \n  // Loop over all connected clients\n  for (temp.client: this.socket.clients) {\n    // Send a packet to all connected clients\n    temp.packet = {};\n    temp.packet.packet_id = \u0022NEW_CLIENT\u0022;\n    temp.packet.packet_data = player.account;\n    temp.client.send(temp.packet.savejsontostring(1));\n  }\n  \n}"
   },
   "connect": {
     "name": "connect",
@@ -10916,8 +10916,8 @@
     ],
     "returns": "void",
     "scope": "clientside",
-    "description": "adddnsentry(str, str) - Adds a custom DNS entry to the client's DNS cache, mapping a hostname to an IP address.",
-    "example": "adddnsentry(\"example.com\", \"192.168.1.1\");"
+    "description": "adddnsentry(str, str) - Adds a custom DNS entry to the client\u0027s DNS cache, mapping a hostname to an IP address.",
+    "example": "adddnsentry(\u0022example.com\u0022, \u0022192.168.1.1\u0022);"
   },
   "clearemptyglobalvars": {
     "name": "clearemptyglobalvars",
@@ -10934,7 +10934,7 @@
       "filename"
     ],
     "returns": "string",
-    "description": "returns float - converts a string to a time number (seconds since 1970) like the strptime unix function, doesn't work in windows, parameters are the format and time string, example: \"%Y-%m-%d %H:%M:%S %Z\", \"2001-11-12 18:31:01 Etc/GMT\"",
+    "description": "returns float - converts a string to a time number (seconds since 1970) like the strptime unix function, doesn\u0027t work in windows, parameters are the format and time string, example: \u0022%Y-%m-%d %H:%M:%S %Z\u0022, \u00222001-11-12 18:31:01 Etc/GMT\u0022",
     "scope": "clientside",
     "type": ""
   },
@@ -11079,7 +11079,7 @@
     "returns": "string",
     "scope": "global",
     "description": "rc4_cipher(str, str) - returns string - encrypts or decrypts data, parameters are the RC4 key and the data",
-    "example": "// Encrypting\ntemp.encrypted = base64encode(rc4_cipher(\"myKey\", base64encode(\"Hello World\")));\necho(\"Encrypted: \" @ temp.encrypted); // Output: pPNT3bcXPf5qKPVb6jxMBg==\n\n// Decrypting\ntemp.decrypted = base64decode(rc4_cipher(\"myKey\", base64decode(temp.encrypted)));\necho(\"Decrypted: \" @ temp.decrypted); // Output: Hello World"
+    "example": "// Encrypting\ntemp.encrypted = base64encode(rc4_cipher(\u0022myKey\u0022, base64encode(\u0022Hello World\u0022)));\necho(\u0022Encrypted: \u0022 @ temp.encrypted); // Output: pPNT3bcXPf5qKPVb6jxMBg==\n\n// Decrypting\ntemp.decrypted = base64decode(rc4_cipher(\u0022myKey\u0022, base64decode(temp.encrypted)));\necho(\u0022Decrypted: \u0022 @ temp.decrypted); // Output: Hello World"
   },
   "reinstall": {
     "name": "reinstall",
@@ -11343,7 +11343,7 @@
     "returns": "string",
     "scope": "global",
     "description": "TServerPlayer.account - string (read only)",
-    "example": "chat = \"Hello\" SPC player.account @ \"!\"; // Hello Denveous!"
+    "example": "chat = \u0022Hello\u0022 SPC player.account @ \u0022!\u0022; // Hello Denveous!"
   },
   "accounts": {
     "name": "accounts",
@@ -12434,8 +12434,8 @@
     "params": [],
     "returns": "boolean",
     "scope": "clientside",
-    "description": "GuiControl.clipchildren - Whether child controls are visually clipped to the parent's width/height area. Default true.",
-    "example": "new GuiControl(\"MountMovement_DPad\") {\n  clipchildren = false;\n  new GuiBitmapCtrl(\"MountMovement_OverlayBack\") {\n    resize(0, 24, 138, 200);\n    bitmap = \"eraiphone_movement1.png\";\n  }\n}"
+    "description": "GuiControl.clipchildren - Whether child controls are visually clipped to the parent\u0027s width/height area. Default true.",
+    "example": "new GuiControl(\u0022MountMovement_DPad\u0022) {\n  clipchildren = false;\n  new GuiBitmapCtrl(\u0022MountMovement_OverlayBack\u0022) {\n    resize(0, 24, 138, 200);\n    bitmap = \u0022eraiphone_movement1.png\u0022;\n  }\n}"
   },
   "clipcolumntext": {
     "name": "clipcolumntext",
@@ -12490,8 +12490,8 @@
     ],
     "returns": "boolean",
     "scope": "clientside",
-    "description": "GuiControl.closequery - Controls whether the window's close button triggers an onCloseQuery() event (true) or just hides the window (false).",
-    "example": "new GuiWindowCtrl(\"MyWindow\") {\n  closequery = true;\n  thiso.catchevent(this, \"onCloseQuery\", \"handleClose\");\n}\n\nfunction handleClose() {\n  // Custom close logic here\n}"
+    "description": "GuiControl.closequery - Controls whether the window\u0027s close button triggers an onCloseQuery() event (true) or just hides the window (false).",
+    "example": "new GuiWindowCtrl(\u0022MyWindow\u0022) {\n  closequery = true;\n  thiso.catchevent(this, \u0022onCloseQuery\u0022, \u0022handleClose\u0022);\n}\n\nfunction handleClose() {\n  // Custom close logic here\n}"
   },
   "code": {
     "name": "code",
@@ -12499,7 +12499,7 @@
       "str"
     ],
     "returns": "void",
-    "description": "base64decode(str) - returns string - converts a url to base64 format by replacing - with + and _ with / and then decodes with base64 scheme | base64decode(str) - returns string - decodes a string with base64 scheme",
+    "description": "base64decode(str) - returns string - converts a url to base64 format by replacing - with \u002B and _ with / and then decodes with base64 scheme | base64decode(str) - returns string - decodes a string with base64 scheme",
     "example": "code()",
     "scope": "clientside",
     "type": ""
@@ -12734,7 +12734,7 @@
       "good"
     ],
     "returns": "void",
-    "description": "TSocket.data | GuiShowImgCtrl.uniqueparticle - boolean - says if each particle should store it's own data (good for text emitters) | TShowImg.uniqueparticle - boolean - says if each particle should store it's own data (good for text emitters)",
+    "description": "TSocket.data | GuiShowImgCtrl.uniqueparticle - boolean - says if each particle should store it\u0027s own data (good for text emitters) | TShowImg.uniqueparticle - boolean - says if each particle should store it\u0027s own data (good for text emitters)",
     "example": "data()",
     "scope": "clientside",
     "type": ""
@@ -12874,7 +12874,7 @@
       "float"
     ],
     "returns": "void",
-    "description": "getdir(float,float) | TServerNPC.move(float, float, float, int) - moves the npc smoothly, parameters are delta x, delta y, time and options:  cache type (0, 1-cache, 2-append) + blockcheck(4) + eventwhendone(8) + applydir(16)",
+    "description": "getdir(float,float) | TServerNPC.move(float, float, float, int) - moves the npc smoothly, parameters are delta x, delta y, time and options:  cache type (0, 1-cache, 2-append) \u002B blockcheck(4) \u002B eventwhendone(8) \u002B applydir(16)",
     "example": "dir()",
     "scope": "clientside",
     "type": ""
@@ -13294,7 +13294,7 @@
       "int"
     ],
     "returns": "void",
-    "description": "decompressfile(str, str, str, int) - returns boolean - parameters are filename, file name pattern (*), destination folder and flags (1 (keep zip paths) + 2 (keep original modification time)); unzips a file into the specified folder; on server-side the npcserver needs to have 'rw *' access on the des...",
+    "description": "decompressfile(str, str, str, int) - returns boolean - parameters are filename, file name pattern (*), destination folder and flags (1 (keep zip paths) \u002B 2 (keep original modification time)); unzips a file into the specified folder; on server-side the npcserver needs to have \u0027rw *\u0027 access on the des...",
     "example": "file()",
     "scope": "clientside",
     "type": ""
@@ -13397,7 +13397,7 @@
       "int"
     ],
     "returns": "void",
-    "description": "GuiMLTextCtrl.findtextat(str, int, int) - returns integer - searches for a sub string in the current text starting at the specified position, returns the position of the next match if found, otherwise -1; thirdparameter are flags: 1 (wrap at text end) + 2 (case sensitive)",
+    "description": "GuiMLTextCtrl.findtextat(str, int, int) - returns integer - searches for a sub string in the current text starting at the specified position, returns the position of the next match if found, otherwise -1; thirdparameter are flags: 1 (wrap at text end) \u002B 2 (case sensitive)",
     "example": "findtextat()",
     "scope": "clientside",
     "type": ""
@@ -14014,7 +14014,7 @@
     "returns": "float",
     "scope": "clientside",
     "description": "graalversion - float (read only) - Returns the version number of the Graal client as a float value.",
-    "example": "player.chat = graalversion; // would output your current game version into the chat (e.g. 6.113)\n\n if (graalversion >= 5.226) { ... } // checks for graal version higher than 5.226",
+    "example": "player.chat = graalversion; // would output your current game version into the chat (e.g. 6.113)\n\n if (graalversion \u003E= 5.226) { ... } // checks for graal version higher than 5.226",
     "type": ""
   },
   "gradientcolor": {
@@ -14514,7 +14514,7 @@
     "returns": "void",
     "scope": "global",
     "description": "TServerNPC.isblockingprojectiles - Boolean indicating whether the NPC blocks projectiles.",
-    "example": "if (this.isblockingprojectiles) {\n  chat = \"I can't be hit by projectiles\";\n}"
+    "example": "if (this.isblockingprojectiles) {\n  chat = \u0022I can\u0027t be hit by projectiles\u0022;\n}"
   },
   "isbuddy": {
     "name": "isbuddy",
@@ -14924,7 +14924,7 @@
     "name": "justify",
     "params": [],
     "returns": "void",
-    "description": "GuiControlProfile.justify - string - the same like \"align\"",
+    "description": "GuiControlProfile.justify - string - the same like \u0022align\u0022",
     "example": "justify()",
     "scope": "clientside",
     "type": ""
@@ -15281,7 +15281,7 @@
     "returns": "int",
     "scope": "clientside",
     "description": "GuiControl.maxchars() - Sets the maximum character limit for text input controls (default 255, set to 0 for unlimited).",
-    "example": "new GuiTextCtrl(\"nameInput\") {\n  width = 160;\n  height = 24;\n  maxchars = 30;\n  text = \"\";\n}"
+    "example": "new GuiTextCtrl(\u0022nameInput\u0022) {\n  width = 160;\n  height = 24;\n  maxchars = 30;\n  text = \u0022\u0022;\n}"
   },
   "maxhp": {
     "name": "maxhp",
@@ -15733,7 +15733,7 @@
       "bool"
     ],
     "returns": "void",
-    "description": "TServerPlayer.openexternalpm(bool) - returns boolean - as parameter specify 'true' if it should display the pm sent by the player, otherwise always open a blank PM window",
+    "description": "TServerPlayer.openexternalpm(bool) - returns boolean - as parameter specify \u0027true\u0027 if it should display the pm sent by the player, otherwise always open a blank PM window",
     "example": "openexternalpm()",
     "scope": "clientside",
     "type": ""
@@ -15792,7 +15792,7 @@
     "returns": "array",
     "scope": "global",
     "description": "params - A built-in array variable that contains the parameters passed to the current function. Access individual parameters using array indexing, where params[0] is the first parameter, params[1] is the second, and so on.",
-    "example": "function onActionServerSide() { switch (params[0]) { case \"test\": echo(params[1]); } }"
+    "example": "function onActionServerSide() { switch (params[0]) { case \u0022test\u0022: echo(params[1]); } }"
   },
   "parent": {
     "name": "parent",
@@ -15995,7 +15995,7 @@
     "returns": "string",
     "scope": "global",
     "description": "TServerPlayer.platform - string (read only)",
-    "example": "if (player.platform in {\"mac\",\"linux\",\"win\"}) player.chat = \"I'm on a PC.\";\nelse player.chat = \"I'm not on a PC.\";\n\n// flash, android, win, mac, linux, iphone",
+    "example": "if (player.platform in {\u0022mac\u0022,\u0022linux\u0022,\u0022win\u0022}) player.chat = \u0022I\u0027m on a PC.\u0022;\nelse player.chat = \u0022I\u0027m not on a PC.\u0022;\n\n// flash, android, win, mac, linux, iphone",
     "type": ""
   },
   "playerlisticon": {
@@ -16307,7 +16307,7 @@
       "str"
     ],
     "returns": "void",
-    "description": "hasright(str, str) - returns boolean | TServerPlayer.hasright(str, str) - returns boolean - parameters are the rights (e.g. \"rw\") and the filename",
+    "description": "hasright(str, str) - returns boolean | TServerPlayer.hasright(str, str) - returns boolean - parameters are the rights (e.g. \u0022rw\u0022) and the filename",
     "example": "right()",
     "scope": "clientside",
     "type": ""
@@ -16683,7 +16683,7 @@
     "returns": "string",
     "scope": "global",
     "description": "TServerPlayer.shield | TServerNPC.shield - The filename or path of the shield image currently equipped by the player or NPC. Can be read to check which shield is equipped, or set to change the shield appearance.",
-    "example": "if (player.shield == \"shield1.png\") echo(\"Player has basic shield\");"
+    "example": "if (player.shield == \u0022shield1.png\u0022) echo(\u0022Player has basic shield\u0022);"
   },
   "shieldimg": {
     "name": "shieldimg",
@@ -16694,7 +16694,7 @@
     "returns": "string",
     "scope": "global",
     "description": "TServerPlayer.shieldimg | TServerNPC.shieldimg - The filename of the shield image currently equipped by the player or NPC. This property exists for compatibility with GS1; use shield instead for new code.",
-    "example": "player.shieldimg = \"no-shield.png\";"
+    "example": "player.shieldimg = \u0022no-shield.png\u0022;"
   },
   "shieldpower": {
     "name": "shieldpower",
@@ -16760,7 +16760,7 @@
       "int"
     ],
     "returns": "void",
-    "description": "TPlayer.showemoticonbykey(int) - shows an emoticon depending on the provided key (VK_A or getascii('a'))",
+    "description": "TPlayer.showemoticonbykey(int) - shows an emoticon depending on the provided key (VK_A or getascii(\u0027a\u0027))",
     "example": "showemoticonbykey()",
     "scope": "clientside",
     "type": ""
@@ -16890,7 +16890,7 @@
     ],
     "returns": "object",
     "scope": "clientside",
-    "description": "DEPRECATED - TStaticVar.Sound.sound(params...) - returns object\n\nCreates and returns a Sound object. Sound is a TStaticVar type used for sound effect management.\n\nNote: This function appears to be deprecated as calling sound() results in \"Function sound not found\" errors in the console. Use play(), play2(), playlooped(), or playlooped2() instead for sound playback.\n\nUse stopsound(str) to stop a sound effect by filename.",
+    "description": "DEPRECATED - TStaticVar.Sound.sound(params...) - returns object\n\nCreates and returns a Sound object. Sound is a TStaticVar type used for sound effect management.\n\nNote: This function appears to be deprecated as calling sound() results in \u0022Function sound not found\u0022 errors in the console. Use play(), play2(), playlooped(), or playlooped2() instead for sound playback.\n\nUse stopsound(str) to stop a sound effect by filename.",
     "example": "DEPRECATED"
   },
   "soundbuttondown": {
@@ -17108,7 +17108,7 @@
       "string"
     ],
     "returns": "void",
-    "description": "addstring(varname,string) | converttimetostring(float) - returns string - prints the timevar2 like 'Wed Apr  8 20:53:13 2009', see formatTimeString() for more options",
+    "description": "addstring(varname,string) | converttimetostring(float) - returns string - prints the timevar2 like \u0027Wed Apr  8 20:53:13 2009\u0027, see formatTimeString() for more options",
     "example": "string()",
     "scope": "clientside",
     "type": ""
@@ -17157,8 +17157,8 @@
     ],
     "returns": "string",
     "scope": "global",
-    "description": "TServerNPC.sword | TServerPlayer.sword - The filename or path of the sword image currently equipped by the player. Can be read to check which sword the player has, or set to change the player's sword appearance.",
-    "example": "player.sword = \"sword1.png\""
+    "description": "TServerNPC.sword | TServerPlayer.sword - The filename or path of the sword image currently equipped by the player. Can be read to check which sword the player has, or set to change the player\u0027s sword appearance.",
+    "example": "player.sword = \u0022sword1.png\u0022"
   },
   "swordimg": {
     "name": "swordimg",
@@ -17168,8 +17168,8 @@
     ],
     "returns": "string",
     "scope": "global",
-    "description": "TServerNPC.swordimg | TServerPlayer.swordimg - The filename or path of the sword image currently equipped by the player. Can be read to check which sword the player has, or set to change the player's sword appearance.",
-    "example": "player.swordimg = \"sword1.png\";"
+    "description": "TServerNPC.swordimg | TServerPlayer.swordimg - The filename or path of the sword image currently equipped by the player. Can be read to check which sword the player has, or set to change the player\u0027s sword appearance.",
+    "example": "player.swordimg = \u0022sword1.png\u0022;"
   },
   "swordpower": {
     "name": "swordpower",
@@ -17445,7 +17445,7 @@
     "returns": "integer",
     "scope": "global",
     "description": "TGraalVar.timevar - Graal timer increased by 1 every 5 seconds, synchronized between server and clients. Started on 2001-02-01 at 18:33:34 Paris time (opening of Graal2001). Read-only.",
-    "example": "if (this.lastaction + 20 < timevar) return;\n// 20 ticks = 100 seconds since last action"
+    "example": "if (this.lastaction \u002B 20 \u003C timevar) return;\n// 20 ticks = 100 seconds since last action"
   },
   "timevar2": {
     "name": "timevar2",
@@ -17454,7 +17454,7 @@
     "returns": "float",
     "scope": "global",
     "description": "TGraalVar.timevar2 - Unix timestamp as a float (seconds since January 1st, 1970). Read-only.",
-    "example": "if (this.lastused > timevar2) return;\nthis.lastused = timevar2 + 5; // 5 seconds cooldown"
+    "example": "if (this.lastused \u003E timevar2) return;\nthis.lastused = timevar2 \u002B 5; // 5 seconds cooldown"
   },
   "timing": {
     "name": "timing",
@@ -17489,7 +17489,7 @@
       "str"
     ],
     "returns": "void",
-    "description": "fiximagetransparency(str) - returns boolean - set's all pixels which match the upper left corner to transparent",
+    "description": "fiximagetransparency(str) - returns boolean - set\u0027s all pixels which match the upper left corner to transparent",
     "example": "transparency()",
     "scope": "clientside",
     "type": ""
@@ -17625,7 +17625,7 @@
       "bool"
     ],
     "returns": "void",
-    "description": "TGraalVar.sortbyvalue(str, str, bool) - sorts an array, specify the variable of the array members which is compared, also the variable type and if it should be sorted ascending; variable type can be \"string\", otherwise it is sorted by floating point value",
+    "description": "TGraalVar.sortbyvalue(str, str, bool) - sorts an array, specify the variable of the array members which is compared, also the variable type and if it should be sorted ascending; variable type can be \u0022string\u0022, otherwise it is sorted by floating point value",
     "example": "value()",
     "scope": "clientside",
     "type": ""
@@ -18557,7 +18557,7 @@
     "returns": "void",
     "scope": "global",
     "description": "onAction() - General event handler for GUI control interactions (button press, enter in text field, slider move) and triggeraction() events.\n\nUse ControlName.onAction() for GUI, or onAction{EventName}() when triggeraction() fires a matching name. Hidden from listscriptfunctions.",
-    "example": "// GUI button\nfunction CloseButton.onAction() {\n  MyWindow.visible = false;\n}\n\n\n// triggeraction calls onActionCreateInstance on NPCs at that position\ntriggeraction(this.x + 1, this.y + 1, \"CreateInstance\", this.instance_id);\n// Handler on the receiving NPC:\nfunction onActionCreateInstance(instance_id) {\n  this.link = instance_id;\n}"
+    "example": "// GUI button\nfunction CloseButton.onAction() {\n  MyWindow.visible = false;\n}\n\n\n// triggeraction calls onActionCreateInstance on NPCs at that position\ntriggeraction(this.x \u002B 1, this.y \u002B 1, \u0022CreateInstance\u0022, this.instance_id);\n// Handler on the receiving NPC:\nfunction onActionCreateInstance(instance_id) {\n  this.link = instance_id;\n}"
   },
   "onAdd": {
     "name": "onAdd",
@@ -18813,7 +18813,7 @@
     "returns": "void",
     "scope": "clientside",
     "description": "GuiControl.onKeyDown(keycode, keystring, scancode) - Event handler called when a key is pressed while a GUI control has input focus.",
-    "example": "function onKeyDown(keycode, keytext, scancode) {\n  // Handle special keys using VK constants\n  if (keycode == VK_RETURN || keycode == 13) { // Enter key\n    submitForm();\n  } else if (keycode == VK_ESCAPE || keycode == 27) { // Escape key  \n    closeDialog();\n  } else if (keycode == VK_UP) { // Up arrow\n    navigateUp();\n  } else if (keycode == VK_DOWN) { // Down arrow\n    navigateDown();\n  }\n  \n  // Handle character input by checking keytext content\n  if (keytext == \"t\") { // Letter 't' pressed\n    toggleSetting();\n  } else if (keytext == \"1\") { // Number '1' pressed\n    selectOption(1);\n  }\n}"
+    "example": "function onKeyDown(keycode, keytext, scancode) {\n  // Handle special keys using VK constants\n  if (keycode == VK_RETURN || keycode == 13) { // Enter key\n    submitForm();\n  } else if (keycode == VK_ESCAPE || keycode == 27) { // Escape key  \n    closeDialog();\n  } else if (keycode == VK_UP) { // Up arrow\n    navigateUp();\n  } else if (keycode == VK_DOWN) { // Down arrow\n    navigateDown();\n  }\n  \n  // Handle character input by checking keytext content\n  if (keytext == \u0022t\u0022) { // Letter \u0027t\u0027 pressed\n    toggleSetting();\n  } else if (keytext == \u00221\u0022) { // Number \u00271\u0027 pressed\n    selectOption(1);\n  }\n}"
   },
   "onKeyUp": {
     "name": "onKeyUp",
@@ -19195,7 +19195,7 @@
     "returns": "void",
     "scope": "global",
     "description": "array.delete(index) - allows deletion of an object by its index number",
-    "example": "temp.fooBar = {\"apple\", \"banana\", \"orange\"};\ntemp.fooBar.delete(1);\necho(temp.fooBar); // Result: apple,orange",
+    "example": "temp.fooBar = {\u0022apple\u0022, \u0022banana\u0022, \u0022orange\u0022};\ntemp.fooBar.delete(1);\necho(temp.fooBar); // Result: apple,orange",
     "type": ""
   },
   "setsize": {
@@ -19366,8 +19366,8 @@
     ],
     "returns": "string",
     "scope": "serverside",
-    "description": "TServerPlayer.ipaddresshash - A read-only string property containing the MD5 hash of the player's IP address as a 32-character hexadecimal string. Useful for detecting players connecting from the same IP address without exposing the actual IP address.",
-    "example": "function checkSameIP(account1, account2) {\n  temp.p1 = findplayer(account1);\n  temp.p2 = findplayer(account2);\n  if (p1 && p2 && p1.ipaddresshash == p2.ipaddresshash) {\n    echo(\"Same IP hash\");\n    return true;\n  }\n  return false;\n}"
+    "description": "TServerPlayer.ipaddresshash - A read-only string property containing the MD5 hash of the player\u0027s IP address as a 32-character hexadecimal string. Useful for detecting players connecting from the same IP address without exposing the actual IP address.",
+    "example": "function checkSameIP(account1, account2) {\n  temp.p1 = findplayer(account1);\n  temp.p2 = findplayer(account2);\n  if (p1 \u0026\u0026 p2 \u0026\u0026 p1.ipaddresshash == p2.ipaddresshash) {\n    echo(\u0022Same IP hash\u0022);\n    return true;\n  }\n  return false;\n}"
   },
   "delete": {
     "name": "delete",
@@ -19378,7 +19378,7 @@
     "returns": "string",
     "scope": "global",
     "description": "delete(int) - Deletes an element from an array or collection at the specified index.",
-    "example": "temp.items = {\"apple\", \"banana\", \"cherry\"};\nitems.delete(1); // Removes \"banana\"\n// temp.items now has: {\"apple\", \"cherry\"}"
+    "example": "temp.items = {\u0022apple\u0022, \u0022banana\u0022, \u0022cherry\u0022};\nitems.delete(1); // Removes \u0022banana\u0022\n// temp.items now has: {\u0022apple\u0022, \u0022cherry\u0022}"
   },
   "deletefolder": {
     "name": "deletefolder",
@@ -19527,7 +19527,7 @@
     "returns": "string",
     "scope": "global",
     "description": "charat(pos) - Returns the character at the specified position in a string.",
-    "example": "// Get first character of string\ntemp.text = \"hello\";\ntemp.first = temp.text.charat(0); // Returns \"h\"\n\n// Loop through characters\nfor (temp.i = 0; temp.i < temp.text.length(); temp.i++) {\n  echo(temp.text.charat(temp.i)); // print one letter at a line\n}"
+    "example": "// Get first character of string\ntemp.text = \u0022hello\u0022;\ntemp.first = temp.text.charat(0); // Returns \u0022h\u0022\n\n// Loop through characters\nfor (temp.i = 0; temp.i \u003C temp.text.length(); temp.i\u002B\u002B) {\n  echo(temp.text.charat(temp.i)); // print one letter at a line\n}"
   },
   "isipinranges": {
     "name": "isipinranges",
@@ -19591,7 +19591,7 @@
     "returns": "str",
     "scope": "global",
     "description": "ends(str) - Checks if a string ends with the specified text/suffix.",
-    "example": "// Check file extension\ntemp.filename = \"image.png\";\nif (temp.filename.ends(\".png\")) {\n  // Handle PNG file\n}\n\n// Check if string ends with specific text\nif (player.chat.ends(\"!\")) {\n  // Player used exclamation\n}"
+    "example": "// Check file extension\ntemp.filename = \u0022image.png\u0022;\nif (temp.filename.ends(\u0022.png\u0022)) {\n  // Handle PNG file\n}\n\n// Check if string ends with specific text\nif (player.chat.ends(\u0022!\u0022)) {\n  // Player used exclamation\n}"
   },
   "onChildMouseDown": {
     "name": "onChildMouseDown",
@@ -19619,8 +19619,8 @@
     "params": [],
     "returns": "void",
     "scope": "clientside",
-    "description": "onCloseQuery() - Event triggered when the user clicks the close button on a GuiWindowCtrl where the 'closequery' property is set to true.\nThis allows the script to intercept the close action.",
-    "example": "function onCreated() {\n    new GuiWindowCtrl(\"MyMainWindow\") {\n        profile = GuiBlueWindowProfile;\n        extent = \"300 150\";\n        text = \"Main Window\";\n        visible = true;\n        closequery = true; // onCloseQuery is called if this is true\n   };\n}\n\n// When the user clicks the 'X' on MyMainWindow...\nfunction MyMainWindow.onCloseQuery() {\n  // Custom close logic here\n}"
+    "description": "onCloseQuery() - Event triggered when the user clicks the close button on a GuiWindowCtrl where the \u0027closequery\u0027 property is set to true.\nThis allows the script to intercept the close action.",
+    "example": "function onCreated() {\n    new GuiWindowCtrl(\u0022MyMainWindow\u0022) {\n        profile = GuiBlueWindowProfile;\n        extent = \u0022300 150\u0022;\n        text = \u0022Main Window\u0022;\n        visible = true;\n        closequery = true; // onCloseQuery is called if this is true\n   };\n}\n\n// When the user clicks the \u0027X\u0027 on MyMainWindow...\nfunction MyMainWindow.onCloseQuery() {\n  // Custom close logic here\n}"
   },
   "onGaniAttributeChanged": {
     "name": "onGaniAttributeChanged",
@@ -19751,7 +19751,7 @@
     "returns": "void",
     "scope": "clientside",
     "description": "Adventure_addFileToIgnore(str) - Adds file to ignore list for downloads.",
-    "example": "Adventure_addFileToIgnore(\"block.png\");"
+    "example": "Adventure_addFileToIgnore(\u0022block.png\u0022);"
   },
   "Adventure_requestUpdateModTime": {
     "name": "Adventure_requestUpdateModTime",
@@ -19761,7 +19761,7 @@
     "returns": "void",
     "scope": "clientside",
     "description": "Requests the last modification timestamp of the file from the server",
-    "example": "Adventure_requestUpdateModTime(\"block.png\");",
+    "example": "Adventure_requestUpdateModTime(\u0022block.png\u0022);",
     "type": ""
   },
   "Adventure_requestDownload": {
@@ -19773,7 +19773,7 @@
     "returns": "void",
     "scope": "clientside",
     "description": "Adventure_requestDownload(str) \u2013 Requests downloading a file from the server. This only works for files marked with the **file** type in folderconfig. The fileupdate() function calls this function.",
-    "example": "Adventure_requestDownload(\"block.png\");"
+    "example": "Adventure_requestDownload(\u0022block.png\u0022);"
   },
   "Adventure_requestUpdateCRC": {
     "name": "Adventure_requestUpdateCRC",
@@ -19783,7 +19783,7 @@
     "returns": "void",
     "scope": "clientside",
     "description": "Requests the CRC (checksum/hash) of the file from the server",
-    "example": "Adventure_requestUpdateCRC(\"block.png\");",
+    "example": "Adventure_requestUpdateCRC(\u0022block.png\u0022);",
     "type": ""
   },
   "Adventure_invokeMouseEvent": {
@@ -19800,7 +19800,7 @@
     ],
     "returns": "void",
     "scope": "clientside",
-    "description": "Adventure_invokeMouseEvent(int, int, int, int, double, double, int, bool) - Invokes a mouse event.\n\n`int` - Button ID (0 = no button, 1 = left, 2 = right, 3 = middle)\n`int` - X coordinate (integer)\n`int` - Y coordinate (integer)\n`int` - Modifier flags (0 = none, 1 = shift, 2 = ctrl, 3 = alt)\n`double` - X coordinate (floating point, for precise positioning)\n`double` - Y coordinate (floating point, for precise positioning)\n`int` - Wheel delta (scroll amount for wheel events, 0 for other events)\n`bool` - Pressed state (true = button down, false = button up; only used for button events)",
+    "description": "Adventure_invokeMouseEvent(int, int, int, int, double, double, int, bool) - Invokes a mouse event.\n\n\u0060int\u0060 - Button ID (0 = no button, 1 = left, 2 = right, 3 = middle)\n\u0060int\u0060 - X coordinate (integer)\n\u0060int\u0060 - Y coordinate (integer)\n\u0060int\u0060 - Modifier flags (0 = none, 1 = shift, 2 = ctrl, 3 = alt)\n\u0060double\u0060 - X coordinate (floating point, for precise positioning)\n\u0060double\u0060 - Y coordinate (floating point, for precise positioning)\n\u0060int\u0060 - Wheel delta (scroll amount for wheel events, 0 for other events)\n\u0060bool\u0060 - Pressed state (true = button down, false = button up; only used for button events)",
     "example": "Adventure_invokeMouseEvent(2, 1, 0, 0, 0, 0);"
   },
   "Adventure_getFrameTick": {
@@ -19823,7 +19823,7 @@
     "returns": "void",
     "scope": "clientside",
     "description": "Applies a full-screen color overlay.",
-    "example": "function onPlayerEnters() {\n  if (player.level.name.starts(\"levelname\")) {\n    // clear the overlay\n    seteffect(0, 0, 0, 0);\n  }\n}",
+    "example": "function onPlayerEnters() {\n  if (player.level.name.starts(\u0022levelname\u0022)) {\n    // clear the overlay\n    seteffect(0, 0, 0, 0);\n  }\n}",
     "type": ""
   },
   "$camera::movementspeed": {
@@ -19984,7 +19984,7 @@
     "params": [],
     "returns": "boolean",
     "scope": "clientside",
-    "description": "Don't load player head images in lists",
+    "description": "Don\u0027t load player head images in lists",
     "example": "$pref::graal::dontloadlistheads = true;",
     "type": ""
   },
@@ -19993,7 +19993,7 @@
     "params": [],
     "returns": "boolean",
     "scope": "clientside",
-    "description": "Don't save login passwords",
+    "description": "Don\u0027t save login passwords",
     "example": "$pref::graal::dontsavepasswords = true;",
     "type": ""
   },
@@ -20002,7 +20002,7 @@
     "params": [],
     "returns": "boolean",
     "scope": "clientside",
-    "description": "Don't save private message history",
+    "description": "Don\u0027t save private message history",
     "example": "$pref::graal::dontsavepms = true;",
     "type": ""
   },
@@ -20030,7 +20030,7 @@
     "returns": "string",
     "scope": "clientside",
     "description": "Selected language/locale code",
-    "example": "$pref::graal::language = \"value\";",
+    "example": "$pref::graal::language = \u0022value\u0022;",
     "type": ""
   },
   "$pref::graal::limitnicknames": {
@@ -20074,7 +20074,7 @@
     "params": [],
     "returns": "boolean",
     "scope": "clientside",
-    "description": "Block 'toall' broadcast messages",
+    "description": "Block \u0027toall\u0027 broadcast messages",
     "example": "$pref::graal::notoalls = true;",
     "type": ""
   },
@@ -20092,7 +20092,7 @@
     "params": [],
     "returns": "boolean",
     "scope": "clientside",
-    "description": "Show yourself on other players' buddy lists",
+    "description": "Show yourself on other players\u0027 buddy lists",
     "example": "$pref::graal::showyourselfonbuddylists = true;",
     "type": ""
   },
@@ -20146,8 +20146,8 @@
     "params": [],
     "returns": "string",
     "scope": "clientside",
-    "description": "Fullscreen resolution mode (e.g., '1920x1080')",
-    "example": "$pref::video::fullscreenmode = \"value\";",
+    "description": "Fullscreen resolution mode (e.g., \u00271920x1080\u0027)",
+    "example": "$pref::video::fullscreenmode = \u0022value\u0022;",
     "type": ""
   },
   "$pref::video::screenshotformat": {
@@ -20156,7 +20156,7 @@
     "returns": "string",
     "scope": "clientside",
     "description": "Screenshot file format (PNG, JPG, etc.)",
-    "example": "$pref::video::screenshotformat = \"value\";",
+    "example": "$pref::video::screenshotformat = \u0022value\u0022;",
     "type": ""
   },
   "$pref::video::visibledistance": {
@@ -20174,7 +20174,7 @@
     "returns": "string",
     "scope": "clientside",
     "description": "Window mode setting (windowed, fullscreen, borderless)",
-    "example": "$pref::video::windowmode = \"value\";",
+    "example": "$pref::video::windowmode = \u0022value\u0022;",
     "type": ""
   },
   "$scenelighting::lightingprogress": {
@@ -20195,7 +20195,7 @@
     "returns": "GuiControl",
     "scope": "clientside",
     "description": "GuiControl is the base GUI control, therefore general functions listed here are available to all GUI controls. Most of the time it is used as container for positioning groups of other controls. It can either have a border (border=1..5) or just be plain transparent, and just display its child controls.",
-    "example": "new GuiControl(\"Test_Back\") {\n   useownprofile = true;\n   profile.border = 3;\n   x = 10;\n   y = 10;\n   width = 160;\n   height = 80;\n }"
+    "example": "new GuiControl(\u0022Test_Back\u0022) {\n   useownprofile = true;\n   profile.border = 3;\n   x = 10;\n   y = 10;\n   width = 160;\n   height = 80;\n }"
   },
   "GuiWindowCtrl": {
     "name": "GuiWindowCtrl",
@@ -20205,8 +20205,8 @@
     ],
     "returns": "GuiWindowCtrl",
     "scope": "clientside",
-    "description": "Works as a container for other control and displays a title bar and buttons for minimizing, maximizing and closing. With Ctrl+Tab you can switch between active windows.",
-    "example": "new GuiWindowCtrl(\"Test_Window\") {\n  profile = GuiBlueWindowProfile;\n  x = 10;\n  y = 10;\n  width = 160;\n  height = 80;\n  text = \"Window\";\n}"
+    "description": "Works as a container for other control and displays a title bar and buttons for minimizing, maximizing and closing. With Ctrl\u002BTab you can switch between active windows.",
+    "example": "new GuiWindowCtrl(\u0022Test_Window\u0022) {\n  profile = GuiBlueWindowProfile;\n  x = 10;\n  y = 10;\n  width = 160;\n  height = 80;\n  text = \u0022Window\u0022;\n}"
   },
   "Adventure_uploadFile": {
     "name": "Adventure_uploadFile",
@@ -20217,7 +20217,7 @@
     "returns": "void",
     "scope": "clientside",
     "description": "Adventure_uploadFile(str) - Displays the file in the File Browser/Echo tab as if it was uploaded, but does not actually upload it.",
-    "example": "Adventure_uploadFile(\"online_count.txt\");"
+    "example": "Adventure_uploadFile(\u0022online_count.txt\u0022);"
   },
   "Adventure_excludeFileFromBackup": {
     "name": "Adventure_excludeFileFromBackup",
@@ -20229,7 +20229,7 @@
     "returns": "void",
     "scope": "clientside",
     "description": "Adventure_excludeFileFromBackup(str, bool) - Sets whether a file or folder should be excluded from iOS backups.",
-    "example": "Adventure_excludeFileFromBackup(Adventure_getApplicationFolder(1) @ \"scriptfiles/\", true);"
+    "example": "Adventure_excludeFileFromBackup(Adventure_getApplicationFolder(1) @ \u0022scriptfiles/\u0022, true);"
   },
   "multitaskingenabled": {
     "name": "multitaskingenabled",
@@ -20283,7 +20283,7 @@
     "returns": "object",
     "scope": "global",
     "description": "TSocket() - Creates a socket object used to configure and open a connection to a destination. On server-side, socket connections are only enabled for iPhone Servers.",
-    "example": "//#CLIENTSIDE\n\n// Packet IDs coming from the server\nenum PACKET_INC {\n  RECEIVEHANDSHAKE = 1,\n  REQUESTPLIST = 2\n};\n\n// Packet IDs sent out to the server\nenum PACKET_OUT {\n  SENDHANDSHAKE = 1,\n  SENDPLIST = 2\n};\n\nfunction onCreated() {\n  // Create custom TSocket Object\n  this.socket = createTSocket(\"127.0.0.1\", 12345);\n\n  // Setup socket event handlers\n  this.catchEvent(this.socket, \"onConnect\", \"onHandleSocketEstablished\");\n  this.catchEvent(this.socket, \"onReceiveData\", \"onHandleSocketIncomingPacket\");\n  this.catchEvent(this.socket, \"onClose\", \"onHandleSocketClosure\");\n\n  // Establish the connection to the server\n  this.socket.establish();\n}\n\n// Called when socket connection is closed\nfunction onHandleSocketClosure(temp.sockObject) {\n  player.chat = \"The TSocket Connection has been closed.\";\n}\n\n// Called when socket connection is established\nfunction onHandleSocketEstablished(temp.sockObject) {\n  player.chat = \"TSocket Connection has been established.\";\n  this.socket.sendPacket(PACKET_OUT.SENDHANDSHAKE, player.account);\n}\n\n// Event triggered to handle incoming packets\nfunction onHandleSocketIncomingPacket(temp.sockObject) {\n  temp.buffer.loadjsonfromstring(this.socket.data);\n\n  switch (temp.buffer.packet_id) {\n    case PACKET_INC.RECEIVEHANDSHAKE:\n      echo(\"Received handshake from server\");\n    break;\n    case PACKET_INC.REQUESTPLIST:\n      this.trigger(\"SendPlayers\", null);\n    break;\n  }\n  \n  // Avoids packet merging\n  this.socket.clearBuffer();\n}\n\n// Sends the players list to the server\nfunction onSendPlayers() {\n\n  temp.packet = {};\n  temp.packet.players = {};\n\n  // Loop through all players\n  for (temp.pl: allplayers) {\n    temp.packet.players.(@temp.pl.account) = {};\n    temp.packet.players.(@temp.pl.account).account = temp.pl.account;\n    temp.packet.players.(@temp.pl.account).nick = temp.pl.nick;\n    temp.packet.players.(@temp.pl.account).level = temp.pl.levelname;\n    temp.packet.players.(@temp.pl.account).pos = temp.pl.x SPC temp.pl.y;\n    temp.packet.players.(@temp.pl.account).head = temp.pl.head;\n    temp.packet.players.(@temp.pl.account).paused = (temp.pl.paused ? \"True\" : \"False\");\n  }\n\n  // Include server name in packet\n  temp.packet.server = getServerName();\n  this.socket.sendPacket(PACKET_OUT.SENDPLIST, temp.packet.savejsontostring(1));\n}\n\nfunction createTSocket(temp.ip, temp.port) {\n  // Allow client to connect to this IP/Port\n  Adventure_setAllowedSocketsConnect(temp.ip @ \":\" @ temp.port);\n\n  // Initialize TSocket object\n  temp.socket = new TSocket();\n  temp.socket._ip = temp.ip;\n  temp.socket._port = temp.port;\n\n  // Function to create a JSON packet string\n  temp.socket.createPacket = function (temp.packet_id, temp.packet_data) {\n    temp.packet = {};\n    temp.packet.packet_id = temp.packet_id;\n    temp.packet.packet_data = temp.packet_data;\n    return temp.packet.savejsontostring(1);\n  };\n\n  // Function to send a packet\n  temp.socket.sendPacket = function (temp.packet_id, temp.packet_data) {\n    if (!this.isconnected) return;\n    temp.packet = this.createPacket(temp.packet_id, temp.packet_data);\n    this.send(temp.packet);\n  };\n\n  // Clears any leftover received data\n  temp.socket.clearBuffer = function () {\n    this.data = \"\";\n  };\n\n  // Connect the socket to destination\n  temp.socket.establish = function () {\n    if (this._ip == null || this._port < 1 || this._port > 65535) return;\n    this.connect(this._ip, this._port);\n  };\n\n  return temp.socket;\n}"
+    "example": "//#CLIENTSIDE\n\n// Packet IDs coming from the server\nenum PACKET_INC {\n  RECEIVEHANDSHAKE = 1,\n  REQUESTPLIST = 2\n};\n\n// Packet IDs sent out to the server\nenum PACKET_OUT {\n  SENDHANDSHAKE = 1,\n  SENDPLIST = 2\n};\n\nfunction onCreated() {\n  // Create custom TSocket Object\n  this.socket = createTSocket(\u0022127.0.0.1\u0022, 12345);\n\n  // Setup socket event handlers\n  this.catchEvent(this.socket, \u0022onConnect\u0022, \u0022onHandleSocketEstablished\u0022);\n  this.catchEvent(this.socket, \u0022onReceiveData\u0022, \u0022onHandleSocketIncomingPacket\u0022);\n  this.catchEvent(this.socket, \u0022onClose\u0022, \u0022onHandleSocketClosure\u0022);\n\n  // Establish the connection to the server\n  this.socket.establish();\n}\n\n// Called when socket connection is closed\nfunction onHandleSocketClosure(temp.sockObject) {\n  player.chat = \u0022The TSocket Connection has been closed.\u0022;\n}\n\n// Called when socket connection is established\nfunction onHandleSocketEstablished(temp.sockObject) {\n  player.chat = \u0022TSocket Connection has been established.\u0022;\n  this.socket.sendPacket(PACKET_OUT.SENDHANDSHAKE, player.account);\n}\n\n// Event triggered to handle incoming packets\nfunction onHandleSocketIncomingPacket(temp.sockObject) {\n  temp.buffer.loadjsonfromstring(this.socket.data);\n\n  switch (temp.buffer.packet_id) {\n    case PACKET_INC.RECEIVEHANDSHAKE:\n      echo(\u0022Received handshake from server\u0022);\n    break;\n    case PACKET_INC.REQUESTPLIST:\n      this.trigger(\u0022SendPlayers\u0022, null);\n    break;\n  }\n  \n  // Avoids packet merging\n  this.socket.clearBuffer();\n}\n\n// Sends the players list to the server\nfunction onSendPlayers() {\n\n  temp.packet = {};\n  temp.packet.players = {};\n\n  // Loop through all players\n  for (temp.pl: allplayers) {\n    temp.packet.players.(@temp.pl.account) = {};\n    temp.packet.players.(@temp.pl.account).account = temp.pl.account;\n    temp.packet.players.(@temp.pl.account).nick = temp.pl.nick;\n    temp.packet.players.(@temp.pl.account).level = temp.pl.levelname;\n    temp.packet.players.(@temp.pl.account).pos = temp.pl.x SPC temp.pl.y;\n    temp.packet.players.(@temp.pl.account).head = temp.pl.head;\n    temp.packet.players.(@temp.pl.account).paused = (temp.pl.paused ? \u0022True\u0022 : \u0022False\u0022);\n  }\n\n  // Include server name in packet\n  temp.packet.server = getServerName();\n  this.socket.sendPacket(PACKET_OUT.SENDPLIST, temp.packet.savejsontostring(1));\n}\n\nfunction createTSocket(temp.ip, temp.port) {\n  // Allow client to connect to this IP/Port\n  Adventure_setAllowedSocketsConnect(temp.ip @ \u0022:\u0022 @ temp.port);\n\n  // Initialize TSocket object\n  temp.socket = new TSocket();\n  temp.socket._ip = temp.ip;\n  temp.socket._port = temp.port;\n\n  // Function to create a JSON packet string\n  temp.socket.createPacket = function (temp.packet_id, temp.packet_data) {\n    temp.packet = {};\n    temp.packet.packet_id = temp.packet_id;\n    temp.packet.packet_data = temp.packet_data;\n    return temp.packet.savejsontostring(1);\n  };\n\n  // Function to send a packet\n  temp.socket.sendPacket = function (temp.packet_id, temp.packet_data) {\n    if (!this.isconnected) return;\n    temp.packet = this.createPacket(temp.packet_id, temp.packet_data);\n    this.send(temp.packet);\n  };\n\n  // Clears any leftover received data\n  temp.socket.clearBuffer = function () {\n    this.data = \u0022\u0022;\n  };\n\n  // Connect the socket to destination\n  temp.socket.establish = function () {\n    if (this._ip == null || this._port \u003C 1 || this._port \u003E 65535) return;\n    this.connect(this._ip, this._port);\n  };\n\n  return temp.socket;\n}"
   },
   "GuiButtonCtrl": {
     "name": "GuiButtonCtrl",
@@ -20294,7 +20294,7 @@
     "returns": "object",
     "scope": "clientside",
     "description": "GuiButtonCtrl - A standard clickable button control used in GUIs. Its primary event is onAction(), which is triggered when the user clicks it.",
-    "example": "new GuiButtonCtrl(\"MyExampleButton\") {\n        profile = GuiBlueButtonProfile;\n        extent = \"100 30\";\n        position = \"50 30\";\n        text = \"Click Me\";\n    };\n};\n\n// The function name is always [instanceName].onAction().\nfunction MyExampleButton.onAction() {\n    player.chat = \"Button was clicked!\";\n}"
+    "example": "new GuiButtonCtrl(\u0022MyExampleButton\u0022) {\n        profile = GuiBlueButtonProfile;\n        extent = \u0022100 30\u0022;\n        position = \u002250 30\u0022;\n        text = \u0022Click Me\u0022;\n    };\n};\n\n// The function name is always [instanceName].onAction().\nfunction MyExampleButton.onAction() {\n    player.chat = \u0022Button was clicked!\u0022;\n}"
   },
   "GuiTextCtrl": {
     "name": "GuiTextCtrl",
@@ -20305,7 +20305,7 @@
     "returns": "object",
     "scope": "clientside",
     "description": "GuiTextCtrl - A simple control for displaying a single line of static text.\n\nIf you need to display more than one line, then use a GuiMLTextCtrl.",
-    "example": "function onCreated() {\n    new GuiWindowCtrl(\"MyWindow\") {\n        profile = GuiBlueWindowProfile;\n        extent = \"200 100\";\n        text = \"This is the window title\";\n        visible = true;\n        \n        // \"MyLabel\" is the instanceName for this control.\n        new GuiTextCtrl(\"MyLabel\") {\n            profile = GuiBlueTextProfile;\n            position = \"10 20\";\n            text = \"Initial Text...\";\n        };\n    };\n\n    // Schedule an event to run in 2 seconds.\n    scheduleevent(2.0, \"updateMyLabel\");\n}\n\n// The engine calls this event handler after the 2-second delay.\nfunction onupdateMyLabel() {\n    if (isObject(\"MyLabel\")) {\n        MyLabel.text = \"Text has been updated!\";\n    }\n}"
+    "example": "function onCreated() {\n    new GuiWindowCtrl(\u0022MyWindow\u0022) {\n        profile = GuiBlueWindowProfile;\n        extent = \u0022200 100\u0022;\n        text = \u0022This is the window title\u0022;\n        visible = true;\n        \n        // \u0022MyLabel\u0022 is the instanceName for this control.\n        new GuiTextCtrl(\u0022MyLabel\u0022) {\n            profile = GuiBlueTextProfile;\n            position = \u002210 20\u0022;\n            text = \u0022Initial Text...\u0022;\n        };\n    };\n\n    // Schedule an event to run in 2 seconds.\n    scheduleevent(2.0, \u0022updateMyLabel\u0022);\n}\n\n// The engine calls this event handler after the 2-second delay.\nfunction onupdateMyLabel() {\n    if (isObject(\u0022MyLabel\u0022)) {\n        MyLabel.text = \u0022Text has been updated!\u0022;\n    }\n}"
   },
   "GuiTextListCtrl": {
     "name": "GuiTextListCtrl",
@@ -20314,7 +20314,7 @@
     "returns": "void",
     "scope": "clientside",
     "description": "profile = GuiBlueTextListProfile;",
-    "example": "new GuiTextListCtrl(\"Test_List\") {\n     profile = GuiBlueTextListProfile;\n     x = y = 0;\n     width = 140;\n     fitparentwidth = true;\n     \n     clearrows();\n     addrow(0,\"TextList\");\n     addrow(1,\"Second line\");\n     setSelectedRow(1);\n   }"
+    "example": "new GuiTextListCtrl(\u0022Test_List\u0022) {\n     profile = GuiBlueTextListProfile;\n     x = y = 0;\n     width = 140;\n     fitparentwidth = true;\n     \n     clearrows();\n     addrow(0,\u0022TextList\u0022);\n     addrow(1,\u0022Second line\u0022);\n     setSelectedRow(1);\n   }"
   },
   "GuiTabCtrl": {
     "name": "GuiTabCtrl",
@@ -20325,7 +20325,7 @@
     "returns": "object",
     "scope": "clientside",
     "description": "GuiTabCtrl - A control that displays a row of clickable tabs. It triggers an onSelect event when a tab is clicked, but the script is responsible for showing or hiding the associated content panes.",
-    "example": "function onCreated() {\n    new GuiWindowCtrl(\"MyTabWindow\") {\n        profile = GuiBlueWindowProfile;\n        extent = \"300 200\";\n        text = \"Tab Control Example\";\n        visible = true;\n\n        // Create the tab control.\n        new GuiTabCtrl(\"MyTabs\") {\n            profile = GuiBlueTabProfile;\n            position = \"10 20\";\n            extent = \"280 30\";\n        };\n\n        // Create the content panes for each tab.\n        new GuiTextCtrl(\"Pane1\") {\n            position = \"10 50\";\n            extent = \"280 140\";\n            text = \"This is the content for the first tab.\";\n            visible = true; // Initially visible\n        };\n        new GuiTextCtrl(\"Pane2\") {\n            position = \"10 50\";\n            extent = \"280 140\";\n            text = \"This is the content for the second tab.\";\n            visible = false; // Initially hidden\n        };\n    };\n\n    // Add tabs to the control.\n    MyTabs.addrow(1, \"First Tab\");\n    MyTabs.addrow(2, \"Second Tab\");\n\n    // Set the def"
+    "example": "function onCreated() {\n    new GuiWindowCtrl(\u0022MyTabWindow\u0022) {\n        profile = GuiBlueWindowProfile;\n        extent = \u0022300 200\u0022;\n        text = \u0022Tab Control Example\u0022;\n        visible = true;\n\n        // Create the tab control.\n        new GuiTabCtrl(\u0022MyTabs\u0022) {\n            profile = GuiBlueTabProfile;\n            position = \u002210 20\u0022;\n            extent = \u0022280 30\u0022;\n        };\n\n        // Create the content panes for each tab.\n        new GuiTextCtrl(\u0022Pane1\u0022) {\n            position = \u002210 50\u0022;\n            extent = \u0022280 140\u0022;\n            text = \u0022This is the content for the first tab.\u0022;\n            visible = true; // Initially visible\n        };\n        new GuiTextCtrl(\u0022Pane2\u0022) {\n            position = \u002210 50\u0022;\n            extent = \u0022280 140\u0022;\n            text = \u0022This is the content for the second tab.\u0022;\n            visible = false; // Initially hidden\n        };\n    };\n\n    // Add tabs to the control.\n    MyTabs.addrow(1, \u0022First Tab\u0022);\n    MyTabs.addrow(2, \u0022Second Tab\u0022);\n\n    // Set the def"
   },
   "GuiTextEditCtrl": {
     "name": "GuiTextEditCtrl",
@@ -20336,7 +20336,7 @@
     "returns": "object",
     "scope": "clientside",
     "description": "GuiTextEditCtrl - A single-line text input field that allows user input. Triggers an onAction event when the user presses Enter.",
-    "example": "//#CLIENTSIDE\n\nfunction onCreated() {\n    new GuiWindowCtrl(\"MyWindow\") {\n        profile = GuiBlueWindowProfile;\n        extent = \"250 100\";\n        text = \"Input Example\";\n        visible = true;\n\n        // Create the text input field.\n        new GuiTextEditCtrl(\"MyInputField\") {\n            profile = GuiTextEditProfile;\n            position = \"20 30\";\n            extent = \"210 30\";\n        };\n    };\n}\n\n// Focus the input field when the window appears.\nfunction MyWindow.onWake() {\n    MyInputField.makefirstresponder(true);\n}\n\n// Handle the Enter key press.\nfunction MyInputField.onAction() {\n    // Read the content from the text field.\n    temp.userInput = MyInputField.text;\n    player.chat = \"You typed: \" @ temp.userInput;\n\n    // Clear the field for the next input.\n    MyInputField.text = \"\";\n}"
+    "example": "//#CLIENTSIDE\n\nfunction onCreated() {\n    new GuiWindowCtrl(\u0022MyWindow\u0022) {\n        profile = GuiBlueWindowProfile;\n        extent = \u0022250 100\u0022;\n        text = \u0022Input Example\u0022;\n        visible = true;\n\n        // Create the text input field.\n        new GuiTextEditCtrl(\u0022MyInputField\u0022) {\n            profile = GuiTextEditProfile;\n            position = \u002220 30\u0022;\n            extent = \u0022210 30\u0022;\n        };\n    };\n}\n\n// Focus the input field when the window appears.\nfunction MyWindow.onWake() {\n    MyInputField.makefirstresponder(true);\n}\n\n// Handle the Enter key press.\nfunction MyInputField.onAction() {\n    // Read the content from the text field.\n    temp.userInput = MyInputField.text;\n    player.chat = \u0022You typed: \u0022 @ temp.userInput;\n\n    // Clear the field for the next input.\n    MyInputField.text = \u0022\u0022;\n}"
   },
   "GuiPopUpMenuCtrl": {
     "name": "GuiPopUpMenuCtrl",
@@ -20347,7 +20347,7 @@
     "returns": "object",
     "scope": "clientside",
     "description": "GuiPopUpMenuCtrl - A dropdown menu control (combo box) that allows a user to select one option from a predefined list. Triggers an onSelect event when a selection is made.",
-    "example": "function onCreated() {\n    new GuiWindowCtrl(\"MyWindow\") {\n        profile = GuiBlueWindowProfile;\n        extent = \"250 150\";\n        text = \"Popup Menu Example\";\n        visible = true;\n\n        new GuiPopUpMenuCtrl(\"MyPopupMenu\") {\n            // Profile for the main combo box itself\n            profile = GuiBluePopUpMenuProfile;\n            \n            // Profile for the text in the dropdown list (styles the rows)\n            textprofile = GuiBlueTextListProfile;\n\n            // Profile for the scrollbar in the dropdown\n            scrollprofile = GuiBlueScrollProfile;\n\n            position = \"20 30\";\n            extent = \"210 30\";\n        };\n    };\n\n    // Populate the menu with options.\n    MyPopupMenu.addrow(1, \"Option A\");\n    MyPopupMenu.addrow(2, \"Option B\");\n    MyPopupMenu.addrow(3, \"Option C\");\n\n    // Set the default displayed option.\n    MyPopupMenu.setselectedrow(0);\n}\n\n// Handle the selection event.\nfunction MyPopupMenu.onSelect(selectedId, selectedText, selectedIndex"
+    "example": "function onCreated() {\n    new GuiWindowCtrl(\u0022MyWindow\u0022) {\n        profile = GuiBlueWindowProfile;\n        extent = \u0022250 150\u0022;\n        text = \u0022Popup Menu Example\u0022;\n        visible = true;\n\n        new GuiPopUpMenuCtrl(\u0022MyPopupMenu\u0022) {\n            // Profile for the main combo box itself\n            profile = GuiBluePopUpMenuProfile;\n            \n            // Profile for the text in the dropdown list (styles the rows)\n            textprofile = GuiBlueTextListProfile;\n\n            // Profile for the scrollbar in the dropdown\n            scrollprofile = GuiBlueScrollProfile;\n\n            position = \u002220 30\u0022;\n            extent = \u0022210 30\u0022;\n        };\n    };\n\n    // Populate the menu with options.\n    MyPopupMenu.addrow(1, \u0022Option A\u0022);\n    MyPopupMenu.addrow(2, \u0022Option B\u0022);\n    MyPopupMenu.addrow(3, \u0022Option C\u0022);\n\n    // Set the default displayed option.\n    MyPopupMenu.setselectedrow(0);\n}\n\n// Handle the selection event.\nfunction MyPopupMenu.onSelect(selectedId, selectedText, selectedIndex"
   },
   "onInitialized": {
     "name": "onInitialized",
@@ -20367,7 +20367,7 @@
     "returns": "void",
     "scope": "clientside",
     "description": "GuiTreeViewCtrl - A GUI control that displays hierarchical data in a tree structure with expandable and collapsible nodes. Useful for displaying file systems, directory structures, category lists, or any hierarchical data.",
-    "example": "new GuiTreeViewCtrl(\"FileTree\") { temp.root = this.addnode(\"Files\"); }"
+    "example": "new GuiTreeViewCtrl(\u0022FileTree\u0022) { temp.root = this.addnode(\u0022Files\u0022); }"
   },
   "TStaticVar": {
     "name": "TStaticVar",
@@ -20376,7 +20376,7 @@
     "returns": "TStaticVar",
     "scope": "global",
     "description": "Creates an empty TStaticVar Object.",
-    "example": "temp.bankData = new TStaticVar();\ntemp.bankData.currency  = \"Gralats\";\ntemp.bankData.owner = findplayer(\"ruanf\");\ntemp.bankData.active = true;"
+    "example": "temp.bankData = new TStaticVar();\ntemp.bankData.currency  = \u0022Gralats\u0022;\ntemp.bankData.owner = findplayer(\u0022ruanf\u0022);\ntemp.bankData.active = true;"
   },
   "Adventure_setAllowedPortsBind": {
     "name": "Adventure_setAllowedPortsBind",
@@ -20398,7 +20398,7 @@
     "returns": "int",
     "scope": "clientside",
     "description": "Adventure_fileSize(str) - Gets file size in bytes. Param is: Path.",
-    "example": "temp.file_size = Adventure_fileSize(\"scriptfiles/jail.nw\");"
+    "example": "temp.file_size = Adventure_fileSize(\u0022scriptfiles/jail.nw\u0022);"
   },
   "Adventure_clearFilesToIgnore": {
     "name": "Adventure_clearFilesToIgnore",
@@ -20416,7 +20416,7 @@
     "returns": "void",
     "scope": "clientside",
     "description": "This control is simply displaying a stretched or tiled bitmap.",
-    "example": "new GuiBitmapCtrl(\"Test_Bitmap\") {\n   x = 10;\n   y = 10;\n   width = 160;\n   height = 80;\n   bitmap = \"2002_sysmsgbg.png\";\n }"
+    "example": "new GuiBitmapCtrl(\u0022Test_Bitmap\u0022) {\n   x = 10;\n   y = 10;\n   width = 160;\n   height = 80;\n   bitmap = \u00222002_sysmsgbg.png\u0022;\n }"
   },
   "GuiShowImgCtrl": {
     "name": "GuiShowImgCtrl",
@@ -20426,8 +20426,8 @@
     ],
     "returns": "void",
     "scope": "clientside",
-    "description": "This is basicly a wrapper around TShowImg for displaying all kind of Graal content inside the GUI, including animations (ganis) and particle effects.\n\nNote: like with normal GUI controls the content of this control might be clipped at the control border, so use width and height to resize the control, and offsetx and offsety to shift the content so that animations or particles are not drawn half.\n\nVariables\nAll variables from TShowImg are available for this control as well. Additional variables:\n\nName\tType\tDescription\noffsetx\tinteger\tdisplay offset for 'showimg' inside the control\noffsety\tinteger\tdisplay offset for 'showimg' inside the control\nshowimg\tobject\tthe actual TShowImg object which contains all the logic",
-    "example": "new GuiShowImgCtrl(\"Test_ShowImg\") {\n  x = 10;\n  y = 10;\n  width = 60;\n  height = 60;\n  ani = \"walk\";\n}"
+    "description": "This is basicly a wrapper around TShowImg for displaying all kind of Graal content inside the GUI, including animations (ganis) and particle effects.\n\nNote: like with normal GUI controls the content of this control might be clipped at the control border, so use width and height to resize the control, and offsetx and offsety to shift the content so that animations or particles are not drawn half.\n\nVariables\nAll variables from TShowImg are available for this control as well. Additional variables:\n\nName\tType\tDescription\noffsetx\tinteger\tdisplay offset for \u0027showimg\u0027 inside the control\noffsety\tinteger\tdisplay offset for \u0027showimg\u0027 inside the control\nshowimg\tobject\tthe actual TShowImg object which contains all the logic",
+    "example": "new GuiShowImgCtrl(\u0022Test_ShowImg\u0022) {\n  x = 10;\n  y = 10;\n  width = 60;\n  height = 60;\n  ani = \u0022walk\u0022;\n}"
   },
   "Adventure_getInstallationPath": {
     "name": "Adventure_getInstallationPath",
@@ -20457,7 +20457,7 @@
     "returns": "void",
     "scope": "serverside",
     "description": "function onActionServerSide(param0, ...) - This is called when either a npc-db or weapon-npc has had triggerServer/triggerAction called to it - Parameters are all user identified.",
-    "example": "function onActionServerSide(text, params) {\n    if (text == \"saveData\") { }\n}"
+    "example": "function onActionServerSide(text, params) {\n    if (text == \u0022saveData\u0022) { }\n}"
   },
   "findObject": {
     "name": "findObject",
@@ -20468,7 +20468,7 @@
     "returns": "object",
     "scope": "global",
     "description": "TServerPlayer.findobject(string) - Finds and returns a global variable by name.",
-    "example": "with (findobject(\"ControlsContainer\")) {\n  new GuiControl(\"MyControl\") {\n    visible = true;\n  }\n}"
+    "example": "with (findobject(\u0022ControlsContainer\u0022)) {\n  new GuiControl(\u0022MyControl\u0022) {\n    visible = true;\n  }\n}"
   },
   "onActionClientSide": {
     "name": "onActionClientSide",
@@ -20480,7 +20480,7 @@
     "returns": "void",
     "scope": "clientside",
     "description": "No matching script function found!",
-    "example": "function onActionClientSide(text, params) {\n    if (text == \"showGUI\") { }\n}"
+    "example": "function onActionClientSide(text, params) {\n    if (text == \u0022showGUI\u0022) { }\n}"
   },
   "Adventure_fileIsFolder": {
     "name": "Adventure_fileIsFolder",
@@ -20491,7 +20491,7 @@
     "returns": "bool",
     "scope": "clientside",
     "description": "Adventure_fileIsFolder(str) - Checks if path is a folder - returns bool.",
-    "example": "temp.isFolder = Adventure_fileIsFolder(\"scriptfiles/Testbed3D\");"
+    "example": "temp.isFolder = Adventure_fileIsFolder(\u0022scriptfiles/Testbed3D\u0022);"
   },
   "triggerServer": {
     "name": "triggerServer",
@@ -20504,8 +20504,8 @@
     ],
     "returns": "void",
     "scope": "clientside",
-    "description": "triggerserver(string, string, string, ...) - Triggers a server-side action on a weapon or NPC database. Calls the onActionServerSide function on the target.\n\nNote: The `type` parameter can be \"gui\" or \"weapon\" (for weapons) or \"NPC\" (for NPC databases). Additional parameters after `command` are passed to the `onActionServerSide` function on the server side.",
-    "example": "triggerserver(\"gui\", this.name, \"useItem\", \"Health Potion\");"
+    "description": "triggerserver(string, string, string, ...) - Triggers a server-side action on a weapon or NPC database. Calls the onActionServerSide function on the target.\n\nNote: The \u0060type\u0060 parameter can be \u0022gui\u0022 or \u0022weapon\u0022 (for weapons) or \u0022NPC\u0022 (for NPC databases). Additional parameters after \u0060command\u0060 are passed to the \u0060onActionServerSide\u0060 function on the server side.",
+    "example": "triggerserver(\u0022gui\u0022, this.name, \u0022useItem\u0022, \u0022Health Potion\u0022);"
   },
   "androidGetDisplayAttributes": {
     "name": "androidGetDisplayAttributes",
@@ -20601,7 +20601,7 @@
     "returns": "void",
     "scope": "clientside",
     "description": "Adventure_selectFileSetFolderByText(str) -Changes the current folder using a string path (Only works with IRC File Browser).",
-    "example": "Adventure_selectFileSetFolderByText(\"levels/images\");"
+    "example": "Adventure_selectFileSetFolderByText(\u0022levels/images\u0022);"
   },
   "Adventure_selectFileSetFolder": {
     "name": "Adventure_selectFileSetFolder",
@@ -20623,7 +20623,7 @@
     "returns": "void",
     "scope": "clientside",
     "description": "Adventure_selectFileSelect(str) - Selects a chosen filename in the current folder (Only works with IRC File Browser).",
-    "example": "Adventure_selectFileSelect(\"block.png\");"
+    "example": "Adventure_selectFileSelect(\u0022block.png\u0022);"
   },
   "MRandomLCG": {
     "name": "MRandomLCG",
@@ -20634,7 +20634,7 @@
     "returns": "object",
     "scope": "clientside",
     "description": "new MRandomLCG() \u2013 creates a linear congruential random number generator that can produce random integers randint() and normalized random floating-point values randfloat().",
-    "example": "temp.random_number = new MRandomLCG(\"num_object\");\nplayer.chat = temp.random_number.randint();\ntemp.random_number.destroy();"
+    "example": "temp.random_number = new MRandomLCG(\u0022num_object\u0022);\nplayer.chat = temp.random_number.randint();\ntemp.random_number.destroy();"
   },
   "MRandomR250": {
     "name": "MRandomR250",
@@ -20643,7 +20643,7 @@
     "returns": "void",
     "scope": "global",
     "description": "new MRandomR250() \u2013 creates a random number generator using the R250 algorithm, seeded with the given identifier, and provides methods such as randint() for generating random integers and randfloat() for generating random floating-point values.",
-    "example": "temp.random_number = new MRandomR250(\"num_object\");\nplayer.chat = temp.random_number.randint();\ntemp.random_number.destroy();"
+    "example": "temp.random_number = new MRandomR250(\u0022num_object\u0022);\nplayer.chat = temp.random_number.randint();\ntemp.random_number.destroy();"
   },
   "TActionScriptVar": {
     "name": "TActionScriptVar",
@@ -20879,7 +20879,7 @@
     "returns": "object",
     "scope": "clientside",
     "description": "GuiScrollCtrl(GuiControl) - Scrollable container that displays vertical and horizontal scroll bars for child controls.",
-    "example": "new GuiScrollCtrl(\"Test_ScrollField\") {\n  profile = GuiBlueScrollProfile;\n  x = 10; y = 10; width = 160; height = 80;\n  hScrollBar = \"dynamic\";\n  vScrollBar = \"alwaysOn\";\n}"
+    "example": "new GuiScrollCtrl(\u0022Test_ScrollField\u0022) {\n  profile = GuiBlueScrollProfile;\n  x = 10; y = 10; width = 160; height = 80;\n  hScrollBar = \u0022dynamic\u0022;\n  vScrollBar = \u0022alwaysOn\u0022;\n}"
   },
   "GuiAccordionCtrl": {
     "name": "GuiAccordionCtrl",
