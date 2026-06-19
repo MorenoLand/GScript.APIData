@@ -219,7 +219,7 @@
   },
   "setimgpart": {
     "name": "setimgpart",
-    "type": "",
+    "type": "function",
     "params": [
       "imageFile",
       "startX",
