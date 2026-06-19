@@ -6157,7 +6157,7 @@
   },
   "showProfile": {
     "name": "showProfile",
-    "type": "",
+    "type": "function",
     "params": [],
     "returns": "void",
     "scope": "clientside",
