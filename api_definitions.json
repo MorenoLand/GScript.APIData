@@ -208,14 +208,14 @@
   },
   "setimg": {
     "name": "setimg",
+    "type": "function",
     "params": [
       "imageFile"
     ],
     "returns": "void",
-    "scope": "clientside",
+    "scope": "global",
     "description": "Sets the NPC\u0027s main graphic to display a full image file.",
-    "example": "setimg(\u0022block.png\u0022);",
-    "type": ""
+    "example": "setimg(\u0022block.png\u0022);"
   },
   "setimgpart": {
     "name": "setimgpart",
