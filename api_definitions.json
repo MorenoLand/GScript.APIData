@@ -461,14 +461,14 @@
   },
   "say2": {
     "name": "say2",
+    "type": "function",
     "params": [
       "str"
     ],
     "returns": "void",
-    "description": "say2(str) | TServerPlayer.say2(str)",
-    "example": "say2(\u0022Welcome to the town!\u0022);",
     "scope": "clientside",
-    "type": ""
+    "description": "TServerPlayer.say2(string) - Displays text as a sign popup above the player or NPC. Supports #b for line breaks.",
+    "example": "say2(\u0022Welcome to the shop!#bPress S to browse items.\u0022);"
   },
   "enableselectweapons": {
     "name": "enableselectweapons",
