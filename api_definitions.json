@@ -4653,15 +4653,15 @@
   },
   "movefile": {
     "name": "movefile",
+    "type": "function",
     "params": [
-      "str",
-      "str"
+      "sourcefile",
+      "destinationfile"
     ],
-    "returns": "void",
-    "description": "movefile(str, str) - returns boolean - moves a file from source (first parameter) to destination (second parameter)",
-    "example": "movefile(param1, param2);",
-    "scope": "clientside",
-    "type": ""
+    "returns": "bool",
+    "scope": "serverside",
+    "description": "movefile(string, string) - Moves a file from source to destination. Returns true on success.",
+    "example": "// Backup the shop DB before modifying\n temp.backup = \u0022data/shop_backup_\u0022 @ int(timevar2) @ \u0022.txt\u0022;\n movefile(\u0022data/shop.txt\u0022, temp.backup);\n\n temp.items.loadlines(\u0022data/shop.txt\u0022);\n temp.items.add(\u0022Fire Sword,500,weapon\u0022);\n temp.items.savelines(\u0022data/shop.txt\u0022, 0)"
   },
   "objecttype": {
     "name": "objecttype",
