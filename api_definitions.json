@@ -230,7 +230,7 @@
     "returns": "void",
     "scope": "clientside",
     "description": "Sets the NPC\u0027s main graphic to a specific rectangular portion of a larger image file.",
-    "example": "setimgpart(\u0022block.png\u0022, 0, 0, 16, 16);\n\necho(1); // test"
+    "example": "setimgpart(\u0022block.png\u0022, 0, 0, 16, 16);"
   },
   "attachplayertoobj": {
     "name": "attachplayertoobj",
