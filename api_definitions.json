@@ -3301,12 +3301,12 @@
   },
   "disableweapons": {
     "name": "disableweapons",
+    "type": "function",
     "params": [],
     "returns": "void",
-    "description": "disableweapons | TServerPlayer.disableweapons | disableweapons() | TServerPlayer.disableweapons()",
-    "example": "disableweapons();",
-    "scope": "clientside",
-    "type": ""
+    "scope": "global",
+    "description": "TServerPlayer.disableweapons() - Prevents the player from using weapons.",
+    "example": "// Disable weapons when entering a spar zone\nfunction onPlayerEnters() {\n  disableweapons();\n}"
   },
   "downloadfiletofolder": {
     "name": "downloadfiletofolder",
