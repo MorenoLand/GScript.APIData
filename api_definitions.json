@@ -14042,12 +14042,12 @@
   },
   "green": {
     "name": "green",
+    "type": "variable",
     "params": [],
-    "returns": "void",
-    "description": "onLogMessage(str, float, float, float, str) event - log message: text, red, green, blue, log type",
-    "example": "green()",
-    "scope": "clientside",
-    "type": ""
+    "returns": "float",
+    "scope": "global",
+    "description": "TShowImg.green - Float property controlling the green color channel of a showimg, particle, or player. Range 0-1.",
+    "example": "temp.img = showimg(300, \u0022block.png\u0022, this.x, this.y);\ntemp.img.green = 0.3; // 30% green"
   },
   "groupnum": {
     "name": "groupnum",
