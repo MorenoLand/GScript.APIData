@@ -2002,6 +2002,7 @@
   },
   "onLogMessage": {
     "name": "onLogMessage",
+    "type": "",
     "params": [
       "param0",
       "y",
@@ -2010,10 +2011,9 @@
       "text"
     ],
     "returns": "void",
-    "description": "onLogMessage(str, float, float, float, str) event - log message: text, red, green, blue, log type",
-    "example": "onLogMessage(param1, param2, param3, param4, param5);",
     "scope": "clientside",
-    "type": ""
+    "description": "onLogMessage(str, float, float, float, str) event - log message: text, red, green, blue, log type",
+    "example": "onLogMessage(param1, param2, param3, param4, param5);"
   },
   "onOpenLogWindow": {
     "name": "onOpenLogWindow",
