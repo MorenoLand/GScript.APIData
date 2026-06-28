@@ -16632,12 +16632,14 @@
   },
   "setbackto": {
     "name": "setbackto",
-    "params": [],
+    "type": "",
+    "params": [
+      "string"
+    ],
     "returns": "void",
-    "description": "Clientside:",
-    "example": "setbackto()",
     "scope": "clientside",
-    "type": ""
+    "description": "Clientside:",
+    "example": "TGraalAni - setbackto"
   },
   "setinterval": {
     "name": "setinterval",
