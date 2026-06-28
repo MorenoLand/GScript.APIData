@@ -1740,7 +1740,7 @@
     ],
     "returns": "object",
     "scope": "serverside",
-    "description": "TGraalVar.requestsql(query, expectResult) - Executes a SQL query on the default database. Returns an event object with rows, error, lastinsertid, and completed properties. Use waitfor(req, \u0022onReceiveData\u0022, 60) for async results.",
+    "description": "requestsql | TGraalVar.requestsql(query, expectResult) - Executes a SQL query on the default database. Returns an event object with rows, error, lastinsertid, and completed properties. Use waitfor(req, \u0022onReceiveData\u0022, 60) for async results.",
     "example": "temp.req = requestsql(\u0022SELECT * FROM players WHERE account = \u0027\u0022 @ acc.escape() @ \u0022\u0027\u0022, true);\nwaitfor(req, \u0022onReceiveData\u0022, 60);\necho(req.rows);"
   },
   "requestsql2": {
@@ -1877,7 +1877,7 @@
       "int"
     ],
     "returns": "void",
-    "description": "TDrawingPanel.clearrectangle(int, int, int, int) - x, y, width and height | GuiDrawingPanel.clearrectangle(int, int, int, int) - x, y, width and height",
+    "description": "GuiDrawingPanel.clearrectangle | TDrawingPanel.clearrectangle(int, int, int, int) - x, y, width and height | GuiDrawingPanel.clearrectangle(int, int, int, int) - x, y, width and height",
     "example": "clearrectangle(param1, param2, param3, param4);",
     "scope": "clientside",
     "type": ""
@@ -1905,7 +1905,7 @@
       "int"
     ],
     "returns": "void",
-    "description": "TDrawingPanel.drawimagerectangle(int, int, str, int, int, int, int) - destination x and y, source image, source x,y,width and height | GuiDrawingPanel.drawimagerectangle(int, int, str, int, int, int, int) - destination x and y, source image, source x,y,width and height",
+    "description": "GuiDrawingPanel.drawimagerectangle | TDrawingPanel.drawimagerectangle(int, int, str, int, int, int, int) - destination x and y, source image, source x,y,width and height | GuiDrawingPanel.drawimagerectangle(int, int, str, int, int, int, int) - destination x and y, source image, source x,y,width and height",
     "example": "drawimagerectangle(param1, param2, param3, param4, param5, param6, param7);",
     "scope": "clientside",
     "type": ""
@@ -3089,7 +3089,7 @@
       "float"
     ],
     "returns": "void",
-    "description": "TDrawingPanel.drawline(int, int, int, int, float) - draws a line with profile.fontcolor, parameters are x1,y1,x2,y2,linewidth | GuiDrawingPanel.drawline(int, int, int, int, float) - draws a line with profile.fontcolor, parameters are x1,y1,x2,y2,linewidth",
+    "description": "GuiDrawingPanel.drawline | TDrawingPanel.drawline(int, int, int, int, float) - draws a line with profile.fontcolor, parameters are x1,y1,x2,y2,linewidth | GuiDrawingPanel.drawline(int, int, int, int, float) - draws a line with profile.fontcolor, parameters are x1,y1,x2,y2,linewidth",
     "example": "drawline(param1, param2, param3, param4, param5);",
     "scope": "clientside",
     "type": ""
@@ -3102,7 +3102,7 @@
       "str"
     ],
     "returns": "void",
-    "description": "TDrawingPanel.drawtext(int, int, str) - draws text with the current profile, parameters are x, y and the text to draw | GuiDrawingPanel.drawtext(int, int, str) - draws text with the current profile, parameters are x, y and the text to draw",
+    "description": "GuiDrawingPanel.drawtext | TDrawingPanel.drawtext(int, int, str) - draws text with the current profile, parameters are x, y and the text to draw | GuiDrawingPanel.drawtext(int, int, str) - draws text with the current profile, parameters are x, y and the text to draw",
     "example": "drawtext(param1, param2, param3);",
     "scope": "clientside",
     "type": ""
@@ -3226,7 +3226,7 @@
     "name": "clearall",
     "params": [],
     "returns": "void",
-    "description": "TDrawingPanel.clearall() | GuiDrawingPanel.clearall()",
+    "description": "GuiDrawingPanel.clearall | TDrawingPanel.clearall() | GuiDrawingPanel.clearall()",
     "example": "this.clearall();",
     "scope": "clientside",
     "type": ""
@@ -3372,7 +3372,7 @@
       "float"
     ],
     "returns": "void",
-    "description": "TDrawingPanel.drawcurve(int, int, int, int, int, int, float) - draws a curve with profile.fontcolor, parameters are x1,y1,x2,y2,x3,y3,linewidth (the curve goes close to x2,y2 but not through it) | GuiDrawingPanel.drawcurve(int, int, int, int, int, int, float) - draws a curve with profile.fontcolor, ...",
+    "description": "GuiDrawingPanel.drawcurve | TDrawingPanel.drawcurve(int, int, int, int, int, int, float) - draws a curve with profile.fontcolor, parameters are x1,y1,x2,y2,x3,y3,linewidth (the curve goes close to x2,y2 but not through it) | GuiDrawingPanel.drawcurve(int, int, int, int, int, int, float) - draws a curve with profile.fontcolor, ...",
     "example": "drawcurve(param1, param2, param3, param4, param5, param6, param7);",
     "scope": "clientside",
     "type": ""
@@ -3385,7 +3385,7 @@
       "str"
     ],
     "returns": "void",
-    "description": "TDrawingPanel.drawimage(int, int, str) - x, y, source image | GuiDrawingPanel.drawimage(int, int, str) - x, y, source image",
+    "description": "GuiDrawingPanel.drawimage | TDrawingPanel.drawimage(int, int, str) - x, y, source image | GuiDrawingPanel.drawimage(int, int, str) - x, y, source image",
     "example": "drawimage(param1, param2, param3);",
     "scope": "clientside",
     "type": ""
@@ -3404,7 +3404,7 @@
       "int"
     ],
     "returns": "void",
-    "description": "TDrawingPanel.drawimagestretched(int, int, int, int, str, int, int, int, int) - destination x,y,width and height, source image, source x,y,width and height | GuiDrawingPanel.drawimagestretched(int, int, int, int, str, int, int, int, int) - destination x,y,width and height, source image, source x,y,w...",
+    "description": "GuiDrawingPanel.drawimagestretched | TDrawingPanel.drawimagestretched(int, int, int, int, str, int, int, int, int) - destination x,y,width and height, source image, source x,y,width and height | GuiDrawingPanel.drawimagestretched(int, int, int, int, str, int, int, int, int) - destination x,y,width and height, source image, source x,y,w...",
     "example": "drawimagestretched(param1, param2, param3, param4, param5, param6, param7, param8, param9);",
     "scope": "clientside",
     "type": ""
@@ -5620,7 +5620,7 @@
       "str"
     ],
     "returns": "void",
-    "description": "TDrawingPanel.saveimage(str) - saves the drawing panel under the specified filename | GuiDrawingPanel.saveimage(str)",
+    "description": "GuiDrawingPanel.saveimage | TDrawingPanel.saveimage(str) - saves the drawing panel under the specified filename | GuiDrawingPanel.saveimage(str)",
     "example": "saveimage(param1);",
     "scope": "clientside",
     "type": ""
@@ -9892,7 +9892,7 @@
       "int"
     ],
     "returns": "void",
-    "description": "TDrawingPanel.saveimage2(str, int) - saves the drawing panel under the specified filename, second parameter is the bitdepth (24 or 32) | GuiDrawingPanel.saveimage2(str, int) - saves the drawing panel under the specified filename, second parameter is the bitdepth (24 or 32)",
+    "description": "GuiDrawingPanel.saveimage2 | TDrawingPanel.saveimage2(str, int) - saves the drawing panel under the specified filename, second parameter is the bitdepth (24 or 32) | GuiDrawingPanel.saveimage2(str, int) - saves the drawing panel under the specified filename, second parameter is the bitdepth (24 or 32)",
     "scope": "clientside",
     "type": ""
   },
@@ -9906,7 +9906,7 @@
       "str"
     ],
     "returns": "boolean",
-    "description": "TDrawingPanel.filterrectangle(int, int, int, int, str) - returns boolean - applys a filter (x,y,width,height,filter type), possible filter types are gray, nightgoggle, negative, updown, blackwhite and lesscolors | TDrawingPanel.availablefilters - object (read only) - available filters for filterrect...",
+    "description": "GuiDrawingPanel.filterrectangle | TDrawingPanel.filterrectangle(int, int, int, int, str) - returns boolean - applys a filter (x,y,width,height,filter type), possible filter types are gray, nightgoggle, negative, updown, blackwhite and lesscolors | TDrawingPanel.availablefilters - object (read only) - available filters for filterrect...",
     "scope": "clientside",
     "type": ""
   },
@@ -9941,7 +9941,7 @@
       "str"
     ],
     "returns": "boolean",
-    "description": "TDrawingPanel.maskimage(int, int, str, str) - returns boolean - draws an image (x,y,filename) on top with a special mask operation (add or multiply), returns true if the operation was executed | GuiDrawingPanel.maskimage(int, int, str, str) - draws an image (x,y,filename) on top with a special mask ...",
+    "description": "GuiDrawingPanel.maskimage | TDrawingPanel.maskimage(int, int, str, str) - returns boolean - draws an image (x,y,filename) on top with a special mask operation (add or multiply), returns true if the operation was executed | GuiDrawingPanel.maskimage(int, int, str, str) - draws an image (x,y,filename) on top with a special mask ...",
     "scope": "clientside",
     "type": ""
   },
@@ -9953,7 +9953,7 @@
       "obj"
     ],
     "returns": "void",
-    "description": "TDrawingPanel.drawobject(int, int, obj) - destination x and y, object to draw (e.g. player), on server-side only npc with images accepted right now | GuiDrawingPanel.drawobject(int, int, obj) - destination x and y, object to draw (e.g. player)",
+    "description": "GuiDrawingPanel.drawobject | TDrawingPanel.drawobject(int, int, obj) - destination x and y, object to draw (e.g. player), on server-side only npc with images accepted right now | GuiDrawingPanel.drawobject(int, int, obj) - destination x and y, object to draw (e.g. player)",
     "scope": "clientside",
     "type": ""
   },
@@ -16168,7 +16168,7 @@
     "name": "range",
     "params": [],
     "returns": "void",
-    "description": "isipinranges(str, str, int)",
+    "description": "GuiSliderCtrl.range | isipinranges(str, str, int)",
     "example": "range()",
     "scope": "clientside",
     "type": ""
@@ -17354,7 +17354,7 @@
     "name": "ticks",
     "params": [],
     "returns": "void",
-    "description": "Clientside:",
+    "description": "GuiSliderCtrl.ticks | Clientside:",
     "example": "ticks()",
     "scope": "clientside",
     "type": ""
@@ -17623,7 +17623,7 @@
       "bool"
     ],
     "returns": "void",
-    "description": "TGraalVar.sortbyvalue(str, str, bool) - sorts an array, specify the variable of the array members which is compared, also the variable type and if it should be sorted ascending; variable type can be \u0022string\u0022, otherwise it is sorted by floating point value",
+    "description": "GuiSliderCtrl.value | TGraalVar.sortbyvalue(str, str, bool) - sorts an array, specify the variable of the array members which is compared, also the variable type and if it should be sorted ascending; variable type can be \u0022string\u0022, otherwise it is sorted by floating point value",
     "example": "value()",
     "scope": "clientside",
     "type": ""
@@ -18554,7 +18554,7 @@
     "params": [],
     "returns": "void",
     "scope": "global",
-    "description": "onAction() - General event handler for GUI control interactions (button press, enter in text field, slider move) and triggeraction() events.\n\nUse ControlName.onAction() for GUI, or onAction{EventName}() when triggeraction() fires a matching name. Hidden from listscriptfunctions.",
+    "description": "GuiSliderCtrl.onAction | onAction() - General event handler for GUI control interactions (button press, enter in text field, slider move) and triggeraction() events.\n\nUse ControlName.onAction() for GUI, or onAction{EventName}() when triggeraction() fires a matching name. Hidden from listscriptfunctions.",
     "example": "// GUI button\nfunction CloseButton.onAction() {\n  MyWindow.visible = false;\n}\n\n\n// triggeraction calls onActionCreateInstance on NPCs at that position\ntriggeraction(this.x \u002B 1, this.y \u002B 1, \u0022CreateInstance\u0022, this.instance_id);\n// Handler on the receiving NPC:\nfunction onActionCreateInstance(instance_id) {\n  this.link = instance_id;\n}"
   },
   "onAdd": {
@@ -21483,6 +21483,90 @@
     "returns": "object",
     "scope": "clientside",
     "description": "GuiGraalCtrl - object type, parent type is GuiControl",
+    "example": ""
+  },
+  "GuiSliderCtrl": {
+    "name": "GuiSliderCtrl",
+    "type": "variable",
+    "params": [],
+    "returns": "object",
+    "scope": "clientside",
+    "description": "GuiSliderCtrl - object type, parent type is GuiControl",
+    "example": ""
+  },
+  "GuiSliderCtrl.onReleaseSlider": {
+    "name": "GuiSliderCtrl.onReleaseSlider",
+    "type": "function",
+    "params": [
+      "float"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "the user has finishzed moving the slider: new slider value",
+    "example": ""
+  },
+  "GuiDrawingPanel": {
+    "name": "GuiDrawingPanel",
+    "type": "variable",
+    "params": [],
+    "returns": "object",
+    "scope": "clientside",
+    "description": "GuiDrawingPanel - object type, parent type is GuiControl",
+    "example": ""
+  },
+  "GuiDrawingPanel.availablefilters - object": {
+    "name": "GuiDrawingPanel.availablefilters - object",
+    "type": "function",
+    "params": [
+      "read only"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "- available filters for filterrectangle()",
+    "example": ""
+  },
+  "GuiDrawingPanel.parth - integer": {
+    "name": "GuiDrawingPanel.parth - integer",
+    "type": "function",
+    "params": [
+      "read only"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "GuiDrawingPanel.parth - integer (read only)",
+    "example": ""
+  },
+  "GuiDrawingPanel.partw - integer": {
+    "name": "GuiDrawingPanel.partw - integer",
+    "type": "function",
+    "params": [
+      "read only"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "GuiDrawingPanel.partw - integer (read only)",
+    "example": ""
+  },
+  "GuiDrawingPanel.partx - integer": {
+    "name": "GuiDrawingPanel.partx - integer",
+    "type": "function",
+    "params": [
+      "read only"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "GuiDrawingPanel.partx - integer (read only)",
+    "example": ""
+  },
+  "GuiDrawingPanel.party - integer": {
+    "name": "GuiDrawingPanel.party - integer",
+    "type": "function",
+    "params": [
+      "read only"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "GuiDrawingPanel.party - integer (read only)",
     "example": ""
   }
 }
