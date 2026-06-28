@@ -14817,7 +14817,7 @@
     "params": [],
     "returns": "void",
     "scope": "clientside",
-    "description": "Clientside:",
+    "description": "Clientside:asdas",
     "example": "isrendering()"
   },
   "issparringzone": {
