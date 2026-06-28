@@ -590,7 +590,7 @@
     "params": [],
     "returns": "void",
     "scope": "global",
-    "description": "destroy() - Removes and deletes the object from memory. The object is permanently destroyed and can no longer be used.",
+    "description": "TStaticVar.destroy | destroy() - Removes and deletes the object from memory. The object is permanently destroyed and can no longer be used.",
     "example": "// Destroy a GUI control\ntemp.button = findobject(\"Button1\");\ntemp.button.destroy();\n\n// Destroy an NPC\nthis.destroy();"
   },
   "sleep": {
@@ -20373,7 +20373,7 @@
     "params": [],
     "returns": "TStaticVar",
     "scope": "global",
-    "description": "Creates an empty TStaticVar Object.",
+    "description": "TStaticVar | Creates an empty TStaticVar Object.",
     "example": "temp.bankData = new TStaticVar();\ntemp.bankData.currency  = \"Gralats\";\ntemp.bankData.owner = findplayer(\"ruanf\");\ntemp.bankData.active = true;"
   },
   "Adventure_setAllowedPortsBind": {
