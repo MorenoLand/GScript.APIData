@@ -2004,14 +2004,14 @@
   },
   "radtodeg": {
     "name": "radtodeg",
+    "type": "function",
     "params": [
-      "float"
+      "radians"
     ],
     "returns": "void",
-    "description": "radtodeg(float) - returns float",
-    "example": "radtodeg(param1);",
-    "scope": "clientside",
-    "type": ""
+    "scope": "global",
+    "description": "radtodeg(float) - Converts radians to degrees.",
+    "example": "temp.degrees = radtodeg(3.14159); // Returns 180 degrees (pi radians)"
   },
   "round": {
     "name": "round",
