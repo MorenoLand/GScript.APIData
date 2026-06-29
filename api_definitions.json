@@ -1504,7 +1504,7 @@
       "filename"
     ],
     "returns": "object",
-    "scope": "clientside",
+    "scope": "global",
     "description": "findlevel(string) - Returns the TServerLevel object for the given level filename.",
     "example": "temp.lvl = findlevel(\u0022zodiac_ctf_sumo.gmap\u0022);\r\ntemp.lvlnpcs = temp.lvl.npcs;"
   },
@@ -11577,7 +11577,7 @@
       "float"
     ],
     "returns": "void",
-    "description": "TShowImg.angle | getangle(float,float) | TDrawingPanel.clearrectangle(int, int, int, int) - x, y, width and height",
+    "description": "TBilliardBall.angle | TShowImg.angle | getangle(float,float) | TDrawingPanel.clearrectangle(int, int, int, int) - x, y, width and height",
     "example": "angle()",
     "scope": "clientside",
     "type": ""
@@ -16911,7 +16911,7 @@
     "name": "speed",
     "params": [],
     "returns": "void",
-    "description": "TShowImg.speed | TBilliardBall.speed - float",
+    "description": "TBilliardBall.speed | TShowImg.speed | TBilliardBall.speed - float",
     "example": "speed()",
     "scope": "clientside",
     "type": ""
@@ -17771,7 +17771,7 @@
       "object"
     ],
     "returns": "void",
-    "description": "TShowImg.x | TGraalAniSprite.x | array.index(object) | bintohex(str) - returns string - converts binary data to a hexadecimal string (double length)",
+    "description": "TBilliardBall.x | TShowImg.x | TGraalAniSprite.x | array.index(object) | bintohex(str) - returns string - converts binary data to a hexadecimal string (double length)",
     "example": "x()",
     "scope": "clientside",
     "type": ""
@@ -17783,7 +17783,7 @@
       "str"
     ],
     "returns": "void",
-    "description": "TShowImg.y | TGraalAniSprite.y | adddnsentry(str, str) | array.subarray(index[,length])",
+    "description": "TBilliardBall.y | TShowImg.y | TGraalAniSprite.y | adddnsentry(str, str) | array.subarray(index[,length])",
     "example": "y()",
     "scope": "clientside",
     "type": ""
@@ -17804,7 +17804,7 @@
     "name": "zangle",
     "params": [],
     "returns": "void",
-    "description": "TShowImg.zangle | TBilliardBall.zangle - float",
+    "description": "TBilliardBall.zangle | TShowImg.zangle | TBilliardBall.zangle - float",
     "example": "zangle()",
     "scope": "clientside",
     "type": ""
@@ -19200,7 +19200,7 @@
     "name": "targettopspin",
     "params": [],
     "returns": "void",
-    "description": "Property: float",
+    "description": "TBilliardCalculation.targettopspin | Property: float",
     "scope": "global",
     "type": ""
   },
@@ -19485,7 +19485,7 @@
     "name": "enablepockets",
     "params": [],
     "returns": "void",
-    "description": "Property: boolean",
+    "description": "TBilliardCalculation.enablepockets | Property: boolean",
     "scope": "clientside",
     "type": ""
   },
@@ -21576,6 +21576,302 @@
     "returns": "void",
     "scope": "clientside",
     "description": "TBilliardCalculation.pocketballs - string (read only)",
+    "example": ""
+  },
+  "TBilliardBall": {
+    "name": "TBilliardBall",
+    "type": "variable",
+    "params": [],
+    "returns": "object",
+    "scope": "clientside",
+    "description": "TBilliardBall - object type, parent type is TGraalVar, cannot be created by script",
+    "example": ""
+  },
+  "TBilliardCalculation": {
+    "name": "TBilliardCalculation",
+    "type": "variable",
+    "params": [],
+    "returns": "object",
+    "scope": "clientside",
+    "description": "TBilliardCalculation - object type, parent type is TStaticVar",
+    "example": ""
+  },
+  "TBilliardBall.ballindex - integer": {
+    "name": "TBilliardBall.ballindex - integer",
+    "type": "function",
+    "params": [
+      "read only"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "TBilliardBall.ballindex - integer (read only)",
+    "example": ""
+  },
+  "TBilliardBall.colorindex": {
+    "name": "TBilliardBall.colorindex",
+    "type": "variable",
+    "params": [],
+    "returns": "integer",
+    "scope": "clientside",
+    "description": "TBilliardBall.colorindex - integer",
+    "example": ""
+  },
+  "TBilliardBall.number": {
+    "name": "TBilliardBall.number",
+    "type": "variable",
+    "params": [],
+    "returns": "integer",
+    "scope": "clientside",
+    "description": "TBilliardBall.number - integer",
+    "example": ""
+  },
+  "TBilliardBall.sidespin": {
+    "name": "TBilliardBall.sidespin",
+    "type": "variable",
+    "params": [],
+    "returns": "float",
+    "scope": "clientside",
+    "description": "TBilliardBall.sidespin - float",
+    "example": ""
+  },
+  "TBilliardBall.stripes": {
+    "name": "TBilliardBall.stripes",
+    "type": "variable",
+    "params": [],
+    "returns": "boolean",
+    "scope": "clientside",
+    "description": "TBilliardBall.stripes - boolean",
+    "example": ""
+  },
+  "TBilliardBall.topspin": {
+    "name": "TBilliardBall.topspin",
+    "type": "variable",
+    "params": [],
+    "returns": "float",
+    "scope": "clientside",
+    "description": "TBilliardBall.topspin - float",
+    "example": ""
+  },
+  "TBilliardCalculation.balldiameter": {
+    "name": "TBilliardCalculation.balldiameter",
+    "type": "variable",
+    "params": [],
+    "returns": "float",
+    "scope": "clientside",
+    "description": "TBilliardCalculation.balldiameter - float",
+    "example": ""
+  },
+  "TBilliardCalculation.balleasingborder": {
+    "name": "TBilliardCalculation.balleasingborder",
+    "type": "variable",
+    "params": [],
+    "returns": "float",
+    "scope": "clientside",
+    "description": "TBilliardCalculation.balleasingborder - float",
+    "example": ""
+  },
+  "TBilliardCalculation.balleasingmove": {
+    "name": "TBilliardCalculation.balleasingmove",
+    "type": "variable",
+    "params": [],
+    "returns": "float",
+    "scope": "clientside",
+    "description": "TBilliardCalculation.balleasingmove - float",
+    "example": ""
+  },
+  "TBilliardCalculation.ballpositions": {
+    "name": "TBilliardCalculation.ballpositions",
+    "type": "variable",
+    "params": [],
+    "returns": "string",
+    "scope": "clientside",
+    "description": "TBilliardCalculation.ballpositions - string",
+    "example": ""
+  },
+  "TBilliardCalculation.cornersize": {
+    "name": "TBilliardCalculation.cornersize",
+    "type": "variable",
+    "params": [],
+    "returns": "float",
+    "scope": "clientside",
+    "description": "TBilliardCalculation.cornersize - float",
+    "example": ""
+  },
+  "TBilliardCalculation.emulateshoot": {
+    "name": "TBilliardCalculation.emulateshoot",
+    "type": "function",
+    "params": [],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "TBilliardCalculation.emulateshoot()",
+    "example": ""
+  },
+  "TBilliardCalculation.firstcontact - integer": {
+    "name": "TBilliardCalculation.firstcontact - integer",
+    "type": "function",
+    "params": [
+      "read only"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "TBilliardCalculation.firstcontact - integer (read only)",
+    "example": ""
+  },
+  "TBilliardCalculation.moves - string": {
+    "name": "TBilliardCalculation.moves - string",
+    "type": "function",
+    "params": [
+      "read only"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "TBilliardCalculation.moves - string (read only)",
+    "example": ""
+  },
+  "TBilliardCalculation.shootcycles - integer": {
+    "name": "TBilliardCalculation.shootcycles - integer",
+    "type": "function",
+    "params": [
+      "read only"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "TBilliardCalculation.shootcycles - integer (read only)",
+    "example": ""
+  },
+  "TBilliardCalculation.sidespineasingball": {
+    "name": "TBilliardCalculation.sidespineasingball",
+    "type": "variable",
+    "params": [],
+    "returns": "float",
+    "scope": "clientside",
+    "description": "TBilliardCalculation.sidespineasingball - float",
+    "example": ""
+  },
+  "TBilliardCalculation.sidespineasingborder": {
+    "name": "TBilliardCalculation.sidespineasingborder",
+    "type": "variable",
+    "params": [],
+    "returns": "float",
+    "scope": "clientside",
+    "description": "TBilliardCalculation.sidespineasingborder - float",
+    "example": ""
+  },
+  "TBilliardCalculation.sidespineffectball": {
+    "name": "TBilliardCalculation.sidespineffectball",
+    "type": "variable",
+    "params": [],
+    "returns": "float",
+    "scope": "clientside",
+    "description": "TBilliardCalculation.sidespineffectball - float",
+    "example": ""
+  },
+  "TBilliardCalculation.sidespineffectborder": {
+    "name": "TBilliardCalculation.sidespineffectborder",
+    "type": "variable",
+    "params": [],
+    "returns": "float",
+    "scope": "clientside",
+    "description": "TBilliardCalculation.sidespineffectborder - float",
+    "example": ""
+  },
+  "TBilliardCalculation.sidespinthrow": {
+    "name": "TBilliardCalculation.sidespinthrow",
+    "type": "variable",
+    "params": [],
+    "returns": "float",
+    "scope": "clientside",
+    "description": "TBilliardCalculation.sidespinthrow - float",
+    "example": ""
+  },
+  "TBilliardCalculation.sidespintransfer": {
+    "name": "TBilliardCalculation.sidespintransfer",
+    "type": "variable",
+    "params": [],
+    "returns": "float",
+    "scope": "clientside",
+    "description": "TBilliardCalculation.sidespintransfer - float",
+    "example": ""
+  },
+  "TBilliardCalculation.tableborderbottom": {
+    "name": "TBilliardCalculation.tableborderbottom",
+    "type": "variable",
+    "params": [],
+    "returns": "float",
+    "scope": "clientside",
+    "description": "TBilliardCalculation.tableborderbottom - float",
+    "example": ""
+  },
+  "TBilliardCalculation.tableborderleft": {
+    "name": "TBilliardCalculation.tableborderleft",
+    "type": "variable",
+    "params": [],
+    "returns": "float",
+    "scope": "clientside",
+    "description": "TBilliardCalculation.tableborderleft - float",
+    "example": ""
+  },
+  "TBilliardCalculation.tableborderright": {
+    "name": "TBilliardCalculation.tableborderright",
+    "type": "variable",
+    "params": [],
+    "returns": "float",
+    "scope": "clientside",
+    "description": "TBilliardCalculation.tableborderright - float",
+    "example": ""
+  },
+  "TBilliardCalculation.tablebordertop": {
+    "name": "TBilliardCalculation.tablebordertop",
+    "type": "variable",
+    "params": [],
+    "returns": "float",
+    "scope": "clientside",
+    "description": "TBilliardCalculation.tablebordertop - float",
+    "example": ""
+  },
+  "TBilliardCalculation.targetangle": {
+    "name": "TBilliardCalculation.targetangle",
+    "type": "variable",
+    "params": [],
+    "returns": "float",
+    "scope": "clientside",
+    "description": "TBilliardCalculation.targetangle - float",
+    "example": ""
+  },
+  "TBilliardCalculation.targetball": {
+    "name": "TBilliardCalculation.targetball",
+    "type": "variable",
+    "params": [],
+    "returns": "integer",
+    "scope": "clientside",
+    "description": "TBilliardCalculation.targetball - integer",
+    "example": ""
+  },
+  "TBilliardCalculation.targetsidespin": {
+    "name": "TBilliardCalculation.targetsidespin",
+    "type": "variable",
+    "params": [],
+    "returns": "float",
+    "scope": "clientside",
+    "description": "TBilliardCalculation.targetsidespin - float",
+    "example": ""
+  },
+  "TBilliardCalculation.targetspeed": {
+    "name": "TBilliardCalculation.targetspeed",
+    "type": "variable",
+    "params": [],
+    "returns": "float",
+    "scope": "clientside",
+    "description": "TBilliardCalculation.targetspeed - float",
+    "example": ""
+  },
+  "TBilliardCalculation.topspineffectball": {
+    "name": "TBilliardCalculation.topspineffectball",
+    "type": "variable",
+    "params": [],
+    "returns": "float",
+    "scope": "clientside",
+    "description": "TBilliardCalculation.topspineffectball - float",
     "example": ""
   }
 }
