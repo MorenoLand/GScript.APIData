@@ -1645,14 +1645,14 @@
   },
   "loadclass": {
     "name": "loadclass",
+    "type": "function",
     "params": [
-      "str"
+      "classname"
     ],
     "returns": "void",
-    "description": "loadclass(str) - preloads the clientside script of a class",
-    "example": "loadclass(\u0022TServerWeapon\u0022);",
-    "scope": "clientside",
-    "type": ""
+    "scope": "global",
+    "description": "loadclass(string) - Preloads a class script so it\u0027s ready before use. On the client, this preloads the clientside portion of the class.",
+    "example": "function onCreated() {\r\n  loadclass(\u0022object_firework\u0022); // Preload class before joining\r\n  loadclass(\u0022ip_hwq_fog\u0022);\r\n}"
   },
   "savejsontostring": {
     "name": "savejsontostring",
