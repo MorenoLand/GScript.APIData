@@ -11904,7 +11904,7 @@
       "int"
     ],
     "returns": "void",
-    "description": "GuiBitmapButtonCtrl.setbitmap(str, int) - parameters are the bitmap and index (0, 1, 2 for normal, mouse over and pressed state) | GuiBitmapCtrl.setbitmap(str)",
+    "description": "GuiControlProfile.bitmap | GuiBitmapButtonCtrl.setbitmap(str, int) - parameters are the bitmap and index (0, 1, 2 for normal, mouse over and pressed state) | GuiBitmapCtrl.setbitmap(str)",
     "example": "bitmap()",
     "scope": "clientside",
     "type": ""
@@ -16658,7 +16658,7 @@
     "name": "shadowcolor",
     "params": [],
     "returns": "void",
-    "description": "TShowImg.shadowcolor | GuiControlProfile.shadowcolor - string",
+    "description": "GuiControlProfile.shadowcolor | TShowImg.shadowcolor | GuiControlProfile.shadowcolor - string",
     "example": "shadowcolor()",
     "scope": "clientside",
     "type": ""
@@ -16667,7 +16667,7 @@
     "name": "shadowoffset",
     "params": [],
     "returns": "void",
-    "description": "TShowImg.shadowoffset | GuiControlProfile.shadowoffset - string",
+    "description": "GuiControlProfile.shadowoffset | TShowImg.shadowoffset | GuiControlProfile.shadowoffset - string",
     "example": "shadowoffset()",
     "scope": "clientside",
     "type": ""
@@ -21567,6 +21567,15 @@
     "returns": "void",
     "scope": "clientside",
     "description": "GuiDrawingPanel.party - integer (read only)",
+    "example": ""
+  },
+  "GuiControlProfile": {
+    "name": "GuiControlProfile",
+    "type": "variable",
+    "params": [],
+    "returns": "object",
+    "scope": "clientside",
+    "description": "GuiControlProfile - object type, parent type is TGraalVar",
     "example": ""
   }
 }
