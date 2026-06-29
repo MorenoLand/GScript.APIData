@@ -1499,14 +1499,14 @@
   },
   "findlevel": {
     "name": "findlevel",
+    "type": "function",
     "params": [
-      "str"
+      "filename"
     ],
-    "returns": "void",
-    "description": "findlevel(str) - returns object",
-    "example": "findlevel(param1);",
+    "returns": "object",
     "scope": "clientside",
-    "type": ""
+    "description": "findlevel(string) - Returns the TServerLevel object for the given level filename.",
+    "example": "temp.lvl = findlevel(\u0022zodiac_ctf_sumo.gmap\u0022);\r\ntemp.lvlnpcs = temp.lvl.npcs;"
   },
   "deletefile": {
     "name": "deletefile",
@@ -21565,6 +21565,17 @@
     "returns": "object",
     "scope": "clientside",
     "description": "GuiControlProfile - object type, parent type is TGraalVar",
+    "example": ""
+  },
+  "TBilliardCalculation.pocketballs - string": {
+    "name": "TBilliardCalculation.pocketballs - string",
+    "type": "function",
+    "params": [
+      "read only"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "TBilliardCalculation.pocketballs - string (read only)",
     "example": ""
   }
 }
