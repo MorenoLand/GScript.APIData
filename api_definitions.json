@@ -1781,14 +1781,14 @@
   },
   "arctan": {
     "name": "arctan",
+    "type": "function",
     "params": [
-      "float"
+      "value"
     ],
     "returns": "float",
     "scope": "global",
     "description": "arctan(float) - Returns the arctangent (inverse tangent) of a value, giving the angle in radians whose tangent is the input value.",
-    "example": "temp.angle = arctan(1.0); // Returns \u03C0/4 radians (45 degrees) in float value (0.785...)",
-    "type": ""
+    "example": "temp.angle = arctan(1.0); // Returns \u03C0/4 radians (45 degrees) in float value (0.785...)"
   },
   "ceil": {
     "name": "ceil",
