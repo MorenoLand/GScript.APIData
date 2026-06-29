@@ -1748,14 +1748,14 @@
   },
   "removeweapon": {
     "name": "removeweapon",
+    "type": "function",
     "params": [
-      "str"
+      "weaponname"
     ],
     "returns": "void",
-    "description": "removeweapon(str) | TServerPlayer.removeweapon(str)",
-    "example": "removeweapon(param1);",
-    "scope": "clientside",
-    "type": ""
+    "scope": "serverside",
+    "description": "TServerPlayer.removeweapon(string) - Removes a weapon from the player\u0027s inventory.",
+    "example": "player.removeweapon(\u0022\u002BGamble\u0022); // Removes the weapon from the player"
   },
   "arccos": {
     "name": "arccos",
