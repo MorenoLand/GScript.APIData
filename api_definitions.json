@@ -1759,14 +1759,14 @@
   },
   "arccos": {
     "name": "arccos",
+    "type": "function",
     "params": [
-      "float"
+      "value"
     ],
-    "returns": "void",
-    "description": "arccos(float) - returns float",
-    "example": "arccos(param1);",
-    "scope": "clientside",
-    "type": ""
+    "returns": "float",
+    "scope": "global",
+    "description": "arccos(float) - Returns the arccosine (inverse cosine) of a value. Input range -1 to 1, returns radians.",
+    "example": "temp.angle = arccos(-1); // Returns 3.14159265... (pi)"
   },
   "arcsin": {
     "name": "arcsin",
