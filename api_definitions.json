@@ -1828,14 +1828,14 @@
   },
   "degtorad": {
     "name": "degtorad",
+    "type": "function",
     "params": [
-      "float"
+      "degrees"
     ],
-    "returns": "void",
-    "description": "degtorad(float) - returns float",
-    "example": "degtorad(param1);",
-    "scope": "clientside",
-    "type": ""
+    "returns": "float",
+    "scope": "global",
+    "description": "degtorad(float) - Converts degrees to radians.",
+    "example": "temp.angle = degtorad(90); // Returns 1.5707... radians (90 degrees)"
   },
   "drawimagerectangle": {
     "name": "drawimagerectangle",
