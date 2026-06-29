@@ -1872,8 +1872,8 @@
     "params": [],
     "returns": "string",
     "scope": "clientside",
-    "description": "getloginaccountname() - returns the account name used to login as a string",
-    "example": "getloginaccountname();"
+    "description": "getloginaccountname() - Returns the account name used to log in to the current server.",
+    "example": "temp.account = getloginaccountname(); // Returns \u0022Stefan\u0022"
   },
   "log": {
     "name": "log",
