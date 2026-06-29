@@ -1971,15 +1971,15 @@
   },
   "onPlayerLogout": {
     "name": "onPlayerLogout",
+    "type": "event",
     "params": [
-      "param0",
-      "value1"
+      "player",
+      "id"
     ],
     "returns": "void",
-    "description": "Clientside:",
-    "example": "onPlayerLogout(param1, param2);",
-    "scope": "clientside",
-    "type": ""
+    "scope": "serverside",
+    "description": "onPlayerLogout(object, int) - Fired when a player logs out. Player object may be NULL. Parameters: player object and player ID.",
+    "example": "function onPlayerLogout(pl) {\r\n  savelog2(\u0022logins.txt\u0022, pl.account @ \u0022 logged out at \u0022 @ timevar2);\r\n}"
   },
   "onServerLogin": {
     "name": "onServerLogin",
