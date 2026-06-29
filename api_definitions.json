@@ -1935,18 +1935,18 @@
   },
   "onLogMessage": {
     "name": "onLogMessage",
-    "type": "",
+    "type": "event",
     "params": [
-      "param0",
-      "y",
-      "z",
-      "value3",
-      "text"
+      "text",
+      "red",
+      "green",
+      "blue",
+      "logtype"
     ],
     "returns": "void",
     "scope": "clientside",
-    "description": "onLogMessage(str, float, float, float, str) event - log message: text, red, green, blue, log type",
-    "example": "onLogMessage(param1, param2, param3, param4, param5);"
+    "description": "onLogMessage(string, float, float, float, string) - Fired when a log message is printed. Parameters: text, red, green, blue, logtype.",
+    "example": "function onLogMessage(txt, r, g, b, ltype) {\r\n  if (ltype == \u0022echo\u0022) {\r\n    F2LogWindow_Text.addtext(txt NL \u0022\u0022, true); // Append echo to F2 window\r\n  }\r\n}"
   },
   "onOpenLogWindow": {
     "name": "onOpenLogWindow",
