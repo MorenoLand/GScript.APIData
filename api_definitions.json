@@ -1950,12 +1950,12 @@
   },
   "onOpenLogWindow": {
     "name": "onOpenLogWindow",
+    "type": "event",
     "params": [],
     "returns": "void",
-    "description": "Clientside:",
-    "example": "onOpenLogWindow();",
     "scope": "clientside",
-    "type": ""
+    "description": "onOpenLogWindow() - Fired when the F2 key is pressed to toggle the log window.",
+    "example": "function onOpenLogWindow() {\r\n  if (F2LogWindow_Window.visible) {\r\n    F2LogWindow_Window.hide(); // Close the log window\r\n  } else {\r\n    cursorOn();\r\n    F2LogWindow_Window.showtop(); // Open the log window\r\n  }\r\n}"
   },
   "onPlayerLogin": {
     "name": "onPlayerLogin",
