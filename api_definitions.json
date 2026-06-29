@@ -234,15 +234,15 @@
   },
   "attachplayertoobj": {
     "name": "attachplayertoobj",
+    "type": "function",
     "params": [
-      "int",
-      "int"
+      "objecttype",
+      "npcindex"
     ],
     "returns": "void",
-    "description": "attachplayertoobj(int, int) | TServerPlayer.attachplayertoobj(int, int)",
-    "example": "attachplayertoobj(this.id, 1);",
-    "scope": "clientside",
-    "type": ""
+    "scope": "serverside",
+    "description": "TServerPlayer.attachplayertoobj(int, int) - Attaches the player to an NPC so they move with it. First parameter is object type (0 = NPC), second is the NPC ID.",
+    "example": "// Attach player to a moving boat when they board\r\nplayer.attachplayertoobj(0, this.id);\r\nplayer.x = this.x \u002B 8;\r\nplayer.y = this.y \u002B 8;\r\n\r\n// Detach when leaving\r\nif (player.attached == true \u0026\u0026 player.attachedtoobject == this) {\r\n  detachplayer();\r\n}"
   },
   "detachplayer": {
     "name": "detachplayer",
