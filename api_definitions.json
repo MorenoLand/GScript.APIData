@@ -1621,17 +1621,6 @@
     "description": "TGraalVar.savestring(str, int) - saves the value as string into a file, the second parameter is the save mode (0 - overwrite, 1 - append).",
     "example": "savestring(param1, param2);"
   },
-  "showfile": {
-    "name": "showfile",
-    "params": [
-      "filename"
-    ],
-    "returns": "void",
-    "description": "No matching script function found!",
-    "example": "showfile(param1);",
-    "scope": "clientside",
-    "type": ""
-  },
   "loadxml": {
     "name": "loadxml",
     "params": [
