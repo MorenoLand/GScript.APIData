@@ -1803,14 +1803,14 @@
   },
   "checksum": {
     "name": "checksum",
+    "type": "function",
     "params": [
-      "str"
+      "text"
     ],
-    "returns": "void",
-    "description": "checksum(str) - returns float - calculates a checksum number on the specified string, this is also known as crc or crc32",
-    "example": "checksum(param1);",
-    "scope": "clientside",
-    "type": ""
+    "returns": "float",
+    "scope": "global",
+    "description": "checksum(string) - Calculates a CRC32 checksum number on the specified string.",
+    "example": "temp.crc = checksum(player.account); // Returns a numeric checksum for the account name"
   },
   "clearrectangle": {
     "name": "clearrectangle",
