@@ -1889,15 +1889,15 @@
   },
   "max": {
     "name": "max",
+    "type": "function",
     "params": [
-      "a",
-      "b"
+      "value1",
+      "value2"
     ],
-    "returns": "void",
-    "description": "max(a,b) | Math.max(float, float) - returns float",
-    "example": "max(param1, param2);",
-    "scope": "clientside",
-    "type": ""
+    "returns": "float",
+    "scope": "global",
+    "description": "max(float, float) - Returns the higher of two values. Also available as Math.max().",
+    "example": "temp.damage = max(1, temp.baseDamage - temp.armor); // Returns 1 minimum"
   },
   "md5": {
     "name": "md5",
