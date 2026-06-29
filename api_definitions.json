@@ -1901,14 +1901,14 @@
   },
   "md5": {
     "name": "md5",
+    "type": "function",
     "params": [
-      "str"
+      "text"
     ],
-    "returns": "void",
-    "description": "md5(str) - returns string - calculates a md5 hash on the specified string | md5(str) - returns string",
-    "example": "md5(param1);",
-    "scope": "clientside",
-    "type": ""
+    "returns": "string",
+    "scope": "global",
+    "description": "md5(string) - Calculates an MD5 hash on the specified string.",
+    "example": "temp.hash = md5(player.account); // Returns \u0022d41d8cd98f00b204e9800998ecf8427e\u0022"
   },
   "min": {
     "name": "min",
