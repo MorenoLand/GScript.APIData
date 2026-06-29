@@ -1734,17 +1734,6 @@
     "scope": "clientside",
     "type": ""
   },
-  "hasweapon": {
-    "name": "hasweapon",
-    "params": [
-      "weaponname"
-    ],
-    "returns": "void",
-    "description": "No matching script function found!",
-    "example": "hasweapon(param1);",
-    "scope": "clientside",
-    "type": ""
-  },
   "hasright": {
     "name": "hasright",
     "type": "function",
