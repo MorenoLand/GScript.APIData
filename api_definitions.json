@@ -1521,14 +1521,14 @@
   },
   "fileexists": {
     "name": "fileexists",
+    "type": "function",
     "params": [
-      "str"
+      "filename"
     ],
-    "returns": "void",
-    "description": "fileexists(str) - returns boolean",
-    "example": "fileexists(param1);",
-    "scope": "clientside",
-    "type": ""
+    "returns": "bool",
+    "scope": "global",
+    "description": "fileexists(string) - Returns true if the specified file exists.",
+    "example": "if (!fileexists(\u0022levels/archetype/monster/dragon.arc\u0022)) return; // Returns false if file is missing"
   },
   "filesize": {
     "name": "filesize",
