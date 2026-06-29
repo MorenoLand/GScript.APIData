@@ -1770,14 +1770,14 @@
   },
   "arcsin": {
     "name": "arcsin",
+    "type": "function",
     "params": [
-      "float"
+      "value"
     ],
-    "returns": "void",
-    "description": "arcsin(float) - returns float",
-    "example": "arcsin(param1);",
-    "scope": "clientside",
-    "type": ""
+    "returns": "float",
+    "scope": "global",
+    "description": "arcsin(float) - Returns the arcsine (inverse sine) of a value. Input range -1 to 1, returns radians.",
+    "example": "temp.angle = arcsin(0.5); // Returns 0.5235... radians (30 degrees)"
   },
   "arctan": {
     "name": "arctan",
