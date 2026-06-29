@@ -1532,14 +1532,14 @@
   },
   "filesize": {
     "name": "filesize",
+    "type": "function",
     "params": [
-      "str"
+      "filename"
     ],
-    "returns": "void",
-    "description": "filesize(str) - returns integer",
-    "example": "filesize(param1);",
+    "returns": "int",
     "scope": "clientside",
-    "type": ""
+    "description": "filesize(string) - Returns the size of a file in bytes. Returns -1 if the file doesn\u0027t exist.",
+    "example": "temp.dbSize = filesize(\u0022databases/items.db\u0022); // Returns file size in bytes"
   },
   "getfilemodtime": {
     "name": "getfilemodtime",
