@@ -1590,12 +1590,12 @@
     "name": "savelog",
     "type": "function",
     "params": [
-      "str"
+      "message"
     ],
     "returns": "void",
-    "scope": "clientside",
-    "description": "savelog(str) - Logs a message to the F2 game messages window.",
-    "example": "savelog(\u0022Welcome to\u0022 SPC servername);"
+    "scope": "global",
+    "description": "savelog(string) - Outputs a message to the F2 game messages log.",
+    "example": "savelog(\u0022Server started at \u0022 @ timevar2); // Appears in F2 console"
   },
   "savelog2": {
     "name": "savelog2",
