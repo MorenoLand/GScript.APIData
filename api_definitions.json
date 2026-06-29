@@ -1924,14 +1924,14 @@
   },
   "onFolderLog": {
     "name": "onFolderLog",
+    "type": "event",
     "params": [
       "message"
     ],
     "returns": "void",
-    "description": "Clientside:",
-    "example": "onFolderLog(param1);",
     "scope": "clientside",
-    "type": ""
+    "description": "onFolderLog(string) - Event fired when the scripted RC file browser outputs a message. Used for tracking file uploads.",
+    "example": "function onFolderLog(msg) {\r\n  if (msg.starts(\u0022Uploaded\u0022)) {\r\n    player.client.waitingForUpload = false; // Upload complete\r\n  }\r\n}"
   },
   "onLogMessage": {
     "name": "onLogMessage",
