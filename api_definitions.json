@@ -939,17 +939,6 @@
     "scope": "clientside",
     "type": ""
   },
-  "executeQuery": {
-    "name": "executeQuery",
-    "params": [
-      "sqlString"
-    ],
-    "returns": "array",
-    "description": "No matching script function found!",
-    "example": "temp.data = executeQuery(\u0022SELECT score FROM highscores ORDER BY score DESC LIMIT 10\u0022);",
-    "scope": "clientside",
-    "type": ""
-  },
   "dbLastError": {
     "name": "dbLastError",
     "params": [],
