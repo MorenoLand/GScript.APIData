@@ -1866,17 +1866,6 @@
     "description": "getangle(float,float) - Calculates the angle in radians from the origin to the given point, or from a delta X and delta Y.",
     "example": "// Calculate angle to target\ntemp.dx = target.x - this.x;\ntemp.dy = target.y - this.y;\ntemp.angle = getangle(temp.dx, temp.dy); // Angle in radians\n\n// Use for projectiles or rotation\ntemp.projectileDir = temp.angle;"
   },
-  "getanglesfromvector": {
-    "name": "getanglesfromvector",
-    "params": [
-      "x"
-    ],
-    "returns": "void",
-    "description": "No matching script function found!",
-    "example": "getanglesfromvector(param1);",
-    "scope": "clientside",
-    "type": ""
-  },
   "getloginaccountname": {
     "name": "getloginaccountname",
     "type": "function",
