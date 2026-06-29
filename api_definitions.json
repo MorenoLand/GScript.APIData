@@ -1643,17 +1643,6 @@
     "scope": "clientside",
     "type": ""
   },
-  "loadimg": {
-    "name": "loadimg",
-    "type": "",
-    "params": [
-      "filename"
-    ],
-    "returns": "object",
-    "scope": "clientside",
-    "description": "No matching script function found!",
-    "example": "temp.img = loadimg(\u0022sprite.png\u0022);"
-  },
   "loadclass": {
     "name": "loadclass",
     "params": [
