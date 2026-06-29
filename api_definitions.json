@@ -1510,14 +1510,14 @@
   },
   "deletefile": {
     "name": "deletefile",
+    "type": "function",
     "params": [
-      "str"
+      "filename"
     ],
     "returns": "void",
-    "description": "deletefile(str) - returns boolean",
-    "example": "deletefile(param1);",
-    "scope": "clientside",
-    "type": ""
+    "scope": "serverside",
+    "description": "deletefile(string) - Deletes a file from the server. Returns true on success.",
+    "example": "// Delete a rejected upload\r\nif (fileExists(\u0022levels/uploads/duplicate.nw\u0022)) {\r\n  deletefile(\u0022levels/uploads/duplicate.nw\u0022); // Returns true if deleted\r\n}"
   },
   "fileexists": {
     "name": "fileexists",
