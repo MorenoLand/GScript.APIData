@@ -1877,15 +1877,15 @@
   },
   "log": {
     "name": "log",
+    "type": "function",
     "params": [
-      "base",
-      "float"
+      "value OR base",
+      "value"
     ],
-    "returns": "void",
-    "description": "log(base,float) | savelog(str)",
-    "example": "log(param1);",
-    "scope": "clientside",
-    "type": ""
+    "returns": "float",
+    "scope": "global",
+    "description": "log(float) - Returns the natural logarithm of a value. Also accepts log(base, value) for custom base.",
+    "example": "temp.natLog = log(2.71828); // Natural log, returns ~1.0\r\n\r\ntemp.logBase10 = log(10, 1000); // Returns 3.0"
   },
   "max": {
     "name": "max",
