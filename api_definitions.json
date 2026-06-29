@@ -1574,18 +1574,6 @@
     "scope": "clientside",
     "type": ""
   },
-  "saveinfo": {
-    "name": "saveinfo",
-    "params": [
-      "filename",
-      "data"
-    ],
-    "returns": "void",
-    "description": "No matching script function found!",
-    "example": "saveinfo(param1, param2);",
-    "scope": "clientside",
-    "type": ""
-  },
   "savelines": {
     "name": "savelines",
     "type": "function",
