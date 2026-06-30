@@ -2057,15 +2057,6 @@
     "description": "tan(float) - Returns the tangent of an angle in radians.",
     "example": "temp.result = tan(0.7853); // Returns ~1.0 (tan of 45 degrees)"
   },
-  "updatevisibledistance": {
-    "name": "updatevisibledistance",
-    "params": [],
-    "returns": "void",
-    "description": "No matching script function found!",
-    "example": "updatevisibledistance();",
-    "scope": "clientside",
-    "type": ""
-  },
   "vecx": {
     "name": "vecx",
     "type": "function",
