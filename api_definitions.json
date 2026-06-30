@@ -2048,14 +2048,14 @@
   },
   "tan": {
     "name": "tan",
+    "type": "function",
     "params": [
-      "float"
+      "radians"
     ],
-    "returns": "void",
-    "description": "arctan(float) | Math.tan(float) - returns float",
-    "example": "tan(param1);",
-    "scope": "clientside",
-    "type": ""
+    "returns": "float",
+    "scope": "global",
+    "description": "tan(float) - Returns the tangent of an angle in radians.",
+    "example": "temp.result = tan(0.7853); // Returns ~1.0 (tan of 45 degrees)"
   },
   "updatevisibledistance": {
     "name": "updatevisibledistance",
