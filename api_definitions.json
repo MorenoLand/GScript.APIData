@@ -15965,12 +15965,14 @@
   },
   "pmswaiting": {
     "name": "pmswaiting",
-    "params": [],
-    "returns": "void",
-    "description": "TServerPlayer.pmswaiting() - returns boolean",
-    "example": "pmswaiting()",
+    "type": "function",
+    "params": [
+      "none"
+    ],
+    "returns": "bool",
     "scope": "clientside",
-    "type": ""
+    "description": "TServerPlayer.pmswaiting() - Returns true if the player has unread private messages waiting.",
+    "example": "if (pmswaiting()) {\r\n   showMailIcon(); // You have a PM waiting\r\n }"
   },
   "polygon": {
     "name": "polygon",
