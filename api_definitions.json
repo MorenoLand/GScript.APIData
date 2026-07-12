@@ -5096,7 +5096,7 @@
       "data"
     ],
     "returns": "void",
-    "description": "TSocket.onReceiveData | TCURLRequest.onReceiveData() event - request finished, received data",
+    "description": "TCURLRequest.onReceiveData | TSocket.onReceiveData | TCURLRequest.onReceiveData() event - request finished, received data",
     "example": "onReceiveData(param1);",
     "scope": "clientside",
     "type": ""
@@ -9019,15 +9019,15 @@
   },
   "passwordmatches": {
     "name": "passwordmatches",
+    "type": "",
     "params": [
       "str",
       "str"
     ],
     "returns": "boolean",
-    "description": "passwordmatches(str, str) - returns boolean",
-    "example": "if (passwordmatches(temp.input)) { }",
     "scope": "clientside",
-    "type": ""
+    "description": "passwordmatches(str, str) - returns boolean",
+    "example": "if (passwordmatches(temp.input)) { }"
   },
   "performclick": {
     "name": "performclick",
@@ -9612,7 +9612,7 @@
     ],
     "returns": "void",
     "scope": "global",
-    "description": "TServerLevel.triggeraction(float, float, str, params...) - Triggers an event on all NPCs at the specified x,y position. The event name is appended to \u0022onAction\u0022 to call the matching handler (e.g. \u0022warpPlayer\u0022 calls onActionwarpPlayer()). Additional params are passed to the handler.",
+    "description": "triggeraction | TServerLevel.triggeraction(float, float, str, params...) - Triggers an event on all NPCs at the specified x,y position. The event name is appended to \u0022onAction\u0022 to call the matching handler (e.g. \u0022warpPlayer\u0022 calls onActionwarpPlayer()). Additional params are passed to the handler.",
     "example": "triggeraction(this.x \u002B 1, this.y \u002B 1, \u0022warpPlayer\u0022);\n// Calls onActionwarpPlayer() on NPCs at that position\ntriggeraction(this.x \u002B 1, this.y \u002B 1, \u0022CreateInstance\u0022, this.instance_id);\n// Calls onActionCreateInstance(instance_id)"
   },
   "undo": {
@@ -10285,7 +10285,7 @@
     "name": "sendrequest",
     "params": [],
     "returns": "void",
-    "description": "sends the request",
+    "description": "TCURLRequest.sendrequest | sends the request",
     "scope": "clientside",
     "type": ""
   },
@@ -17498,7 +17498,7 @@
       "str"
     ],
     "returns": "void",
-    "description": "gethttprequestforurl(str) - returns object - finds an active http request with the given url | requestcurl(str) - returns object - requests data from a web server or similar, parameter is the URL; alternatively you can also create a TCURLRequest; works only if the server is authorized",
+    "description": "TCURLRequest.url | gethttprequestforurl(str) - returns object - finds an active http request with the given url | requestcurl(str) - returns object - requests data from a web server or similar, parameter is the URL; alternatively you can also create a TCURLRequest; works only if the server is authorized",
     "example": "url()",
     "scope": "clientside",
     "type": ""
@@ -21844,6 +21844,104 @@
     "returns": "void",
     "scope": "clientside",
     "description": "TPlayer.reading - boolean (read only)",
+    "example": ""
+  },
+  "TCURLRequest": {
+    "name": "TCURLRequest",
+    "type": "variable",
+    "params": [],
+    "returns": "object",
+    "scope": "clientside",
+    "description": "TCURLRequest - object type, parent type is TStaticVar",
+    "example": ""
+  },
+  "TCURLRequest.data - string": {
+    "name": "TCURLRequest.data - string",
+    "type": "function",
+    "params": [
+      "read only"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "- the data returned by the server",
+    "example": ""
+  },
+  "TCURLRequest.headers": {
+    "name": "TCURLRequest.headers",
+    "type": "variable",
+    "params": [],
+    "returns": "string",
+    "scope": "clientside",
+    "description": "http headers as array of string",
+    "example": ""
+  },
+  "TCURLRequest.post": {
+    "name": "TCURLRequest.post",
+    "type": "variable",
+    "params": [],
+    "returns": "boolean",
+    "scope": "clientside",
+    "description": "by default false, will send a POST instead of GET http request",
+    "example": ""
+  },
+  "TCURLRequest.postdata": {
+    "name": "TCURLRequest.postdata",
+    "type": "variable",
+    "params": [],
+    "returns": "string",
+    "scope": "clientside",
+    "description": "the POST data, set post=true to make this work",
+    "example": ""
+  },
+  "TCURLRequest.quick": {
+    "name": "TCURLRequest.quick",
+    "type": "variable",
+    "params": [],
+    "returns": "boolean",
+    "scope": "clientside",
+    "description": "same as \u0027skipsslverification\u0027, default false",
+    "example": ""
+  },
+  "TCURLRequest.returncode - integer": {
+    "name": "TCURLRequest.returncode - integer",
+    "type": "function",
+    "params": [
+      "read only"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "TCURLRequest.returncode - integer (read only)",
+    "example": ""
+  },
+  "TCURLRequest.skipsslverification": {
+    "name": "TCURLRequest.skipsslverification",
+    "type": "variable",
+    "params": [],
+    "returns": "boolean",
+    "scope": "clientside",
+    "description": "by default false, speeds up connecting by skipping verification of SSL peer and host",
+    "example": ""
+  },
+  "requestcurl": {
+    "name": "requestcurl",
+    "type": "function",
+    "params": [
+      "str"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "- returns object - requests data from a web server or similar, parameter is the URL; alternatively you can also create a TCURLRequest; works only if the server is authorized",
+    "example": ""
+  },
+  "TGraalVar.scripterrors - object": {
+    "name": "TGraalVar.scripterrors - object",
+    "type": "function",
+    "params": [
+      "read only"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "- gives the list of script errors which were reported for this object",
     "example": ""
   }
 }
