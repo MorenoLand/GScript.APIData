@@ -11144,15 +11144,6 @@
     "scope": "clientside",
     "type": ""
   },
-  "_level0": {
-    "name": "_level0",
-    "params": [],
-    "returns": "void",
-    "description": "Clientside:",
-    "example": "_level0()",
-    "scope": "clientside",
-    "type": ""
-  },
   "_name": {
     "name": "_name",
     "params": [],
