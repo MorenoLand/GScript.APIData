@@ -9027,7 +9027,7 @@
     "returns": "boolean",
     "scope": "clientside",
     "description": "passwordmatches(str, str) - returns boolean",
-    "example": "if (passwordmatches(temp.input)) { }"
+    "example": "if (passwordmatches(temp.input)) { }sdfsdf"
   },
   "performclick": {
     "name": "performclick",
