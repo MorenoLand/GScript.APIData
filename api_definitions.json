@@ -12815,12 +12815,12 @@
   },
   "disableactionprojectile2": {
     "name": "disableactionprojectile2",
+    "type": "variable",
     "params": [],
     "returns": "void",
-    "description": "Clientside:",
-    "example": "disableactionprojectile2()",
     "scope": "clientside",
-    "type": ""
+    "description": "TServerPlayer.disableactionprojectile2 - Boolean flag to disable onActionProjectile2 events for performance. Disabled by default on mobile.",
+    "example": "disableactionprojectile2 = true; // Suppresses projectile landing events for speed"
   },
   "disableapnoheal": {
     "name": "disableapnoheal",
