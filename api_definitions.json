@@ -9019,15 +9019,15 @@
   },
   "passwordmatches": {
     "name": "passwordmatches",
-    "type": "",
+    "type": "function",
     "params": [
       "str",
       "str"
     ],
     "returns": "boolean",
-    "scope": "clientside",
+    "scope": "serverside",
     "description": "passwordmatches(str, str) - returns boolean",
-    "example": "if (passwordmatches(temp.input)) { }sdfsdf"
+    "example": "setstring client.pass,#E(hunter2);\r\nif (playerchats \u0026\u0026 passwordmatches(#s(client.pass),#c)){\r\n  setstring stars,;\r\n  for (i=0;i\u003Cstrlen(hunter2);i\u002B\u002B){\r\n    setstring stars,#s(stars)*;\r\n  }\r\n  // do something after the password has been accepted here\r\n  setplayerprop #c,#s(stars);\r\n}"
   },
   "performclick": {
     "name": "performclick",
