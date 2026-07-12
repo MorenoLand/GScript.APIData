@@ -15945,12 +15945,12 @@
   },
   "playersindex": {
     "name": "playersindex",
-    "type": "",
+    "type": "variable",
     "params": [],
-    "returns": "void",
-    "scope": "clientside",
+    "returns": "int",
+    "scope": "global",
     "description": "TServerPlayer.playersindex - Integer (read only). Position of the player in the level.players[] array.",
-    "example": "playersindex()"
+    "example": "temp.idx = player.playersindex; // Returns 0 for the first player in level"
   },
   "playing": {
     "name": "playing",
