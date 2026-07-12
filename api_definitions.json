@@ -12816,8 +12816,10 @@
   "disableactionprojectile2": {
     "name": "disableactionprojectile2",
     "type": "variable",
-    "params": [],
-    "returns": "void",
+    "params": [
+      "true/false"
+    ],
+    "returns": "bool",
     "scope": "clientside",
     "description": "TServerPlayer.disableactionprojectile2 - Boolean flag to disable onActionProjectile2 events for performance. Disabled by default on mobile.",
     "example": "disableactionprojectile2 = true; // Suppresses projectile landing events for speed"
