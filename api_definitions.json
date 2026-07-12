@@ -11198,15 +11198,6 @@
     "scope": "clientside",
     "type": ""
   },
-  "_xmouse": {
-    "name": "_xmouse",
-    "params": [],
-    "returns": "void",
-    "description": "Clientside:",
-    "example": "_xmouse()",
-    "scope": "clientside",
-    "type": ""
-  },
   "_xscale": {
     "name": "_xscale",
     "params": [],
