@@ -4633,12 +4633,17 @@
   },
   "onActionProjectile2": {
     "name": "onActionProjectile2",
-    "params": [],
+    "type": "event",
+    "params": [
+      "x",
+      "y",
+      "type",
+      "params..."
+    ],
     "returns": "void",
-    "description": "Clientside:",
-    "example": "onActionProjectile2();",
     "scope": "clientside",
-    "type": ""
+    "description": "onActionProjectile2(float, float, string, params...) - Fired clientside when a projectile lands on the ground or hits an object. Parameters: x, y, projectile type, then setshootparams data.",
+    "example": "function onActionProjectile2(px, py, ptype, dmg, mods, from) {\r\n  if (from != player.account) return;\r\n  if (px in |this.x - 2, this.x \u002B 4| \u0026\u0026 py in |this.y - 2, this.y \u002B 4|) {\r\n    triggerserver(\u0022gui\u0022, \u0022\u002BEnvironment\u0022, \u0022hitflag\u0022, \u0022(\u0022 @ this.attr[6], dmg, mods);\r\n  }\r\n}"
   },
   "onActionPulled": {
     "name": "onActionPulled",
