@@ -11175,7 +11175,7 @@
     "name": "_rotation",
     "params": [],
     "returns": "void",
-    "description": "Clientside:",
+    "description": "MovieClip._rotation | Clientside:",
     "example": "_rotation()",
     "scope": "clientside",
     "type": ""
@@ -11184,7 +11184,7 @@
     "name": "_visible",
     "params": [],
     "returns": "void",
-    "description": "Clientside:",
+    "description": "MovieClip._visible | Clientside:",
     "example": "_visible()",
     "scope": "clientside",
     "type": ""
@@ -11193,7 +11193,7 @@
     "name": "_x",
     "params": [],
     "returns": "void",
-    "description": "Clientside:",
+    "description": "MovieClip._x | Clientside:",
     "example": "_x()",
     "scope": "clientside",
     "type": ""
@@ -11202,7 +11202,7 @@
     "name": "_xscale",
     "params": [],
     "returns": "void",
-    "description": "Clientside:",
+    "description": "MovieClip._xscale | Clientside:",
     "example": "_xscale()",
     "scope": "clientside",
     "type": ""
@@ -11211,7 +11211,7 @@
     "name": "_y",
     "params": [],
     "returns": "void",
-    "description": "Clientside:",
+    "description": "MovieClip._y | Clientside:",
     "example": "_y()",
     "scope": "clientside",
     "type": ""
@@ -11229,7 +11229,7 @@
     "name": "_yscale",
     "params": [],
     "returns": "void",
-    "description": "Clientside:",
+    "description": "MovieClip._yscale | Clientside:",
     "example": "_yscale()",
     "scope": "clientside",
     "type": ""
@@ -21934,5 +21934,82 @@
     "scope": "clientside",
     "description": "- gives the list of script errors which were reported for this object",
     "example": ""
+  },
+  "MovieClip._xmouse - float": {
+    "name": "MovieClip._xmouse - float",
+    "type": "function",
+    "params": [
+      "read only"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "MovieClip._xmouse - float (read only)",
+    "example": ""
+  },
+  "MovieClip._level0 - object": {
+    "name": "MovieClip._level0 - object",
+    "type": "function",
+    "params": [
+      "read only"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "MovieClip._level0 - object (read only)",
+    "example": ""
+  },
+  "MovieClip._name - string": {
+    "name": "MovieClip._name - string",
+    "type": "function",
+    "params": [
+      "read only"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "MovieClip._name - string (read only)",
+    "example": ""
+  },
+  "MovieClip._parent - object": {
+    "name": "MovieClip._parent - object",
+    "type": "function",
+    "params": [
+      "read only"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "MovieClip._parent - object (read only)",
+    "example": ""
+  },
+  "MovieClip._root - object": {
+    "name": "MovieClip._root - object",
+    "type": "function",
+    "params": [
+      "read only"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "MovieClip._root - object (read only)",
+    "example": ""
+  },
+  "MovieClip._ymouse - float": {
+    "name": "MovieClip._ymouse - float",
+    "type": "function",
+    "params": [
+      "read only"
+    ],
+    "returns": "void",
+    "scope": "clientside",
+    "description": "MovieClip._ymouse - float (read only)",
+    "example": ""
+  },
+  "_level0": {
+    "name": "_level0",
+    "type": "variable",
+    "params": [
+      "none"
+    ],
+    "returns": "object",
+    "scope": "clientside",
+    "description": "MovieClip._level0 - Read-only object referencing the root MovieClip timeline.",
+    "example": "temp.root = _level0; // Access the root timeline of the MovieClip hierarchy"
   }
 }
