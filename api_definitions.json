@@ -21306,12 +21306,12 @@
     "name": "GuiShowImgCtrl.uniqueparticle - boolean - says if each particle should store it\u0027s own data",
     "type": "function",
     "params": [
-      "good for text emitters"
+      "boolean"
     ],
     "returns": "void",
     "scope": "clientside",
-    "description": "GuiShowImgCtrl.uniqueparticle - boolean - says if each particle should store it\u0027s own data (good for text emitters)",
-    "example": ""
+    "description": "TParticleEmitter.uniqueparticle - Boolean. When true, each particle stores its own data. Useful for text emitters where each particle displays different text.",
+    "example": "with (findimg(200).emitter) {\r\n  uniqueparticle = true; // Each particle tracks its own data independently\r\n}"
   },
   "GuiTabCtrlEntry": {
     "name": "GuiTabCtrlEntry",
