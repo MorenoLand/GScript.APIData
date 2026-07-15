@@ -21302,17 +21302,6 @@
     "description": "TParticleEmitter.particle - object (read only)",
     "example": ""
   },
-  "GuiShowImgCtrl.uniqueparticle - boolean - says if each particle should store it\u0027s own data": {
-    "name": "GuiShowImgCtrl.uniqueparticle - boolean - says if each particle should store it\u0027s own data",
-    "type": "function",
-    "params": [
-      "boolean"
-    ],
-    "returns": "void",
-    "scope": "clientside",
-    "description": "TParticleEmitter.uniqueparticle - Boolean. When true, each particle stores its own data. Useful for text emitters where each particle displays different text.",
-    "example": "with (findimg(200).emitter) {\r\n  uniqueparticle = true; // Each particle tracks its own data independently\r\n}"
-  },
   "GuiTabCtrlEntry": {
     "name": "GuiTabCtrlEntry",
     "type": "variable",
