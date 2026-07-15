@@ -450,14 +450,14 @@
   },
   "say": {
     "name": "say",
+    "type": "function",
     "params": [
-      "int"
+      "signindex"
     ],
     "returns": "void",
-    "description": "say(int) | TServerPlayer.say(int)",
-    "example": "say(5);",
-    "scope": "clientside",
-    "type": ""
+    "scope": "global",
+    "description": "TServerPlayer.say(int) - Displays a sign message to the player by sign index.",
+    "example": "say(0); // Displays sign 0 to the player"
   },
   "say2": {
     "name": "say2",
