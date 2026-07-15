@@ -21216,17 +21216,6 @@
     "description": "TShowImg.rotationcenter - string - the current rotation center (only works when useowncenter=true)",
     "example": ""
   },
-  "TShowImg.uniqueparticle - boolean - says if each particle should store it\u0027s own data": {
-    "name": "TShowImg.uniqueparticle - boolean - says if each particle should store it\u0027s own data",
-    "type": "function",
-    "params": [
-      "good for text emitters"
-    ],
-    "returns": "void",
-    "scope": "clientside",
-    "description": "TShowImg.uniqueparticle - boolean - says if each particle should store it\u0027s own data (good for text emitters)",
-    "example": ""
-  },
   "GuiShowImgCtrl.emitter - object": {
     "name": "GuiShowImgCtrl.emitter - object",
     "type": "function",
