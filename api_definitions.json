@@ -17436,12 +17436,14 @@
   },
   "uniqueparticle": {
     "name": "uniqueparticle",
-    "params": [],
-    "returns": "void",
-    "description": "Clientside:",
-    "example": "uniqueparticle()",
+    "type": "function",
+    "params": [
+      "true/false"
+    ],
+    "returns": "bool",
     "scope": "clientside",
-    "type": ""
+    "description": "TParticleEmitter.uniqueparticle - Boolean. When true, each particle stores its own data. Useful for text emitters where each particle displays different text.",
+    "example": "with (findimg(200).emitter) {\r\n  uniqueparticle = true; // Each particle tracks its own data independently\r\n}"
   },
   "unloadmovie": {
     "name": "unloadmovie",
