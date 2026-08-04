@@ -20398,7 +20398,7 @@
   },
   "triggerServer": {
     "name": "triggerServer",
-    "type": "function",
+    "type": "",
     "params": [
       "type",
       "target",
